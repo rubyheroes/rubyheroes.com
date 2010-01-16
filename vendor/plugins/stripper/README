@@ -1,0 +1,14 @@
+= Stripper
+
+Stripper is a plugin that removes leading and trailing blanks from attribute
+values.
+
+Leading and trailing spaces on attribute values can be a problem. They're almost never
+wanted nor intended. In fact, oracle actually treats empty strings as +NULL+. That's
+not to say we necessarily think that the database should be messing with our data mind
+you but it does show that at least someone agrees with us.
+
+=== License
+
+This plugin is copyright 2006 by RedHill Consulting, Pty. Ltd. and is released
+under the MIT license.

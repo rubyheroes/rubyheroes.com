@@ -1,0 +1,26 @@
+!!!
+%html{ html_attrs }
+  %head
+    %meta{ "http-equiv" => "content-type", :content => "text/html;charset=UTF-8" }
+    %title Ruby Hero Awards
+    = stylesheet_link_tag "boilerplate/screen"
+    = stylesheet_link_tag "blueprint/plugins/buttons/buttons"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag :defaults
+  %body{ :class => "#{controller.controller_name} #{controller.controller_name}-#{controller.action_name}" }
+    #Header.wrapper
+      #UserInfo
+        = render :partial => "shared/user_info"
+      %h1
+        = link_to image_tag("rubyhero_title.png"), "/"
+    #Subheader
+      = yield :subheader
+    = render :partial => "shared/messages"
+    #Content.wrapper
+      = yield
+    #Footer
+      = link_to image_tag("webbynode.png", :align => "right"), 'http://www.webbynode.com'
+      Ruby Heroes is produced by 
+      = link_to("Rails Envy", "http://www.RailsEnvy.com") + ","
+      and hosted graciously at 
+      = link_to "Webbynode", "http://www.webbynode.com."

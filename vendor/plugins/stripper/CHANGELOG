@@ -1,0 +1,11 @@
+[REVISION 20080103]
+
+[FIXED] False incorrectly interpreted as empty.
+
+[REVISION 20071128]
+
+[FIXED] Workaround to ensure plugin is only ever loaded once.
+
+[REVISION 20071106]
+
+[NEW] Initial revision.

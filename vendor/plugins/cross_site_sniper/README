@@ -1,0 +1,44 @@
+= Cross Site Sniper (XSS)
+
+Cross Site Sniper is a Ruby on Rails Plugin that automatically wraps html_escape() around 
+ActiveRecord attribute methods associated with string and text fields in the
+database.  This provides a convenient and DRY method to protect a Rails site from Cross
+Site Scripting (XSS) attacks from malicious users.
+
+Data used to pre-populate form fields is *not* auto escaped, allowing for user friendly
+legitimate uses of normally escaped characters and painless integration into 
+existing Rails applications without modifying forms or controllers.
+
+You will probably want to remove any calls to h() in helpers and views, otherwise fields
+will be double escaped. This will only be of concern however in cases of legitimate uses of
+escaped characters, where, for instance, users may actually see '&amp;' displayed on a webpage
+instead of an expected '&'.
+
+See the html_escape[link:classes/ActiveRecord/CrossSiteSniperExtensions/ClassMethods.html#M000001] method to fine tune which fields to automatically escape.
+
+== Example
+
+=== Before Cross Site Sniper
+
+* @user.first_name  => "Haxor<script>alert('Gotcha!')</script>"
+
+=== After Cross Site Sniper
+
+Attribute Methods are Automatically Escaped
+* @user.first_name => "Haxor&lt;script&gt;alert('Gotcha!')&lt;/script&gt;"
+
+Two convenient ways to get at the unescaped data when needed.
+* @user.first_name_without_html_escaping => "HaXor<script>alert('Gotcha!')</script>"
+* @quiz[:question] => "True or False, 5/8 < 3/5?"
+
+By not escaping data accessed via the hash method (eg. @quiz[:question]), forms
+prepopulate with the *unescaped* data, allowing user friendly legitimate uses of
+usually escaped characters. 
+
+== Installation
+
+  script/plugin install -x http://xss.rubyforge.org/svn/cross_site_sniper/trunk
+
+== Copyright
+
+Copyright (c) 2008 World Wide IDEA, Inc., released under the MIT license. [ http://www.wwidea.org ]

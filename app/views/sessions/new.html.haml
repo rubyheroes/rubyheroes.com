@@ -1,0 +1,10 @@
+- content_for :subheader, "Log in"
+.box
+  - form_tag session_path do
+    %fieldset
+      %label{ :for => :passcode } Passcode
+      = text_field_tag :passcode
+    .buttons.wrapper
+      = button_to_log_in
+%script
+  $('openid_url').focus();

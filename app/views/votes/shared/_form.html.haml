@@ -1,0 +1,39 @@
+%fieldset
+  %table
+    %tr
+      %td
+        %label{ :for => :vote_category_id } For which category are you nominating them?
+      %td
+        = form.select :category_id, Category.find(:all, :order => :name).collect { |category| [category.name, category.id] }
+    %tr
+      %td
+        %label{ :for => :site_name } What is the name of their site?
+      %td
+        = form.text_field :site_name
+      %td
+    %tr
+      %td
+        %label{ :for => :site_url } What is the url of their site?
+      %td
+        = form.text_field :site_url
+      %td
+    %tr
+      %td
+        %label{ :for => :nomination_nominator_name } What is your name?
+      %td
+        = form.text_field :nominator_name
+      %td
+    %tr
+      %td
+        %label{ :for => :nomination_nominator_email } What is your email address?
+      %td
+        = form.text_field :nominator_email
+      %td
+        %em We'll never sell.
+    %tr
+      %td
+        %label{ :for => :nomination_testimonial } Testify!
+      %td
+        = form.text_area :testimonial, :rows => 5
+      %td
+        %em Use at least 25 characters to tell us why your nominee is a Ruby Hero.

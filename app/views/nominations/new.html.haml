@@ -1,0 +1,10 @@
+- content_for :subheader, "Nominate a Ruby Hero!"
+.box
+  = error_messages_for :nomination
+  - form_for(@nomination) do |form|
+    = render :partial => "nominations/shared/form", :object => form
+    .buttons.wrapper
+      = button_to_save "Submit My Nomination!"
+      = link_to_cancel "/"
+%script
+  $('nomination_nominee').focus();

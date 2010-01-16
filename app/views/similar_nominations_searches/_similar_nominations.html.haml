@@ -1,0 +1,8 @@
+#SimilarNominations
+  - unless similar_nominations.empty?
+    %h4 Do you see a match?
+    %ul
+      - similar_nominations.collect { |nomination| nomination.site_url }.uniq.each do |site_url|
+        %li.wrapper
+          = link_to "Yes, nominate " + site_url, new_nomination_path(:site_url => site_url), :class => "button"
+    %h4 No match?

@@ -1,0 +1,11 @@
+- content_for :subheader, "The Panel"
+.model-summary
+  = link_to image_tag_with_text("arrow_left.png", "Back to nominations"), new_similar_nominations_search_path, :class => "button"
+.model-details.box
+  %table
+    - @users.each do |user|
+      %tr
+        %td
+          = image_tag(user.mugshot.public_filename)
+        %td
+          %h1= user.name

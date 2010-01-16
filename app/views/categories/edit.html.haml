@@ -1,0 +1,13 @@
+- content_for :subheader, "Edit category"
+.model-summary
+  = link_to_list categories_path
+  = link_to_delete @category, "Delete this category", :confirm => "Delete category '#{@category.name}'?", :class => "button"
+.model-details.box
+  %h1
+    = @category.name
+  = error_messages_for :category
+  - form_for(@category) do |form|
+    = render :partial => "categories/shared/form", :object => form
+    .buttons.wrapper
+      = button_to_save "Save Category"
+      = link_to_cancel categories_path

@@ -1,0 +1,12 @@
+- content_for :subheader, @category.name
+.box
+  %h1= pluralize @category.votes.count, "vote"
+  %ul
+    - @category.votes.each do |vote|
+      %li= vote.user.name
+%br
+.box
+  %h1= pluralize @category.nominations.count, "nomination"
+  %ul
+    - @category.nominations.each do |nomination|
+      %li= nomination.site_url

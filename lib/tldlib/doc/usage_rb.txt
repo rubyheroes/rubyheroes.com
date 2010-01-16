@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require 'tld'
+
+sample =
+[
+  'dd',	      # TLD assigned of German Democratic Republic, no longer exists
+  'example',  # Example TLD, see RFC 2606 (aka BCP 32)
+  'biz',      # For business usage
+  'com',      # For commercial usage
+  'dj',	      # TLD assigned to Djibouti
+  'gr',	      # TLD assigned to Greece
+  'kw',	      # TLD assigned to Kuwait
+  'mt',	      # TLD assigned to Malta
+  'ro',	      # TLD assigned to Romania
+  'vi'	      # TLD assigned to Virgin Islands, U.S.
+]
+
+puts '-' * 79
+sample.each { |tld|
+  if TLD.valid?(tld)
+    puts "#{tld}\tis a  valid        TLD. Description of usage: #{TLD::All[tld]}"
+  else
+    print "#{tld}\tis no valid        TLD"
+    if TLD.rfc_2606?(tld)
+      puts " but reserved for: #{TLD::RFC_2606[tld]}"
+    else
+      puts
+    end
+  end
+
+  puts "#{tld}\tis a  country-code TLD"	      if TLD.country?(tld)
+  puts "#{tld}\tis a  non-country  TLD"	      if TLD.noncountry?(tld)
+  puts "#{tld}\tis a  non-country  TLD (old)" if TLD.noncountry_old?(tld)
+  puts "#{tld}\tis a  non-country  TLD (new)" if TLD.noncountry_new?(tld)
+  puts "#{tld}\tis an RFC 2606     TLD"	      if TLD.rfc_2606?(tld)
+  puts "#{tld}\tis a  BCP 32       TLD"	      if TLD.bcp_32?(tld)
+
+  puts '-' * 79
+}

@@ -1,0 +1,77 @@
+#!/usr/bin/env ksh
+
+function is_valid {
+  [[ $(ruby -r tld -e "print TLD::valid?('$1')") = 'true' ]]
+}
+
+function is_country {
+  [[ $(ruby -r tld -e "print TLD::country?('$1')") = 'true' ]]
+}
+
+function is_noncountry {
+  [[ $(ruby -r tld -e "print TLD::noncountry?('$1')") = 'true' ]]
+}
+
+function is_noncountry_new {
+  [[ $(ruby -r tld -e "print TLD::noncountry_new?('$1')") = 'true' ]]
+}
+
+function is_noncountry_old {
+  [[ $(ruby -r tld -e "print TLD::noncountry_old?('$1')") = 'true' ]]
+}
+
+function is_rfc_2606 {
+  [[ $(ruby -r tld -e "print TLD::rfc_2606?('$1')") = 'true' ]]
+}
+
+function is_bcp_32 {
+  [[ $(ruby -r tld -e "print TLD::bcp_32?('$1')") = 'true' ]]
+}
+
+function TLD_all
+{
+  print $(ruby -r tld -e "print TLD::All['$1']")
+}
+
+function TLD_rfc_2606
+{
+  print $(ruby -r tld -e "print TLD::RFC_2606['$1']")
+}
+
+tld[0]='dd'	  # TLD assigned of German Democratic Republic, no longer exists
+tld[1]='example'  # Example TLD, see RFC 2606 (aka BCP 32)
+tld[2]='biz'	  # For business usage
+tld[3]='com'	  # For commercial usage
+tld[4]='dj'	  # TLD assigned to Djibouti
+tld[5]='gr'	  # TLD assigned to Greece
+tld[6]='kw'	  # TLD assigned to Kuwait
+tld[7]='mt'	  # TLD assigned to Malta
+tld[8]='ro'	  # TLD assigned to Romania
+tld[9]='vi'	  # TLD assigned to Virgin Islands, U.S.
+
+a=''
+for i in $(seq 79); do a="$a-"; done
+
+print - $a
+
+for tld in ${tld[@]}; do
+  if is_valid $tld; then
+    print -n "$tld\tis a  valid        TLD. Description of usage: "
+    TLD_all $tld
+  else
+    print -n "$tld\tis no valid        TLD"
+    if is_rfc_2606 $tld; then
+      print -n ' but reserved for: '
+      TLD_rfc_2606 $tld
+    else
+      print
+    fi
+  fi
+  if is_country $tld;	      then print "$tld\tis a  country-code TLD";	fi
+  if is_noncountry $tld;      then print "$tld\tis a  non-country  TLD";	fi
+  if is_noncountry_old $tld;  then print "$tld\tis a  non-country  TLD (old)";	fi
+  if is_noncountry_new $tld;  then print "$tld\tis a  non-country  TLD (new)";	fi
+  if is_rfc_2606 $tld;	      then print "$tld\tis an RFC 2606     TLD";	fi
+  if is_bcp_32 $tld;	      then print "$tld\tis an BCP 32       TLD";	fi
+  print - $a
+done

@@ -1,0 +1,20 @@
+- content_for :subheader, "#{link_to "Nominations", nomination_sites_path} for #{link_to params[:site_url], params[:site_url], :popup => true}"
+%table
+  %tr
+    %th Nominee
+    %th Name
+    %th Email
+    %th Testimonial
+    %th Actions
+  - @nominations.each do |nomination|
+    %tr
+      %td
+        = nomination.nominee
+      %td
+        = nomination.nominator_name
+      %td
+        = nomination.nominator_email
+      %td
+        = nomination.testimonial
+      %td
+        = link_to_delete nomination, "Delete", :confirm => "Delete nomination for '#{nomination.nominee}'?" if params[:edit]

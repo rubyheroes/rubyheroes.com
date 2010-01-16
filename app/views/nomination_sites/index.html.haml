@@ -1,0 +1,14 @@
+- content_for :subheader, "Nominations"
+%table
+  %tr
+    %th Nominations
+    %th Site url
+    %th 
+  - @nomination_sites.each do |nomination_site|
+    %tr
+      %td
+        = link_to nomination_site[1], nominations_url(:site_url => nomination_site[0])
+      %td
+        = link_to nomination_site[0], nomination_site[0], :popup => true
+      %td
+        = link_to "View Nominations", nominations_url(:site_url => nomination_site[0])

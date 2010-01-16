@@ -1,0 +1,18 @@
+- content_for :subheader, "Categories"
+.model-summary
+  = link_to_add "Add a category", new_category_path
+.model-details.box
+  %table
+    %tr
+      %th Name
+      %th Description
+      %th Actions
+    - @categories.each do |category|
+      %tr
+        %td
+          = category.name
+        %td
+          = truncate(category.description, 50)
+        %td
+          = link_to_edit edit_category_path(category)
+          = link_to_delete category, "Delete", :confirm => "Delete category '#{category.name}'?"

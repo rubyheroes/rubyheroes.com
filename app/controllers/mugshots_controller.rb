@@ -1,0 +1,2 @@
+class MugshotsController < ApplicationController
+end

@@ -1,0 +1,7 @@
+tldlib provides hashes that assign descriptions to TLDs
+
+Installation is described in INSTALL.
+Documentation is in doc directory.
+
+tldlib was written by Josef 'Jupp' Schugt, jupp@sourceforge.net and
+is free software. See GPL.txt for details.

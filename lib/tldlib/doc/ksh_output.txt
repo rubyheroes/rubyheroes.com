@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+dd	is no valid        TLD
+-------------------------------------------------------------------------------
+example	is no valid        TLD but reserved for: Documentation or examples
+example	is an RFC 2606     TLD
+example	is an BCP 32       TLD
+-------------------------------------------------------------------------------
+biz	is a  valid        TLD. Description of usage: Businesses
+biz	is a  non-country  TLD
+biz	is a  non-country  TLD (new)
+-------------------------------------------------------------------------------
+com	is a  valid        TLD. Description of usage: Commercial
+com	is a  non-country  TLD
+com	is a  non-country  TLD (old)
+-------------------------------------------------------------------------------
+dj	is a  valid        TLD. Description of usage: Djibouti
+dj	is a  country-code TLD
+-------------------------------------------------------------------------------
+gr	is a  valid        TLD. Description of usage: Greece
+gr	is a  country-code TLD
+-------------------------------------------------------------------------------
+kw	is a  valid        TLD. Description of usage: Kuwait
+kw	is a  country-code TLD
+-------------------------------------------------------------------------------
+mt	is a  valid        TLD. Description of usage: Malta
+mt	is a  country-code TLD
+-------------------------------------------------------------------------------
+ro	is a  valid        TLD. Description of usage: Romania
+ro	is a  country-code TLD
+-------------------------------------------------------------------------------
+vi	is a  valid        TLD. Description of usage: Virgin Islands, U.S.
+vi	is a  country-code TLD
+-------------------------------------------------------------------------------

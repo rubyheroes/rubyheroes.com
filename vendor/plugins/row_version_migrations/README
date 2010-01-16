@@ -1,0 +1,24 @@
+= Row Version Migrations
+
+Row Version Migrations is a plugin that automatically generates the following
+row version columns for every table:
+
+  :created_at,   :datetime,  :null => false
+  :updated_at,   :datetime,  :null => false
+  :lock_version, :integer,   :null => false, :default => 0
+
+If you have a table for which you do not want row version columns to be
+generated, simply pass <code>:row_version => false</code> as an option to +create_table+:
+
+  create_table :orders, :row_version => false do |t|
+    ...
+  end
+
+=== Dependencies
+  
+* RedHill on Rails Core (redhillonrails_core).
+
+=== License
+
+This plugin is copyright 2006 by RedHill Consulting, Pty. Ltd. and is released
+under the MIT license.

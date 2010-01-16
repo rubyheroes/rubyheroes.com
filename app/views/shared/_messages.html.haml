@@ -1,0 +1,8 @@
+- unless flash[:error].blank? && flash[:notice].blank?
+  #Messages
+    - unless flash[:error].blank?
+      #Error
+        = flash[:error]
+    - unless flash[:notice].blank?
+      #Notice
+        = flash[:notice]

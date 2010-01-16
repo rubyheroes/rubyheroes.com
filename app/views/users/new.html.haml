@@ -1,0 +1,12 @@
+- content_for :subheader, "Add a user"
+.model-summary
+  = link_to_list users_path
+.model-details.box
+  %h1 New user
+  = error_messages_for :user
+  = error_messages_for :mugshot, :object => @user.mugshot
+  - form_for(@user, :html => { :multipart => true }) do |form|
+    = render :partial => "users/shared/form", :object => form
+    .buttons.wrapper
+      = button_to_save "Save User"
+      = link_to_cancel users_path

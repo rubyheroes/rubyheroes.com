@@ -1,0 +1,19 @@
+- content_for :subheader, "Nominate a Ruby Hero!"
+.box
+  %p 
+    Thanks for your nomination. Winners will be announced at
+    = link_to("Railsconf", "http://en.oreilly.com/rails2009/") + "."
+  %p
+    = link_to("Nominate someone else", "/")
+.spread_the_word
+  %p
+    %strong 
+      Do your part to spread the word
+  %p
+    Pay it forward and blog about the Ruby Hero Awards to encourage others to show their gratitude.  
+    = image_tag "rubyhero_button_small.png", :alt => "Ruby Heroes"
+  %p
+    Html Code: (click to copy and paste)
+    :plain
+      <textarea rows="3" cols="43" name="none" onclick="this.select();"><a href="http://www.RubyHeroes.com" title="Ruby Heroes"><img alt="Ruby Heroes" src="http://rubyheroes.morphexchange.com/images/rubyhero_button_small.png" /></a></textarea>
+  %script

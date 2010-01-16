@@ -1,0 +1,22 @@
+%fieldset
+  %table
+    %tr
+      %td
+        %label{ :for => :user_name } Name
+      %td
+        = form.text_field :name
+    %tr
+      %td
+        %label{ :for => :user_email } Email
+      %td
+        = form.text_field :email
+    %tr
+      %td
+        %label{ :for => :user_openid_url } OpenID url
+      %td
+        = form.text_field :openid_url
+    %tr
+      %td
+        %label{ :for => :user_uploaded_data } Mugshot
+      %td
+        = form.file_field :uploaded_data

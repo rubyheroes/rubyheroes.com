@@ -1,0 +1,24 @@
+- content_for :subheader, "Users"
+.model-summary
+  = link_to_add "Add a user", new_user_path
+.model-details.box
+  %table
+    %tr
+      %th Mugshot
+      %th Name
+      %th Email
+      %th OpenID url
+      %th Actions
+    - @users.each do |user|
+      %tr
+        %td
+          = link_to image_tag(user.mugshot.public_filename), edit_user_path(user)
+        %td
+          = user.name
+        %td
+          = user.email
+        %td
+          = user.openid_url
+        %td
+          = link_to_edit edit_user_path(user)
+          = link_to_delete user, "Delete", :confirm => "Delete user '#{user.name}'?"
