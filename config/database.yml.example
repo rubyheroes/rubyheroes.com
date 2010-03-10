@@ -17,7 +17,7 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: rubyheroes_development
+  database: rubyheroes_development2
   username: root
   password:
   socket: /tmp/mysql.sock

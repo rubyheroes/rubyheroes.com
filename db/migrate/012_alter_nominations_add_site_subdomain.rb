@@ -1,6 +1,6 @@
 class AlterNominationsAddSiteSubdomain < ActiveRecord::Migration
   def self.up
-    add_column :nominations, :site_subdomain, :string, :null => false
+    add_column :nominations, :site_subdomain, :string
   end
 
   def self.down

@@ -1,6 +1,6 @@
 class AlterUsersAddName < ActiveRecord::Migration
   def self.up
-    add_column :users, :name, :string, :null => false
+    add_column :users, :name, :string
   end
 
   def self.down

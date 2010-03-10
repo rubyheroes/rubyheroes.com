@@ -1,6 +1,6 @@
 class AlterUsersAddMugshot < ActiveRecord::Migration
   def self.up
-    add_column :users, :mugshot_id, :integer, :null => false
+    add_column :users, :mugshot_id, :integer
   end
 
   def self.down
