@@ -104,12 +104,12 @@ ActiveRecord::Schema.define(:version => 13) do
   add_index "votes", ["nomination_id"], :name => "nomination_id"
   add_index "votes", ["user_id"], :name => "user_id"
 
-  add_foreign_key "mugshots", ["parent_id"], "mugshots", ["id"], :name => "mugshots_ibfk_1"
-
-  add_foreign_key "users", ["mugshot_id"], "mugshots", ["id"], :name => "users_ibfk_1"
-
-  add_foreign_key "votes", ["category_id"], "categories", ["id"], :name => "votes_ibfk_1"
-  add_foreign_key "votes", ["nomination_id"], "nominations", ["id"], :name => "votes_ibfk_2"
-  add_foreign_key "votes", ["user_id"], "users", ["id"], :name => "votes_ibfk_3"
+  # add_foreign_key "mugshots", ["parent_id"], "mugshots", ["id"], :name => "mugshots_ibfk_1"
+  # 
+  # add_foreign_key "users", ["mugshot_id"], "mugshots", ["id"], :name => "users_ibfk_1"
+  # 
+  # add_foreign_key "votes", ["category_id"], "categories", ["id"], :name => "votes_ibfk_1"
+  # add_foreign_key "votes", ["nomination_id"], "nominations", ["id"], :name => "votes_ibfk_2"
+  # add_foreign_key "votes", ["user_id"], "users", ["id"], :name => "votes_ibfk_3"
 
 end
