@@ -43,8 +43,8 @@ class User < ActiveRecord::Base
   
   def validate
     begin
-      self.openid_url = OpenIdAuthentication.normalize_url(openid_url)
-    rescue OpenIdAuthentication::InvalidOpenId
+      self.openid_url = URI::GenericHacks.normalize_url(openid_url)
+    rescue URI::InvalidURIError
       errors.add("openid_url", "is invalid")
     end
   end

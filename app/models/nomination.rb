@@ -24,9 +24,9 @@ class Nomination < ActiveRecord::Base
   
   def validate
     begin
-      self.site_url = OpenIdAuthentication.normalize_url(site_url)
+      self.site_url = URI::GenericHacks.normalize_url(self.site_url)
       self.site_url = site_url_without_www
-    rescue OpenIdAuthentication::InvalidOpenId
+    rescue URI::InvalidURIError
       errors.add("site_url", "appears to be invalid. It should be a url like http://www.google.com")
     end
   end
