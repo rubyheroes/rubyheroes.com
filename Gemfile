@@ -4,15 +4,15 @@ source 'http://gemcutter.org'
 
 gem "rails", "2.3.5"
 gem "haml"
-gem "ruby-openid"
-gem "rack-openid", :require=> "rack/openid"
 
-gem "aws-s3", :require => "aws/s3"
-gem "attachment_fu"
+# gem "ruby-openid"
+# gem "rack-openid", :require=> "rack/openid"
+
+# gem "aws-s3", :require => "aws/s3"
+# gem "attachment_fu"
 # gem "restful_authentication"
 # gem "stripper"
 # gem "squirrel"
-
 
 
 ## Bundle edge rails:

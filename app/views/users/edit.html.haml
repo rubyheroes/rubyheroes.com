@@ -7,7 +7,6 @@
     = image_tag @user.mugshot.public_filename
     = @user.name
   = error_messages_for :user
-  = error_messages_for :mugshot, :object => @user.mugshot
   - form_for(@user, :html => { :multipart => true }) do |form|
     = render :partial => "users/shared/form", :object => form
     .buttons.wrapper
