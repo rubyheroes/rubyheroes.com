@@ -1,34 +1,32 @@
--form_for :nomination, :url=>new_nomination_path, :method=>:post do |form|
-  = form.text_field :url
-  = form.submit "Nominate"
-#about
-  :markdown
-    ### What is this about? ###
+%section#vote
+  -form_for :nomination, :url=>new_nomination_path, :method=>:post do |form|
+    = form.text_field :url
+    = form.submit "Nominate"
+%section#about
+  .unsemantic-div
+    :markdown
+      ### What is this about? ###
     
-    There are many people in the Ruby/Rails world who contribute to our community and rarely receive any recognition or payment for their work.
+      There are many people in the Ruby/Rails world who contribute to our community and rarely receive any recognition or payment for their work.
     
-    They create educational content, develop plugins &amp; gems, contribute to open source projects, and even put on events which help educate and make our lives as developers easier.
+      They create educational content, develop plugins &amp; gems, contribute to open source projects, and even put on events which help educate and make our lives as developers easier.
     
-    Ruby Heroes was created to show some gratitude and give these people the recognition they deserve. Hopefully the type of recognition that keeps them doing what they're doing, and continuing to make our community stronger.
+      Ruby Heroes was created to show some gratitude and give these people the recognition they deserve. Hopefully the type of recognition that keeps them doing what they're doing, and continuing to make our community stronger.
 
-    Based on the nominations you give here, [the previous Ruby Heroes](http://weblog.rubyonrails.org/2009/6/12/community-highlights-ruby-heroes") will pick 6 people who will receive a Ruby Hero Award at [Railsconf](<http://en.oreilly.com/rails2010/) this year.
-#reasons
+      Based on the nominations you give here, [the previous Ruby Heroes](http://weblog.rubyonrails.org/2009/6/12/community-highlights-ruby-heroes") will pick 6 people who will receive a Ruby Hero Award at [Railsconf](<http://en.oreilly.com/rails2010/) this year.
+%aside
+  %section#reasons
+    :markdown
+      ### Reward what? ###
+    
+      + educational content &amp; tutorials
+      + contribution to a useful open source project
+      + help organizing educational events
+      + free support on mailing lists / IRC
+      + well deserved recognition
+%section#spread
   :markdown
-    ### Why nominate someone? ###
+    ### Spread the word ###
     
-    + They produce educational content / tutorials
-    + They contribute to a useful open source project
-    + They help organize educational events
-    + They give free support on the mailing list / IRC
-    + They don't get the recognition they deserve
-#spread
-  :markdown
-    ### Do your part to spread the word ###
+    Pay it forward and [talk about us on Twitter](http://twitter.com/home?status=Currently%20reading%20http://rubyheroes.heroku.com/ title="Click to share this post on Twitter")
     
-    Pay it forward and post a blog badge to your website to encourage others to show their gratitude.
-    
-    ![Ruby Heroes](/images/rubyhero_button_small.png)
-    
-    HTML Code: (click to copy and paste)
-    
-    <textarea rows="3" cols="43" name="none" onclick="this.select();"><a href="http://www.RubyHeroes.com" title="Ruby Heroes"><img alt="Ruby Heroes" src="http://rubyheroes.morphexchange.com/images/rubyhero_button_small.png" /></a></textarea>
