@@ -1,53 +1,34 @@
-- content_for :subheader, "Nominate a Ruby Hero!"
-.nominate_form
-  .box.noPadding
-    %h4 What is the url of the person to nominate?
-    .small
-      (you will be asked to fill out a larger form on the next page)
-    - form_remote_tag :url => similar_nominations_search_path do
-      = text_field_tag :url
-      = observe_field :url, :frequency => 0.25, :function => "$('Nominate').update('Nominate ' + element.value); $('site_url').value = element.value; element.up('form').request();"
-    = render :partial => "similar_nominations"
-    - form_tag new_nomination_path do
-      = hidden_field_tag :site_url
-      .wrapper
-        - button_tag :id => "Nominate", :class => "button positive" do
-          = "Nominate"
-  .box.noPadding
-    %h4 What is this about?
-    %p 
-      There are many people in the Ruby/Rails world who contribute to our community and rarely receive any recognition or payment for their work.
-    %p
-      They create educational content, develop plugins & gems, contribute to open source projects, and even put on events which help educate and make our lives as developers easier.
-    %p
-      Ruby Heroes was created to show some gratitude and give these people the recognition they deserve. Hopefully the type of recognition that keeps them doing what they're doing, and continuing to make our community stronger.
-    %p 
-      Based on the nominations you give here,
-      = link_to "the previous Ruby Heroes", "http://weblog.rubyonrails.org/2009/6/12/community-highlights-ruby-heroes"
-      will pick 6 people who will receive a Ruby Hero Award at 
-      = link_to "Railsconf", "http://en.oreilly.com/rails2010/"
-      this year.
-.reasons_to_nominate
-  %p
-    %strong 
-      Reasons to nominate someone
-    %ul
-      %li They produce educational content / tutorials
-      %li They contribute to a useful open source project
-      %li They help organize educational events
-      %li They give free support on the mailing list / IRC
-      %li They don't get the recognition they deserve
-.spread_the_word
-  %p
-    %strong 
-      Do your part to spread the word
-  %p
-    Pay it forward and post a blog badge to your website to encourage others to show their gratitude.  
-  %p
-    = image_tag "rubyhero_button_small.png", :alt => "Ruby Heroes"
-  %p
-    Html Code: (click to copy and paste)
-    :plain
-      <textarea rows="3" cols="43" name="none" onclick="this.select();"><a href="http://www.RubyHeroes.com" title="Ruby Heroes"><img alt="Ruby Heroes" src="http://rubyheroes.morphexchange.com/images/rubyhero_button_small.png" /></a></textarea>
-%script
-  $('url').focus();
+-form_for :nomination, :url=>new_nomination_path, :method=>:post do |form|
+  = form.text_field :url
+  = form.submit "Nominate"
+#about
+  :markdown
+    ### What is this about? ###
+    
+    There are many people in the Ruby/Rails world who contribute to our community and rarely receive any recognition or payment for their work.
+    
+    They create educational content, develop plugins &amp; gems, contribute to open source projects, and even put on events which help educate and make our lives as developers easier.
+    
+    Ruby Heroes was created to show some gratitude and give these people the recognition they deserve. Hopefully the type of recognition that keeps them doing what they're doing, and continuing to make our community stronger.
+
+    Based on the nominations you give here, [the previous Ruby Heroes](http://weblog.rubyonrails.org/2009/6/12/community-highlights-ruby-heroes") will pick 6 people who will receive a Ruby Hero Award at [Railsconf](<http://en.oreilly.com/rails2010/) this year.
+#reasons
+  :markdown
+    ### Why nominate someone? ###
+    
+    + They produce educational content / tutorials
+    + They contribute to a useful open source project
+    + They help organize educational events
+    + They give free support on the mailing list / IRC
+    + They don't get the recognition they deserve
+#spread
+  :markdown
+    ### Do your part to spread the word ###
+    
+    Pay it forward and post a blog badge to your website to encourage others to show their gratitude.
+    
+    ![Ruby Heroes](/images/rubyhero_button_small.png)
+    
+    HTML Code: (click to copy and paste)
+    
+    <textarea rows="3" cols="43" name="none" onclick="this.select();"><a href="http://www.RubyHeroes.com" title="Ruby Heroes"><img alt="Ruby Heroes" src="http://rubyheroes.morphexchange.com/images/rubyhero_button_small.png" /></a></textarea>

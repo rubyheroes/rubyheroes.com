@@ -3,22 +3,17 @@
   %head
     %meta{ "http-equiv" => "content-type", :content => "text/html;charset=UTF-8" }
     %title Ruby Hero Awards
-    = stylesheet_link_tag "boilerplate/screen"
-    = stylesheet_link_tag "blueprint/plugins/buttons/buttons"
-    = stylesheet_link_tag "application"
-    = javascript_include_tag :defaults
+    = stylesheet_link_tag 'application'
   %body{ :class => "#{controller.controller_name} #{controller.controller_name}-#{controller.action_name}" }
-    #Header.wrapper
-      #UserInfo
-        = render :partial => "shared/user_info"
+    #header
       %h1
-        = link_to image_tag("rubyhero_title.png"), "/"
-    #Subheader
+        = link_to "Ruby Hero<span>Awards</span>", "/"
+    #subheader
       = yield :subheader
     = render :partial => "shared/messages"
-    #Content.wrapper
+    #content
       = yield
-    #Footer
+    #footer
       = link_to image_tag("webbynode.png", :align => "right"), 'http://www.webbynode.com'
       Ruby Heroes is produced by 
       = link_to("Rails Envy", "http://www.RailsEnvy.com") + ","

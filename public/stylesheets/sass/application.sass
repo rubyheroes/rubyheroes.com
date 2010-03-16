@@ -1,199 +1,110 @@
-body
-  background-color: #96B9D2
-  margin: 15px
-  width: 800px
-  
-body.nominations,
-body.users
-  width: 95%
-
-fieldset
-  border: none
-
-fieldset td
-  vertical-align: middle
-
-input[type="file"],
-input[type="text"],
-input[type="password"],
-select,
-textarea
-  border: 1px solid #6F7794
-  font-size: 100%
-
-input[type="file"],
-input[type="text"],
-input[type="password"],
-label,
-textarea
-  padding: 0.2em
-
-td
-  border-bottom: none
-
-#Content
-  background-color: White
-  padding: 15px 20px
-
-#Error
-  background-color: Pink
-  color: DarkRed
-  font-size: 1.6em
-  text-align: center
-  
-#Footer
-  text-align: center
-  padding: 10px 20px
-  
-#Header
-  color: White
-  
-#Header a
-  color: White
-  
-#Header h1
-  float: left
-  width: 486px
-  
-#Home
-  background-color: #96B9D2
-  text-align: center
-
-#Messages
-  background-color: White
-  padding: 15px 20px 0 20px
-
-#Notice
-  background-color: LightGreen
-  color: Green
-  font-size: 1.6em
-  text-align: center
-  
-#SimilarNominations
-  margin-top: 20px
-
-#SimilarNominations ul
-  list-style-type: none
-
-#SimilarNominations ul li a
-  float: left
-
-#Subheader
-  background-color: #4F89B3
-  border-bottom: solid 1px DarkRed
-  color: DarkRed
-  font-size: 1.8em
-  font-weight: bold
-  padding: 0.3em 20px
-  
-#Tabs
-  padding-left: 20px
-  
-#Tabs a
-  color: #E6E6E6
-
-#Tabs li
-  background-color: #26436F
-  float: left
-  font-size: 1.1em
-  font-weight: bold
-  margin-left: 5px
-  padding: 6px 8px 2px 8px
-  
-#Tabs ul
-  list-style-type: none
+*
   margin: 0
+  padding: 0
+  list-style: none
+  text-decoration: none
 
-#UserInfo
-  float: right
-  text-align: right
-  color: #01337C
-  width: 410px
-  
-.box
-  border: solid 6px #96B9D2
-  margin-bottom: 15px
-  padding: 12px
-  
-.noPadding
-  padding: 0px
 
-.box h1
-  color: DarkRed
+html
+  font: 62.5% Helvetica, Arial, sans-serif
+
+
+body
+  font-size: 1.3em
+  margin: 1em auto
+  width: 760px
+
+
+h1
+  display: block
+  width: 750px
+  text-align: center
+  font-size: 8em
+  margin: 0 auto -20px
+  text-transform: uppercase
+  letter-spacing: -0.1em
+
+
+h2
+  margin-left: 0
+  font: 4em Gill Sans Light
+  letter-spacing: 0.1em
+  text-align: center
+  font-weight: normal
+  text-transform: uppercase
+
+
+h3
   font-size: 2em
+  margin: 1em 0 .7em
+  letter-spacing: 0.05em
 
-.categories                       #CategoriesTab,
-.home                             #HomeTab,
-.nominations                      #NominationsTab,
-.nominations-new                  #NewNominationTab,
-.similar_nominations_searches-new #NewNominationTab,
-.users                            #UsersTab
-  background-color: #4F89B3
 
-.categories                       #CategoriesTab a,
-.home                             #HomeTab a,
-.nominations                      #NominationsTab a,
-.nominations-new                  #NewNominationTab a,
-.similar_nominations_searches-new #NewNominationTab a,
-.users                            #UsersTab a
-  color: DarkRed
-  
-.nominations-new  #NominationsTab
-  background-color: #26436F
-  
-.nominations-new  #NominationsTab a
-  color: #E6E6E6
-  
-.home-index #Content
-  background-color: #96B9D2
-  padding: 40px
-  
-.home-index #Subheader
-  display: none
-  
-.model-summary
-  width: 200px  
+a
+  &:link, &:visited
+    color: inherit
 
-.model-details
-  margin-left: 200px
-  
-.model-details td a
-  padding-right: 8px
-  
-.model-details td a img
-  vertical-align: middle
 
-.nominate_form
+section
+  width: 100%
+  padding: 30px
+  background: #fff7e5
+  border: 1px solid rgba(0,0,0,.5)
+  overflow: auto
+
+
+p
+  margin-bottom: 1em
+  font-size: 1.2em
+  letter-spacing: 0.06em
+  line-height: 1.5
+
+
+#about
+  width: 360px
+  margin: 0 20px 0 0
   float: left
+
+
+aside
+  width: 320px
+  padding: 0 30px 20px
+  float: left
+  background: #f2e5c2
+
+
+#similar
+  text-align: center
+  margin: 0 0 10px -350px
+
+
+#reasons ul li
+  letter-spacing: .06em
+  font-size: 1.1em
+  line-height: 1.5
+  list-style: disc inside
+
+
+#spread
+  clear: right
+
+
+input#url
+  display: block
+  margin: 1em auto 1em 80px
   width: 400px
-  
-.nominate_form .box
-  border: none
-  
-.nominate_form .small
-  margin-top: -20px
+  padding: 4px 5px
 
-.reasons_to_nominate
-  background-color: #96B9D2
-  margin-left: 425px
-  padding: 10px
-  width: 325px
 
-.spread_the_word
-  background-color: #96B9D2
-  margin: 30px 425px
-  padding: 10px
-  width: 325px
+button#nominate
+  margin: -63px 0 1em 510px
+  display: block
+  padding: 4px 10px
+  font-size: 1.4em
 
-.spread_the_word p
-.reasons_to_nominate p
-  margin: 0pt 0pt 1em
 
-.spread_the_word textarea
-  font-size: 10px
-
-.similar_nominations_searches-new #url
-  width: 250px
-  
-#Footer img
-  border: 1px solid #4F89B3
+#footer
+  margin: 0 auto
+  width: 750px
+  margin: 1em 10px
+  font-size: 1em

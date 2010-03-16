@@ -3,9 +3,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :panel
   map.resource :similar_nominations_search
   
-  # Unused routes
-  # map.resources :categories
-  # map.resources :mugshots
+  map.resources :categories
+  map.resources :mugshots
   
   map.resources :nominations
   map.resources :nomination_sites
