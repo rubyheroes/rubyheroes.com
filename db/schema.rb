@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 14) do
+ActiveRecord::Schema.define(:version => 20100317203337) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -24,16 +24,6 @@ ActiveRecord::Schema.define(:version => 14) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "mugshots", :force => true do |t|
-    t.integer "parent_id"
-    t.string  "content_type"
-    t.string  "filename"
-    t.string  "thumbnail"
-    t.integer "size"
-    t.integer "width"
-    t.integer "height"
   end
 
   create_table "nominations", :force => true do |t|
@@ -77,7 +67,6 @@ ActiveRecord::Schema.define(:version => 14) do
     t.datetime "updated_at"
     t.string   "openid_url"
     t.string   "name"
-    t.integer  "mugshot_id"
   end
 
   create_table "votes", :force => true do |t|
