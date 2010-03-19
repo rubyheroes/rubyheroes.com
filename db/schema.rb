@@ -9,22 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100317203337) do
-
-  create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "emails", :force => true do |t|
-    t.string   "site_url"
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20100319050414) do
 
   create_table "nominations", :force => true do |t|
     t.string "nominee",         :null => false
@@ -34,45 +19,6 @@ ActiveRecord::Schema.define(:version => 20100317203337) do
     t.string "site_url",        :null => false
     t.text   "testimonial",     :null => false
     t.string "site_subdomain"
-  end
-
-  create_table "open_id_authentication_associations", :force => true do |t|
-    t.binary  "server_url"
-    t.string  "handle"
-    t.binary  "secret"
-    t.integer "issued"
-    t.integer "lifetime"
-    t.string  "assoc_type"
-  end
-
-  create_table "open_id_authentication_nonces", :force => true do |t|
-    t.integer "timestamp",  :null => false
-    t.string  "server_url"
-    t.string  "salt",       :null => false
-  end
-
-  create_table "sessions", :force => true do |t|
-    t.string   "session_id", :null => false
-    t.text     "data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
-  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
-
-  create_table "users", :force => true do |t|
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "openid_url"
-    t.string   "name"
-  end
-
-  create_table "votes", :force => true do |t|
-    t.integer "category_id",   :null => false
-    t.integer "nomination_id", :null => false
-    t.integer "user_id",       :null => false
   end
 
 end
