@@ -10,6 +10,8 @@ gem "rails", "2.3.5"
   gem "haml"
 # Markdown filter.
   gem "rdiscount"
+# Formtastic: A Semantic Form Helper
+  gem "formtastic"
 
 
 # Only need sqlite3 on dev environments, Heroku uses Postgres
