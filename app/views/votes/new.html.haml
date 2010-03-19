@@ -1,8 +1,0 @@
-- content_for :subheader, "Vote!"
-.box
-  = error_messages_for :vote
-  - form_for(@vote) do |form|
-    = render :partial => "votes/shared/form", :object => form
-    .buttons.wrapper
-      = button_to_save "Submit My Nomination!"
-      = link_to_cancel "/"

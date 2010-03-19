@@ -1,6 +1,0 @@
-- content_for :subheader, "My votes"
-.box
-  %p= "You have voted for #{@user.votes.count} out of #{Category.count} categories."
-  %ul
-    - Category.find(:all, :order => "name").each do |category|
-      %li= category.name

@@ -1,1 +1,0 @@
-page.replace "SimilarNominations", :partial => "similar_nominations"
