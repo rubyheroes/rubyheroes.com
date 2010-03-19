@@ -3,19 +3,18 @@
     %li= render :partial => 'shared/hero_portrait', :locals => {:name=>"Yehuda Katz",:year=>"2009",:image_source=>"Yehuda.jpg"}
     %li= render :partial => 'shared/hero_portrait', :locals => {:name=>"Evan Weaver",:year=>"2009",:image_source=>"Evan.jpg"}
 %section#vote
-  -form_for :nomination, :url=>new_nomination_path, :method=>:post do |form|
+  -form_for :site, :url=>new_nomination_path, :method=>:get do |form|
     %p What is the website or GitHub URL of the person you want to nominate?
     %div
-      %label(for="nomination_url") http://
+      %label(for="site_url") http://
       = form.text_field :url, :value=>"domain.com"
     %h2 Do you see a match?
-    %ul.popdown
+    %ul#popdown
       %li <a href="#">Yes, nominate <strong>envylabs.com</strong></a>
       %li.last <a href="#">Yes, nominate <strong>envylabs.com/labs/</strong></a>
     %h2 No match?
-    %ul.popdown
+    %ul#popdown
       %li <a href="#">Nominate <strong>domain.com</strong></a>
-      %li.last <a href="#">Yes, nominate <strong>envylabs.com/labs/</strong></a>
     %button#nomination_submit.button.positive{:type=>"submit",:name=>"commit"} Nominate
 %section#about
   .unsemantic-div
