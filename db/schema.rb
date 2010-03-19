@@ -9,16 +9,42 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100319050414) do
+ActiveRecord::Schema.define(:version => 20100319055050) do
+
+  create_table "heroes", :force => true do |t|
+    t.string   "name"
+    t.string   "avatar"
+    t.string   "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "nominations", :force => true do |t|
-    t.string "nominee",         :null => false
-    t.string "nominator_email", :null => false
-    t.string "nominator_name",  :null => false
-    t.string "site_name",       :null => false
-    t.string "site_url",        :null => false
-    t.text   "testimonial",     :null => false
-    t.string "site_subdomain"
+    t.string  "nominee",      :null => false
+    t.text    "testimonial",  :null => false
+    t.integer "nominator_id"
+    t.integer "site_id"
+  end
+
+  create_table "nominators", :force => true do |t|
+    t.string   "email"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sites", :force => true do |t|
+    t.string   "url"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "urls", :force => true do |t|
+    t.string   "domain"
+    t.string   "path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
