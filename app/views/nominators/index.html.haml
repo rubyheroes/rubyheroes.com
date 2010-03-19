@@ -1,0 +1,15 @@
+- title "Nominators"
+
+%table
+  %tr
+    %th Email
+    %th Name
+  - for nominator in @nominators
+    %tr
+      %td= h nominator.email
+      %td= h nominator.name
+      %td= link_to 'Show', nominator
+      %td= link_to 'Edit', edit_nominator_path(nominator)
+      %td= link_to 'Destroy', nominator, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Nominator", new_nominator_path

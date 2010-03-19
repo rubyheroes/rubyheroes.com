@@ -1,4 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :sites
+
+  map.resources :heroes
+
+  map.resources :heros
+
+  map.resources :urls
+
+  map.resources :nominators
+
+  map.resources :nominators
+
 
   map.resource :similar_nominations_search
 

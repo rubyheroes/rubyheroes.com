@@ -1,0 +1,18 @@
+- title "Hero"
+
+%p
+  %strong Name:
+  =h @hero.name
+%p
+  %strong Avatar:
+  =h @hero.avatar
+%p
+  %strong Year:
+  =h @hero.year
+
+%p
+  = link_to "Edit", edit_hero_path(@hero)
+  |
+  = link_to "Destroy", @hero, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", heroes_path

@@ -1,0 +1,17 @@
+- title "Heroes"
+
+%table
+  %tr
+    %th Name
+    %th Avatar
+    %th Year
+  - for hero in @heroes
+    %tr
+      %td= h hero.name
+      %td= h hero.avatar
+      %td= h hero.year
+      %td= link_to 'Show', hero
+      %td= link_to 'Edit', edit_hero_path(hero)
+      %td= link_to 'Destroy', hero, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Hero", new_hero_path

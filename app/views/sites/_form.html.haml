@@ -1,0 +1,12 @@
+- form_for @site do |f|
+  = f.error_messages
+  %p
+    = f.label :url
+    %br
+    = f.text_field :url
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.submit "Submit"

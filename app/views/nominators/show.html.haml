@@ -1,0 +1,15 @@
+- title "Nominator"
+
+%p
+  %strong Email:
+  =h @nominator.email
+%p
+  %strong Name:
+  =h @nominator.name
+
+%p
+  = link_to "Edit", edit_nominator_path(@nominator)
+  |
+  = link_to "Destroy", @nominator, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", nominators_path

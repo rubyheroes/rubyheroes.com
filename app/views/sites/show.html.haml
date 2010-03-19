@@ -1,0 +1,15 @@
+- title "Site"
+
+%p
+  %strong Url:
+  =h @site.url
+%p
+  %strong Name:
+  =h @site.name
+
+%p
+  = link_to "Edit", edit_site_path(@site)
+  |
+  = link_to "Destroy", @site, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", sites_path
