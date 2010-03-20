@@ -10,7 +10,7 @@ jQuery(function($){
       } else {
         $('#yes_match').empty();
       }
-      $('#no_match a').text('Nominate <strong>' + input_text + '</strong>')
+      $('#no_match a').html('Nominate <strong>' + input_text + '</strong>')
     })
   ;
   
