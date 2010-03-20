@@ -21,5 +21,4 @@ class SimilarNominationsSearchesController < ApplicationController
       format.js
     end
   end
-  
 end

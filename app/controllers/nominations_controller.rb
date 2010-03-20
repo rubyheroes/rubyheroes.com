@@ -29,42 +29,32 @@ class NominationsController < ApplicationController
     end
   end
 
-  # GET /nominations/new
-  # GET /nominations/new.xml
   def new
-    redirect_to new_similar_nominations_search_path and return if params[:site_url].blank?
-    
     @nomination = Nomination.new
-    @nomination.site_url = params[:site_url]
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @nomination }
+    if params[:site_id]
+      @nomination.site = Site.find(params[:site_id])
+    elsif params[:site]
+      @nomination.site = Site.new
+      @nomination.site.url = params[:site][:url]
+    else
+      redirect_to root_path and return
     end
+    @nomination.nominator = Nominator.new
   end
 
-  # GET /nominations/1/edit
+  def create
+    @nomination = Nomination.new(params[:nomination])
+    if @nomination.save
+      flash[:notice] = "Thank you for your nomination."
+      redirect_to @nomination
+    else
+      render :action => 'new'
+    end
+  end
+  
   def edit
     @nomination = Nomination.find(params[:id])
   end
-
-  # POST /nominations
-  # POST /nominations.xml
-  def create
-    @nomination = Nomination.new(params[:nomination])
-
-    respond_to do |format|
-      if @nomination.save
-        flash[:notice] = 'Thank you for your nomination.'
-        format.html { redirect_to(nomination_url(@nomination)) }
-        format.xml  { render :xml => @nomination, :status => :created, :location => @nomination }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @nomination.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
   # PUT /nominations/1
   # PUT /nominations/1.xml
   def update
