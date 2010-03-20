@@ -1,4 +1,5 @@
 class HeroesController < ApplicationController
+  before_filter :authenticate
   def index
     @heroes = Hero.all
   end
