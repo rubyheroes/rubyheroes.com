@@ -1,3 +1,4 @@
+.DS_Store
 log/*.log
 tmp/**/*
 doc/*
@@ -9,4 +10,3 @@ public/system
 !doc/README_FOR_APP*
 !.keep
 *.swp
-.DS_Store
