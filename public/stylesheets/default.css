@@ -2,7 +2,7 @@
 
    Ruby Hero Awards
    CSS3 stylesheet 1.0
-   by Olivier Lacan 
+   by Olivier Lacan
    cleverCode LLC - 2010
    
 */
@@ -129,12 +129,12 @@ body {
 }
 /* ===== POPDOWN AUTOCOMPLETE FOR URL INPUT ===== */
 
-#popdown {
+.popdown {
 	margin: 5px auto 20px;
 	width: 60%;
 	padding: 0;
 }
-#popdown li {
+.popdown li {
 	margin: 0 -5px;
 	border-left: 1px solid rgba(255,255,255,.2);
 	border-right: 1px solid rgba(0,0,0,.2);
@@ -145,20 +145,20 @@ body {
 	background: -moz-linear-gradient(top, rgba(161,192,229,.3), rgba(122,159,204,.4));
 	background: -webkit-gradient(linear,left top,left bottom,from(rgba(161,192,229,.3)),to(rgba(122,159,204,.4)));
 }
-#popdown li:last-child {
+.popdown li:last-child {
 	border-radius: 0 0 5px 5px;
 	-moz-border-radius-bottomleft: 5px;
 	-moz-border-radius-bottomright: 5px;
 	-webkit-border-bottom-left-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
 }
-#popdown li:active {
+.popdown li:active {
 	background: #a1c0e5;
 	background: rgba(161,192,229,.5);
 	background: -moz-linear-gradient(top,rgba(122,159,204,.5),rgba(161,192,229,.5));
 	background: -webkit-gradient(linear,left top,left bottom,from(rgba(122,159,204,.5)),to(rgba(161,192,229,.5)));
 }
-#popdown li a {
+.popdown li a {
 	display: block;
 	width: 100%;
 	padding: 6px 0 5px;
@@ -171,10 +171,10 @@ body {
 	-moz-transition: all 200ms ease-in;
 	transition: all 200ms ease-in;
 }
-#popdown li a:hover, #popdown li a:active, #popdown li a:focus {
+.popdown li a:hover, .popdown li a:active, .popdown li a:focus {
 /*	color: #fff;
 	text-shadow: rgba(0,0,0,.9) 1px 1px 1px;*/
-	background: url("../img/arrow.png") no-repeat 98%;
+	background: url("../images/arrow.png") no-repeat 98%;
 }
 
 #content {
@@ -265,7 +265,7 @@ footer {
 h1 {
 	text-align: center;
 	text-indent: -9999px;
-	background: url("../img/header5.png") no-repeat;
+	background: url("../images/header5.png") no-repeat;
 	width: 715px;
 	height: 225px;
 	font-size: 8em;
@@ -341,7 +341,7 @@ p:last-child {
 	color: #111;
 	font-size: 1.2em;
 }
-input#nomination_url {
+input#site_url {
 	display: block;
 	margin: -10px auto 5px;
 	width: 60%;
@@ -458,7 +458,7 @@ input#url:focus {
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 }
-#nominate fieldset input:focus, #nominate fieldset textarea:focus {
+#nominate fieldset.inputs input:focus, #nominate fieldset.inputs textarea:focus {
 	background: #e5ecff;
 	color: #000;
 }
