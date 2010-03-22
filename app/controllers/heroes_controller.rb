@@ -2,6 +2,10 @@ class HeroesController < ApplicationController
   before_filter :authenticate
   def index
     @heroes = Hero.all
+    respond_to do |format|
+      format.html
+      format.json { render :json => @heroes.to_json(:only=>[:name,:avatar,:year]) } 
+    end
   end
   
   def show
