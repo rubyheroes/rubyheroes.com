@@ -62,6 +62,7 @@ body {
 #heroes li {
 	display: block;
 	width: 100px;
+	margin-bottom: 10px;
 	padding: 10px 11px 15px 9px;
 	background: #eee;
 	background: -moz-linear-gradient(left, #fff, #eee);
@@ -367,13 +368,12 @@ input#url:focus {
 
 /* ===== SUBMISSION FORM ===== */
 #nomination_submit {
-	margin-top: 70px;
-}
-
-#nomination_submit {
 	text-align: center;
 	margin: 0 auto;
 	display: block;
+	margin-top: 70px;
+	max-width: 860px;
+	overflow: hidden;
 	padding: 5px 50px;
 	font-size: 1.3em;
 	font-weight: bold;
