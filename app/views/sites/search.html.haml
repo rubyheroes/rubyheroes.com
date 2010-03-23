@@ -3,16 +3,12 @@
     %li= render :partial => 'heroes/portrait', :locals => {:name=>"Yehuda Katz",:year=>"2009",:image_source=>"Yehuda.jpg"}
     %li= render :partial => 'heroes/portrait', :locals => {:name=>"Evan Weaver",:year=>"2009",:image_source=>"Evan.jpg"}
 %section#vote
-  -form_for :site, :url=>new_nomination_path, :method=>:get do |form|
+  -form_for :site, :url=>new_nomination_path, :html=>{:method=>:get,:autocomplete=>"off"} do |form|
     %p What is the website or GitHub URL of the person you want to nominate?
     %div
       %label(for="site_url") http://
       = form.text_field :url
-    %h2 Do you see a match?
-    %ul#yes_match.popdown
-    %h2 No match?
-    %ul#no_match.popdown
-      %li <a href="#">Nominate <strong>domain.com</strong></a>
+    #yes_match
     %button#nomination_submit.button.positive{:type=>"submit",:name=>"commit"} Nominate
 %section#about
   .unsemantic-div
@@ -30,7 +26,7 @@
     :markdown
       ### Reward what? ###
       + educational content &amp; tutorials
-      + contribution to a useful open source project
+      + open source project contribution
       + help organizing educational events
       + free support on mailing lists / IRC
       + well deserved recognition

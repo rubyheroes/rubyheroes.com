@@ -30,16 +30,20 @@ class NominationsController < ApplicationController
   end
 
   def new
-    @nomination = Nomination.new
-    if params[:site_id]
-      @nomination.site = Site.find(params[:site_id])
-    elsif params[:site]
-      @nomination.site = Site.new
-      @nomination.site.url = params[:site][:url]
+    if cookies[:real_visit]
+      @nomination = Nomination.new
+      if params[:site_id]
+        @nomination.site = Site.find(params[:site_id])
+      elsif params[:site]
+        @nomination.site = Site.new
+        @nomination.site.url = params[:site][:url]
+      else
+        redirect_to root_path and return
+      end
+      @nomination.nominator = Nominator.new
     else
-      redirect_to root_path and return
+      redirect_to search_sites_path
     end
-    @nomination.nominator = Nominator.new
   end
 
   def create

@@ -332,6 +332,15 @@ p:last-child {
 	margin: -36px auto 0;
 	z-index: 3;
 }
+#vote div {
+  position: relative;
+}
+#vote label {
+  position: absolute;
+  top: 6px;
+  left: 170px;
+  z-index: 20;
+}
 /*#vote p {
 	text-align: center;
 	font-size: .9em;
@@ -345,10 +354,11 @@ input#site_url {
 	display: block;
 	margin: -10px auto 5px;
 	width: 60%;
-	padding: 4px 5px;
+	padding: 4px 5px 4px 35px;
 	font-size: 1em;
 	color: #999;
 	position: relative;
+	width: 479px;
 }
 input#url:focus {
 	background: #f2f6ff;

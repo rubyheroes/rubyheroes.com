@@ -1,2 +1,4 @@
-- @sites.each do |site|
-  %li= link_to "Yes, nominate <strong>#{site.url}</strong>", new_site_nomination_path(site)
+%h2 Do you see a match?
+%ul.popdown
+  - @sites.each do |site|
+    %li= link_to "Yes, nominate <strong>#{site.url}</strong>", new_site_nomination_path(site)
