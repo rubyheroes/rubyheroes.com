@@ -178,14 +178,14 @@ body {
 	background: url("../images/arrow.png") no-repeat 98%;
 }
 
-#content {
-	margin: 0 40px 0 0;
-}
 #about {
 	width: 60%;
 	margin: 0;
 	float: left;
 	clear: left;
+}
+#about p {
+	margin-right: 40px;
 }
 aside {
 	width: 40%;
@@ -369,9 +369,8 @@ input#url:focus {
 /* ===== SUBMISSION FORM ===== */
 #nomination_submit {
 	text-align: center;
-	margin: 0 auto;
+	margin: 20px auto 0;
 	display: block;
-	margin-top: 70px;
 	max-width: 860px;
 	overflow: hidden;
 	padding: 5px 50px;
@@ -422,6 +421,11 @@ input#url:focus {
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+}
+/* ==== SUCCESS PAGE ===== */
+.box {
+	clear: left;
+	margin-top: 50px;
 }
 #success h3 {
 	margin: 0 0 20px;
