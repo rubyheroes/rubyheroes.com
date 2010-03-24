@@ -446,23 +446,6 @@ input#url:focus {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
-/* ==== SUCCESS PAGE ===== */
-.box {
-	clear: left;
-	float: left;
-	margin-top: 50px;
-	width: 60%;
-}
-#success h3 {
-	margin: 0 0 20px;
-	padding: 0;
-}
-#success p a:visited {
-	color: #fff;
-}
-#success p a:hover, #success p a:focus {
-	color: #000;
-}
 #nominate fieldset label {
 	display: block;
 	font-size: 1.2em;
@@ -501,7 +484,7 @@ input#url:focus {
 	line-height: 1.3;
 }
 #nominate #nomination_testimonial_input p.inline-errors {
-	margin-top: -49px;
+	margin-top: -30px;
 }
 #nominate #nomination_testimonial_input p.inline-hints {
 	margin-top: -315px;
@@ -559,4 +542,34 @@ input#url:focus {
 	background: #2e4073;
 	background: -moz-linear-gradient(top, #2e4073, #3f568c, #456199);
 	background: -webkit-gradient(linear,left top,left bottom,from(#2e4073),to(#456199), color-stop(0.5, #3f568c));
+}
+
+/* ==== SUCCESS PAGE ===== */
+.box {
+	clear: left;
+	float: left;
+	margin-top: 50px;
+	width: 50%;
+}
+.box p {
+	margin: 0;
+}
+#spreadmini {
+	width: 50%;
+	margin-top: 59px;
+}
+#spreadmini img {
+	display: block;
+	margin: 0 auto 7px;
+	border: #000 solid 5px;
+}
+#success h3 {
+	margin: 0 0 20px;
+	padding: 0;
+}
+#success p a:visited {
+	color: #fff;
+}
+#success p a:hover, #success p a:focus {
+	color: #000;
 }
