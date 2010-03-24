@@ -75,6 +75,8 @@ body {
 	-moz-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 	-webkit-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 	-webkit-transition: 100ms ease-in;
+	-moz-transition: 100ms linear;
+	transition: 100ms linear;
 }
 #heroes li:first-child:hover, #heroes li:first-child:focus {
 	-webkit-transition: 100ms ease-in;
@@ -169,8 +171,8 @@ body {
 	background-position: 92%;
 	background-image: none;
 	-webkit-transition: all 100ms ease-in;
-	-moz-transition: all 200ms ease-in;
-	transition: all 200ms ease-in;
+	-moz-transition: all 100ms ease-in;
+	transition: all 100ms ease-in;
 }
 .popdown li a:hover, .popdown li a:active, .popdown li a:focus {
 /*	color: #fff;
@@ -180,7 +182,7 @@ body {
 
 #about {
 	width: 60%;
-	margin: 0;
+	margin: 0 0 1em 0;
 	float: left;
 	clear: left;
 }
@@ -190,7 +192,7 @@ body {
 aside {
 	width: 40%;
 	padding: 0;
-	margin: 25px 0 22px 0;
+	margin: 25px 0 37px 0;
 	padding: 0 0 0 0;
 	float: right;
 	color: #fff;
@@ -246,12 +248,27 @@ aside {
 	clear: right;
 	margin: 0;
 	font-size: .8em;
+
 }
 #spread img {
 	float: left;
 	background: #333;
-	height: 90px;
-	width: 40%;
+	margin: 10px 0 0;
+	border: 5px solid #fff;
+	box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
+	-moz-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
+	-webkit-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
+}
+#sponsor {
+	clear: both;
+}
+#sponsor p {
+	font-size: 1.2em;
+	margin-bottom: 2em;
+}
+#sponsor img {
+	float: left;
+	margin: 5px 20px 10px 0;
 }
 footer {
 	width: 100%;
@@ -330,7 +347,7 @@ p:last-child {
 /* ===== FORMS ===== */
 #vote {
 	display: block;
-	margin: -36px auto 0;
+	margin: -36px auto 1em;
 	z-index: 3;
 }
 #vote div {
@@ -444,16 +461,21 @@ input#url:focus {
 	text-shadow: rgba(0,0,0,.8) 0 1px 1px;
 }
 #nominate p.inline-errors {
-	float: right;
+
+	margin: -15px 390px 10px 0;
+	padding: 3px 10px 2px;
 	color: #d92b2b;
-	padding: 3px 10px 0;
+	text-align: right;
 	text-shadow: #000 0 0 5px;
 	letter-spacing: normal;
-	background: rgba(0,0,0,.7);
-	margin: -70px 390px 0 0;
 	line-height: normal;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-weight: bold;
+	background: #222;
+	border-radius: 0 0 5px 5px;
+	-webkit-transition: all 200ms linear;
+	-moz-transition: all 200ms linear;
+	transition: all 200ms linear;
 }
 #nominate p.inline-hints {
 	width: 45%;
