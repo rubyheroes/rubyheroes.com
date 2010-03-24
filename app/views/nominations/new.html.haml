@@ -2,10 +2,12 @@
   - semantic_form_for @nomination do |form|
     - form.inputs do
       - form.semantic_fields_for :site do |site|
+        = site.input :id, :as => :hidden
         = site.input :url, :label => "What is the url?"
         = site.input :name, :label => "What is the title of the site?"
       = form.input :nominee, :label => "Who is the nominee?", :hint => "This can be an individual or group."
       - form.semantic_fields_for :nominator do |nominator|
+        = nominator.input :id, :as => :hidden
         = nominator.input :name, :label => "What is your name?"
         = nominator.input :email, :label => "What is your email address?", :hint => "We'll never sell."
       = form.input :testimonial, :label => "Testify!", :hint => "Use at least 25 characters to tell us why your nominee is a Ruby Hero."
