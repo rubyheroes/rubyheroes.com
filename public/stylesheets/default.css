@@ -13,6 +13,9 @@
 	list-style: none;
 	text-decoration: none;
 }
+textarea {
+	resize: none;
+}
 // Getting rid of Mozilla's stupid dotted line inside active buttons
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -278,11 +281,15 @@ aside {
 	margin: 5px 20px 10px 0;
 }
 footer {
-	width: 100%;
+	width: 80%;
 	margin: 1.5em auto 2em;
 	font-size: 1em;
 	text-align: center;
-	color: #222;
+	color: #999;
+	background: #333;
+}
+footer img {
+	vertical-align: bottom;
 }
 
 
@@ -458,12 +465,13 @@ input#url:focus {
 	padding: 4px 10px 5px;
 	color: #d92b2b;
 	text-align: right;
-	text-shadow: #000 0 0 5px;
+	text-shadow: #000 1px 1px 0;
 	letter-spacing: normal;
 	line-height: normal;
 	font-size: 1em;
 	font-weight: bold;
-	background: #222;
+	background: #111;
+	background: rgba(0,0,0,.6);
 	border-radius: 0 0 5px 5px;
 	-webkit-border-bottom-left-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
@@ -484,12 +492,12 @@ input#url:focus {
 	line-height: 1.3;
 }
 #nominate #nomination_testimonial_input p.inline-errors {
-	margin-top: -30px;
+	margin-top: -15px;
 }
 #nominate #nomination_testimonial_input p.inline-hints {
-	margin-top: -315px;
+	margin-top: -115px;
 }
-#nominate fieldset em.textarea {
+#nominate fieldset textarea {
 	margin-top: -100px;
 	margin-bottom: 10px;
 	height: 100px;

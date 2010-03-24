@@ -10,7 +10,7 @@
     %meta{ :name => 'apple-mobile-web-app-status-bar-style', :content => 'black' }
     %link{ :rel => 'apple-touch-icon-precomposed',:href => '/images/homescreen.png' }
     %link{ :rel => 'apple-touch-startup-image',:href => '/images/startup.png' }
-    %link{ :rel => 'shortcut icon', :type => 'image/png', :href => 'images/favicon.png' }
+    %link{ :rel => 'shortcut icon', :type => 'image/png', :href => '/images/favicon.png' }
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
     = javascript_include_tag 'application'
     /[if IE]
@@ -25,8 +25,8 @@
       = yield
     %footer
       Ruby Heroes is produced by 
-      = link_to("Rails Envy", "http://www.RailsEnvy.com") + ","
+      = link_to image_tag("/images/envylabs.png"), "http://www.envylabs.com"
       designed by
-      = link_to("cleverCode", "http://clevercode.net") + ","
+      = link_to image_tag("/images/clevercode.png"), "http://www.clevercode.net"
       and graciously hosted at 
-      = link_to("Heroku", "http://www.heroku.com.")
+      = link_to image_tag("/images/heroku.png"), "http://www.heroku.com"
