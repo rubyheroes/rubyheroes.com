@@ -4,10 +4,10 @@
       - form.semantic_fields_for :site do |site|
         = site.input :url, :label => "What is the url?"
         = site.input :name, :label => "What is the title of the site?"
-      = form.input :nominee, :label => "Who is the nominee?", :hint => "This can be an individual or group."
+      = form.input :nominee, :label => "Who is the nominee? ", :hint => "This can be an individual or group."
       - form.semantic_fields_for :nominator do |nominator|
-        = nominator.input :name, :label => "What is your name?"
-        = nominator.input :email, :label => "What is your email address?", :hint => "We'll never sell."
-      = form.input :testimonial, :label => "Testify!", :hint => "Use at least 25 characters to tell us why your nominee is a Ruby Hero."
+        = nominator.input :name, :label => "What is your name? "
+        = nominator.input :email, :label => "What is your email address? ", :hint => "We'll never sell."
+      = form.input :testimonial, :label => "Testify! ", :hint => "Use at least 25 characters to tell us why your nominee is a Ruby Hero."
       .buttons
         %button.formbutton{:name=>"commit", :type=>"submit"} Submit Nomination
