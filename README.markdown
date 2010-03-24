@@ -10,7 +10,7 @@ Nomination Site & Application
 
 ###Dependencies###
 + Rails v2.3.5
-+ Haml v2.2
++ Haml v2.2.22
 + Formtastic v0.9.4
 + RDiscount v1.6.3
 
