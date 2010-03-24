@@ -8,16 +8,21 @@
   %p
     = link_to("Nominate someone else", "/")
   %p
-.spread_the_word
+#spreadmini
   %p
-    %strong 
-      Do your part to spread the word
+    %h3
+      Spread the word
   %p
     Pay it forward and  
     = link_to("talk about us on Twitter", "http://twitter.com/home?status=Currently%20reading%20http://rubyheroes.heroku.com/%20title=") + " or post a blog badge to your website to encourage others to show their gratitude."
-    = image_tag "rubyhero_button_small.png", :alt => "Ruby Heroes"
-  %p
+    = image_tag "/images/banner_small.png", :alt => "Ruby Heroes"
     HTML Code: (click to copy and paste)
     :plain
-      <textarea rows="3" cols="43" name="none" onclick="this.select();"><a href="http://www.RubyHeroes.com" title="Ruby Heroes"><img alt="Ruby Heroes" src="http://rubyheroes.morphexchange.com/images/rubyhero_button_small.png" /></a></textarea>
+      <textarea rows="3" name="none" onclick="this.select();"><a href="http://www.RubyHeroes.com" title="Ruby Heroes"><img alt="Ruby Heroes" src="http://rubyheroes.morphexchange.com/images/rubyhero_button_small.png" /></a></textarea>
+%section#sponsor
+  :markdown
+    ### Sponsor ###
+    ![O'Reilly](/images/oreilly.png)
+    The Ruby Hero Awards are graciously sponsored this year by [O'Reilly](http://www.oreilly.com/ "O'Reilly").  
+    O'Reilly spreads the knowledge of innovators through technology books, online services, and tech conferences (including Railsconf). [Railsconf](http://en.oreilly.com/rails2010 "Railsconf 2010") is taking place this year June 7-10 in Baltimore, Maryland, where the winners of the Ruby Hero Awards will be announced live on stage. [Registrations are now open](http://en.oreilly.com/rails2010 "Railsconf 2010") if you'd like to attend.
   %script
