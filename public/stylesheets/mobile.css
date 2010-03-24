@@ -333,6 +333,9 @@ input#url:focus {
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
 }
+#nominate fieldset textarea {
+	height: 100px;
+}
 #nominate fieldset input:focus, #nominate fieldset textarea:focus {
 	background: #e5ecff;
 	color: #000;
