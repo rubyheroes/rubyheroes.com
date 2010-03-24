@@ -9,7 +9,7 @@ class SitesController < ApplicationController
         render :action => "search_xhr", :layout => false
       end
     else
-      cookies[:real_visit] = true
+      session[:real_visit] = true
       @sites = []
     end
   end

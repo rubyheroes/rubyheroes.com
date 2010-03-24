@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.resources :heroes, :nominators
+  map.resources :heroes
   map.resources :nominations, :new => {:new => :any}
   map.resources :sites, :collection => {:search => :get}, :has_many=>:nominations
   

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100320191333) do
+ActiveRecord::Schema.define(:version => 20100324103815) do
 
   create_table "heroes", :force => true do |t|
     t.string   "name"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20100320191333) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "sites", ["url"], :name => "index_sites_on_url"
 
   create_table "urls", :force => true do |t|
     t.string   "domain"

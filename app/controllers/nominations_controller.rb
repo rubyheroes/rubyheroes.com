@@ -1,54 +1,28 @@
 class NominationsController < ApplicationController
   before_filter :authenticate, :except => [:new, :create, :show]
-
-  # GET /nominations
-  # GET /nominations.xml
-  def index
-    redirect_to nomination_sites_path and return unless params[:site_url]
-
-    options = {
-      :order_by => "created_at",
-      :site_url => params[:site_url],
-      :skip_pagination => true }
-    @nominations = Nomination.search options
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @nominations }
-    end
-  end
-
-  # GET /nominations/1
-  # GET /nominations/1.xml
-  def show
-    @nomination = Nomination.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @nomination }
-    end
-  end
+  before_filter :session_check, :only => [:new, :create]
 
   def new
-    if cookies[:real_visit]
-      @nomination = Nomination.new
-      if params[:site_id]
-        @nomination.site = Site.find(params[:site_id])
-      elsif params[:site]
-        @nomination.site = Site.new
-        @nomination.site.url = params[:site][:url]
-      else
-        redirect_to root_path and return
-      end
-      @nomination.nominator = Nominator.new
+    @nomination = Nomination.new
+    @nomination.nominator = current_nominator
+    if params[:site_id]
+      @nomination.site = Site.find(params[:site_id])
+    elsif params[:site]
+      @nomination.site = Site.find_or_create_by_url(params[:site][:url])
     else
-      redirect_to search_sites_path
+      redirect_to root_path and return
     end
   end
 
   def create
-    @nomination = Nomination.new(params[:nomination])
+    @nomination = Nomination.new
+    @nomination.site = Site.find_or_create_by_id(params[:nomination][:site_attributes][:id])
+    @nomination.site = Site.find_or_create_by_url(params[:nomination][:site_attributes][:url]) if @nomination.site.new_record?
+    @nomination.nominator = current_nominator
+      # for some reason Nominator.find_or_create_by_email isn't working properly.
+    @nomination.update_attributes(params[:nomination])
     if @nomination.save
+      cookies[:nid] = @nomination.nominator_id
       flash[:notice] = "Thank you for your nomination."
       redirect_to @nomination
     else
@@ -56,36 +30,17 @@ class NominationsController < ApplicationController
     end
   end
   
-  def edit
-    @nomination = Nomination.find(params[:id])
+  # Just a simple precaution to keep users from
+  #  passing around urls like /sites/22/nominations/new
+  #  Possibly unneeded, but it sounds good.
+  def session_check
+    redirect_to search_sites_path unless session[:real_visit]
   end
-  # PUT /nominations/1
-  # PUT /nominations/1.xml
-  def update
-    @nomination = Nomination.find(params[:id])
-
-    respond_to do |format|
-      if @nomination.update_attributes(params[:nomination])
-        flash[:notice] = 'Nomination was saved'
-        format.html { redirect_to(edit_nomination_url(@nomination)) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @nomination.errors, :status => :unprocessable_entity }
-      end
+  
+  private
+    def current_nominator
+      return @current_nominator if defined?(@current_nominator)
+      return @current_nominator = Nominator.find(cookies[:nid]) if cookies[:nid]
+      @current_nominator = Nominator.new
     end
-  end
-
-  # DELETE /nominations/1
-  # DELETE /nominations/1.xml
-  def destroy
-    @nomination = Nomination.find(params[:id])
-    @nomination.destroy
-
-    respond_to do |format|
-      flash[:notice] = 'Nomination was deleted'
-      format.html { redirect_to(nominations_url) }
-      format.xml  { head :ok }
-    end
-  end
 end

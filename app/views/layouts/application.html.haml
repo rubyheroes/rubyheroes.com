@@ -3,11 +3,11 @@
   %head
     %meta{ "http-equiv" => "content-type", :content => "text/html;charset=UTF-8" }
     %title Ruby Hero Awards
-    /= stylesheet_link_tag 'http://clevercode.net/dev/rh/assets/css/default.css'
-    = stylesheet_link_tag "default"
-    = stylesheet_link_tag "mobile", :media=>"screen and (max-device-width: 700px)"
-    %meta(name="viewport" id="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0")
-    %link(rel="apple-touch-icon" href="/images/homescreen.png")
+    = stylesheet_link_tag 'default'
+    = stylesheet_link_tag 'mobile', :media => 'screen and (max-device-width: 700px)'
+    %meta{ :name => 'viewport', :content => 'width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' }
+    %link{ :rel => 'apple-touch-icon-precomposed',:href => '/images/homescreen.png' }
+    %link{ :rel => 'shortcut icon', :type => 'image/png', :href => 'images/favicon.png' }
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
     = javascript_include_tag 'application'
     /[if IE]
