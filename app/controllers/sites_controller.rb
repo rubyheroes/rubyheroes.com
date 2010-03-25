@@ -11,7 +11,7 @@ class SitesController < ApplicationController
     else
       session[:real_visit] = true
       @sites = []
-      @heroes = [Hero.find(:random, :limit=>1),Hero.find(:random, :limit=>1)]
+      @heroes = [Hero.find(:random),Hero.find(:random)]
     end
   end
 
