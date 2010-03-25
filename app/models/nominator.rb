@@ -3,7 +3,7 @@ class Nominator < ActiveRecord::Base
   attr_accessible :email, :name
   validates_format_of :email,
     :with => /^([^\s]+)((?:[-a-z0-9]\.)[a-z]{2,})$/i,
-    :message => "We need a valid email address"
+    :message => "we need a valid email address"
   validates_presence_of :name,
-    :message => "We need to know your name"
+    :message => "we need to know your name"
 end
