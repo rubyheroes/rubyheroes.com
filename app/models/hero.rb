@@ -1,5 +1,5 @@
 class Hero < ActiveRecord::Base
-  attr_accessible :name, :avatar, :year
+  attr_accessible :name, :avatar, :year, :url
   def self.find(*args)
     if args.first.to_s == "random"
       ids = connection.select_all("SELECT id FROM "+table_name)
