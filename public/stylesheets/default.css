@@ -184,7 +184,7 @@ body {
 
 #about {
 	width: 60%;
-	margin: 0 0 1em 0;
+	margin: 0 0 2.5em 0;
 	float: left;
 	clear: left;
 }
@@ -248,13 +248,14 @@ aside {
 }
 #spread {
 	clear: right;
+	width: 100%;
 	margin: 0;
 	font-size: .8em;
 }
 #spread img {
-	float: left;
+	display: block;
 	background: #333;
-	margin: 10px 0 0;
+	margin: 10px auto 0;
 	border: 5px solid #fff;
 	box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 	-moz-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
@@ -265,7 +266,7 @@ aside {
 }
 #sponsor p {
 	font-size: 1.2em;
-	margin-bottom: 2em;
+	margin-bottom: 10px;
 }
 #sponsor img {
 	float: left;
@@ -362,7 +363,10 @@ p:last-child {
   position: absolute;
   top: 6px;
   left: 170px;
+  padding: 0;
+  margin: 0;
   z-index: 20;
+  font-size: 1.3em;
 }
 /*#vote p {
 	text-align: center;
@@ -376,10 +380,9 @@ p:last-child {
 input#site_url {
 	display: block;
 	margin: -10px auto 5px;
-	width: 60%;
-	padding: 4px 5px 4px 35px;
-	font-size: 1em;
-	color: #999;
+	padding: 0 5px 0 50px;
+	height: 25px;
+	font-size: 1.3em;
 	position: relative;
 	width: 479px;
 }
@@ -393,7 +396,7 @@ input#site_url:focus {
 	text-align: center;
 	margin: 20px auto 0;
 	display: block;
-	max-width: 860px;
+	max-width: 840px;
 	overflow: hidden;
 	padding: 5px 50px;
 	font-size: 1.3em;
@@ -429,6 +432,7 @@ input#site_url:focus {
 #nominate h3 {
 	margin: 0 0 20px;
 	padding: 0;
+	color: #fff;
 	text-shadow: rgba(0,0,0,.4) 2px 2px 1px;
 }
 #nominate fieldset, #success {
@@ -453,7 +457,7 @@ input#site_url:focus {
 }
 #nominate p.inline-errors {
 
-	margin: -20px 390px 20px 0;
+	margin: -20px 398px 20px 0;
 	padding: 4px 10px 5px;
 	color: #d92b2b;
 	text-align: right;
@@ -475,7 +479,7 @@ input#site_url:focus {
 	transition: all 200ms linear;
 }
 #nominate p.inline-hints {
-	width: 45%;
+	width: 47%;
 	float: right;
 	margin-top: -40px;
 	padding: 0 5px 0 0;
@@ -502,13 +506,13 @@ input#site_url:focus {
 	font-size: 1.2em;
 	display: block;
 	margin: 0 0 20px 0;
-	padding: 5px 4px;
+	padding: 5px 0;
+	text-indent: 7px;
 	border: none;
-	box-shadow: rgba(0,0,0,.6) -1px -1px 1px, rgba(255,255,255,.4) 1px 1px 0;
-	-moz-box-shadow: rgba(0,0,0,.6) -1px -1px 1px, rgba(255,255,255,.4) 1px 1px 0;
-	-webkit-box-shadow: rgba(0,0,0,.6) -1px -1px 1px, rgba(255,255,255,.4) 1px 1px 0;
+	box-shadow: rgba(0,0,0,.6) -1px -1px 0, rgba(255,255,255,.4) 1px 1px 0;
+	-moz-box-shadow: rgba(0,0,0,.6) -1px -1px 0, rgba(255,255,255,.4) 1px 1px 0;
+	-webkit-box-shadow: rgba(0,0,0,.6) -1px -1px 0, rgba(255,255,255,.4) 1px 1px 0;
 	background: #fcffe5;
-	color: #999;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -551,7 +555,7 @@ input#site_url:focus {
 #successbox {
 	clear: left;
 	float: left;
-	margin: 50px 0 20px;
+	margin: 50px 0 2.5em;
 	width: 50%;
 }
 #successbox h3 {
@@ -559,30 +563,30 @@ input#site_url:focus {
 	text-shadow: #000 1px 1px 0;
 }
 #successbox p {
-	margin: 0;
+	margin: 0 50px 0 0;	
 }
 #spreadmini {
 	clear: none;
-	width: 30%;
 	float: right;
-	width: 50%;
-	margin-top: 59px;
+	width: 48%;
+	margin: 59px 0 0 10px;
 	font-size: .8em;
 }
 #spreadmini textarea {
-	width: 80%;
+	width: 90%;
 	overflow-y: hidden;
+	overflow: hidden;
+	height: 80px;
 	margin: 10px 0 0;
 	padding: 7px 10px;
-	height: 70px;
-	font: .9em Monaco, Courrier, monospace;
+	font: 1em Monaco, Courrier, monospace;
 }
 #spreadmini textarea:focus {
 	background: #;
 }
 #spreadmini img {
 	display: block;
-	margin: 10px auto;
+	margin: 10px auto 20px;
 	border: #fff solid 5px;
 	box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 	-moz-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
@@ -593,15 +597,17 @@ input#site_url:focus {
 	font-size: .8em;
 }
 #sponsormini h3 {
-	margin-top: 20px;
+	margin: 20px 40px 10px 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(0,0,0,.5);
 }
 #sponsormini p {
 	font-size: 1.3em;
-	margin-right: 20px;
+	margin-right: 25px;
 }
 #sponsormini img {
 	float: left;
-	margin: 0 20px 5px 0;
+	margin: 4px 20px 10px 0;
 	height: 35px;
 }
 
