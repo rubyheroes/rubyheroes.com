@@ -14,5 +14,10 @@ jQuery(function($){
       return false;
     })
   ;
+  var heroes = $("#heroes");
+  var oheight = $("#y2008").appendTo(heroes);
+  var ohnine = $("#y2009").appendTo(heroes);
   
+  oheight.load("/heroes/year?year=2008");
+  ohnine.load("/heroes/year?year=2009");
 });
