@@ -45,14 +45,16 @@ body {
 	display: none;
 }
 /* ===== POPDOWN AUTOCOMPLETE FOR URL INPUT ===== */
-
-#popdown {
-	margin: 5px auto 20px;
-	width: 100%;
+#yes_match h2{
+	margin: 2px;
+}
+#yes_match ul {
+	margin: 2px 0 10px 7px;
+	width: 95%;
 	padding: 0;
 }
 #popdown li {
-	margin: 0 -5px;
+	margin: 0;
 	border-left: 1px solid rgba(255,255,255,.2);
 	border-right: 1px solid rgba(0,0,0,.2);
 	border-bottom: 1px solid rgba(0,0,0,.4);
@@ -73,13 +75,11 @@ body {
 	display: block;
 	width: 100%;
 	padding: 6px 0 5px;
-	text-indent: 10px;
 	font-weight: normal;
 	font-size: 1.1em;
 	background-position: 92%;
 	background-image: none;
 	-webkit-transition: all 100ms ease-in;
-	-moz-transition: all 200ms ease-in;
 	transition: all 200ms ease-in;
 }
 #popdown li a:hover, #popdown li a:active, #popdown li a:focus {
@@ -252,6 +252,8 @@ input#url:focus {
 	font-size: 1.3em;
 	font-weight: bold;
 	color: #fff;
+	max-width: 280px;
+	overflow: hidden;
 	text-shadow: #000 1px 1px 1px;
 	text-shadow: rgba(0,0,0,1) 1px 1px 1px;
 	border-radius: 5px;
@@ -269,7 +271,9 @@ input#url:focus {
 #nomination_submit:active {
 	background: -webkit-gradient(linear,left top,left bottom,from(#991f1f),to(#d92121));
 }
-
+#nomination_submit strong {
+	padding-right: 5px;
+}
 #nominate h3 {
 	margin: 0 0 20px;
 	padding: 0;

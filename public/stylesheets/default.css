@@ -572,9 +572,10 @@ input#site_url:focus {
 #spreadmini textarea {
 	width: 80%;
 	overflow-y: hidden;
-	margin: 10px 10%;
-	padding: 5px 7px;
-	font: .7em Monaco, Courrier, monospace;
+	margin: 10px 0 0;
+	padding: 7px 10px;
+	height: 70px;
+	font: .9em Monaco, Courrier, monospace;
 }
 #spreadmini textarea:focus {
 	background: #;
@@ -595,13 +596,13 @@ input#site_url:focus {
 	margin-top: 20px;
 }
 #sponsormini p {
-	font-size: 1.2em;
+	font-size: 1.3em;
 	margin-right: 20px;
 }
 #sponsormini img {
 	float: left;
-	margin: 0 10px 0 0;
-	height: 30px;
+	margin: 0 20px 5px 0;
+	height: 35px;
 }
 
 #success h3 {
