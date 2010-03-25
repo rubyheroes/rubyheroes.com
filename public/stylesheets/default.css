@@ -184,7 +184,7 @@ body {
 
 #about {
 	width: 60%;
-	margin: 0 0 1em 0;
+	margin: 0 0 2.5em 0;
 	float: left;
 	clear: left;
 }
@@ -265,7 +265,7 @@ aside {
 }
 #sponsor p {
 	font-size: 1.2em;
-	margin-bottom: 2em;
+	margin-bottom: 10px;
 }
 #sponsor img {
 	float: left;
@@ -362,7 +362,10 @@ p:last-child {
   position: absolute;
   top: 6px;
   left: 170px;
+  padding: 0;
+  margin: 0;
   z-index: 20;
+  font-size: 1.3em;
 }
 /*#vote p {
 	text-align: center;
@@ -376,10 +379,9 @@ p:last-child {
 input#site_url {
 	display: block;
 	margin: -10px auto 5px;
-	width: 60%;
-	padding: 4px 5px 4px 35px;
-	font-size: 1em;
-	color: #999;
+	padding: 0 5px 0 50px;
+	height: 25px;
+	font-size: 1.3em;
 	position: relative;
 	width: 479px;
 }
@@ -453,7 +455,7 @@ input#site_url:focus {
 }
 #nominate p.inline-errors {
 
-	margin: -20px 390px 20px 0;
+	margin: -20px 398px 20px 0;
 	padding: 4px 10px 5px;
 	color: #d92b2b;
 	text-align: right;
@@ -475,7 +477,7 @@ input#site_url:focus {
 	transition: all 200ms linear;
 }
 #nominate p.inline-hints {
-	width: 45%;
+	width: 47%;
 	float: right;
 	margin-top: -40px;
 	padding: 0 5px 0 0;
@@ -502,13 +504,13 @@ input#site_url:focus {
 	font-size: 1.2em;
 	display: block;
 	margin: 0 0 20px 0;
-	padding: 5px 4px;
+	padding: 5px 0;
+	text-indent: 7px;
 	border: none;
-	box-shadow: rgba(0,0,0,.6) -1px -1px 1px, rgba(255,255,255,.4) 1px 1px 0;
-	-moz-box-shadow: rgba(0,0,0,.6) -1px -1px 1px, rgba(255,255,255,.4) 1px 1px 0;
-	-webkit-box-shadow: rgba(0,0,0,.6) -1px -1px 1px, rgba(255,255,255,.4) 1px 1px 0;
+	box-shadow: rgba(0,0,0,.6) -1px -1px 0, rgba(255,255,255,.4) 1px 1px 0;
+	-moz-box-shadow: rgba(0,0,0,.6) -1px -1px 0, rgba(255,255,255,.4) 1px 1px 0;
+	-webkit-box-shadow: rgba(0,0,0,.6) -1px -1px 0, rgba(255,255,255,.4) 1px 1px 0;
 	background: #fcffe5;
-	color: #999;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
