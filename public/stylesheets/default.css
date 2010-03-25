@@ -13,9 +13,8 @@
 	list-style: none;
 	text-decoration: none;
 }
-textarea {
-	resize: none;
-}
+textarea { resize: none; }
+img { border: none; }
 // Getting rid of Mozilla's stupid dotted line inside active buttons
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -247,7 +246,7 @@ aside {
 	-webkit-border-bottom-left-radius: 10px;
 	-webkit-border-bottom-right-radius: 10px;
 }
-#spread, #spreadmini {
+#spread {
 	clear: right;
 	margin: 0;
 	font-size: .8em;
@@ -260,14 +259,6 @@ aside {
 	box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 	-moz-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 	-webkit-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;gi
-}
-#spreadmini {
-	clear: none;
-	width: 30%;
-	float: left;
-}
-#spreadmini textarea {
-	width: 100%;
 }
 #sponsor {
 	clear: both;
@@ -392,7 +383,7 @@ input#site_url {
 	position: relative;
 	width: 479px;
 }
-input#url:focus {
+input#site_url:focus {
 	background: #f2f6ff;
 	color: #000;
 }
@@ -443,25 +434,26 @@ input#url:focus {
 #nominate fieldset, #success {
 	display: block;
 	margin-top: 50px;
-	padding: 20px 30px 30px;
+	padding: 30px 30px 30px;
 	border: none;
-	background: #bb2222;
-	background: -moz-linear-gradient(top, #cc3333, #661f1f);
-	background: -webkit-gradient(linear,left top,left bottom,from(#cc3333),to(#661f1f));
-	color: #fff;
+	background: #83acde;
+	background: -moz-linear-gradient(top, #e53538, #732222);
+	background: -webkit-gradient(linear,left top,left bottom,from(#e53538),to(#732222));
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
 #nominate fieldset label {
 	display: block;
+	color: #b0d4ff;
 	font-size: 1.2em;
+	letter-spacing: .06em;
 	margin: 0 0 5px 3px;
 	text-shadow: rgba(0,0,0,.8) 0 1px 1px;
 }
 #nominate p.inline-errors {
 
-	margin: -15px 390px 10px 0;
+	margin: -20px 390px 20px 0;
 	padding: 4px 10px 5px;
 	color: #d92b2b;
 	text-align: right;
@@ -472,6 +464,7 @@ input#url:focus {
 	font-weight: bold;
 	background: #111;
 	background: rgba(0,0,0,.6);
+	border-top: 1px solid #000;
 	border-radius: 0 0 5px 5px;
 	-webkit-border-bottom-left-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
@@ -484,15 +477,17 @@ input#url:focus {
 #nominate p.inline-hints {
 	width: 45%;
 	float: right;
-	margin-top: -37px;
+	margin-top: -40px;
 	padding: 0 5px 0 0;
-	color: #bbb;
-	text-shadow: rgba(0,0,0,.6) 0 1px 1px;
+	color: #fff;
+	font-style: italic;
+	font-size: 1em;
+	text-shadow: rgba(0,0,0,.4) 0 1px 1px;
 	letter-spacing: .08em;
 	line-height: 1.3;
 }
 #nominate #nomination_testimonial_input p.inline-errors {
-	margin-top: -15px;
+	margin-top: -20px;
 }
 #nominate #nomination_testimonial_input p.inline-hints {
 	margin-top: -115px;
@@ -506,7 +501,7 @@ input#url:focus {
 	width: 50%;
 	font-size: 1.2em;
 	display: block;
-	margin: 0 0 1em 0;
+	margin: 0 0 20px 0;
 	padding: 5px 4px;
 	border: none;
 	box-shadow: rgba(0,0,0,.6) -1px -1px 1px, rgba(255,255,255,.4) 1px 1px 0;
@@ -553,24 +548,62 @@ input#url:focus {
 }
 
 /* ==== SUCCESS PAGE ===== */
-.box {
+#successbox {
 	clear: left;
 	float: left;
-	margin-top: 50px;
+	margin: 50px 0 20px;
 	width: 50%;
 }
-.box p {
+#successbox h3 {
+	color: #e5171e;
+	text-shadow: #000 1px 1px 0;
+}
+#successbox p {
 	margin: 0;
 }
 #spreadmini {
+	clear: none;
+	width: 30%;
+	float: right;
 	width: 50%;
 	margin-top: 59px;
+	font-size: .8em;
+}
+#spreadmini textarea {
+	width: 80%;
+	overflow-y: hidden;
+	margin: 10px 10%;
+	padding: 5px 7px;
+	font: .7em Monaco, Courrier, monospace;
+}
+#spreadmini textarea:focus {
+	background: #;
 }
 #spreadmini img {
 	display: block;
-	margin: 0 auto 7px;
-	border: #000 solid 5px;
+	margin: 10px auto;
+	border: #fff solid 5px;
+	box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
+	-moz-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
+	-webkit-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 }
+#sponsormini {
+	width: 50%;
+	font-size: .8em;
+}
+#sponsormini h3 {
+	margin-top: 20px;
+}
+#sponsormini p {
+	font-size: 1.2em;
+	margin-right: 20px;
+}
+#sponsormini img {
+	float: left;
+	margin: 0 10px 0 0;
+	height: 30px;
+}
+
 #success h3 {
 	margin: 0 0 20px;
 	padding: 0;

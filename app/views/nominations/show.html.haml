@@ -1,5 +1,5 @@
 - content_for :subheader, "Nominate a Ruby Hero!"
-.box
+#successbox
   %h3
     Thanks for your nomination.
   %p
@@ -18,8 +18,8 @@
     = image_tag "/images/banner_small.png", :alt => "Ruby Heroes"
     HTML Code: (click to copy and paste)
     :plain
-      <textarea rows="3" name="none" onclick="this.select();"><a href="http://www.RubyHeroes.com" title="Ruby Heroes"><img alt="Ruby Heroes" src="http://rubyheroes.morphexchange.com/images/rubyhero_button_small.png" /></a></textarea>
-%section#sponsor
+      <textarea rows="3" name="none" onclick="this.select();"><a href="http://www.rubyheroes.com" title="Ruby Hero Awards"><img alt="Ruby Hero Awards" src="http://#{request.host}/images/banner_small.png" /></a></textarea>
+%section#sponsormini
   :markdown
     ### Sponsor ###
     ![O'Reilly](/images/oreilly.png)
