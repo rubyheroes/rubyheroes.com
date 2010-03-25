@@ -1,7 +1,6 @@
 %section#heroes
   %ul
-    %li= render :partial => 'heroes/portrait', :locals => {:name=>"Yehuda Katz",:year=>"2009",:image_source=>"Yehuda.jpg"}
-    %li= render :partial => 'heroes/portrait', :locals => {:name=>"Evan Weaver",:year=>"2009",:image_source=>"Evan.jpg"}
+    = render :partial => "heroes/hero", :collection => @heroes
 %section#vote
   -form_for :site, :url=>new_nomination_path, :html=>{:method=>:get,:autocomplete=>"off"} do |form|
     %p What is the website or GitHub URL of the person you want to nominate?

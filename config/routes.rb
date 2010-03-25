@@ -1,10 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.resources :heroes
+  map.resources :heroes, :collection => {:year => :get}
   map.resources :nominations, :new => {:new => :any}
   map.resources :sites, :collection => {:search => :get}, :has_many=>:nominations
-  
-  map.resources :nomination_sites
   
   map.root :controller => "sites", :action => "search"
 
