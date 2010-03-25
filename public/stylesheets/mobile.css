@@ -376,7 +376,7 @@ input#url:focus {
 
 /* ===== SUCCESS ===== */
 #successbox {
-	margin-top: -55px;
+	margin: -50px 0 5px;
 	width: 100%%;
 }
 #successbox h3 {
@@ -410,4 +410,15 @@ input#url:focus {
 #spreadmini textarea {
 	margin: 10px 0;
 	padding: 5px 0;
+	width: 99%;
+}
+#sponsormini {
+	width: 300px
+}
+#sponsormini h3 {
+	font-size: 1.6em;
+}
+#sponsormini img {
+	width: 40%;
+	height: 22px;
 }
