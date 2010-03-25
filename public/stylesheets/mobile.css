@@ -234,7 +234,7 @@ p:last-child {
 	font-size: 1.2em;
 }
 input#site_url {
-	padding: 4px 5px 4px 45px;
+	padding: 4px 5px 4px 50px;
 	width: 80%;
 }
 input#nomination_url {
@@ -342,7 +342,6 @@ input#url:focus {
 	box-shadow: rgba(0,0,0,.6) -1px -1px 1px, rgba(255,255,255,.4) 1px 1px 0;
 	-webkit-box-shadow: rgba(0,0,0,.6) -1px -1px 1px, rgba(255,255,255,.4) 1px 1px 0;
 	background: #fcffe5;
-	color: #999;
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
 }
@@ -376,25 +375,25 @@ input#url:focus {
 }
 
 /* ===== SUCCESS ===== */
-.box {
+#successbox {
 	margin-top: -55px;
 	width: 100%%;
+}
+#successbox h3 {
+	font-size: 1.4em;
+	width: 300px;
+}
+#successbox p {
+	margin: 0;
+	font-size: 1.1em;
+	letter-spacing: normal;
 }
 #spreadmini {
 	width: 100%;
 	margin: 0 0 20px;
 }
-.box h3 {
-	font-size: 1.4em;
-	width: 300px;
-}
 #spreadmini h3 {
 	font-size: 1.7em;
-}
-.box p {
-	margin: 0;
-	font-size: 1.1em;
-	letter-spacing: normal;
 }
 #spreadmini p {
 	font-size: 1.3em;
