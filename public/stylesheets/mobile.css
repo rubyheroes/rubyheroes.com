@@ -139,13 +139,20 @@ aside {
 	-webkit-border-bottom-right-radius: 10px;
 }
 #spread {
-	margin: 0;
+	margin: 0 0 20px;
 	font-size: 1em;
 }
 #spread img {
 	background: #333;
-	height: 90px;
-	width: 100%;
+	margin: 10px 0 20px;
+	width: 95%;
+}
+#sponsor img {
+	width: 40%;
+	margin: 5px 10px 0px 0;
+}
+#sponsor p {
+	font-size: 1.1em;
 }
 footer {
 	width: 85%;
