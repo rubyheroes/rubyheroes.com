@@ -440,12 +440,12 @@ input#site_url:focus {
 	color: #fff;
 	text-shadow: rgba(0,0,0,.4) 2px 2px 1px;
 }
-#nominate fieldset, #success {
+#nominate fieldset {
 	display: block;
 	margin-top: 50px;
 	padding: 30px 30px 30px;
 	border: none;
-	background: #83acde;
+	background: #732222;
 	background: -moz-linear-gradient(top, #e53538, #732222);
 	background: -webkit-gradient(linear,left top,left bottom,from(#e53538),to(#732222));
 	border-radius: 10px;
