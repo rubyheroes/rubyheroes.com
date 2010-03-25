@@ -285,11 +285,11 @@ footer {
 	margin: 1.5em auto 2em;
 	font-size: 1em;
 	text-align: center;
-	color: #999;
-	background: #333;
+	color: #222;
 }
 footer img {
-	vertical-align: bottom;
+	vertical-align: middle;
+	margin-top: -7px;
 }
 
 
