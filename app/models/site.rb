@@ -4,13 +4,10 @@ class Site < ActiveRecord::Base
   validates_presence_of :url, :name
   
   def url=(value)
-    value.strip
-    begin
-      uri= URI.parse(value)
-      write_attribute(:url, uri.host+uri.path)
-    rescue URI::InvalidURIError
-      errors.add(:url, "is an invalid url")
-    end
+    return if value.nil?
+    value.strip!
+    value.gsub! /(https?:\/\/)/, ""
+    self[:url] = value
   end
   
 end
