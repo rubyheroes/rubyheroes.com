@@ -15,5 +15,5 @@ class DropMugshotsTableAndReferences < ActiveRecord::Migration
       t.column :width, :integer
       t.column :height, :integer
     end
-  end3
+  end
 end
