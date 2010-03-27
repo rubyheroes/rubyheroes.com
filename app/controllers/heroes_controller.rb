@@ -1,8 +1,13 @@
 class HeroesController < ApplicationController
+  
   def year
-    #TODO: Make this more robust, really simplified right now.
     @year = params[:year]
     @heroes = Hero.find_all_by_year(@year)
-    render :action =>"xhr/year", :layout => false
+    
+    if request.xhr?
+      render :action => "xhr/year", :layout => false and return
+    end
+    
+    render :file => "#{RAILS_ROOT}/public/404.html", :status => 404 if @heroes.empty?
   end
 end
