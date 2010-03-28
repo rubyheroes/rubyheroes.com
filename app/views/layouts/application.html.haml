@@ -4,15 +4,6 @@
     %meta{ "http-equiv" => "content-type", :content => "text/html;charset=UTF-8" }
     %title Ruby Hero Awards
     = stylesheet_link_tag 'default'
-    = stylesheet_link_tag 'mobile', :media => 'screen and (max-device-width: 700px)'
-    %meta{ :name => 'viewport', :content => 'width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' }
-    %meta{ :name => 'apple-mobile-web-app-capable', :content => 'yes' }
-    %meta{ :name => 'apple-mobile-web-app-status-bar-style', :content => 'black' }
-    %link{ :rel => 'apple-touch-icon-precomposed',:href => '/images/homescreen.png' }
-    %link{ :rel => 'apple-touch-startup-image',:href => '/images/startup.png' }
-    %link{ :rel => 'shortcut icon', :type => 'image/png', :href => '/images/favicon.png' }
-    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
-    = javascript_include_tag 'application'
     = render :partial => 'layouts/mobile_head'
     %link{ :rel => 'shortcut icon', :type => 'image/png', :href => '/images/favicon.png' }
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js', 'application'
