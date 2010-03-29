@@ -79,7 +79,7 @@ body {
 	-moz-transition: 100ms linear;
 	transition: 100ms linear;
 }
-#heroes li:first-child:hover, #heroes li:first-child:focus {
+#penultimate li:hover, #penultimate li:focus {
 	-webkit-transition: 100ms ease-in;
 	-webkit-transform: rotate(-2deg) scale(1.15);
 	-moz-transition: 100ms ease-in;
@@ -87,7 +87,7 @@ body {
 	transition: 100ms ease-in;
 	transform: rotate(-2deg) scale(1.15);
 }
-#heroes li:last-child:hover, #heroes li:last-child:focus {
+#antepenultimate li:hover, #antepenultimate li:focus {
 	-webkit-transition: 100ms ease-in;	
 	-webkit-transform: rotate(2deg) scale(1.15);
 	-moz-transition: 100ms ease-in;
@@ -95,19 +95,12 @@ body {
 	transition: 100ms ease-in;
 	transform: rotate(2deg) scale(1.15);
 }
-#heroes li img {
+#heroes ul li img {
 	margin-bottom: 4px;
 	border: 1px solid #111;
 	border: 1px solid rgba(0,0,0,.2);
-	/*border: 5px solid rgba(0,0,0,.9);*/
 }
-/*#popdown li img a {
-	display: block;
-	background: #000 url("../img/bg_shine.png") no-repeat;
-	position: relative;
-	z-index: 5;
-}*/
-#heroes li p {
+#heroes ul li p {
 	position: relative;
 	margin: 0;
 	padding: 0 0 0 10px;
@@ -118,16 +111,16 @@ body {
 	text-align: left;
 	color: #B90019;
 }
-#heroes li p strong {
+#heroes ul li p strong {
 	font-size: 1.1em;
 	margin-left: -5px;
 	color: #000;
 	text-shadow: none;
 }
-#heroes li:first-child {
+#heroes #penultimate li {
 	float: left;
 }
-#heroes li:last-child {
+#heroes #antepenultimate li {
 	float: right;
 	text-align: right;
 }
