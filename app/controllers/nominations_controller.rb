@@ -1,12 +1,11 @@
 class NominationsController < ApplicationController
-  before_filter :session_check, :only => [:new, :create]
   def new
     @nomination = Nomination.new
     @nomination.nominator = current_nominator
     if params[:site_id]
       @nomination.site = Site.find(params[:site_id])
     elsif params[:site]
-      @nomination.site = Site.find_or_create_by_url(params[:site][:url])
+      @nomination.site = Site.find_or_create_by_url(:url => params[:site][:url], :name => "New Unnamed Site")
     else
       redirect_to root_path and return
     end
