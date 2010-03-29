@@ -127,7 +127,6 @@ body {
 /* ===== POPDOWN AUTOCOMPLETE FOR URL INPUT ===== */
 
 .popdown {
-	clear: both;
 	margin: 5px auto 20px;
 	width: 60%;
 	padding: 0;
@@ -176,7 +175,10 @@ body {
 }
 
 #yes_match {
-	margin-top: 70px;
+	margin-top: 50px;
+}
+#yes_match h2 {
+  margin-bottom: 0;
 }
 
 #about {
@@ -386,6 +388,7 @@ input#site_url:focus {
 
 /* ===== SUBMISSION FORM ===== */
 #nomination_submit {
+  clear: both;
 	text-align: center;
 	margin: 20px auto 0;
 	display: block;
