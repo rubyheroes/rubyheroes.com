@@ -3,9 +3,9 @@
 %section#nominate
   - semantic_form_for @nomination do |form|
     - form.inputs do
+      %h3
+        Please complete your nomination
       - form.semantic_fields_for :site do |site|
-        %h3
-          Please complete your nomination
         = site.input :url, :label => "What is the url?"
         = site.input :name, :label => "What is the title of the site?"
       = form.input :nominee, :label => "Who is the nominee?", :hint => "This can be an individual or group."

@@ -2,7 +2,6 @@
 
    Ruby Hero Awards
    CSS3 stylesheet 1.0
-   by Olivier Lacan
    cleverCode LLC - 2010
    
 */
@@ -135,6 +134,7 @@ body {
 /* ===== POPDOWN AUTOCOMPLETE FOR URL INPUT ===== */
 
 .popdown {
+	clear: both;
 	margin: 5px auto 20px;
 	width: 60%;
 	padding: 0;
@@ -180,6 +180,10 @@ body {
 /*	color: #fff;
 	text-shadow: rgba(0,0,0,.9) 1px 1px 1px;*/
 	background: url("../images/arrow.png") no-repeat 98%;
+}
+
+#yes_match {
+	margin-top: 70px;
 }
 
 #about {
@@ -297,10 +301,7 @@ h1 {
 	background: url("../images/header5.png") no-repeat;
 	width: 715px;
 	height: 225px;
-	font-size: 8em;
 	margin: 0 auto;
-	text-transform: uppercase;
-	letter-spacing: -0.1em;
 	z-index: 1;
 	position: relative;
 }
@@ -309,14 +310,6 @@ h1 a {
 	height: 100%;
 	display: block;
 }
-/*#header h2 {
-	display: block;
-	margin: 0 auto;
-	background: url("../img/hero.png") no-repeat;
-	position: relative;
-	background: #000;
-	z-index: 99;
-}*/
 h2 {
 	margin-left: 0;
 	font-size: 1.3em;
@@ -366,10 +359,10 @@ p:last-child {
 }
 #vote label {
   position: absolute;
-  top: 6px;
-  left: 170px;
+  top: 2px;
+  left: 50%;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 -262px;
   z-index: 20;
   font-size: 1.3em;
 }
@@ -384,12 +377,14 @@ p:last-child {
 }
 input#site_url {
 	display: block;
-	margin: -10px auto 5px;
-	padding: 0 5px 0 50px;
-	height: 25px;
+	margin: 10px 0 5px -268px;
+	padding: 0 5px 0 48px;
+	height: 30px;
 	font-size: 1.3em;
-	position: relative;
-	width: 479px;
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	width: 480px;
 }
 input#site_url:focus {
 	background: #f2f6ff;
@@ -401,7 +396,8 @@ input#site_url:focus {
 	text-align: center;
 	margin: 20px auto 0;
 	display: block;
-	max-width: 840px;
+	max-width: 540px;
+	white-space: nowrap;
 	overflow: hidden;
 	padding: 5px 50px;
 	font-size: 1.3em;
@@ -409,13 +405,13 @@ input#site_url:focus {
 	color: #fff;
 	text-shadow: #000 1px 1px 1px;
 	text-shadow: rgba(0,0,0,1) 1px 1px 1px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border: none;
 	box-shadow: #ff8080 -1px -1px 0, #661414 1px 1px 0;
 	-moz-box-shadow: #ff8080 -1px -1px 0, #661414 1px 1px 0;
 	-webkit-box-shadow: #ff8080 -1px -1px 0, #661414 1px 1px 0;
+	border: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 	background: #cc1010;
 	background: -moz-linear-gradient(top, #d92b2b, #732222);
 	background: -webkit-gradient(linear,left top,left bottom,from(#d92b2b),to(#732222));
@@ -625,4 +621,42 @@ input#site_url:focus {
 }
 #success p a:hover, #success p a:focus {
 	color: #000;
+}
+
+/* ===== PAST HEROES ===== */
+.heroes-year ul {
+	margin: 40px 0 0 0;
+}
+.heroes-year ul li {
+	display: block;
+	background: #333;
+	width: 200px;
+	float: left;
+}
+#heroeslist {
+	clear: both;
+	margin: 50px 0 0 0;
+	width: 100%;
+}
+#heroeslist h2 {
+	text-align: left;
+	margin: 0;
+}
+#pastheroes {
+	margin: 0;
+	width: 100%;
+}
+#pastheroes #2008 {
+	float: left;
+	width: 50%;
+}
+#pastheroes #2009 {
+	float: left;
+	width: 50%;
+	background: red;
+}
+
+/* ===== FIREFOX FIXES ===== */
+#nomination_site_attributes_id {
+	visibility: hidden;
 }
