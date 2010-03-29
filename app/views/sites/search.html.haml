@@ -1,6 +1,8 @@
 %section#heroes
-  %ul
-    = render :partial => "heroes/hero", :collection => @heroes
+  %ul#penultimate
+    = render :partial => "heroes/hero", :collection => [@heroes[0]]
+  %ul#antepenultimate
+    = render :partial => "heroes/hero", :collection => [@heroes[1]]
 %section#vote
   -form_for :site, :url=>new_nomination_path, :html=>{:method=>:post,:autocomplete=>"off"} do |form|
     %p What is the website or GitHub URL of the person you want to nominate?
