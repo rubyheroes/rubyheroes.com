@@ -1,7 +1,5 @@
 class NominationsController < ApplicationController
-  before_filter :authenticate, :except => [:new, :create, :show]
   before_filter :session_check, :only => [:new, :create]
-
   def new
     @nomination = Nomination.new
     @nomination.nominator = current_nominator
@@ -23,6 +21,7 @@ class NominationsController < ApplicationController
     @nomination.update_attributes(params[:nomination])
     if @nomination.save
       cookies[:nid] = @nomination.nominator_id
+      session[:ns] = true
       flash[:notice] = "Thank you for your nomination."
       redirect_to @nomination
     else
@@ -30,14 +29,14 @@ class NominationsController < ApplicationController
     end
   end
   
-  # Just a simple precaution to keep users from
-  #  passing around urls like /sites/22/nominations/new
-  #  Possibly unneeded, but it sounds good.
-  def session_check
-    redirect_to search_sites_path unless session[:real_visit]
-  end
-  
   private
+    # Just a simple precaution to keep users from
+    #  passing around urls like /sites/22/nominations/new
+    #  Possibly unneeded, but it sounds good.
+    def session_check
+      redirect_to search_sites_path unless session[:real_visit] && !session[:ns]
+    end
+    
     def current_nominator
       return @current_nominator if defined?(@current_nominator)
       return @current_nominator = Nominator.find(cookies[:nid]) if cookies[:nid]
