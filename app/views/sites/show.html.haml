@@ -1,0 +1,14 @@
+%table
+  %caption= "Nominations for #{link_to @site.name, "http://"+@site.url}"
+  %thead
+    %tr
+      %th(scope="col") Nominee
+      %th(scope="col") Nominator
+      %th(scope="col") Testimony
+  %tbody
+    - @site.nominations.each do |nomination|
+      %tr
+        %td.nominee= nomination.nominee
+        %td.nominator= "#{nomination.nominator.name} (#{nomination.nominator.email})"
+        %td.testimony= nomination.testimonial
+= link_to "Back to nominated sites", sites_path
