@@ -1,0 +1,15 @@
+%table
+  %caption Most nominated sites.
+  %thead
+    %tr
+      %th(scope="col") # of Nominations
+      %th(scope="col") Site
+      %th(scope="col") 
+  %tbody
+    - @sites.each do |site|
+      %tr
+        %td.nominations_count= site.nominations_count
+        %td.site_name= "#{site.name} (#{site.url})"
+        %td.actions= link_to "View nominations", site_path(site)
+
+= will_paginate @sites

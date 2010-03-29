@@ -1,0 +1,27 @@
+!!! 5
+%html{ html_attrs }
+  %head
+    %meta{ "http-equiv" => "content-type", :content => "text/html;charset=UTF-8" }
+    %title Ruby Hero Awards
+    = stylesheet_link_tag 'default', 'admin'
+    = render :partial => 'layouts/mobile_head'
+    %link{ :rel => 'shortcut icon', :type => 'image/png', :href => '/images/favicon.png' }
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js', 'application'
+    /[if IE]
+      = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
+    /[if lt IE 8]
+      = javascript_include_tag 'http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js'
+      
+  %body{ :class => "#{controller.controller_name} #{controller.controller_name}-#{controller.action_name}" }
+    %header
+      %h1
+        = link_to "Ruby Hero", "/"
+    %section#wrapper
+      = yield
+    %footer
+      Ruby Heroes is produced by 
+      = link_to image_tag("/images/envylabs.png"), "http://www.envylabs.com"
+      designed by
+      = link_to image_tag("/images/clevercode.png"), "http://www.clevercode.net"
+      and graciously hosted at 
+      = link_to image_tag("/images/heroku.png"), "http://www.heroku.com"
