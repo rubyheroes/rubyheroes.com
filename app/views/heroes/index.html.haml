@@ -13,27 +13,13 @@
 %section#pastheroes
   %h2
     Past Heroes
-    %div#2008
+    #2008
       %h3
         2008
       %ul
-        %li
-          envylabs.com
-        %li
-          envylabs.com
-        %li
-          envylabs.com
-        %li
-          envylabs.com
-    %div#2009
+        = render :partial => "hero", :collection => @heroes.find_all {|i| i.year == "2008"}
+    #2009
       %h3
         2009
       %ul
-        %li
-          envylabs.com
-        %li
-          envylabs.com
-        %li
-          envylabs.com
-        %li
-          envylabs.com
+        = render :partial => "hero", :collection => @heroes.find_all {|i| i.year == "2009"}
