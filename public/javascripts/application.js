@@ -6,7 +6,7 @@ jQuery(function($){
     .keyup(function(event) {
       var input_text = $(event.target).val();
       if (input_text.length > 2) {
-        $('#yes_match').load('/sites/search?site_url=' + input_text);
+        $('#yes_match').css('display','block').load('/sites/search?site_url=' + input_text);
       } else {
         $('#yes_match').empty();
       }
