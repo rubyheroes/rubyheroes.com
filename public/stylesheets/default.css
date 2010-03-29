@@ -175,6 +175,7 @@ body {
 }
 
 #yes_match {
+  display: none;
 	margin-top: 50px;
 }
 #yes_match h2 {
@@ -346,40 +347,42 @@ p:last-child {
 /* ===== FORMS ===== */
 #vote {
 	display: block;
-	margin: -36px auto 1em;
+	margin: -36px auto 0;
 	z-index: 3;
 }
-#vote div {
-  position: relative;
-}
-#vote label {
-  position: absolute;
-  top: 2px;
-  left: 50%;
-  padding: 0;
-  margin: 0 0 0 -262px;
-  z-index: 20;
-  font-size: 1.3em;
-}
-/*#vote p {
-	text-align: center;
-	font-size: .9em;
-}*/
 #vote p {
 	text-align: center;
 	color: #111;
 	font-size: 1.2em;
 }
+#vote div {
+  position: relative;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}
+#vote label {
+  display: block;
+  position: absolute;
+  left: 170px;
+  top: 3px;
+  padding: 0;
+  margin: 0;
+  z-index: 99;
+  font-size: 1.3em;
+}
 input#site_url {
 	display: block;
 	margin: 10px 0 5px -268px;
-	padding: 0 5px 0 48px;
-	height: 30px;
+	padding: 2px 5px 5px 50px;
+	height: 28px;
 	font-size: 1.3em;
 	position: absolute;
 	top: -15px;
 	left: 50%;
 	width: 480px;
+  border: 1px solid ;
+  box-shadow:
 }
 input#site_url:focus {
 	background: #f2f6ff;
@@ -388,14 +391,15 @@ input#site_url:focus {
 
 /* ===== SUBMISSION FORM ===== */
 #nomination_submit {
+  display: block;
   clear: both;
+  margin: 0px auto 0;
+  padding: 5px 50px;
+  width: auto;
+  max-width: 540px;
 	text-align: center;
-	margin: 20px auto 0;
-	display: block;
-	max-width: 540px;
 	white-space: nowrap;
 	overflow: hidden;
-	padding: 5px 50px;
 	font-size: 1.3em;
 	font-weight: bold;
 	color: #fff;
