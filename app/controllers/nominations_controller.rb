@@ -2,10 +2,10 @@ class NominationsController < ApplicationController
   def new
     @nomination = Nomination.new
     @nomination.nominator = current_nominator
-    if params[:site_id]
+    if params[:site_id] && params[:site_id] != 0
       @nomination.site = Site.find(params[:site_id])
     elsif params[:site]
-      @nomination.site = Site.find_or_create_by_url(:url => params[:site][:url], :name => "New Unnamed Site")
+      @nomination.site = Site.new(:url => params[:site][:url], :name => "New Unnamed Site")
     else
       redirect_to root_path and return
     end
@@ -13,11 +13,15 @@ class NominationsController < ApplicationController
 
   def create
     @nomination = Nomination.new
-    @nomination.site = Site.find_or_create_by_id(params[:nomination][:site_attributes][:id])
-    @nomination.site = Site.find_or_create_by_url(params[:nomination][:site_attributes][:url]) if @nomination.site.new_record?
-    @nomination.nominator = current_nominator
-      # for some reason Nominator.find_or_create_by_email isn't working properly.
-    @nomination.update_attributes(params[:nomination])
+    @nomination.site = Site.find_or_create_by_url(
+                            :url => params[:nomination][:site_attributes][:url],
+                            :name => params[:nomination][:site_attributes][:name])
+    @nomination.nominator = Nominator.find_or_create_by_email(
+                                      :email => params[:nomination][:nominator_attributes][:email],
+                                      :name  => params[:nomination][:nominator_attributes][:name])
+    @nomination.nominee = params[:nomination][:nominee]
+    @nomination.testimonial = params[:nomination][:testimonial]
+    
     if @nomination.save
       cookies[:nid] = @nomination.nominator_id
       session[:ns] = true
@@ -38,7 +42,12 @@ class NominationsController < ApplicationController
     
     def current_nominator
       return @current_nominator if defined?(@current_nominator)
-      return @current_nominator = Nominator.find(cookies[:nid]) if cookies[:nid]
+      begin
+        return @current_nominator = Nominator.find(cookies[:nid]) if cookies[:nid]
+      rescue
+        # just in case the database was reset, their nominator record would have been deleted.
+        cookies[:nid] = false
+      end
       @current_nominator = Nominator.new
     end
 end
