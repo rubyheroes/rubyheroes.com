@@ -2,14 +2,9 @@
   %h2
     2010 nominees
   %ul
-    %li
-      envylabs.com
-    %li
-      envylabs.com
-    %li
-      envylabs.com
-    %li
-      envylabs.com
+    - @nominees.each do |nominee|
+      %li= nominee
+    
 %section#pastheroes
   %h2
     Past Heroes
