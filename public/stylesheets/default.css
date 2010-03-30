@@ -14,7 +14,7 @@
 }
 textarea { resize: none; }
 img { border: none; }
-// Getting rid of Mozilla's stupid dotted line inside active buttons
+/* Getting rid of Mozilla's stupid dotted line inside active buttons */
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
@@ -58,7 +58,6 @@ body {
 	display: block;
 	height: 100px;
 	position: relative;
-	z-index: 2;
 }
 #heroes li {
 	display: block;
@@ -125,11 +124,20 @@ body {
 	text-align: right;
 }
 /* ===== POPDOWN AUTOCOMPLETE FOR URL INPUT ===== */
-
+#yes_match {
+  display: none;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+#yes_match h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
 .popdown {
-	margin: 5px auto 20px;
+	margin: 5px auto 5px;
 	width: 60%;
 	padding: 0;
+	display: block;
 }
 .popdown li {
 	margin: 0 -5px;
@@ -172,15 +180,7 @@ body {
 /*	color: #fff;
 	text-shadow: rgba(0,0,0,.9) 1px 1px 1px;*/
 	background: url("../images/arrow.png") no-repeat 98%;
-}
-
-#yes_match {
-  display: none;
-	margin-top: 50px;
-}
-#yes_match h2 {
-  margin-bottom: 0;
-}
+}  
 
 #about {
 	width: 60%;
@@ -259,7 +259,7 @@ aside {
 	border: 5px solid #fff;
 	box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 	-moz-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
-	-webkit-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;gi
+	-webkit-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 }
 #sponsor {
 	clear: both;
@@ -348,7 +348,6 @@ p:last-child {
 #vote {
 	display: block;
 	margin: -36px auto 0;
-	z-index: 3;
 }
 #vote p {
 	text-align: center;
@@ -362,7 +361,7 @@ p:last-child {
   margin: 0;
 }
 #vote label {
-  display: block;
+  display: inline;
   position: absolute;
   left: 170px;
   top: 3px;
@@ -382,7 +381,6 @@ input#site_url {
 	left: 50%;
 	width: 480px;
   border: 1px solid ;
-  box-shadow:
 }
 input#site_url:focus {
 	background: #f2f6ff;
@@ -392,10 +390,8 @@ input#site_url:focus {
 /* ===== SUBMISSION FORM ===== */
 #nomination_submit {
   display: block;
-  clear: both;
-  margin: 0px auto 0;
+  margin: 10px auto 0;
   padding: 5px 50px;
-  width: auto;
   max-width: 540px;
 	text-align: center;
 	white-space: nowrap;
@@ -583,7 +579,7 @@ input#site_url:focus {
 	font: 1em Monaco, Courrier, monospace;
 }
 #spreadmini textarea:focus {
-	background: #;
+	background: yellow;
 }
 #spreadmini img {
 	display: block;
