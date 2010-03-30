@@ -1,20 +1,18 @@
 %section#heroeslist
-  %h2
-    2010 nominees
+  %h2 2010 nominees
   %ul
     - @nominees.each do |nominee|
       %li= nominee
-    
+
 %section#pastheroes
-  %h2
-    Past Heroes
-    #2008
-      %h3
-        2008
-      %ul
-        = render :partial => "hero", :collection => @heroes.find_all {|i| i.year == "2008"}
-    #2009
-      %h3
-        2009
-      %ul
-        = render :partial => "hero", :collection => @heroes.find_all {|i| i.year == "2009"}
+  %h2 Past Heroes
+  .year
+    %h3
+      2008 Ruby Hero Award Winners
+    %ul
+      = render :partial => "hero", :collection => @heroes.find_all {|i| i.year == "2008"}
+  .year
+    %h3
+      2009 Ruby Hero Award Winners
+    %ul
+      = render :partial => "hero", :collection => @heroes.find_all {|i| i.year == "2009"}

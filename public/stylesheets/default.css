@@ -620,36 +620,29 @@ input#site_url:focus {
 }
 
 /* ===== PAST HEROES ===== */
-.heroes-year ul {
-	margin: 40px 0 0 0;
-}
-.heroes-year ul li {
-	display: block;
-	background: #333;
-	width: 200px;
-	float: left;
-}
 #heroeslist {
-	clear: both;
-	margin: 50px 0 0 0;
-	width: 100%;
+  margin-top: 30px;
+  
 }
-#heroeslist h2 {
-	text-align: left;
-	margin: 0;
+#heroeslist h2, #pastheroes h2 {
+  clear: both;
+  margin-left: 0;
+  font-size: 2em;
 }
-#pastheroes {
-	margin: 0;
-	width: 100%;
+#pastheroes .year {
+  clear: both;
 }
-#pastheroes #2008 {
-	float: left;
-	width: 50%;
+#pastheroes .year ul li {
+  float: left;
+  width: 135px;
+  font-size: .7em;
+  visibility: hidden;
 }
-#pastheroes #2009 {
-	float: left;
-	width: 50%;
-	background: red;
+#pastheroes .year ul li strong {
+  visibility: visible;
+}
+#pastheroes .year ul li img {
+  visibility: visible;
 }
 
 /* ===== FIREFOX FIXES ===== */
