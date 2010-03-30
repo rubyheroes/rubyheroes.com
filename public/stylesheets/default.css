@@ -59,7 +59,7 @@ body {
 	height: 100px;
 	position: relative;
 }
-#heroes li {
+#heroes li dl {
 	display: block;
 	width: 100px;
 	margin-bottom: 10px;
@@ -77,8 +77,10 @@ body {
 	-webkit-transition: 100ms ease-in;
 	-moz-transition: 100ms linear;
 	transition: 100ms linear;
+	z-index: 4;
+	position: relative;
 }
-#penultimate li:hover, #penultimate li:focus {
+#penultimate li dl:hover, #penultimate li dl:focus {
 	-webkit-transition: 100ms ease-in;
 	-webkit-transform: rotate(-2deg) scale(1.15);
 	-moz-transition: 100ms ease-in;
@@ -86,7 +88,7 @@ body {
 	transition: 100ms ease-in;
 	transform: rotate(-2deg) scale(1.15);
 }
-#antepenultimate li:hover, #antepenultimate li:focus {
+#antepenultimate li dl:hover, #antepenultimate li dl:focus {
 	-webkit-transition: 100ms ease-in;	
 	-webkit-transform: rotate(2deg) scale(1.15);
 	-moz-transition: 100ms ease-in;
@@ -94,12 +96,12 @@ body {
 	transition: 100ms ease-in;
 	transform: rotate(2deg) scale(1.15);
 }
-#heroes ul li img {
+#heroes ul li dt img {
 	margin-bottom: 4px;
 	border: 1px solid #111;
 	border: 1px solid rgba(0,0,0,.2);
 }
-#heroes ul li p {
+#heroes ul li dd {
 	position: relative;
 	margin: 0;
 	padding: 0 0 0 10px;
@@ -110,16 +112,16 @@ body {
 	text-align: left;
 	color: #B90019;
 }
-#heroes ul li p strong {
+#heroes ul li dd strong {
 	font-size: 1.1em;
 	margin-left: -5px;
 	color: #000;
 	text-shadow: none;
 }
-#heroes #penultimate li {
+#heroes #penultimate li dl {
 	float: left;
 }
-#heroes #antepenultimate li {
+#heroes #antepenultimate li dl {
 	float: right;
 	text-align: right;
 }
@@ -619,28 +621,67 @@ input#site_url:focus {
 
 /* ===== PAST HEROES ===== */
 #heroeslist {
-  margin-top: 30px;
-  
+  margin-top: 50px;
+  width: 50%;
+  float: left;
 }
 #heroeslist h2, #pastheroes h2 {
   clear: both;
   margin-left: 0;
+  margin-bottom: 0;
   font-size: 2em;
+}
+#heroeslist ul li {
+  list-style: disc inside;
+  font-size: 1.2em;
+  margin-right: 30px;
+}
+#pastheroes {
+  margin-top: 50px;
+  width: 50%;
+  float: right;
+}
+#pastheroes p {
+  margin-bottom: -20px;
+}
+#pastheroes h3 {
+  font-size: 1.5em;
+  padding-top: 20px;
 }
 #pastheroes .year {
   clear: both;
 }
-#pastheroes .year ul li {
+#pastheroes .year ul li dl {
   float: left;
-  width: 135px;
-  font-size: .7em;
-  visibility: hidden;
+  width: 100px;
+  margin: 0 15px 10px 0;
+  padding: 7px 10px 10px;
+  background: #eee;
+  background: -moz-linear-gradient(left, #fff, #eee);
+  background: -webkit-gradient(linear,left top,right top,from(#fff),to(#eee));
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
+  -moz-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
+  -webkit-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 }
-#pastheroes .year ul li strong {
-  visibility: visible;
+#pastheroes .year ul li dl dd span {
+  display: none;
 }
-#pastheroes .year ul li img {
+#pastheroes .year ul li dl dd strong {
   visibility: visible;
+  font-size: .65em;
+  letter-spacing: .05em;
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+}
+#pastheroes .year ul li dt img {
+  visibility: visible;
+  border: 1px solid #111;
+  border: 1px solid rgba(0,0,0,.4);
 }
 
 /* ===== FIREFOX FIXES ===== */

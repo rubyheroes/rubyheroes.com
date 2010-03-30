@@ -1,6 +1,7 @@
 %li
-  = link_to image_tag("/images/heroes/#{hero.avatar}", :alt => hero.name, :size=>"100x100"), hero.url
-  %p
-    %strong= link_to hero.name, hero.url
-    %br
-    = "#{hero.year} Hero"
+  %dl
+    %dt
+      = link_to image_tag("/images/heroes/#{hero.avatar}", :alt => hero.name, :size=>"100x100"), hero.url
+      %dd
+        %strong= link_to hero.name, hero.url
+        %span= "#{hero.year} Hero"
