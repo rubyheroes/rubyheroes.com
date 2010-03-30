@@ -98,8 +98,9 @@ body {
 }
 #heroes ul li dt img {
 	margin-bottom: 4px;
-	border: 1px solid #111;
+	border: 1px solid #222;
 	border: 1px solid rgba(0,0,0,.2);
+	background: rgba(0,0,0,.2);
 }
 #heroes ul li dd {
 	position: relative;
@@ -113,8 +114,10 @@ body {
 	color: #B90019;
 }
 #heroes ul li dd strong {
+  display: block;
 	font-size: 1.1em;
 	margin-left: -5px;
+	padding-top: 7px;
 	color: #000;
 	text-shadow: none;
 }
@@ -419,6 +422,7 @@ input#site_url:focus {
 	background: #bf2626;
 	background: -moz-linear-gradient(top, #f23030, #bf2626);
 	background: -webkit-gradient(linear,left top,left bottom,from(#f23030),to(#bf2626));
+	cursor: pointer;
 }
 #nomination_submit:active {
 	background: #d92121;
@@ -541,6 +545,7 @@ input#site_url:focus {
 	background: #3f568c;
 	background: -moz-linear-gradient(top, #456199, #3f568c, #2e4073);
 	background: -webkit-gradient(linear,left top,left bottom,from(#456199),to(#2e4073), color-stop(0.5, #3f568c));
+	cursor: pointer;
 }
 .formbutton:active {
 	background: #2e4073;
@@ -620,33 +625,15 @@ input#site_url:focus {
 }
 
 /* ===== PAST HEROES ===== */
-#heroeslist {
-  margin-top: 50px;
-  width: 50%;
-  float: left;
-}
-#heroeslist h2, #pastheroes h2 {
-  clear: both;
-  margin-left: 0;
-  margin-bottom: 0;
-  font-size: 2em;
-}
-#heroeslist ul li {
-  list-style: disc inside;
-  font-size: 1.2em;
-  margin-right: 30px;
-}
 #pastheroes {
   margin-top: 50px;
-  width: 50%;
-  float: right;
 }
 #pastheroes p {
-  margin-bottom: -20px;
+  margin-bottom: -30px;
 }
 #pastheroes h3 {
-  font-size: 1.5em;
-  padding-top: 20px;
+  font-size: 1.2em;
+  padding-top: 10px;
 }
 #pastheroes .year {
   clear: both;
@@ -654,8 +641,9 @@ input#site_url:focus {
 #pastheroes .year ul li dl {
   float: left;
   width: 100px;
-  margin: 0 15px 10px 0;
-  padding: 7px 10px 10px;
+  height: 130px;
+  margin: 0 20px 10px 0;
+  padding: 10px 10px 13px;
   background: #eee;
   background: -moz-linear-gradient(left, #fff, #eee);
   background: -webkit-gradient(linear,left top,right top,from(#fff),to(#eee));
@@ -672,9 +660,8 @@ input#site_url:focus {
 }
 #pastheroes .year ul li dl dd strong {
   visibility: visible;
-  font-size: .65em;
+  font-size: 1em;
   letter-spacing: .05em;
-  white-space: nowrap;
   text-align: center;
   overflow: hidden;
 }
@@ -682,9 +669,10 @@ input#site_url:focus {
   visibility: visible;
   border: 1px solid #111;
   border: 1px solid rgba(0,0,0,.4);
+  background: rgba(0,0,0,.2);
 }
 
 /* ===== FIREFOX FIXES ===== */
 #nomination_site_attributes_id {
-	visibility: hidden;
+	display: none;
 }
