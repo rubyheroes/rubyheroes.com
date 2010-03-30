@@ -126,8 +126,6 @@ body {
 /* ===== POPDOWN AUTOCOMPLETE FOR URL INPUT ===== */
 #yes_match {
   display: none;
-	margin-top: 50px;
-	margin-bottom: 100px;
 }
 #yes_match h2 {
   margin-top: 10px;
@@ -354,7 +352,7 @@ p:last-child {
 	color: #111;
 	font-size: 1.2em;
 }
-#vote div {
+#vote div.field {
   position: relative;
   height: 30px;
   padding: 0;
