@@ -4,13 +4,7 @@
   %ul#antepenultimate
     = render :partial => "heroes/hero", :collection => [@heroes[1]]
 %section#vote
-  -form_for :site, :url=>new_nomination_path, :html=>{:method=>:post,:autocomplete=>"off"} do |form|
-    %p What is the website or GitHub URL of the person you want to nominate?
-    %div.field
-      %label(for="site_url") http://
-      %input(type="url" id="site_url" name="site[url]" size="30")
-    #yes_match
-    %button#nomination_submit{:type=>"submit",:name=>"commit"} Nominate
+  %p <img src="/images/RubyHeroes-2010.jpg" />
 %section#about
   :markdown
     ### What is this about? ###
