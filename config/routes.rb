@@ -1,10 +1,15 @@
-ActionController::Routing::Routes.draw do |map|
+RubyHeroAwards::Application.routes.draw do
+  resources :heroes
+  match 'heroes/year/:year' => 'heroes#year', :year => /\d{4}/
   
-  map.resources :heroes
-  map.connect "heroes/year/:year", :controller => "heroes", :action => "year", :year => /\d{4}/
+  resources :nominations, :new => {:new => [:post]}
+  resources :sites do
+    resources :nominations
+    collection do
+      get :search
+    end
+  end
+
+  root :to => 'sites#search'
   
-  map.resources :nominations, :new => {:new => [:post]}
-  map.resources :sites, :collection => {:search => :get}, :has_many=>:nominations
-  
-  map.root :controller => "sites", :action => "search"
 end
