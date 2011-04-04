@@ -5,7 +5,7 @@ gem 'rails', '3.0.5'
 gem 'haml-rails'
 gem 'rdiscount'
 gem 'formtastic'
-gem 'will_paginate', :version => '~>2.3.11'
+gem 'will_paginate', '~>2.3.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
