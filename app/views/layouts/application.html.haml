@@ -1,12 +1,13 @@
-!!! 5
+!!!
 %html{ html_attrs }
   %head
-    %meta{ "http-equiv" => "content-type", :content => "text/html;charset=UTF-8" }
+    %meta(charset='UTF-8')
     %title Ruby Hero Awards
     = stylesheet_link_tag 'default'
     = render :partial => 'layouts/mobile_head'
     %link{ :rel => 'shortcut icon', :type => 'image/png', :href => '/images/favicon.png' }
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js', 'application'
+    = javascript_include_tag 'http://platform.twitter.com/widgets.js'
     /[if IE]
       = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
     /[if lt IE 8]
@@ -15,13 +16,13 @@
   %body{ :class => "#{controller.controller_name} #{controller.controller_name}-#{controller.action_name}" }
     %header
       %h1
-        = link_to "Ruby Hero", "/"
+        = link_to('Ruby Hero Awards', root_url)
     %section#wrapper
       = yield
     %footer
       Ruby Heroes is produced by 
-      = link_to image_tag("/images/envylabs.png"), "http://www.envylabs.com"
+      = link_to image_tag('envylabs.png'), 'http://www.envylabs.com'
       designed by
-      = link_to image_tag("/images/clevercode.png"), "http://www.clevercode.net"
+      = link_to image_tag('clevercode.png'), 'http://www.clevercode.net'
       and graciously hosted at 
-      = link_to image_tag("/images/heroku.png"), "http://www.heroku.com"
+      = link_to image_tag('heroku.png'), 'http://www.heroku.com'
