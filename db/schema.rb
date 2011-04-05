@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110405153226) do
+ActiveRecord::Schema.define(:version => 20110405201817) do
 
   create_table "heroes", :force => true do |t|
     t.string   "name"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(:version => 20110405153226) do
   end
 
   create_table "nominations", :force => true do |t|
-    t.string  "nominee_id",   :null => false
-    t.text    "testimonial",  :null => false
+    t.integer "nominee_id",   :limit => 8, :null => false
+    t.text    "testimonial",               :null => false
     t.integer "nominator_id"
   end
 
