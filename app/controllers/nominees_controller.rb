@@ -6,6 +6,7 @@ class NomineesController < ApplicationController
       render :index, :layout => false
     else
       render :nothing => true
+    end
   end
 
 end
