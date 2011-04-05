@@ -2,14 +2,37 @@
 #successbox
   %h3
     Thanks for your nomination.
+#info
   %p
     Winners will be announced at
     = link_to("Railsconf", "http://en.oreilly.com/rails2011") + "."
   %p
     You can
     = link_to("nominate someone else", root_path)
+#sponsormini
+  :markdown  
+    ### Sponsors ###
+    ![O’Reilly](/images/oreilly.png)
+    The Ruby Hero Awards are graciously sponsored this year by
+    [O’Reilly](http://www.oreilly.com/ "O’Reilly"). O’Reilly spreads the
+    knowledge of innovators through technology books, online services, and tech
+    conferences (including Railsconf).
+    [Railsconf](http://en.oreilly.com/rails2011 "Railsconf 2011") is taking
+    place this year May 16-19 in Baltimore, Maryland, where the winners of the
+    Ruby Hero Awards will be announced live on stage. [Registrations are now
+    open](http://en.oreilly.com/rails2011 "Railsconf 2011") if you'd like to
+    attend.
+#railsbestmini
+  %h4
+    Looking to improve your Rails skills?
+  %p
+    Envy Labs recently released their first Code School course,
+    #{link_to('Rails Best Practices', 'http://railsbest.com')}.
+    The course is full of techniques to improve the code quality
+    and maintainability of your rails apps. Available now for just $45.
+    = link_to image_tag('http://railsforzombies.org/code_path_course_engine/images/promo-rbp.jpg?1300999723'), 'http://railsbest.com'
 #spreadmini
-  %h3
+  %h4
     Spread the word
   %p
     Pay it forward and 
@@ -19,9 +42,3 @@
     HTML Code: (click to copy)
     :plain
       <textarea rows="3" name="none" onclick="this.select();"><a href="http://www.rubyheroes.com" title="Ruby Hero Awards"><img alt="Ruby Hero Awards" src="http://#{request.host}/images/banner_small.png" /></a></textarea>
-%section#sponsormini
-  :markdown  
-    ### Sponsor ###
-    ![O'Reilly](/images/oreilly.png)
-    The Ruby Hero Awards are graciously sponsored this year by [O'Reilly](http://www.oreilly.com/ "O'Reilly"). O'Reilly spreads the knowledge of innovators through technology books, online services, and tech conferences (including Railsconf). [Railsconf](http://en.oreilly.com/rails2011 "Railsconf 2011") is taking place this year June 7-10 in Baltimore, Maryland, where the winners of the Ruby Hero Awards will be announced live on stage. [Registrations are now open](http://en.oreilly.com/rails2011 "Railsconf 2011") if you'd like to attend.
-  %script

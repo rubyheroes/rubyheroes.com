@@ -317,7 +317,7 @@ h2 {
 	margin-left: 20%;
 	font-weight: bold;
 }
-h3 {
+h3, h4 {
 	font-size: 2em;
 	margin: 1em 0 .7em;
 	letter-spacing: 0.05em;
@@ -552,24 +552,32 @@ input#nominee:focus {
 
 /* ==== SUCCESS PAGE ===== */
 #successbox {
-	clear: left;
-	float: left;
-	margin: 50px 0 2.5em;
-	width: 50%;
+  float: left;
+	margin: 50px 0 0;
+	width: 49%;
 }
 #successbox h3 {
 	color: #e5171e;
+  margin-bottom: 0px;
 	text-shadow: #000 1px 1px 0;
 }
-#successbox p {
-	margin: 0 50px 0 0;	
+#info {
+  padding-top: 20px;
+  width: 49%;
+}
+#info p {
+  margin: 0;
+}
+#spreadmini, #railsbestmini {
+	width: 49%;
+	margin: 10px 0 0 0px;
+	font-size: .8em;
 }
 #spreadmini {
-	clear: none;
-	float: right;
-	width: 48%;
-	margin: 59px 0 0 10px;
-	font-size: .8em;
+  padding-top: 10px;
+} 
+#spreadmini h4, #railsbestmini h4 {
+  white-space: nowrap;
 }
 #spreadmini textarea {
 	width: 90%;
@@ -580,10 +588,17 @@ input#nominee:focus {
 	padding: 7px 10px;
 	font: 1em Monaco, Courrier, monospace;
 }
+#info, #successbox { float: left; clear: left }
+#spreadmini { clear: left }
+
+#sponsormini, #railsbestmini {
+  clear:right;
+  float:right;
+}
 #spreadmini textarea:focus {
 	background: yellow;
 }
-#spreadmini img {
+#spreadmini img, #railsbestmini img {
 	display: block;
 	margin: 10px auto 20px;
 	border: #fff solid 5px;
@@ -592,20 +607,19 @@ input#nominee:focus {
 	-webkit-box-shadow: rgba(0,0,0,.8) 1px 1px 2px;
 }
 #sponsormini {
-	width: 50%;
+  margin-top: -45px;
+	width: 49%;
 	font-size: .8em;
 }
 #sponsormini h3 {
-	margin: 20px 40px 10px 0;
+	margin: 20px 0px 10px 0;
 	padding-bottom: 10px;
 	border-bottom: 1px solid rgba(0,0,0,.5);
 }
 #sponsormini p {
 	font-size: 1.3em;
-	margin-right: 25px;
 }
 #sponsormini img {
-	float: left;
 	margin: 4px 20px 10px 0;
 	height: 35px;
 }
