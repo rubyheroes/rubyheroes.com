@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(:version => 20110405201817) do
   end
 
   create_table "nominations", :force => true do |t|
-    t.integer "nominee_id",   :limit => 8, :null => false
-    t.text    "testimonial",               :null => false
+    t.text    "testimonial",  :null => false
     t.integer "nominator_id"
+    t.integer "nominee_id"
   end
 
   create_table "nominators", :force => true do |t|

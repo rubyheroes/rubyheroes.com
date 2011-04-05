@@ -1,25 +1,16 @@
 class ChangeNomineeIdToIntegerOnNominations < ActiveRecord::Migration
   def self.up
-    nominations = {}
-    Nomination.all.each do |n|
-      nominations[n.id] = n.nominee_id.to_i
-    end
-    change_column :nominations, :nominee_id, :integer, :limit => 8
+    # Manually change id strings into integers
+    rename_column :nominations, :nominee_id, :old_nominee_id
+    add_column :nominations, :nominee_id, :integer
     Nomination.reset_column_information
     Nomination.all.each do |n|
-      n.update_attribute(:nominee_id, nominations[n.id])
+      n.update_attribute(:nominee_id, n.old_nominee_id.to_i)
     end
+    remove_column :nominations, :old_nominee_id
   end
 
   def self.down
-    nominations = {}
-    Nomination.all.each do |n|
-      nominations[n.id] = n.nominee_id.to_s
-    end
     change_column :nominations, :nominee_id, :string
-    Nomination.reset_column_information
-    Nomination.all.each do |n|
-      n.update_attribute(:nominee_id, nominations[n.id])
-    end
   end
 end
