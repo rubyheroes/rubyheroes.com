@@ -133,11 +133,11 @@ body {
   display: block;
 }
 #yes_match h2 {
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 .popdown {
-	margin: 5px auto 5px;
+	margin: 5px 40px 5px;
 	width: 60%;
 	padding: 0;
 	display: block;
@@ -359,7 +359,7 @@ p:last-child {
 	font-size: 1.2em;
 }
 #vote div.field {
-  height: 30px;
+  height: 80px;
   padding: 0;
   margin: 0;
 }
@@ -387,7 +387,7 @@ input#nominee:focus {
 /* ===== SUBMISSION FORM ===== */
 #nomination_submit {
   display: block;
-  margin: 10px auto 0;
+  margin: 10px 40px 0;
   padding: 5px 50px;
   max-width: 540px;
 	text-align: center;
