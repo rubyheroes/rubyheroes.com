@@ -8,7 +8,7 @@ en:
     labels:
       github_username: "What is the Github username of your Ruby Hero?"
       name: "What is your name?"
-      email: "Waht is your email?"
+      email: "What is your email?"
       testimonial: "Testify!"
 
     hints:
