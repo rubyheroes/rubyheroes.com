@@ -1,4 +1,0 @@
-haml --version ">=2.2.22"
-rdiscount --version "~>1.6"
-formtastic --version "~>0.9"
-will_paginate --version "~>2.3.11"

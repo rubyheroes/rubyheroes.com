@@ -1,17 +1,9 @@
-- Formtastic::SemanticFormBuilder.required_string = "" 
-
 %section#nominate
-  - semantic_form_for @nomination do |form|
-    - form.inputs do
-      %h3
-        Please complete your nomination
-      - form.semantic_fields_for :site do |site|
-        = site.input :url, :label => "What is the url?"
-        = site.input :name, :label => "What is the title of the site?"
-      = form.input :nominee, :label => "Who is the nominee?", :hint => "This can be an individual or group."
-      - form.semantic_fields_for :nominator do |nominator|
-        = nominator.input :name, :label => "What is your name?"
-        = nominator.input :email, :label => "What is your email address?", :hint => "We'll never sell."
-      = form.input :testimonial, :label => "Testify!", :hint => "Use at least 25 characters to tell us why your nominee is a Ruby Hero."
-      .buttons
-        %button.formbutton{:name=>"commit", :type=>"submit"} Submit Nomination
+  = semantic_form_for @nomination do |form|
+    %h3
+      Please complete your nomination
+    = form.inputs :github_username, :for => :nominee
+    = form.inputs :name, :email, :for => :nominator
+    = form.inputs :testimonial
+    .buttons
+      %button.formbutton{:name=>"commit", :type=>"submit"} Submit Nomination

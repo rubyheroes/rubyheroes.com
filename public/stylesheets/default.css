@@ -130,10 +130,10 @@ body {
 }
 /* ===== POPDOWN AUTOCOMPLETE FOR URL INPUT ===== */
 #yes_match {
-  display: none;
+  display: block;
 }
 #yes_match h2 {
-  margin-top: 10px;
+  margin-top: 40px;
   margin-bottom: 0;
 }
 .popdown {
@@ -351,6 +351,7 @@ p:last-child {
 #vote {
 	display: block;
 	margin: -36px auto 0;
+  padding: 0px 150px;
 }
 #vote p {
 	text-align: center;
@@ -358,34 +359,27 @@ p:last-child {
 	font-size: 1.2em;
 }
 #vote div.field {
-  position: relative;
   height: 30px;
   padding: 0;
   margin: 0;
 }
 #vote label {
-  display: inline;
-  position: absolute;
-  left: 170px;
-  top: 3px;
-  padding: 0;
-  margin: 0;
-  z-index: 99;
+  display: block;
+  padding: 5px 0px;
+  width: 500px;
+  margin: 0 auto;
   font-size: 1.3em;
 }
-input#site_url {
+input#nominee {
 	display: block;
-	margin: 10px 0 5px -268px;
-	padding: 2px 5px 5px 50px;
+	padding: 2px 5px 5px; 
 	height: 28px;
-	font-size: 1.3em;
-	position: absolute;
-	top: -15px;
-	left: 50%;
-	width: 480px;
+	font-size: 1.5em;
+	width: 500px;
+  margin: 0px auto;
   border: 1px solid ;
 }
-input#site_url:focus {
+input#nominee:focus {
 	background: #f2f6ff;
 	color: #000;
 }
@@ -436,17 +430,20 @@ input#site_url:focus {
 	color: #fff;
 	text-shadow: rgba(0,0,0,.4) 2px 2px 1px;
 }
-#nominate fieldset {
+#nominate form {
 	display: block;
 	margin-top: 50px;
 	padding: 30px 30px 30px;
-	border: none;
 	background: #732222;
 	background: -moz-linear-gradient(top, #e53538, #732222);
 	background: -webkit-gradient(linear,left top,left bottom,from(#e53538),to(#732222));
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+}
+
+#nominate fieldset {
+	border: none;
 }
 #nominate fieldset label {
 	display: block;

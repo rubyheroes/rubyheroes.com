@@ -16,8 +16,6 @@ class HeroesController < ApplicationController
   
   def index
     @heroes = Hero.all
-    @nominations = Nomination.all(:select=>"nominee", :group => "nominee")
-    @nominees = @nominations.map { |nomination| nomination.nominee }
     response.headers['Cache-Control'] = 'public, max-age=300'
     respond_to do |format|
       format.html do

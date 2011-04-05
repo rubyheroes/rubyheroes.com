@@ -4,13 +4,12 @@
   %ul#antepenultimate
     = render :partial => "heroes/hero", :locals => {:hero => @heroes[1]}
 %section#vote
-  = form_for :site, :url => new_nomination_path, :html => { :method => :post, :autocomplete => 'off' } do |form|
-    %p What is the Github username of the person you want to nominate?
+  = form_tag new_nomination_path, :method => :get, :autocomplete => 'off' do
     %div.field
-      = form.label :url, 'http://'
-      = form.text_field :url, :size => 30 
+      = label_tag 'nominee', 'What is the Github username of the person you want to nominate?'
+      = text_field_tag 'nominee', nil, :size =>  24
     #yes_match
-      = form.submit 'Nominate'
+      %button.formbutton Nominate
 %section#about
   :markdown
     ### What is this about? ###
@@ -29,7 +28,7 @@
      
      Based on the nominations you give here, #{link_to "the previous Ruby
      Heroes", heroes_path} will pick 6 people who will receive a Ruby Hero
-     Award at [RailsConf](<http://en.oreilly.com/rails2010/) this year.
+     Award at [RailsConf](<http://en.oreilly.com/rails2011/) this year.
 
 %aside
   %section#reasons
@@ -55,9 +54,9 @@
      [O’Reilly](http://www.oreilly.com/ "O’Reilly").  O’Reilly spreads the
      knowledge of innovators through technology books, online services, and
      tech conferences (including RailsConf).
-     [RailsConf](http://en.oreilly.com/rails2010 "RailsConf 2010") is taking
+     [RailsConf](http://en.oreilly.com/rails2011 "RailsConf 2011") is taking
      place this year May 16-19 in Baltimore, Maryland, where the winners of the
      Ruby Hero Awards will be announced live on stage. [Registrations are now
-     open](http://en.oreilly.com/rails2010 "RailsConf 2010") if you’d like to
+     open](http://en.oreilly.com/rails2011 "RailsConf 2011") if you’d like to
      attend.
     

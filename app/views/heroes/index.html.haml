@@ -2,14 +2,9 @@
   %p Here are the previous year's award winners.  Many had quite humble beginnings, and now are quite notable.  
     
 %section#pastheroes
-  .year
-    %h3
-      2009 Ruby Hero Award Winners
-    %ul
-      = render :partial => "hero", :collection => @heroes.find_all {|i| i.year == "2009"}
-  .year
-    %h3
-      2008 Ruby Hero Award Winners
-    %ul
-      = render :partial => "hero", :collection => @heroes.find_all {|i| i.year == "2008"}
- 
+  - %w( 2010 2009 2008 ).each do |year|
+    .year
+      %h3
+        #{year} Ruby Hero Award Winners
+      %ul
+        = render :partial => "hero", :collection => @heroes.find_all {|i| i.year == year}

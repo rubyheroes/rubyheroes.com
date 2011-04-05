@@ -3,3 +3,14 @@
 
 en:
   hello: "Hello world"
+
+  formtastic:
+    labels:
+      github_username: "What is the Github username of your Ruby Hero?"
+      name: "What is your name?"
+      email: "Waht is your email?"
+      testimonial: "Testify!"
+
+    hints:
+      email: "We'll never sell"
+      testimonial: "Use at least 25 characters to tell us why your nominee is a Ruby Hero."

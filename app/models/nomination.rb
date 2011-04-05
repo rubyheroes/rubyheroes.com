@@ -1,8 +1,20 @@
 class Nomination < ActiveRecord::Base
+
+  # Associations
+  belongs_to :nominee
   belongs_to :nominator
-  belongs_to :site, :counter_cache => true
-  validates_length_of :testimonial, :minimum => 25, :message => "Testimony must be at least 25 charaters."
-  validates_presence_of :nominee, :message => "This field is required."
   accepts_nested_attributes_for :nominator
-  accepts_nested_attributes_for :site
+
+  # Validations
+  validates :testimonial, :length => { :minimum => 25, :message => "Testimony must be at least 25 charaters." }
+
+
+  def nominee_attributes=(params)
+    self.nominee = Nominee.find_or_create_by_github_username(params[:github_username])
+  end
+
+  def nominator_attributes=(params)
+    self.nominator = Nominator.find_or_create_by_email(params[:email], :name => params[:name] )
+  end
+
 end
