@@ -4,6 +4,7 @@ class NominationsController < ApplicationController
     @nomination.nominator = current_nominator
     @nomination.nominee_id = params[:nominee_id]
     @nomination.build_nominee(:github_username => params[:nominee]) unless @nomination.nominee
+    @nomination.nominee.valid?
   end
 
   def create
