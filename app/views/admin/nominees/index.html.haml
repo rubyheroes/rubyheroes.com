@@ -1,0 +1,18 @@
+%table
+  %caption Most nominated sites.
+  %thead
+    %tr
+      %th(scope="col") # of Nominations
+      %th(scope="col") Nominee
+      %th(scope="col") 
+  %tfoot
+    %tr
+      %td(colspan="3")= paginate(@nominees)
+  %tbody
+    - @nominees.each do |nominee|
+      %tr
+        %td.nomination_count= nominee.nomination_count
+        %td.github= link_to nominee.github_username, nominee.url
+        %td.actions= link_to "View nominations", [:admin, nominee]
+
+

@@ -5,7 +5,11 @@ RubyHeroAwards::Application.routes.draw do
 
   resources :heroes
   
-  resources :nominations
   resources :nominees, :only => %w( index )
+
+  namespace :admin do
+    resources :nominees, :only => %w( index show )
+    root :to => 'nominees#index'
+  end
 
 end

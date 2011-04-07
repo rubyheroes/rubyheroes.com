@@ -9,4 +9,14 @@ class NomineesController < ApplicationController
     end
   end
 
+  def index
+    @sites = Site.paginate(:order=>"nominations_count DESC", :page => params[:page])
+    render :index, :layout => 'admin'
+  end
+  
+  def show
+    @site = Site.find(params[:id])
+    render :show, :layout => 'admin'
+  end
+
 end

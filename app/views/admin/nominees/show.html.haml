@@ -1,0 +1,14 @@
+%table
+  %caption
+    Nominations for
+    = link_to @nominee.github_username, @nominee.url
+  %thead
+    %tr
+      %th(scope="col") Nominator
+      %th(scope="col") Testimony
+  %tbody
+    - @nominee.nominations.each do |nomination|
+      %tr
+        %td.nominator= "#{nomination.nominator.name} (#{nomination.nominator.email})"
+        %td.testimony= nomination.testimonial
+= link_to "Back to nominated sites", admin_nominees_path

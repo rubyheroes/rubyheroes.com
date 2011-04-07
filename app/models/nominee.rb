@@ -23,4 +23,9 @@ class Nominee < ActiveRecord::Base
   def github_username=(username)
     self[:github_username] = username.try(:downcase)
   end
+
+  def url
+    'http://github.com/%s' % github_username
+  end
+
 end

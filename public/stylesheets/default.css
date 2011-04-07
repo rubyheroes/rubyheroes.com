@@ -687,3 +687,32 @@ input#nominee:focus {
 #nomination_site_attributes_id {
 	display: none;
 }
+
+/* ===== Admin Area ====== */
+
+.nominees table {
+  width: 75%;
+  margin: 50px auto 10px;
+}
+
+.nominees table td.nomination_count {
+  width: 3ex;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.nominees table caption {
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.nominees table td {
+  padding: 15px;
+}
+.nominees table th {
+  padding: 5px 15px;
+}
+
+.nominees table th { background-color: rgba(0,0,0,0.075) }
+
+.nominees table tr:nth-child(odd) { background-color: rgba(0,0,0,0.05) }
