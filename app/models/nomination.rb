@@ -1,7 +1,7 @@
 class Nomination < ActiveRecord::Base
 
   # Associations
-  belongs_to :nominee, :counter_cache => true
+  belongs_to :nominee, :counter_cache => :nomination_count
   belongs_to :nominator
   accepts_nested_attributes_for :nominator
 
