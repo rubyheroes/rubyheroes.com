@@ -1,15 +1,16 @@
-%section#heroes
-  %ul#penultimate
-    = render :partial => "heroes/hero", :locals => {:hero => @heroes[0]}
-  %ul#antepenultimate
-    = render :partial => "heroes/hero", :locals => {:hero => @heroes[1]}
-%section#vote
-  = form_tag new_nomination_path, :method => :get, :autocomplete => 'off' do
-    %div.field
-      = label_tag 'nominee', 'What is the Github username of the person you want to nominate?'
-      = text_field_tag 'nominee', nil, :size =>  24
-    #yes_match
-    %button#nomination_submit Nominate
+%section#pastheroes
+  .year
+    %h3 Congratulations to the 2011 Ruby Heroes!
+    %ul
+      = render @heroes
+-# 
+  %section#vote
+    = form_tag new_nomination_path, :method => :get, :autocomplete => 'off' do
+      %div.field
+        = label_tag 'nominee', 'What is the Github username of the person you want to nominate?'
+        = text_field_tag 'nominee', nil, :size =>  24
+      #yes_match
+      %button#nomination_submit Nominate
 %section#about
   :markdown
     ### What is this about? ###
@@ -28,7 +29,7 @@
      
      Based on the nominations you give here, #{link_to "the previous Ruby
      Heroes", heroes_path} will pick 6 people who will receive a Ruby Hero
-     Award at [RailsConf](<http://en.oreilly.com/rails2011/) this year.
+     Award at [RailsConf](http://en.oreilly.com/rails2011/) this year.
 
 %aside
   %section#reasons
