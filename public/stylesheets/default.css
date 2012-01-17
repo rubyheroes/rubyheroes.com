@@ -142,7 +142,7 @@ body {
 
 #yes_match {
   width: 340px;
-  margin: 0 auto;
+  margin-left: -20px;
   overflow: hidden;
   display: block; }
   #yes_match h2 {
@@ -150,7 +150,7 @@ body {
     margin-bottom: 0; }
 
 .popdown {
-  margin: -15px 29px 5px;
+  margin: -12px 29px 5px;
   padding: 0;
   display: block; }
   .popdown li {
@@ -378,10 +378,13 @@ footer {
     width: 500px;
     margin: 0 auto;
     font-size: 1.3em; }
+  #vote .inputs {
+    float: left;
+    width: 300px; }
 
 input#nominee {
   display: block;
-  padding: 3px 5px 5px;
+  padding: 5px 5px 6px;
   height: 35px;
   font-size: 1.6em;
   width: 280px;
@@ -397,13 +400,14 @@ input#nominee {
 /* ===== SUBMISSION FORM ===== */
 #nomination_submit {
   display: block;
-  margin: 10px auto 0;
-  padding: 5px 50px;
-  width: 240px;
+  float: left;
+  margin: 35px 0 0 10px;
+  padding: 10px 20px 11px;
+  width: 170px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: bold;
   color: white;
   text-shadow: black 1px 1px 1px;

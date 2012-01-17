@@ -8,10 +8,11 @@
 - # comment out section#vote to close voting round
 %section#vote
   = form_tag new_nomination_path, :method => :get, :autocomplete => 'off' do
-    %div.field
-      = label_tag 'nominee', 'What is the Github username of the person you want to nominate?'
-      = text_field_tag 'nominee', nil, :size =>  24, :autocomplete => "off"
-    #yes_match
+    .inputs
+      %div.field
+        = label_tag 'nominee', 'What is the Github username of the person you want to nominate?'
+        = text_field_tag 'nominee', nil, :size =>  24, :autocomplete => "off"
+      #yes_match
     %button#nomination_submit Nominate
 
 %section#about
