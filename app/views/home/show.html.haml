@@ -10,7 +10,7 @@
   = form_tag new_nomination_path, :method => :get, :autocomplete => 'off' do
     %div.field
       = label_tag 'nominee', 'What is the Github username of the person you want to nominate?'
-      = text_field_tag 'nominee', nil, :size =>  24
+      = text_field_tag 'nominee', nil, :size =>  24, :autocomplete => "off"
     #yes_match
     %button#nomination_submit Nominate
 
@@ -52,15 +52,8 @@
 
 %section#sponsor
   :markdown
-    ### Sponsor ###
-     ![O’Reilly](/images/oreilly.png)
-     The Ruby Hero Awards are graciously sponsored this year by
-     [O’Reilly](http://www.oreilly.com/ "O’Reilly").  O’Reilly spreads the
-     knowledge of innovators through technology books, online services, and
-     tech conferences (including RailsConf).
-     [RailsConf](http://en.oreilly.com/rails2011 "RailsConf 2011") is taking
-     place this year May 16-19 in Baltimore, Maryland, where the winners of the
-     Ruby Hero Awards will be announced live on stage. [Registrations are now
-     open](http://en.oreilly.com/rails2011 "RailsConf 2011") if you’d like to
-     attend.
-    
+    ### Sponsor
+    [![Code School](/images/code_school.png)](http://www.codeschool.com/enrollments/UVZOU2VsUVg3WlRXR2tRYTh0Vm5vU25pZDFKYmF2UVk5bEg0RFlhMGdQcz0tLS96RHZMT3lQTG4rcjViR3lHRlRZakE9PQ==)
+    Code School is an online learning platform that allows you to learn new coding skills through video lessons and interactive coding challenges. 
+
+    [Try our CoffeeScript course for free](http://coffeescript.codeschool.com) or [enroll for only $9 a month](http://www.codeschool.com/enrollments/UVZOU2VsUVg3WlRXR2tRYTh0Vm5vU25pZDFKYmF2UVk5bEg0RFlhMGdQcz0tLS96RHZMT3lQTG4rcjViR3lHRlRZakE9PQ==) to get access to all courses and screencasts.
