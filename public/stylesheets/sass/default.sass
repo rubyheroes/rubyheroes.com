@@ -21,7 +21,6 @@
 @import partials/base
 @import partials/home
 
-/* ===== STYLING =====
 /* ===== FORMS =====
 
 #vote
@@ -204,19 +203,33 @@ input#nominee
   margin: 50px 0 0
   width: 49%
   h3
+    font:
+      size: 2.1em
     color: #e5171e
     margin-bottom: 0px
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9)
 
 #info
   padding-top: 20px
-  width: 48%
-  p
+  width: 50%
 
-#spreadmini, #railsbestmini, #sponsormini
-  width: 47%
+  p
+    clear: both
+
+  .twitter-share-button
+    float: left
+    margin-bottom: 1em
+    margin-left: 4em
+
+  .fb-like
+    margin-top: 4px
+    float: left
+    margin-left: 4em
+
+#spreadmini, #sponsormini
+  width: 45%
   margin: 10px 0 0 0px
-  font-size: .9em
+  font-size: 1em
 
   h3
     margin: 20px 0px 10px 0
@@ -227,9 +240,11 @@ input#nominee
   margin-top: -45px
   p
     font-size: 1.3em
+    clear: left
   img
-    margin: 4px 20px 10px 0
-    height: 98px
+    float: right
+    margin: -62px 0 10px 0
+    height: 45px
 
 #spreadmini
   clear: left
@@ -247,6 +262,7 @@ input#nominee
     font: 1em Monaco, Courrier, monospace
     &:focus
       background: #fff5b2
+
   img
     display: block
     margin: 10px auto 20px
@@ -255,19 +271,16 @@ input#nominee
     -moz-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
     -webkit-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
 
-#railsbestmini h4
-  white-space: nowrap
-
 #info, #successbox
   float: left
   clear: left
 
-#sponsormini, #railsbestmini
+#sponsormini
   clear: right
   float: right
 
-#railsbestmini 
-  img
+  .coffeescript img
+    height: 141px
     display: block
     margin: 10px auto 20px
     border: #fff solid 5px

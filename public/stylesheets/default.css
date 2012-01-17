@@ -49,7 +49,7 @@ body {
   margin: -89px 0 0 0;
   padding: 60px 50px 30px;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  overflow: auto; }
+  overflow: hidden; }
 
 #heroes {
   margin-top: -20px;
@@ -259,7 +259,7 @@ aside {
   margin: 0 20px 0; }
   #reasons h3 {
     font-size: 1.3em;
-    line-height: 1.2;
+    line-height: 1.3;
     margin: 0 -20px 0;
     padding: 18px 10px 12px 30px;
     text-shadow: rgba(0, 0, 0, 0.9) 1px 1px 1px;
@@ -277,9 +277,8 @@ aside {
     background-image: -o-linear-gradient(top, #364466, #26314d);
     background-image: linear-gradient(top, #364466, #26314d); }
   #reasons ul li {
-    letter-spacing: 0.06em;
-    font-size: 1.1em;
-    line-height: 1.1;
+    font-size: 1.2em;
+    line-height: 1.3;
     margin: 0 -20px 0 -20px;
     padding: 14px 20px 13px 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -313,6 +312,14 @@ aside {
     box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
     -moz-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px; }
+  #spread .twitter-share-button {
+    float: left;
+    margin-bottom: 1em;
+    margin-left: 3em; }
+  #spread .fb-like {
+    margin-top: 4px;
+    float: left;
+    margin-left: 3em; }
 
 #sponsor {
   clear: both; }
@@ -326,13 +333,10 @@ aside {
     margin-top: 1em;
     float: right;
     clear: left; }
-    #sponsor p:last-child {
-      float: none;
-      text-align: center; }
   #sponsor img {
     float: left;
     margin: -0.5em 43px 10px 0;
-    width: 380px; }
+    width: 360px; }
 
 footer {
   width: 80%;
@@ -344,7 +348,6 @@ footer {
     vertical-align: middle;
     margin-top: -7px; }
 
-/* ===== STYLING ===== */
 /* ===== FORMS ===== */
 #vote {
   display: block;
@@ -557,19 +560,30 @@ input#nominee {
   margin: 50px 0 0;
   width: 49%; }
   #successbox h3 {
+    font-size: 2.1em;
     color: #e5171e;
     margin-bottom: 0px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9); }
 
 #info {
   padding-top: 20px;
-  width: 48%; }
+  width: 50%; }
+  #info p {
+    clear: both; }
+  #info .twitter-share-button {
+    float: left;
+    margin-bottom: 1em;
+    margin-left: 4em; }
+  #info .fb-like {
+    margin-top: 4px;
+    float: left;
+    margin-left: 4em; }
 
-#spreadmini, #railsbestmini, #sponsormini {
-  width: 47%;
+#spreadmini, #sponsormini {
+  width: 45%;
   margin: 10px 0 0 0px;
-  font-size: 0.9em; }
-  #spreadmini h3, #railsbestmini h3, #sponsormini h3 {
+  font-size: 1em; }
+  #spreadmini h3, #sponsormini h3 {
     margin: 20px 0px 10px 0;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
@@ -577,10 +591,12 @@ input#nominee {
 #sponsormini {
   margin-top: -45px; }
   #sponsormini p {
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    clear: left; }
   #sponsormini img {
-    margin: 4px 20px 10px 0;
-    height: 98px; }
+    float: right;
+    margin: -62px 0 10px 0;
+    height: 45px; }
 
 #spreadmini {
   clear: left;
@@ -605,24 +621,21 @@ input#nominee {
     -moz-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px; }
 
-#railsbestmini h4 {
-  white-space: nowrap; }
-
 #info, #successbox {
   float: left;
   clear: left; }
 
-#sponsormini, #railsbestmini {
+#sponsormini {
   clear: right;
   float: right; }
-
-#railsbestmini img {
-  display: block;
-  margin: 10px auto 20px;
-  border: white solid 5px;
-  box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px; }
+  #sponsormini .coffeescript img {
+    height: 141px;
+    display: block;
+    margin: 10px auto 20px;
+    border: white solid 5px;
+    box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px; }
 
 #success h3 {
   margin: 0 0 20px;
