@@ -134,15 +134,23 @@ body {
   float: right;
   text-align: right; }
 
+#error {
+  margin-top: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center; }
+
 #yes_match {
+  width: 340px;
+  margin: 0 auto;
+  overflow: hidden;
   display: block; }
   #yes_match h2 {
     margin-top: 10px;
     margin-bottom: 0; }
 
 .popdown {
-  margin: 5px 29px 5px;
-  width: 90%;
+  margin: -15px 29px 5px;
   padding: 0;
   display: block; }
   .popdown li {
@@ -181,13 +189,12 @@ body {
       font-size: 1.1em;
       background-position: 92%;
       background-image: none;
+      background: url("../images/arrow.png") no-repeat 95%;
       -webkit-transition: all 100ms ease-in;
       -moz-transition: all 100ms ease-in;
       transition: all 100ms ease-in; }
-      .popdown li a:hover, .popdown li a:active, .popdown li a:focus {
-        /*  color: #fff;
-         *text-shadow: rgba(0,0,0,.9) 1px 1px 1px; */
-        background: url("../images/arrow.png") no-repeat 98%; }
+      .popdown li a:hover, .popdown li a:focus {
+        background-position: 98%; }
 
 h1 {
   text-align: center;
@@ -349,7 +356,6 @@ footer {
   text-align: center;
   color: #222222; }
   footer img {
-    border: none;
     vertical-align: middle;
     margin-top: -7px; }
 
@@ -375,12 +381,15 @@ footer {
 
 input#nominee {
   display: block;
-  padding: 2px 5px 5px;
-  height: 28px;
-  font-size: 1.5em;
-  width: 500px;
-  margin: 0px auto;
-  border: 1px solid; }
+  padding: 3px 5px 5px;
+  height: 35px;
+  font-size: 1.6em;
+  width: 280px;
+  margin: 5px auto 0;
+  border: 1px solid;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
   input#nominee:focus {
     background: #fff2f2;
     color: black; }
@@ -388,9 +397,9 @@ input#nominee {
 /* ===== SUBMISSION FORM ===== */
 #nomination_submit {
   display: block;
-  margin: 10px 40px 0 23px;
+  margin: 10px auto 0;
   padding: 5px 50px;
-  max-width: 540px;
+  width: 240px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
