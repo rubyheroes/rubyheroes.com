@@ -8,11 +8,6 @@ class NomineesController < ApplicationController
       render :nothing => true
     end
   end
-
-  def index
-    @sites = Site.paginate(:order=>"nominations_count DESC", :page => params[:page])
-    render :index, :layout => 'admin'
-  end
   
   def show
     @site = Site.find(params[:id])
