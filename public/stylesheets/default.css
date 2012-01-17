@@ -26,6 +26,10 @@ section, article, footer, header {
 body {
   -webkit-font-smoothing: antialiased; }
 
+/* removing borders from image links on IE */
+a > img {
+  border: none; }
+
 html {
   font: 62.5% Helvetica, Arial, sans-serif;
   background: #4c698b;
@@ -147,6 +151,7 @@ body {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #bbcbdb;
     background-color: rgba(122, 159, 204, 0.4);
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(161, 192, 229, 0.3)), to(rgba(122, 159, 204, 0.4)));
     background-image: -webkit-linear-gradient(top, rgba(161, 192, 229, 0.3), rgba(122, 159, 204, 0.4));
@@ -159,6 +164,7 @@ body {
       -moz-border-radius: 0 0 5px 5px;
       border-radius: 0 0 5px 5px; }
     .popdown li:active {
+      background-color: #aabed2;
       background-color: rgba(161, 192, 229, 0.5);
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(122, 159, 204, 0.5)), to(rgba(161, 192, 229, 0.5)));
       background-image: -webkit-linear-gradient(top, rgba(122, 159, 204, 0.5), rgba(161, 192, 229, 0.5));
@@ -343,6 +349,7 @@ footer {
   text-align: center;
   color: #222222; }
   footer img {
+    border: none;
     vertical-align: middle;
     margin-top: -7px; }
 
