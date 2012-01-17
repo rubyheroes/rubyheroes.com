@@ -4,38 +4,38 @@
     Thanks for your nomination.
 #info
   %p
+    Help us rally some well deserved love for Ruby Heroes by letting your friends know that you cast your vote on Twitter and Facebook.
+  %p
+    = link_to "Tweet", "https://twitter.com/share", :class => "twitter-share-button", 'data-url' => "http://rubyheroes.com", 'data-text' => "The Ruby Heroes among us deserve recognition from the community. I cast my vote at", 'data-size' => "large"
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+  #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+  .fb-like{ "data-href" => "http://rubyheroes.com", "data-send" => "false", "data-layout" => "button_count", "data-width" => "50", "data-show-faces" => "true", "data-action" => "recommend", "data-font" => "lucida grande" }
+    
+  %p
+    Feel free to
+    = link_to("nominate someone else", root_path)
+    if you think other contributors deserve some recognition.
+  %p
     Ruby Hero Award winners will be announced at the next 
     = link_to("RailsConf", "http://railsconf2012.com/")
     in Austin, TX on April 23rd, 2012.
-  %p
-    You can
-    = link_to("nominate someone else", root_path)
-    or go relax with a little 
-    = link_to("sip of CoffeeScript", "http://coffeescript.codeschool.com/")
-    on Code School, it's up to you really.
 #sponsormini
+  %h3 Sponsor
+  = link_to image_tag("/images/code_school-small.png", alt: "Code School"), "http://www.codeschool.com/enrollments/UVZOU2VsUVg3WlRXR2tRYTh0Vm5vU25pZDFKYmF2UVk5bEg0RFlhMGdQcz0tLS96RHZMT3lQTG4rcjViR3lHRlRZakE9PQ==", title: "Code School"
   :markdown
-    ### Sponsor ###
-     [![Code School](/images/code_school.png)](http://www.codeschool.com)
-    Code School is an online platform that allows you to learn new coding skills through video lessons and interactive coding challenges.
+    Code School is an online platform that allows you to learn by doing through video lessons and interactive coding challenges.
 
-    Use the link below to enroll for Code School and you'll save $16 on your first month, get access to all Code School courses as well as all Code TV screencasts. 
-
-  = link_to "Give Code School a try", "http://www.codeschool.com/enrollments/UVZOU2VsUVg3WlRXR2tRYTh0Vm5vU25pZDFKYmF2UVk5bEg0RFlhMGdQcz0tLS96RHZMT3lQTG4rcjViR3lHRlRZakE9PQ==", :class => "button"
-#railsbestmini
-  %h3
-    Check out CoffeeScript?
   %p
-    Try out the first level of #{link_to "A Sip of CoffeeScript", "http://coffeescript.codeschool.com/"} for free.
-    = link_to image_tag('/images/codeschool_coffeescript.png'), 'http://coffeescript.codeschool.com'
-#spreadmini
-  %h3
-    Spread the word
-  %p
-    Pay it forward and 
-    = link_to 'talk about us on Twitter', 'http://twitter.com/intent/tweet?text=Who%20is%20your%20Ruby%20Hero?%20-%20&url=http://www.rubyheroes.com/', :title => 'Click to share this post on Twitter'
-    or post a blog badge to your website to encourage others to show their gratitude.
-    = image_tag "/images/banner_small.png", :alt => "Ruby Heroes"
-    HTML Code:
-    :plain
-      <textarea rows="3" name="none" onclick="this.select();"><a href="http://www.rubyheroes.com" title="Ruby Hero Awards"><img alt="Ruby Hero Awards" src="http://#{request.host}/images/banner_small.png" /></a></textarea>
+    Try the first level of #{link_to "A Sip of CoffeeScript", "http://coffeescript.codeschool.com/"} for free.
+    = link_to image_tag('/images/codeschool_coffeescript.png'), 'http://coffeescript.codeschool.com', class: "coffeescript"

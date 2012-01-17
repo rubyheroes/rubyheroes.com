@@ -37,23 +37,33 @@
 %aside
   %section#reasons
     :markdown
-      ### Reasons to nominate someone ###
+      ### Why to nominate a Ruby Hero?
       + educational content &amp; tutorials
       + open source project contribution
       + help organizing educational events
       + free support on mailing lists / IRC
       + well deserved recognition
 %section#spread
-  :markdown
-    ### Spread the word ###
-    
-    Pay it forward and [talk about us on Twitter](http://twitter.com/intent/tweet?text=Who%20is%20your%20Ruby%20Hero?%20-%20&url=http://www.rubyheroes.com/ "Click to share this post on Twitter") or post a blog badge to your website to encourage others to show their gratitude.
-    ![Ruby Hero Banner](/images/banner_small.png)
+  %h3 Spread the word
+  %p Help us rally some well deserved love for Ruby Heroes by letting your friends know that you cast your vote on Twitter and Facebook.
+  = link_to "Tweet", "https://twitter.com/share", :class => "twitter-share-button", 'data-url' => "http://rubyheroes.com", 'data-text' => "The Ruby Heroes among us deserve recognition from the community.", 'data-size' => "large"
+  :javascript
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+  #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+  .fb-like{ "data-href" => "http://rubyheroes.com", "data-send" => "false", "data-layout" => "button_count", "data-width" => "50", "data-show-faces" => "true", "data-action" => "recommend", "data-font" => "lucida grande" }
 
 %section#sponsor
   :markdown
     ### Sponsor
     [![Code School](/images/code_school.png)](http://www.codeschool.com/enrollments/UVZOU2VsUVg3WlRXR2tRYTh0Vm5vU25pZDFKYmF2UVk5bEg0RFlhMGdQcz0tLS96RHZMT3lQTG4rcjViR3lHRlRZakE9PQ==)
-    Code School is an online learning platform that allows you to learn new coding skills through video lessons and interactive coding challenges. 
-
-    [Try our CoffeeScript course for free](http://coffeescript.codeschool.com) or [enroll for only $9 a month](http://www.codeschool.com/enrollments/UVZOU2VsUVg3WlRXR2tRYTh0Vm5vU25pZDFKYmF2UVk5bEg0RFlhMGdQcz0tLS96RHZMT3lQTG4rcjViR3lHRlRZakE9PQ==) to get access to all courses and screencasts.
+    Code School is an online platform that allows you to learn by doing through video lessons and interactive coding challenges. [Try the first level of our CoffeeScript course for free](http://coffeescript.codeschool.com).
