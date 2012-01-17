@@ -1,0 +1,332 @@
+/* ===== INFO =====
+/*   Ruby Hero Awards
+/*   CSS3 stylesheet 1.0
+/*   cleverCode LLC - 2010
+
+@import partials/reset
+
+// Mixins
+=linear-gradient($from, $to)
+  background-color: $to
+  background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to)) /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $from, $to) /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, $from, $to) /* FF3.6 */
+  background-image: -ms-linear-gradient(top, $from, $to) /* IE10 */
+  background-image: -o-linear-gradient(top, $from, $to) /* Opera 11.10+ */
+  background-image: linear-gradient(top, $from, $to)
+
+@import partials/structure
+@import partials/heroes
+@import partials/popdown
+@import partials/base
+@import partials/home
+
+/* ===== STYLING =====
+/* ===== FORMS =====
+
+#vote
+  display: block
+  margin: 3em auto 0
+  padding: 0px 150px
+  p
+    text-align: center
+    color: #111
+    font-size: 1.2em
+  div.field
+    height: 80px
+    padding: 0
+    margin: 0
+  label
+    display: block
+    padding: 5px 0px
+    width: 500px
+    margin: 0 auto
+    font-size: 1.3em
+
+input#nominee
+  display: block
+  padding: 2px 5px 5px
+  height: 28px
+  font-size: 1.5em
+  width: 500px
+  margin: 0px auto
+  border: 1px solid
+  &:focus
+    background: #fff2f2
+    color: #000
+
+/* ===== SUBMISSION FORM =====
+
+#nomination_submit
+  display: block
+  margin: 10px 40px 0 23px
+  padding: 5px 50px
+  max-width: 540px
+  text-align: center
+  white-space: nowrap
+  overflow: hidden
+  font-size: 1.4em
+  font-weight: bold
+  color: #fff
+  text-shadow: #000 1px 1px 1px
+  text-shadow: rgba(0, 0, 0, 1) 1px 1px 1px
+  // box-shadow: #ff8080 -1px -1px 0, #661414 1px 1px 0
+  // -moz-box-shadow: #ff8080 -1px -1px 0, #661414 1px 1px 0
+  // -webkit-box-shadow: #ff8080 -1px -1px 0, #661414 1px 1px 0
+  box-shadow: inset rgba(0,0,0,.7) 0 0 2px, inset rgba(255,255,255,.5) 0 1px 1px 
+  border: none
+  border-radius: 5px
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  +linear-gradient(#d92b2b, #732222)
+  -webkit-transition: all 200ms linear
+  -moz-transition: all 200ms linear
+  transition: all 200ms linear
+  &:hover, &:focus
+    +linear-gradient(lighten(saturate(#d92b2b, 10%), 5%), #732222)
+    cursor: pointer
+  &:active
+    +linear-gradient(#991f1f, #d92121)
+
+#nominate
+  h3
+    margin: 0 0 20px
+    padding: 0
+    color: #fff
+    text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 1px
+  form
+    display: block
+    margin-top: 50px
+    padding: 30px 30px 30px
+    +linear-gradient(#e53538, #732222)
+    border-radius: 10px
+    -moz-border-radius: 10px
+    -webkit-border-radius: 10px
+  fieldset
+    border: none
+    label
+      display: block
+      color: #b0d4ff
+      font-size: 1.2em
+      letter-spacing: .06em
+      margin: 0 0 5px 3px
+      text-shadow: rgba(0, 0, 0, 0.8) 0 1px 1px
+  p
+    &.inline-errors
+      margin: -20px 398px 20px 0
+      padding: 4px 10px 5px
+      color: #d92b2b
+      text-align: right
+      text-shadow: #000 1px 1px 0
+      letter-spacing: normal
+      line-height: normal
+      font-size: 1em
+      font-weight: bold
+      background: #111
+      background: rgba(0, 0, 0, 0.6)
+      border-top: 1px solid #000
+      border-radius: 0 0 5px 5px
+      -webkit-border-bottom-left-radius: 5px
+      -webkit-border-bottom-right-radius: 5px
+      -moz-border-radius-bottomleft: 5px
+      -moz-border-radius-bottomright: 5px
+      -webkit-transition: all 200ms linear
+      -moz-transition: all 200ms linear
+      transition: all 200ms linear
+    &.inline-hints
+      width: 47%
+      float: right
+      margin-top: -40px
+      padding: 0 5px 0 0
+      color: #fff
+      font-style: italic
+      font-size: 1em
+      text-shadow: rgba(0, 0, 0, 0.4) 0 1px 1px
+      letter-spacing: .08em
+      line-height: 1.3
+
+  #nomination_testimonial_input p
+    &.inline-errors
+      margin-top: -20px
+    &.inline-hints
+      margin-top: -115px
+  fieldset
+    textarea
+      margin-top: -100px
+      margin-bottom: 10px
+      height: 100px
+    input, textarea
+      width: 50%
+      font-size: 1.2em
+      display: block
+      margin: 0 0 20px 0
+      padding: 5px 0
+      text-indent: 7px
+      border: none
+      box-shadow: rgba(0, 0, 0, 0.6) -1px -1px 0, rgba(255, 255, 255, 0.4) 1px 1px 0
+      -moz-box-shadow: rgba(0, 0, 0, 0.6) -1px -1px 0, rgba(255, 255, 255, 0.4) 1px 1px 0
+      -webkit-box-shadow: rgba(0, 0, 0, 0.6) -1px -1px 0, rgba(255, 255, 255, 0.4) 1px 1px 0
+      background: #fcffe5
+      border-radius: 2px
+      -moz-border-radius: 2px
+      -webkit-border-radius: 2px
+    &.inputs
+      input:focus, textarea:focus
+        background: #e5ecff
+        color: #000
+
+.formbutton
+  font-size: 1.3em
+  margin: 20px 0 0 0
+  padding: 5px 20px
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px
+  color: #fff
+  font-weight: bold
+  letter-spacing: normal
+  +linear-gradient(#395180, #243259)
+  border-radius: 5px
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  border: none
+  box-shadow: #6690cc -1px -1px 0, #1f2b4d 1px 1px 0
+  -moz-box-shadow: #6690cc -1px -1px 0, #1f2b4d 1px 1px 0
+  -webkit-box-shadow: #6690cc -1px -1px 0, #1f2b4d 1px 1px 0
+  &:hover, &:focus
+    +linear-gradient(#456199, #2e4073)
+    cursor: pointer
+  &:active
+    +linear-gradient(#2e4073, #456199)
+
+/* ==== SUCCESS PAGE =====
+
+#successbox
+  float: left
+  margin: 50px 0 0
+  width: 49%
+  h3
+    color: #e5171e
+    margin-bottom: 0px
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9)
+
+#info
+  padding-top: 20px
+  width: 48%
+  p
+
+#spreadmini, #railsbestmini, #sponsormini
+  width: 47%
+  margin: 10px 0 0 0px
+  font-size: .9em
+
+  h3
+    margin: 20px 0px 10px 0
+    padding-bottom: 10px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+
+#sponsormini
+  margin-top: -45px
+  p
+    font-size: 1.3em
+  img
+    margin: 4px 20px 10px 0
+    height: 98px
+
+#spreadmini
+  clear: left
+  padding-top: 10px
+  p
+    font-size: 1.35em
+
+  textarea
+    width: 90%
+    overflow-y: hidden
+    overflow: hidden
+    height: 80px
+    margin: 10px 0 0
+    padding: 7px 10px
+    font: 1em Monaco, Courrier, monospace
+    &:focus
+      background: #fff5b2
+  img
+    display: block
+    margin: 10px auto 20px
+    border: #fff solid 5px
+    box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
+
+#railsbestmini h4
+  white-space: nowrap
+
+#info, #successbox
+  float: left
+  clear: left
+
+#sponsormini, #railsbestmini
+  clear: right
+  float: right
+
+#railsbestmini 
+  img
+    display: block
+    margin: 10px auto 20px
+    border: #fff solid 5px
+    box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
+
+#success
+  h3
+    margin: 0 0 20px
+    padding: 0
+  p a
+    &:visited
+      color: #fff
+    &:hover, &:focus
+      color: #000
+
+/* ===== PAST HEROES =====
+
+#pastheroes
+  margin-top: 50px
+  p
+    margin-bottom: -30px
+  h3
+    font-size: 1.2em
+    padding-top: 10px
+  .year
+    clear: both
+    ul li
+      dl
+        float: left
+        width: 100px
+        height: 130px
+        margin: 0 20px 10px 0
+        padding: 10px 10px 13px
+        +linear-gradient(white, #eeeeee)
+        border: 1px solid rgba(0, 0, 0, 0.2)
+        border-radius: 3px
+        -moz-border-radius: 3px
+        -webkit-border-radius: 3px
+        box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
+        -moz-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
+        -webkit-box-shadow: rgba(0, 0, 0, 0.8) 1px 1px 2px
+        dd
+          span
+            display: none
+          strong
+            visibility: visible
+            font-size: 1em
+            letter-spacing: .05em
+            text-align: center
+            overflow: hidden
+      dt img
+        visibility: visible
+        border: 1px solid #111
+        border: 1px solid rgba(0, 0, 0, 0.4)
+        background: rgba(0, 0, 0, 0.2)
+
+/* ===== FIREFOX FIXES =====
+
+#nomination_site_attributes_id
+  display: none

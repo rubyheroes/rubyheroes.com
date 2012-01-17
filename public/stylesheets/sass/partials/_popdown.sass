@@ -1,0 +1,42 @@
+#yes_match
+  display: block
+  h2
+    margin-top: 10px
+    margin-bottom: 0
+
+.popdown
+  margin: 5px 40px 5px
+  width: 60%
+  padding: 0
+  display: block
+  li
+    margin: 0 -5px
+    border-left: 1px solid rgba(255, 255, 255, 0.2)
+    border-right: 1px solid rgba(0, 0, 0, 0.2)
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4)
+    border-top: 1px solid rgba(255, 255, 255, 0.5)
+    +linear-gradient(rgba(161, 192, 229, 0.3), rgba(122, 159, 204, 0.4))
+    &:last-child
+      border-radius: 0 0 5px 5px
+      -moz-border-radius-bottomleft: 5px
+      -moz-border-radius-bottomright: 5px
+      -webkit-border-bottom-left-radius: 5px
+      -webkit-border-bottom-right-radius: 5px
+    &:active
+      +linear-gradient(rgba(122, 159, 204, 0.5), rgba(161, 192, 229, 0.5))
+    a
+      display: block
+      width: 100%
+      padding: 6px 0 5px
+      text-indent: 10px
+      font-weight: normal
+      font-size: 1.1em
+      background-position: 92%
+      background-image: none
+      -webkit-transition: all 100ms ease-in
+      -moz-transition: all 100ms ease-in
+      transition: all 100ms ease-in
+      &:hover, &:active, &:focus
+        /*  color: #fff;
+         *text-shadow: rgba(0,0,0,.9) 1px 1px 1px;
+        background: url("../images/arrow.png") no-repeat 98%
