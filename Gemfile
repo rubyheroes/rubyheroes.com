@@ -6,6 +6,8 @@ gem 'haml-rails'
 gem 'rdiscount'
 gem 'formtastic'
 gem 'kaminari'
+gem 'sass', '~> 3.1.12'
+gem 'jquery-rails', '>= 1.0.12'
 
 gem 'sqlite3'
 
