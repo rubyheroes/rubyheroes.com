@@ -1,4 +1,20 @@
 %table
+  %caption Statistics
+  %thead
+    %tr
+      %th(scope="col") Nominations
+      %th(scope="col") Nominees
+      %th(scope="col") Voters
+  %tbody
+    %tr
+      %td.nomination_total= @nomination_count
+      %td.nominee_total= @nominee_count
+      %td.voter_total= @voter_count
+
+
+
+
+%table
   %caption Most nominated sites.
   %thead
     %tr
