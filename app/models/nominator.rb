@@ -1,5 +1,5 @@
 class Nominator < ActiveRecord::Base
-  has_many :nominations
+  has_many :nominations, :dependent => :destroy
   attr_accessible :email, :name
   validates_format_of :email,
     :with => /^([^\s]+)((?:[-a-z0-9]\.)[a-z]{2,})$/i,
