@@ -15,6 +15,7 @@ class NominationsController < ApplicationController
       flash[:notice] = "Thank you for your nomination."
       redirect_to @nomination
     else
+      @nomination.nominee.valid?
       render :action => 'new'
     end
   end
