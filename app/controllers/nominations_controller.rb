@@ -9,7 +9,7 @@ class NominationsController < ApplicationController
 
   def create
     @nomination = Nomination.new(params[:nomination])
-    if @nomination.save
+    if @nomination.save && @nomination.nominee.valid?
       session[:nominator_id] = @nomination.nominator_id
       session[:ns] = true
       flash[:notice] = "Thank you for your nomination."
