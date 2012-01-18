@@ -101,10 +101,12 @@ input#nominee
     margin: 0 0 20px
     padding: 0
     color: #fff
-    text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 1px
+    text-shadow: rgba(0, 0, 0, 0.4) 0 2px 1px
   form
+    overflow: hidden
     display: block
-    margin-top: 50px
+    margin-top: 4em
+    margin-bottom: 2em
     padding: 30px 30px 30px
     +linear-gradient(#e53538, #732222)
     border-radius: 10px
@@ -114,18 +116,17 @@ input#nominee
     border: none
     label
       display: block
-      color: #b0d4ff
+      color: #fff
       font-size: 1.2em
-      letter-spacing: .06em
       margin: 0 0 5px 3px
-      text-shadow: rgba(0, 0, 0, 0.8) 0 1px 1px
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8) 
   p
     &.inline-errors
-      margin: -20px 398px 20px 0
+      margin: -20px 378px 20px 0
       padding: 4px 10px 5px
-      color: #d92b2b
+      color: #ccc
       text-align: right
-      text-shadow: #000 1px 1px 0
+      text-shadow: 0 1px 0 #000 
       letter-spacing: normal
       line-height: normal
       font-size: 1em
@@ -140,13 +141,13 @@ input#nominee
       -moz-transition: all 200ms linear
       transition: all 200ms linear
     &.inline-hints
-      width: 47%
+      width: 45%
       float: right
-      margin-top: -40px
+      margin-top: -50px
       padding: 0 5px 0 0
       color: #fff
       font-style: italic
-      font-size: 1em
+      font-size: 1.2em
       text-shadow: rgba(0, 0, 0, 0.4) 0 1px 1px
       letter-spacing: .08em
       line-height: 1.3
@@ -166,8 +167,7 @@ input#nominee
       font-size: 1.2em
       display: block
       margin: 0 0 20px 0
-      padding: 5px 0
-      text-indent: 7px
+      padding: 10px 10px
       border: none
       box-shadow: rgba(0, 0, 0, 0.6) -1px -1px 0, rgba(255, 255, 255, 0.4) 1px 1px 0
       -moz-box-shadow: rgba(0, 0, 0, 0.6) -1px -1px 0, rgba(255, 255, 255, 0.4) 1px 1px 0
@@ -182,9 +182,10 @@ input#nominee
         color: #000
 
 .formbutton
-  font-size: 1.3em
+  float: right
+  font-size: 1.6em
   margin: 20px 0 0 0
-  padding: 5px 20px
+  padding: 15px 20px
   text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px
   color: #fff
   font-weight: bold
@@ -194,9 +195,9 @@ input#nominee
   -moz-border-radius: 5px
   -webkit-border-radius: 5px
   border: none
-  -webkit-box-shadow: #6690cc -1px -1px 0, #1f2b4d 1px 1px 0
-  -moz-box-shadow: #6690cc -1px -1px 0, #1f2b4d 1px 1px 0
-  box-shadow: #6690cc -1px -1px 0, #1f2b4d 1px 1px 0
+  -webkit-box-shadow: inset rgba(0,0,0,.7) 0 0 2px, inset rgba(255,255,255,.5) 0 1px 1px 
+  -moz-box-shadow: inset rgba(0,0,0,.7) 0 0 2px, inset rgba(255,255,255,.5) 0 1px 1px 
+  box-shadow: inset rgba(0,0,0,.7) 0 0 2px, inset rgba(255,255,255,.5) 0 1px 1px  
   &:hover, &:focus
     +linear-gradient(#456199, #2e4073)
     cursor: pointer
