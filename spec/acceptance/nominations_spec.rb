@@ -8,9 +8,9 @@ feature "Nominations", %q{
 
   scenario "Nomination" do
     visit root_path
-    fill_in 'nomination', :with => 'envylabs'
+    fill_in 'nominee', :with => 'envylabs'
     click_button 'Nominate'
-    page.should have_content 'http://github.com/envylabs'
+    find_field("What is the Github username of your Ruby Hero?").value.should have_content "envylabs"
   end
 
 end
