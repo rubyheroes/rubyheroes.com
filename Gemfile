@@ -1,21 +1,23 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.11'
+gem 'rails', '3.0.20'
 
-gem 'haml-rails'
-gem 'rdiscount'
-gem 'formtastic'
-gem 'kaminari'
-gem 'sass', '~> 3.1.12'
-gem 'jquery-rails', '>= 1.0.12'
+gem "haml-rails", "~> 0.3.4"
+gem "rdiscount", "~> 2.0.7"
+gem "formtastic", "~> 2.2.1"
+gem "kaminari", "~> 0.14.1"
+gem 'sass', '~> 3.2.5'
+gem "jquery-rails", "~> 2.2.1"
 
 gem 'sqlite3'
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', "~> 2.12.2"
+  gem 'pry-rails'
+  gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'capybara'
 end
