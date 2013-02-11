@@ -1,6 +1,7 @@
 class Nominee < ActiveRecord::Base
 
   INELIGIBLE_NOMINEES = %w( 
+                            rkh tarcieri yokolet svenfuchs fcheung drbrain
                             sutto jnicklas lsegal mhartl radar steveklabnik
                             josevalim tenderlove sandal qrush wayneeseguin fxn 
                             tmm1 dkubb luislavena brynary freelancing-god jnunemaker
