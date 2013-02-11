@@ -36,5 +36,7 @@ past_heroes = [
   {:name=>"Eric Hodel",:year=>"2012",:avatar=>"eric_hodel.jpg",:url=>"https://github.com/drbrain"},
 ]
 
-Hero.create! past_heroes
+past_heroes.each do |hero|
+  Hero.where(hero).first || Hero.where(hero).create 
+end
 
