@@ -2,9 +2,13 @@
 %html{lang: 'en'}
   %head
     %meta{charset: 'UTF-8'}
-    %title Ruby Hero Awards
+    %meta{content: 'IE-edge, chrome=1', :'http-equiv' => 'X-UA-Compatible'}
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
-    %meta{name: 'description', content: 'Reward the Heroes of the Ruby Community'}
+    %meta{name: 'description', content: 'The Ruby Hero Award gives recognition to influential devs in the Ruby/Rails community and announces the winners at RailsConf'}
+    %meta{property: 'og:url', content: 'http://rubyheroes.com'}
+    %meta{property: 'og:image', content: 'http://rubyheroes.com/images/rubyheroes.jpg'}
+
+    %title Ruby Hero Awards
     %link{rel: 'shortcut icon', type: 'image/png', href: '/images/favicon.png'}
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'jquery-1.9.1.min', 'jquery.fittext.js', 'modernizr-2.6.2.min.js', 'application'

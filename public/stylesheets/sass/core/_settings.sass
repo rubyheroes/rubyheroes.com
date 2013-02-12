@@ -62,16 +62,6 @@ $portable: 740px
 
 // ----- Extends ----- //
 
-%debug
-  background-color: pink !important
-
-%ellipsis
-  overflow: hidden
-  -ms-text-overflow: ellipsis
-  -o-text-overflow: ellipsis
-  text-overflow: ellipsis
-  white-space: nowrap
-
 %group
   zoom: 1
   &:before,
@@ -81,9 +71,24 @@ $portable: 740px
   &:after
     clear: both
 
-%ir
-  background-color: transparent
-  border: 0
-  color: transparent
-  font: 0/0 a
-  text-shadow: none
+// ----- Animations ----- //
+
+@-webkit-keyframes in
+  to
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+@-moz-keyframes in
+  to
+    opacity: 1
+    -moz-transform: none
+    transform: none
+@-o-keyframes in
+  to
+    opacity: 1
+    -o-transform: none
+    transform: none
+@keyframes in
+  to
+    opacity: 1
+    transform: none

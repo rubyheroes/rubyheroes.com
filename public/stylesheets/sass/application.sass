@@ -47,6 +47,8 @@
     -ms-transform: translateX(-150px)
     -o-transform: translateX(-150px)
     transform: translateX(-150px)
+  .no-backgroundsize &
+    background: #c0bcba
 
 
 // ----- Content ----- //
@@ -110,6 +112,7 @@ header
     display: block
     height: auto
     max-width: 100%
+    width: 100%
     position: relative
   +respond-to($portable)
     margin: -26px 0 0
@@ -141,9 +144,19 @@ header
 .header-glow--b
   border-radius: 50%
   left: 50%
+  opacity: 0
   position: absolute
+  -webkit-transform: scale(0.6)
+  -moz-transform: scale(0.6)
+  -ms-transform: scale(0.6)
+  -o-transform: scale(0.6)
+  transform: scale(0.6)
 
 .header-glow--a
+  -webkit-animation: in 1.4s 0.1s forwards ease-in-out
+  -moz-animation: in 1.4s 0.1s forwards ease-in-out
+  -o-animation: in 1.4s 0.1s forwards ease-in-out
+  animation: in 1.4s 0.1s forwards ease-in-out
   background: rgba(#ca3f29, 0.05)
   height: 350px
   margin-left: -175px
@@ -158,6 +171,10 @@ header
     width: 475px
 
 .header-glow--b
+  -webkit-animation: in 1s 0.1s forwards ease-in-out
+  -moz-animation: in 1s 0.1s forwards ease-in-out
+  -o-animation: in 1s 0.1s forwards ease-in-out
+  animation: in 1s 0.1s forwards ease-in-out
   background: rgba(#ad3626, 0.05)
   height: 250px
   margin-left: -125px
@@ -202,6 +219,8 @@ header
   padding-right: 103px
   position: relative
   z-index: 1
+  +respond-to($desk)
+    padding-left: 1.5em
 
 .nominate-submit
   height: 51px
@@ -221,7 +240,6 @@ header
   background: url('../images/bg-hero.png') no-repeat
   border: 0
   bottom: -1px
-  cursor: pointer
   display: block
   height: 72px
   position: absolute
@@ -260,6 +278,7 @@ header
     height: auto
     margin: 2em 5% 1em
     max-width: 90%
+    width: 90%
     +respond-to($desk)
       margin: 1em 0 0
       max-width: 100%
@@ -389,14 +408,24 @@ footer
     -moz-transition: opacity 0.5s 0.6s ease-in-out, -moz-transform 0.5s 0.6s ease-in-out
     -o-transition: opacity 0.5s 0.6s ease-in-out, -o-transform 0.5s 0.6s ease-in-out
     transition: opacity 0.5s 0.6s ease-in-out, transform 0.5s 0.6s ease-in-out
+  ul
+    margin-left: -20px
 
 .heroes-inner
   margin: 0 auto
   max-width: 700px
 
 .heroes-hero
+  padding-left: 20px
+  a
+    display: block
+    background: #fff
+    padding: 0.5em
   img
     display: block
+    height: auto
+    max-width: 100%
+    width: 100%
   strong
     display: block
 
