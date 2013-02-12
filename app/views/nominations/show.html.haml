@@ -1,41 +1,36 @@
-- content_for :subheader, "Nominate a Ruby Hero!"
-#successbox
-  %h3
-    Thanks for your nomination.
-#info
-  %p
-    Help us rally some well deserved love for Ruby Heroes by letting your friends know that you cast your vote on Twitter and Facebook.
-  %p
+%section.content
+  .main.main--thanks
+    %h2 Thanks for Voting!
+    %p You can #{link_to 'vote again', root_url} for a different hero, or rally some support for your hero-of-choice by telling friends to vote. Six Ruby Hero Award winners will be announced at #{link_to 'RailsConf', 'http://railsconf.com'} in Portland, OR in April.
     = link_to "Tweet", "https://twitter.com/share", :class => "twitter-share-button", 'data-url' => "http://rubyheroes.com", 'data-text' => "The Ruby Heroes among us deserve recognition from the community. I cast my vote at", 'data-size' => "large"
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
-  #fb-root
-    :javascript
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+    #fb-root
+      :javascript
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-  .fb-like{ "data-href" => "http://rubyheroes.com", "data-send" => "false", "data-layout" => "button_count", "data-width" => "50", "data-show-faces" => "true", "data-action" => "recommend", "data-font" => "lucida grande" }
-    
-  %p
-    Feel free to
-    = link_to("nominate someone else", root_path)
-    if you think other contributors deserve some recognition.
-  %p
-    Ruby Hero Award winners will be announced at the next 
-    = link_to("RailsConf", "http://railsconf2012.com/")
-    in Austin, TX on April 23rd, 2012.
-#sponsormini
-  %h3 Sponsor
-  = link_to image_tag("/images/code_school-small.png", alt: "Code School"), "http://www.codeschool.com/enrollments/UVZOU2VsUVg3WlRXR2tRYTh0Vm5vU25pZDFKYmF2UVk5bEg0RFlhMGdQcz0tLS96RHZMT3lQTG4rcjViR3lHRlRZakE9PQ==", title: "Code School"
-  :markdown
-    Code School is an online platform that allows you to learn by doing through video lessons and interactive coding challenges.
+    .fb-like{ "data-href" => "http://rubyheroes.com", "data-send" => "false", "data-layout" => "button_count", "data-width" => "50", "data-show-faces" => "true", "data-action" => "like", "data-font" => "lucida grande" }
 
-  %p
-    Try the first level of #{link_to "A Sip of CoffeeScript", "http://coffeescript.codeschool.com/"} for free.
-    = link_to image_tag('/images/codeschool_coffeescript.png'), 'http://coffeescript.codeschool.com', class: "coffeescript"
+  %footer
+    = image_tag 'img-mask.svg', class: 'footer-mask', alt: 'Mask', :"aria-hidden" => 'true'
+
+    .sponsor.grid
+      .grid-box.one-whole.desk-one-half
+        %p Ruby Heroes is sponsored by <a href="http://codeschool.com">Code School</a>, which teaches web technologies in the comfort of your browser with video lessons, coding challenges, and screencasts. Try it out now with a free level of <a href="http://codeschool.com/courses/ruby-bits">Ruby&nbsp;Bits</a>.
+      .grid-box.one-whole.desk-one-half
+        = link_to image_tag('logo-codeschool.svg', alt: 'Code School'), 'http://codeschool.com', class: 'sponsor-logo'
+
+    %ul.footer-credits
+      %li
+        %h4 Development
+        = link_to 'Envy Labs', 'http://envylabs.com'
+      %li
+        %h4 Hosting
+        = link_to 'Heroku', 'http://heroku.com'

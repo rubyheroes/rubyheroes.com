@@ -1,0 +1,81 @@
+//-------------------------------------
+//  Base
+//-------------------------------------
+
+html
+  font-size: 16px
+  height: 100%
+
+body
+  color: $color-base
+  font: normal 62.5%/1.5 $font-base
+  height: 100%
+
+// ----- Block Content ----- //
+
+h2
+  font-size: 3em
+  font-family: $font-header
+
+h3
+  font-size: 2.6em
+  font-weight: bold
+
+h4
+  font-size: 1.2em
+  text-transform: uppercase
+
+p
+  font-size: 2em
+
+// ----- Inline Content ----- //
+
+a
+  -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out
+  -moz-transition: background 0.1s ease-in-out, color 0.1s ease-in-out
+  -o-transition: background 0.1s ease-in-out, color 0.1s ease-in-out
+  transition: background 0.1s ease-in-out, color 0.1s ease-in-out
+  color: lighten($color-base, 25%)
+  font-style: italic
+  font-weight: bold
+  text-decoration: none
+
+// ----- Forms ----- //
+
+input,
+textarea
+  background: #fff
+  background: rgba(#fff, 0.8)
+  border: 0
+  border-bottom: 3px solid $color-border
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  color: lighten($color-base, 25%)
+  cursor: text
+  display: block
+  height: 60px
+  font: normal 2em/30px $font-base
+  padding: 18px 10px 12px
+  position: relative
+  width: 100%
+textarea
+  height: 150px
+
+button
+  background: $color-highlight
+  border: 0
+  border-radius: 3px
+  color: #fff
+  cursor: pointer
+  display: block
+  font: bold 2em/30px $font-base
+  height: 60px
+  padding: 18px 0 12px
+  right: 53px
+  top: 3px
+  width: 100%
+  z-index: 10
+  &:hover,
+  &:focus
+    background: lighten($color-highlight, 5%)

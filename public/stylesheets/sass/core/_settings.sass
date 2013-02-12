@@ -1,0 +1,89 @@
+//-------------------------------------
+//  Settings
+//-------------------------------------
+
+// ----- @font-face ----- //
+
+@font-face
+  font-family: 'FluxRegular'
+  src: url('../fonts/Flux_Architect_Regular-webfont.eot')
+  src: url('../fonts/Flux_Architect_Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Flux_Architect_Regular-webfont.woff') format('woff'), url('../fonts/Flux_Architect_Regular-webfont.ttf') format('truetype'), url('../fonts/Flux_Architect_Regular-webfont.svg#FluxRegular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'GandhiSans'
+  src: url('../fonts/GandhiSans-Regular-webfont.eot')
+  src: url('../fonts/GandhiSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/GandhiSans-Regular-webfont.woff') format('woff'), url('../fonts/GandhiSans-Regular-webfont.ttf') format('truetype'), url('../fonts/GandhiSans-Regular-webfont.svg#GandhiSansRegular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'GandhiSans'
+  src: url('../fonts/GandhiSans-Bold-webfont.eot')
+  src: url('../fonts/GandhiSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/GandhiSans-Bold-webfont.woff') format('woff'), url('../fonts/GandhiSans-Bold-webfont.ttf') format('truetype'), url('../fonts/GandhiSans-Bold-webfont.svg#GandhiSansBold') format('svg')
+  font-weight: bold
+  font-style: normal
+
+@font-face
+  font-family: 'GandhiSans'
+  src: url('../fonts/GandhiSans-BoldItalic-webfont.eot')
+  src: url('../fonts/GandhiSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/GandhiSans-BoldItalic-webfont.woff') format('woff'), url('../fonts/GandhiSans-BoldItalic-webfont.ttf') format('truetype'), url('../fonts/GandhiSans-BoldItalic-webfont.svg#GandhiSansBoldItalic') format('svg')
+  font-weight: bold
+  font-style: italic
+
+// ----- Variables ----- //
+
+// Color
+
+$color-base: #413d3a
+$color-bg: #eae3df
+$color-bg-alt: #141413
+$color-border: #d6cec9
+$color-highlight: #dc4a17
+
+// Font
+
+$font-base: "GandhiSans", "Tahoma", "sans-serif"
+$font-header: "FluxRegular", "Tahoma", "sans-serif"
+
+// Settings
+
+$desk: 900px
+$gutter: 40px
+$lap: 550px
+$portable: 740px
+
+// ----- Mixins ----- //
+
+=respond-to($val, $query: min-width, $media: screen)
+  @media #{$media} and ($query: $val)
+    @content
+
+// ----- Extends ----- //
+
+%debug
+  background-color: pink !important
+
+%ellipsis
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  -o-text-overflow: ellipsis
+  text-overflow: ellipsis
+  white-space: nowrap
+
+%group
+  zoom: 1
+  &:before,
+  &:after
+    content: ''
+    display: table
+  &:after
+    clear: both
+
+%ir
+  background-color: transparent
+  border: 0
+  color: transparent
+  font: 0/0 a
+  text-shadow: none

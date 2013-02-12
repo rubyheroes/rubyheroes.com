@@ -1,11 +1,9 @@
-%section#nominate
+%section.nomination
   = simple_form_for @nomination do |f|
-    %h3
-      Please complete your nomination
+    %h2 Nomination
     = simple_fields_for :nominee do |nominee|
       = nominee.input :github_username
     = simple_fields_for :nominator do |nominator|
       = nominator.input :name
     = f.input :testimonial
-    .buttons
-      %button.formbutton{:name=>"commit", :type=>"submit"} Submit Nomination
+    %button.nomination-submit{commit: "commit", type: "submit"} Nominate!

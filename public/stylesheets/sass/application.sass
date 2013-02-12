@@ -1,67 +1,415 @@
-$primary_color: #4B7399
+//-------------------------------------
+//  Imports
+//-------------------------------------
 
-body
-  background-color: $primary_color
-  font:
-    family: Verdana, Helvetica, Arial
-    size: 14px
+@import "core/reset"
+@import "core/settings"
+@import "core/base"
 
-a
-  color: #0000FF
-  img
-    border: none
+// ----- Modules ----- //
 
-.clear
-  clear: both
-  height: 0
-  overflow: hidden
+@import "modules/grids"
 
-#container
-  width: 75%
+//-------------------------------------
+//  Site
+//-------------------------------------
+
+.site
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  min-height: 100%
+  overflow-x: hidden
+  padding: 7px 1em
+  position: relative
+  +respond-to($lap)
+    padding-left: 2em
+    padding-right: 2em
+
+.site-backdrop
+  background: url('../images/bg-body.jpg') center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  bottom: 0
+  left: 0
+  position: absolute
+  right: -150px
+  -webkit-transition: -webkit-transform 0.75s ease-in-out
+  -moz-transition: -moz-transform 0.75s ease-in-out
+  -o-transition: -o-transform 0.75s ease-in-out
+  transition: transform 0.75s ease-in-out
+  top: 0
+  .is-reminiscing &
+    -webkit-transform: translateX(-150px)
+    -moz-transform: translateX(-150px)
+    -ms-transform: translateX(-150px)
+    -o-transform: translateX(-150px)
+    transform: translateX(-150px)
+
+
+// ----- Content ----- //
+
+.content
+  background: $color-bg
+  border-top: 13px solid $color-border
+  box-shadow: 0 0 0 1px rgba(#000, 0.08), 0 0 35px rgba(#000, 0.14)
   margin: 0 auto
-  background: #fff
-  padding: 20px 40px
-  border: solid 1px black
-  margin-top: 20px
+  max-width: 1000px
+  position: relative
+  -webkit-transition: -webkit-transform 0.75s ease-in-out
+  -moz-transition: -moz-transform 0.75s ease-in-out
+  -o-transition: -o-transform 0.75s ease-in-out
+  transition: transform 0.75s ease-in-out
+  z-index: 10
+  .is-reminiscing &
+    -webkit-transform: translateX(-99%)
+    -moz-transform: translateX(-99%)
+    -ms-transform: translateX(-99%)
+    -o-transform: translateX(-99%)
+    transform: translateX(-99%)
+    .no-csstransforms &
+      left: -99%
+  &:before,
+  &:after
+    display: block
+    position: absolute
+  &:before
+    content: url('../images/bg-wear.png')
+    height: 209px
+    right: 0
+    top: -1em
+    width: 4px
+  &:after
+    background: url('../images/bg-pages.svg') center bottom no-repeat
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    content: ''
+    height: 6px
+    top: -19px
+    width: 100%
+  +respond-to($portable)
+    border-top-width: 26px
+    &:after
+      top: -32px
 
-#flash_notice,
-#flash_error
-  padding: 5px 8px
-  margin: 10px 0
+header
+  margin: -13px 0 0
+  min-height: 150px
+  overflow: hidden
+  position: relative
+  h1
+    display: none
+    padding: 0 4em
+    +respond-to($lap)
+      display: block
+  img
+    display: block
+    height: auto
+    max-width: 100%
+    position: relative
+  +respond-to($portable)
+    margin: -26px 0 0
+    min-height: 300px
 
-#flash_notice
-  background-color: #CFC
-  border: solid 1px #6C6
+.header-ruby
+  background: url('../images/bg-header.jpg') no-repeat
+  -webkit-background-size: 316px 150px
+  -moz-background-size: 316px 150px
+  -o-background-size: 316px 150px
+  background-size: 316px 150px
+  height: 150px
+  left: 50%
+  margin-left: -158px
+  position: absolute
+  width: 316px
+  +respond-to($lap)
+    margin-left: -118px
+  +respond-to($portable)
+    -webkit-background-size: 633px 300px
+    -moz-background-size: 633px 300px
+    -o-background-size: 633px 300px
+    background-size: 633px 300px
+    height: 300px
+    margin-left: -250px
+    width: 633px
 
-#flash_error
-  background-color: #FCC
-  border: solid 1px #C66
+.header-glow--a,
+.header-glow--b
+  border-radius: 50%
+  left: 50%
+  position: absolute
 
-.fieldWithErrors
-  display: inline
+.header-glow--a
+  background: rgba(#ca3f29, 0.05)
+  height: 350px
+  margin-left: -175px
+  top: -140px
+  width: 350px
+  +respond-to($lap)
+    margin-left: -135px
+  +respond-to($portable)
+    height: 475px
+    margin-left: -170px
+    top: -160px
+    width: 475px
 
-#errorExplanation
-  width: 400px
-  border: 2px solid #CF0000
-  padding: 0
-  padding-bottom: 12px
-  margin-bottom: 20px
-  background-color: #f0f0f0
-  h2
-    text-align: left
-    padding: 5px 5px 5px 15px
-    margin: 0
-    font:
-      weight: bold
-      size: 12px
-    background-color: #c00
-    color: #fff
-  p
-    color: #333
+.header-glow--b
+  background: rgba(#ad3626, 0.05)
+  height: 250px
+  margin-left: -125px
+  top: -90px
+  width: 250px
+  +respond-to($lap)
+    margin-left: -85px
+  +respond-to($portable)
+    height: 350px
+    margin-left: -108px
+    top: -98px
+    width: 350px
+
+// ----- Nominate ----- //
+
+.nominate
+  padding: 12em 2em 6em
+  position: relative
+  z-index: 10
+  +respond-to($lap)
+    padding: 6em 4em 6em
+  +respond-to($portable)
+    padding: 6em
+  +respond-to($desk)
+    padding: 8em 8em 6em
+
+.nominate-label
+  color: lighten($color-base, 25%)
+  display: block
+  font: normal 30px/60px $font-header
+  margin-bottom: 10px
+  text-align: center
+  width: 100%
+  +respond-to($desk)
     margin-bottom: 0
-    padding: 8px
-  ul
-    margin: 2px 24px
-    li
-      font-size: 12px
-      list-style: disc
+
+.nominate-form
+  padding-right: 5em
+  position: relative
+
+.nominate-input
+  padding-right: 103px
+  position: relative
+  z-index: 1
+
+.nominate-submit
+  height: 51px
+  opacity: 0
+  padding: 13px 0 9px
+  position: absolute
+  right: 53px
+  top: 3px
+  visibility: hidden
+  width: 90px
+  z-index: 10
+  .is-nominating &
+    opacity: 1
+    visibility: visible
+
+.nominate-hero
+  background: url('../images/bg-hero.png') no-repeat
+  border: 0
+  bottom: -1px
+  cursor: pointer
+  display: block
+  height: 72px
+  position: absolute
+  right: 0
+  -webkit-transition: background-position 0.2s ease-in-out
+  -moz-transition: background-position 0.2s ease-in-out
+  -o-transition: background-position 0.2s ease-in-out
+  transition: background-position 0.2s ease-in-out
+  width: 131px
+  .is-nominating &
+    background-position: -141px 0
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+    background: url('../images/hires/bg-hero.png') no-repeat
+    -webkit-background-size: 272px 71px
+    -moz-background-size: 272px 71px
+    -o-background-size: 272px 71px
+    background-size: 272px 71px
+
+// ----- Main ----- //
+
+.main
+  margin-bottom: 4em
+  padding: 0 2em
+  position: relative
+  p
+    text-indent: 1.5em
+  a
+    background: rgba($color-highlight, 0.075)
+    padding: 0 0.2em
+    &:hover,
+    &:focus
+      background: transparent
+      color: $color-highlight
+  img
+    display: block
+    height: auto
+    margin: 2em 5% 1em
+    max-width: 90%
+    +respond-to($desk)
+      margin: 1em 0 0
+      max-width: 100%
+  li
+    background: url('../images/bg-bullet.svg') 5px center no-repeat
+    border-bottom: 3px solid $color-border
+    font-size: 2em
+    font-weight: bold
+    padding: 0.375em 0 0.2em 1.5em
+  +respond-to($lap)
+    padding: 0 4em
+  +respond-to($portable)
+    margin-bottom: 8em
+
+.main--thanks
+  margin-top: 4em
+
+// ----- Sponsor ----- //
+
+.sponsor
+  padding: 4em 2em 0em
+  position: relative
+  z-index: 1
+  +respond-to($lap)
+    padding: 5em 4em 11em
+  +respond-to($desk)
+    p
+      padding-right: 1em
+
+.sponsor-logo
+  background: transparent
+  display: block
+  margin: 3em auto
+  padding: 0
+  width: 280px
+  img
+    display: block
+    height: auto
+    max-width: 100%
+
+// ----- Footer ----- //
+
+footer
+  background: $color-bg-alt
+  color: #fff
+  padding-bottom: 6em
+  position: relative
+  &:before,
+  &:after
+    position: absolute
+    z-index: 2
+  &:before
+    content: url('../images/bg-wear-2.png')
+    display: block
+    height: 276px
+    right: 0
+    top: 3em
+    width: 4px
+  &:after
+    background: #fff
+    bottom: 1em
+    content: url('../images/bg-barcode.svg')
+    display: none
+    height: 99px
+    left: 2em
+    width: 160px
+    +respond-to($lap)
+      display: block
+  a
+    background: rgba($color-border, 0.075)
+    padding: 0 0.2em
+    &:hover,
+    &:focus
+      background: transparent
+      color: $color-highlight
+  +respond-to($portable)
+    padding-bottom: 11em
+
+.footer-mask
+  display: none
+  height: auto
+  left: 0
+  position: absolute
+  top: -40px
+  width: 100%
+  +respond-to($portable)
+    display: block
+
+.footer-credits
+  bottom: 1em
+  float: right
+  position: absolute
+  right: 4em
+  li
+    display: inline-block
+    margin-left: 4em
+  a
+    font-size: 1.2em
+
+// ----- Heroes ----- //
+
+.heroes
+  bottom: 0
+  left: 0
+  opacity: 0
+  overflow-y: auto
+  position: absolute
+  right: 0
+  top: 0
+  -webkit-transform: scale(0.98)
+  -moz-transform: scale(0.98)
+  -ms-transform: scale(0.98)
+  -o-transform: scale(0.98)
+  transform: scale(0.98)
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out
+  -moz-transition: opacity 0.3s ease-in-out, -moz-transform 0.3s ease-in-out
+  -o-transition: opacity 0.3s ease-in-out, -o-transform 0.3s ease-in-out
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out
+  .is-reminiscing &
+    opacity: 1
+    -webkit-transform: none
+    -moz-transform: none
+    -ms-transform: none
+    -o-transform: none
+    transform: none
+    -webkit-transition: opacity 0.5s 0.6s ease-in-out, -webkit-transform 0.5s 0.6s ease-in-out
+    -moz-transition: opacity 0.5s 0.6s ease-in-out, -moz-transform 0.5s 0.6s ease-in-out
+    -o-transition: opacity 0.5s 0.6s ease-in-out, -o-transform 0.5s 0.6s ease-in-out
+    transition: opacity 0.5s 0.6s ease-in-out, transform 0.5s 0.6s ease-in-out
+
+.heroes-inner
+  margin: 0 auto
+  max-width: 700px
+
+.heroes-hero
+  img
+    display: block
+  strong
+    display: block
+
+// ----- Nomination ----- //
+
+.nomination
+  margin: 4em auto
+  max-width: 500px
+  position: relative
+  z-index: 10
+  .input
+    margin: 2em 0
+  label
+    display: block
+    font-size: 1.6em
+    font-weight: bold

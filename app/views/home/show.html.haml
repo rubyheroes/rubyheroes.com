@@ -1,70 +1,85 @@
--# remove comment to toggle display of past heroes 
-  %section#pastheroes
-    .year
-      %h3 Congratulations to the 2011 Ruby Heroes!
-      %ul
-        = render @heroes
+%section.content
+  %header
+    .header-ruby{:'aria-hidden' => 'true'}
+    %h1= image_tag 'logo-rubyheroes.svg', alt: 'Ruby Heroes'
 
-- # comment out section#vote to close voting round
-%section#vote
-  = form_tag new_nomination_path, :method => :get, :autocomplete => 'off' do
-    .inputs
-      %div.field
-        = label_tag 'nominee', 'What is the Github username of the person you want to nominate?'
-        = text_field_tag 'nominee', nil, :size =>  24, :autocomplete => "off"
-      #yes_match
-    %button#nomination_submit Nominate
+    = form_tag new_nomination_path, method: :get, autocomplete: 'off', class: 'nominate grid' do
+      .grid-box.one-whole.desk-one-half
+        = label_tag 'nominee', "I'd like to nominate", class: 'nominate-label'
+      .grid-box.one-whole.desk-one-half
+        .nominate-form
+          = text_field_tag 'nominee', nil, autocomplete: 'off', class: 'nominate-input', placeholder: 'GitHub Username'
+          #yes_match
+          %button#nomination_submit.nominate-submit Next
+          .nominate-hero{:'aria-hidden' => 'true'}
 
-%section#about
-  :markdown
-    ### What is this about? ###
+  .header-glow--a{:'aria-hidden' => 'true'}
+  .header-glow--b{:'aria-hidden' => 'true'}
 
-     There are many people in the Ruby/Rails world who contribute to our
-     community and rarely receive any recognition or payment for their work.
-     
-     They create educational content, develop plugins & gems, contribute to
-     open source projects, and even put on events which help educate and make
-     our lives as developers easier.
-     
-     Ruby Heroes was created to show some gratitude and give these people the
-     recognition they deserve. Hopefully the type of recognition that keeps
-     them doing what they’re doing, and continuing to make our community
-     stronger.
-     
-     Based on the nominations you give here, #{link_to "the previous Ruby
-     Heroes", heroes_path} will pick 6 people who will receive a Ruby Hero
-     Award at [RailsConf](http://railsconf2012.com/) this year.
+  .main.grid
+    .grid-box.one-whole.desk-one-half
+      %h3 The <a href="#" class="heroes-toggle">Ruby Hero Award</a> gives recognition to influential devs in the Ruby/Rails community and announces the winners at&nbsp;<a href="http://railsconf.com">RailsConf</a>.
+      %p We believe great work deserves recognition. The Ruby/Rails dev community is full of amazing contributors and unsung heroes who are busy producing educational content, developing plugins and gems, contributing to open-source projects, or putting on events to help developers learn and grow. Wherever they are, their work is too great to go unnoticed and we need your help to find&nbsp;them.
+    .grid-box.one-whole.desk-one-half
+      %p Submit your vote for the Ruby Hero Award above. Six will be chosen and pulled out from behind their code to receive an award at&nbsp;RailsConf.
+      = image_tag 'img-instructions.svg', alt: 'Instructions'
+      %ol
+        %li Nominate a worthy candidate
+        %li Share link to get others voting
+        %li Nominees get tallied
+        %li <a href="#" class="heroes-toggle">Previous Ruby Heroes</a> choose finalists
+        %li Winners announced at <a href="http://railsconf.com">RailsConf</a>
 
-%aside
-  %section#reasons
-    :markdown
-      ### Why to nominate a Ruby Hero?
-      + educational content &amp; tutorials
-      + open source project contribution
-      + help organizing educational events
-      + free support on mailing lists / IRC
-      + well deserved recognition
-%section#spread
-  %h3 Spread the word
-  %p Help us rally some well deserved love for Ruby Heroes by letting your friends know that you cast your vote on Twitter and Facebook.
-  = link_to "Tweet", "https://twitter.com/share", :class => "twitter-share-button", 'data-url' => "http://rubyheroes.com", 'data-text' => "The Ruby Heroes among us deserve recognition from the community.", 'data-size' => "large"
-  :javascript
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  %footer
+    = image_tag 'img-mask.svg', class: 'footer-mask', alt: 'Mask', :"aria-hidden" => 'true'
 
-  #fb-root
+    .sponsor.grid
+      .grid-box.one-whole.desk-one-half
+        %p Ruby Heroes is sponsored by <a href="http://codeschool.com">Code School</a>, which teaches web technologies in the comfort of your browser with video lessons, coding challenges, and screencasts. Try it out now with a free level of <a href="http://codeschool.com/courses/ruby-bits">Ruby&nbsp;Bits</a>.
+      .grid-box.one-whole.desk-one-half
+        = link_to image_tag('logo-codeschool.svg', alt: 'Code School'), 'http://codeschool.com', class: 'sponsor-logo'
+
+    %ul.footer-credits
+      %li
+        %h4 Development
+        = link_to 'Envy Labs', 'http://envylabs.com'
+      %li
+        %h4 Hosting
+        = link_to 'Heroku', 'http://heroku.com'
+
+%section.heroes
+  .heroes-inner
+    %h2 Past Heroes
+
+    %h3 2012
+    %ul.grid= render partial: "hero", collection: @heroes
+
+    - %w( 2011 2010 2009 2008 ).each do |year|
+      %h3 #{year}
+      %ul.grid= render partial: "hero", collection: @past_heroes.find_all {|i| i.year == year}
+
+
+
+
+
+
+-#%section#pastheroes
+
+  %section#spread
+    %h3 Spread the word
+    %p Help us rally some well deserved love for Ruby Heroes by letting your friends know that you cast your vote on Twitter and Facebook.
+    = link_to "Tweet", "https://twitter.com/share", :class => "twitter-share-button", 'data-url' => "http://rubyheroes.com", 'data-text' => "The Ruby Heroes among us deserve recognition from the community.", 'data-size' => "large"
     :javascript
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
-  .fb-like{ "data-href" => "http://rubyheroes.com", "data-send" => "false", "data-layout" => "button_count", "data-width" => "50", "data-show-faces" => "true", "data-action" => "recommend", "data-font" => "lucida grande" }
+    #fb-root
+      :javascript
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-%section#sponsor
-  :markdown
-    ### Sponsor
-    [![Code School](/images/code_school.png)](http://www.codeschool.com/enrollments/UVZOU2VsUVg3WlRXR2tRYTh0Vm5vU25pZDFKYmF2UVk5bEg0RFlhMGdQcz0tLS96RHZMT3lQTG4rcjViR3lHRlRZakE9PQ==)
-    Code School is an online platform that allows you to learn by doing through video lessons and interactive coding challenges. [Try the first level of our CoffeeScript course for free](http://coffeescript.codeschool.com).
+    .fb-like{ "data-href" => "http://rubyheroes.com", "data-send" => "false", "data-layout" => "button_count", "data-width" => "50", "data-show-faces" => "true", "data-action" => "recommend", "data-font" => "lucida grande" }

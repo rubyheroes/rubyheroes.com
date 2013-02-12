@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+  margin-top: 50px; }
+  table caption {
+    font-size: 30px;
+    text-align: left; }
+  table th, table td {
+    padding: 5px; }
+  table th {
+    text-align: left; }
+  table td {
+    border-bottom: 1px solid #dddddd; }
+  table .nominations_count {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold; }

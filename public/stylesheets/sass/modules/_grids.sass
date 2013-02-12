@@ -1,0 +1,43 @@
+//-------------------------------------
+//  Grids
+//-------------------------------------
+
+.grid
+  @extend %group
+  margin-left: -$gutter
+
+.grid-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  float: left
+  padding-left: $gutter
+
+// ----- Widths ----- //
+
+.one-whole
+  width: 100%
+.one-half
+  width: 50%
+.one-third
+  width: 33.33333%
+
++respond-to($lap)
+  .lap-one-half
+    width: 50%
+  .lap-one-third
+    width: 33.33333%
+  .lap-one-fourth
+    width: 25%
+
++respond-to($desk)
+  .desk-one-half
+    width: 50%
+  .desk-one-third
+    width: 33.33333%
+  .desk-one-fourth
+    width: 25%
+  .desk-one-fifth
+    width: 20%
+  .desk-one-sixth
+    width: 16.66666%
