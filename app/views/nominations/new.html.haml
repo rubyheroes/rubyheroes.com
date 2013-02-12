@@ -2,7 +2,7 @@
   = simple_form_for @nomination do |f|
     %h2 Nomination
     = simple_fields_for :nominee do |nominee|
-      = nominee.input :github_username
+      = nominee.input :github_username, input_html: { value: @nomination.nominee.github_username }
     = simple_fields_for :nominator do |nominator|
       = nominator.input :name
     = f.input :testimonial
