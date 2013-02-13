@@ -36,8 +36,8 @@ jQuery(function($){
 
   // ----- Nomination Form ----- //
 
-  var regex1 = /github/;
-  var regex2 = /http/;
+  var regex1 = /github.com/;
+  var regex2 = /http:/;
   
   $('#nominee')
     .focus()
