@@ -4,7 +4,7 @@ class MyMailer < ActionMailer::Base
     @subject    = 'Your Ruby Hero Nominations'
     @body       = {:nominations => nominations, :name => name}
     @recipients = email
-    @from       = 'Gregg@RailsEnvy.com'
+    @from       = 'gregg@envylabs.com'
     @sent_on    = sent_at
     @headers    = {}
   end
