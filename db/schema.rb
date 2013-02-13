@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,12 +14,12 @@
 ActiveRecord::Schema.define(:version => 20110407174929) do
 
   create_table "heroes", :force => true do |t|
-    t.string   "name"
-    t.string   "avatar"
-    t.string   "year"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "url"
+    t.string    "name"
+    t.string    "avatar"
+    t.string    "year"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "url"
   end
 
   create_table "nominations", :force => true do |t|
@@ -28,10 +29,10 @@ ActiveRecord::Schema.define(:version => 20110407174929) do
   end
 
   create_table "nominators", :force => true do |t|
-    t.string   "email"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "email"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "nominees", :force => true do |t|
@@ -41,11 +42,11 @@ ActiveRecord::Schema.define(:version => 20110407174929) do
   end
 
   create_table "sites", :force => true do |t|
-    t.string   "url"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "nominations_count"
+    t.string    "url"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "nominations_count"
   end
 
   add_index "sites", ["url"], :name => "index_sites_on_url"

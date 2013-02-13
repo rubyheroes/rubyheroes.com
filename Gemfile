@@ -11,13 +11,16 @@ gem "kaminari", "~> 0.14.1"
 gem 'sass', '~> 3.2.5'
 gem "jquery-rails", "~> 2.2.1"
 
-gem 'sqlite3'
+group :production do
+  gem 'pg'
+end
 
 group :development, :test do
   gem 'rspec-rails', "~> 2.12.2"
   gem 'pry-rails'
   gem 'pry-remote'
   gem 'factory_girl_rails'
+  gem 'sqlite3'
 end
 
 group :test do
