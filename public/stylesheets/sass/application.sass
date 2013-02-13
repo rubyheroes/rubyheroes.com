@@ -119,7 +119,7 @@ header
     min-height: 300px
 
 .header-ruby
-  background: url('../images/bg-header.jpg') no-repeat
+  background: url('../images/hires/bg-header.jpg') no-repeat
   -webkit-background-size: 316px 150px
   -moz-background-size: 316px 150px
   -o-background-size: 316px 150px
@@ -129,6 +129,8 @@ header
   margin-left: -158px
   position: absolute
   width: 316px
+  .no-backgroundsize &
+    background: url('../images/bg-header.jpg') no-repeat
   +respond-to(550px)
     margin-left: -118px
   +respond-to($portable)

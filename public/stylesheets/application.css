@@ -307,7 +307,7 @@ header {
       min-height: 300px; } }
 
 .header-ruby {
-  background: url("../images/bg-header.jpg") no-repeat;
+  background: url("../images/hires/bg-header.jpg") no-repeat;
   -webkit-background-size: 316px 150px;
   -moz-background-size: 316px 150px;
   -o-background-size: 316px 150px;
@@ -317,6 +317,8 @@ header {
   margin-left: -158px;
   position: absolute;
   width: 316px; }
+  .no-backgroundsize .header-ruby {
+    background: url("../images/bg-header.jpg") no-repeat; }
   @media screen and (min-width: 550px) {
     .header-ruby {
       margin-left: -118px; } }
