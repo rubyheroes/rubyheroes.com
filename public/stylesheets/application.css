@@ -343,10 +343,10 @@ header {
   transform: scale(0.6); }
 
 .header-glow--a {
-  -webkit-animation: in 0.75s 0.5s forwards ease-in-out;
-  -moz-animation: in 0.75s 0.5s forwards ease-in-out;
-  -o-animation: in 0.75s 0.5s forwards ease-in-out;
-  animation: in 0.75s 0.5s forwards ease-in-out;
+  -webkit-animation: in 1s 0.75s forwards ease-in-out;
+  -moz-animation: in 1s 0.75s forwards ease-in-out;
+  -o-animation: in 1s 0.75s forwards ease-in-out;
+  animation: in 1s 0.75s forwards ease-in-out;
   background: rgba(202, 63, 41, 0.05);
   height: 350px;
   margin-left: -175px;
@@ -363,10 +363,10 @@ header {
       width: 475px; } }
 
 .header-glow--b {
-  -webkit-animation: in 0.75s 0.75s forwards ease-in-out;
-  -moz-animation: in 0.75s 0.75s forwards ease-in-out;
-  -o-animation: in 0.75s 0.75s forwards ease-in-out;
-  animation: in 0.75s 0.75s forwards ease-in-out;
+  -webkit-animation: in 0.75s 0.5s forwards ease-in-out;
+  -moz-animation: in 0.75s 0.5s forwards ease-in-out;
+  -o-animation: in 0.75s 0.5s forwards ease-in-out;
+  animation: in 0.75s 0.5s forwards ease-in-out;
   background: rgba(173, 54, 38, 0.05);
   height: 250px;
   margin-left: -125px;
@@ -525,7 +525,7 @@ header {
     border-bottom: 3px solid #d6cec9;
     font-size: 2em;
     font-weight: bold;
-    padding: 0.375em 0 0.2em 1.5em; }
+    padding: 0.375em 0 0.25em 1.5em; }
   @media screen and (min-width: 480px) {
     .main {
       padding: 0 4em; } }
@@ -540,6 +540,9 @@ header {
   padding: 4em 2em 0em;
   position: relative;
   z-index: 1; }
+  .sponsor p a {
+    background: rgba(214, 206, 201, 0.075);
+    padding: 0 0.2em; }
   @media screen and (min-width: 480px) {
     .sponsor {
       padding: 5em 4em 11em; } }
@@ -556,7 +559,8 @@ header {
   .sponsor-logo img {
     display: block;
     height: auto;
-    max-width: 100%; }
+    max-width: 100%;
+    width: 100%; }
 
 footer {
   background: #141413;
@@ -584,12 +588,10 @@ footer {
     @media screen and (min-width: 480px) {
       footer:after {
         display: block; } }
-  footer a {
-    background: rgba(214, 206, 201, 0.075);
-    padding: 0 0.2em; }
-    footer a:hover, footer a:focus {
-      background: transparent;
-      color: #dc4a17; }
+  footer a:hover,
+  footer a:focus {
+    background: transparent;
+    color: #dc4a17; }
   @media screen and (min-width: 900px) {
     footer {
       padding-bottom: 11em; } }
@@ -609,12 +611,17 @@ footer {
   bottom: 1em;
   float: right;
   position: absolute;
-  right: 4em; }
+  right: 2em; }
   .footer-credits li {
     display: inline-block;
-    margin-left: 4em; }
+    margin-left: 2em; }
   .footer-credits a {
     font-size: 1.2em; }
+  @media screen and (min-width: 480px) {
+    .footer-credits {
+      right: 4em; }
+      .footer-credits li {
+        margin-left: 4em; } }
 
 .heroes {
   bottom: 0;
