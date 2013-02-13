@@ -20,6 +20,21 @@
     .grid-box.one-whole.desk-one-half
       %h3 The <a href="#" class="heroes-toggle">Ruby Hero Award</a> gives recognition to influential devs in the Ruby/Rails community and announces the winners at&nbsp;<a href="http://railsconf.com">RailsConf</a>.
       %p We believe great work deserves recognition. The Ruby/Rails dev community is full of amazing contributors and unsung heroes who are busy producing educational content, developing plugins and gems, contributing to open-source projects, or putting on events to help developers learn and grow. Wherever they are, their work is too great to go unnoticed and we need your help to find&nbsp;them.
+      .main-share
+        = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", :'data-url' => "http://rubyheroes.com", :'data-text' => "The Ruby Heroes among us deserve recognition from the community.", :'data-size' => "small"
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        #fb-root
+          :javascript
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        .fb-like{ :"data-href" => "http://rubyheroes.com", :"data-send" => "false", :"data-layout" => "button_count", :"data-width" => "50", :"data-show-faces" => "true", :"data-action" => "like", :"data-font" => "lucida grande" }
+
     .grid-box.one-whole.desk-one-half
       %p Submit your vote for the Ruby Hero Award above. Six will be chosen and pulled out from behind their code to receive an award at&nbsp;RailsConf.
       = image_tag 'img-instructions.svg', alt: 'Instructions'
@@ -29,20 +44,6 @@
         %li Nominees get tallied
         %li <a href="#" class="heroes-toggle">Previous Ruby Heroes</a> choose finalists
         %li Winners announced at <a href="http://railsconf.com">RailsConf</a>
-    -#.main-share
-      = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", :'data-url' => "http://rubyheroes.com", :'data-text' => "The Ruby Heroes among us deserve recognition from the community.", :'data-size' => "small"
-      :javascript
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-      #fb-root
-        :javascript
-          (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-      .fb-like{ :"data-href" => "http://rubyheroes.com", :"data-send" => "false", :"data-layout" => "button_count", :"data-width" => "50", :"data-show-faces" => "true", :"data-action" => "like", :"data-font" => "lucida grande" }
 
   %footer
     = image_tag 'img-mask.svg', class: 'footer-mask', alt: 'Mask', :"aria-hidden" => 'true'

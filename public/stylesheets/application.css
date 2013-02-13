@@ -522,19 +522,20 @@ header {
   .main img {
     display: block;
     height: auto;
-    margin: 2em 5% 1em;
-    max-width: 90%;
-    width: 90%; }
+    margin: 2em 10% 1em;
+    max-width: 80%;
+    width: 80%; }
     @media screen and (min-width: 900px) {
       .main img {
-        margin: 1em 0 0;
-        max-width: 100%; } }
+        margin: 3em 0 2em;
+        max-width: 100%;
+        width: 100%; } }
   .main li {
     background: url("../images/bg-bullet.svg") 5px center no-repeat;
     border-bottom: 3px solid #d6cec9;
     font-size: 2em;
     font-weight: bold;
-    padding: 0.375em 0 0.25em 1.5em; }
+    padding: 0.5em 0 0.4em 1.5em; }
   @media screen and (min-width: 480px) {
     .main {
       padding: 0 4em; } }
@@ -549,7 +550,7 @@ header {
   background: #d6cec9;
   clear: both;
   margin: 2em 0;
-  padding: 15px 3em 10px; }
+  padding: 13px 3em 7px; }
   .main-share .twitter-share-button,
   .main-share .fb-like,
   .main-share #fb-root {
