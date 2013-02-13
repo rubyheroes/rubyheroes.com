@@ -1,6 +1,6 @@
 #error
 #results
-  %ul.popdown
+  %ul
     - @nominees.each do |nominee|
       %li
         = link_to "Nominate <strong>#{h nominee.github_username}</strong>".html_safe,

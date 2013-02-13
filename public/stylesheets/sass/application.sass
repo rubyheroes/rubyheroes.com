@@ -106,7 +106,7 @@ header
   h1
     display: none
     padding: 0 4em
-    +respond-to($lap)
+    +respond-to(550px)
       display: block
   img
     display: block
@@ -129,7 +129,7 @@ header
   margin-left: -158px
   position: absolute
   width: 316px
-  +respond-to($lap)
+  +respond-to(550px)
     margin-left: -118px
   +respond-to($portable)
     -webkit-background-size: 633px 300px
@@ -153,16 +153,16 @@ header
   transform: scale(0.6)
 
 .header-glow--a
-  -webkit-animation: in 1.4s 0.1s forwards ease-in-out
-  -moz-animation: in 1.4s 0.1s forwards ease-in-out
-  -o-animation: in 1.4s 0.1s forwards ease-in-out
-  animation: in 1.4s 0.1s forwards ease-in-out
+  -webkit-animation: in 0.75s 0.5s forwards ease-in-out
+  -moz-animation: in 0.75s 0.5s forwards ease-in-out
+  -o-animation: in 0.75s 0.5s forwards ease-in-out
+  animation: in 0.75s 0.5s forwards ease-in-out
   background: rgba(#ca3f29, 0.05)
   height: 350px
   margin-left: -175px
   top: -140px
   width: 350px
-  +respond-to($lap)
+  +respond-to(550px)
     margin-left: -135px
   +respond-to($portable)
     height: 475px
@@ -171,16 +171,16 @@ header
     width: 475px
 
 .header-glow--b
-  -webkit-animation: in 1s 0.1s forwards ease-in-out
-  -moz-animation: in 1s 0.1s forwards ease-in-out
-  -o-animation: in 1s 0.1s forwards ease-in-out
-  animation: in 1s 0.1s forwards ease-in-out
+  -webkit-animation: in 0.75s 0.75s forwards ease-in-out
+  -moz-animation: in 0.75s 0.75s forwards ease-in-out
+  -o-animation: in 0.75s 0.75s forwards ease-in-out
+  animation: in 0.75s 0.75s forwards ease-in-out
   background: rgba(#ad3626, 0.05)
   height: 250px
   margin-left: -125px
   top: -90px
   width: 250px
-  +respond-to($lap)
+  +respond-to(550px)
     margin-left: -85px
   +respond-to($portable)
     height: 350px
@@ -194,7 +194,7 @@ header
   padding: 12em 2em 6em
   position: relative
   z-index: 10
-  +respond-to($lap)
+  +respond-to(550px)
     padding: 6em 4em 6em
   +respond-to($portable)
     padding: 6em
@@ -221,6 +221,48 @@ header
   z-index: 1
   +respond-to($desk)
     padding-left: 1.5em
+
+.nominate-autocomplete
+  background: darken($color-border, 10%)
+  bottom: 110%
+  left: 0
+  position: absolute
+  right: 5em
+  z-index: 100
+  li
+    border-bottom: 3px solid $color-border
+    &:last-child
+      border: 0
+  a
+    color: $color-base
+    display: block
+    font: normal 2em/2 $font-base
+    padding: 2px 10px 0
+    -webkit-transition: none
+    -moz-transition: none
+    -o-transition: none
+    transition: none
+    &:hover,
+    &:focus
+      color: $color-highlight
+    strong
+      font-weight: bold
+    +respond-to($desk)
+      padding-left: 1.5em
+      padding-right: 1.5em
+  #results
+    position: relative
+    &:after
+      border: 10px solid transparent
+      border-bottom: 0
+      border-top: 10px solid darken($color-border, 10%)
+      bottom: -10px
+      content: ''
+      display: block
+      height: 0
+      left: 2.5em
+      position: absolute
+      width: 0
 
 .nominate-submit
   height: 51px
@@ -354,7 +396,7 @@ footer
     &:focus
       background: transparent
       color: $color-highlight
-  +respond-to($portable)
+  +respond-to($desk)
     padding-bottom: 11em
 
 .footer-mask
@@ -382,11 +424,11 @@ footer
 
 .heroes
   bottom: 0
-  left: 0
+  left: 5em
   opacity: 0
   overflow-y: auto
   position: absolute
-  right: 0
+  right: 5em
   top: 0
   -webkit-transform: scale(0.98)
   -moz-transform: scale(0.98)
@@ -408,26 +450,93 @@ footer
     -moz-transition: opacity 0.5s 0.6s ease-in-out, -moz-transform 0.5s 0.6s ease-in-out
     -o-transition: opacity 0.5s 0.6s ease-in-out, -o-transform 0.5s 0.6s ease-in-out
     transition: opacity 0.5s 0.6s ease-in-out, transform 0.5s 0.6s ease-in-out
-  ul
-    margin-left: -20px
 
 .heroes-inner
-  margin: 0 auto
-  max-width: 700px
+  margin: 8em auto 0
+  max-width: 600px
+  padding: 0 0 2em 10em
+  position: relative
 
-.heroes-hero
-  padding-left: 20px
+.heroes-close
+  border: 3px solid $color-base
+  color: $color-base
+  border-radius: 50%
+  font-size: 3em
+  font-style: normal
+  font-weight: bold
+  line-height: 36px
+  left: 10px
+  padding-top: 4px
+  position: absolute
+  text-align: center
+  top: -0.5em
+  width: 40px
+  &:hover,
+  &:focus
+    background: $color-base
+    color: #fff
+
+.heroes-nav
+  left: 0
+  position: absolute
+  top: 6em
+  li
+    margin-bottom: 0.5em
+    padding-bottom: 0.5em
+    width: 10em
+    &.is-selected
+      a
+        background: $color-highlight
+        color: #fff
   a
+    border-radius: 3px
+    display: inline-block
+    font-size: 2em
+    padding: 3px 0.5em 0
+    &:hover,
+    &:focus
+      background: #fff
+      background: rgba(#fff, 0.7)
+
+.heroes-collection
+  display: none
+  margin-left: -20px
+  &.is-selected
     display: block
+
+.heroes-collection-hero
+  padding-left: 20px
+  max-width: 220px
+  a
     background: #fff
-    padding: 0.5em
+    background: rgba(#fff, 0.7)
+    box-shadow: 0 0 0 1px rgba(#000, 0.05), 0 0 35px rgba(#000, 0.08)
+    display: block
+    -webkit-filter: grayscale(90%)
+    filter: grayscale(90%)
+    margin-bottom: 20px
+    padding: 0.75em 0.75em 0
+    -webkit-transition: none
+    -moz-transition: none
+    -o-transition: none
+    transition: none
+    &:hover,
+    &:focus
+      background: #fff
+      color: $color-highlight
+      -webkit-filter: none
+      filter: none
   img
     display: block
     height: auto
     max-width: 100%
     width: 100%
   strong
+    @extend %ellipsis
     display: block
+    font: normal 1.2em/3 $font-header
+    padding: 0 0.5em
+    text-align: center
 
 // ----- Nomination ----- //
 

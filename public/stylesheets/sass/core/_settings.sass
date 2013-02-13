@@ -51,7 +51,8 @@ $font-header: "FluxRegular", "Tahoma", "sans-serif"
 
 $desk: 900px
 $gutter: 40px
-$lap: 550px
+$lap: 480px
+$palm: 320px
 $portable: 740px
 
 // ----- Mixins ----- //
@@ -61,6 +62,13 @@ $portable: 740px
     @content
 
 // ----- Extends ----- //
+
+%ellipsis
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  -o-text-overflow: ellipsis
+  text-overflow: ellipsis
+  white-space: nowrap
 
 %group
   zoom: 1

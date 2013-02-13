@@ -8,8 +8,8 @@ jQuery(function($){
 
   var site = $('.site');
 
-  $('body').on('click', '.is-reminiscing .content', function(e) {
-    site.toggleClass('is-reminiscing');
+  $('body').on('click', '.is-reminiscing .content, .heroes-close', function(e) {
+    site.removeClass('is-reminiscing');
   }).on('keydown.modal', function(e) {
     if (e.which == 27) {
       site.removeClass('is-reminiscing');
@@ -17,8 +17,21 @@ jQuery(function($){
   });
   $('.heroes-toggle').on('click', function(e) {
     site.toggleClass('is-reminiscing');
+    $('html, body').delay(750).animate({ scrollTop: 0 }, "slow");
     e.preventDefault();
     e.stopPropagation();
+  });
+
+  // ----- Past Hero Nav ----- //
+
+  var heroes_nav = $('.heroes-nav li');
+
+  heroes_nav.on('click', function(e) {
+    var new_collection = $(this);
+    var index = heroes_nav.index(new_collection);
+    new_collection.addClass('is-selected').siblings().removeClass('is-selected');
+    $('.heroes-collection').removeClass('is-selected').eq(index).addClass('is-selected');
+    e.preventDefault();
   });
 
   // ----- Nomination Form ----- //
@@ -34,7 +47,7 @@ jQuery(function($){
       // TODO disable http & github from submitting the form
       if ( regex1.test(input_text) ||  regex2.test(input_text) ) {
         $('#error').html("Just enter the GitHub username.")
-        $('#results').empty().fadeOut();
+        $('#results').empty().hide();
       } else {
         if (input_text.length > 2 ) {
           $('#yes_match')
@@ -44,9 +57,7 @@ jQuery(function($){
             .show()
           $('.nominate').addClass('is-nominating');
         } else {
-          $('#results')
-            .fadeOut()
-            .empty();
+          $('#results').empty().hide();
           $('.nominate').removeClass('is-nominating');
         }
       }

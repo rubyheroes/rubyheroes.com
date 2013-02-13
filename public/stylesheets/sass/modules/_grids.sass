@@ -15,29 +15,21 @@
 
 // ----- Widths ----- //
 
-.one-whole
-  width: 100%
-.one-half
-  width: 50%
-.one-third
-  width: 33.33333%
+=device-type($namespace: '')
+  .#{$namespace}one-whole
+    width: 100%
+  .#{$namespace}one-half
+    width: 50%
+  .#{$namespace}one-third
+    width: 33.33333%
+
++device-type()
 
 +respond-to($lap)
-  .lap-one-half
-    width: 50%
-  .lap-one-third
-    width: 33.33333%
-  .lap-one-fourth
-    width: 25%
+  +device-type('lap-')
+
++respond-to($portable)
+  +device-type('portable-')
 
 +respond-to($desk)
-  .desk-one-half
-    width: 50%
-  .desk-one-third
-    width: 33.33333%
-  .desk-one-fourth
-    width: 25%
-  .desk-one-fifth
-    width: 20%
-  .desk-one-sixth
-    width: 16.66666%
+  +device-type('desk-')
