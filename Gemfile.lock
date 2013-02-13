@@ -79,6 +79,9 @@ GEM
       slop (~> 3.4)
     pry-rails (0.2.2)
       pry (>= 0.9.10)
+    pry-remote (0.1.6)
+      pry (~> 0.9)
+      slop (~> 3.0)
     rack (1.2.8)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -145,6 +148,7 @@ DEPENDENCIES
   jquery-rails (~> 2.2.1)
   kaminari (~> 0.14.1)
   pry-rails
+  pry-remote
   rails (= 3.0.20)
   rdiscount (~> 2.0.7)
   rspec-rails (~> 2.12.2)
