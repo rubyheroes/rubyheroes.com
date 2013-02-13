@@ -4,7 +4,7 @@ gem 'rails', '3.0.20'
 
 gem "haml-rails", "~> 0.3.4"
 gem "rdiscount", "~> 2.0.7"
-gem "simple_form", "~> 2.0.4"
+gem "formtastic", "~> 2.2.1"
 gem "kaminari", "~> 0.14.1"
 gem 'sass', '~> 3.2.5'
 gem "jquery-rails", "~> 2.2.1"
