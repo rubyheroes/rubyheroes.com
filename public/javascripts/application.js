@@ -46,7 +46,7 @@ jQuery(function($){
       
       // TODO disable http & github from submitting the form
       if ( regex1.test(input_text) ||  regex2.test(input_text) ) {
-        $('#error').html("Just enter the GitHub username.")
+        $('#error').html("Only include the GitHub username");
         $('#results').empty().hide();
       } else {
         if (input_text.length > 2 ) {
@@ -58,6 +58,7 @@ jQuery(function($){
           $('.nominate').addClass('is-nominating');
         } else {
           $('#results').empty().hide();
+          $('#error').empty().hide();
           $('.nominate').removeClass('is-nominating');
         }
       }
