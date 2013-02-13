@@ -15,7 +15,7 @@ class Nominee < ActiveRecord::Base
   validates :github_username,
               :presence => true,
               :length => { :maximum => 40 },
-              :exclusion => { :in => INELIGIBLE_NOMINEES, :message => "He's already a Ruby Hero! Please nominate someone else."}
+              :exclusion => { :in => INELIGIBLE_NOMINEES, :message => "They're already a Ruby Hero! Please nominate someone else."}
 
   #validates :name, :presence => true
 
