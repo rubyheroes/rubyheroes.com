@@ -1,34 +1,35 @@
-%table
-  %caption Statistics
-  %thead
-    %tr
-      %th(scope="col") Nominations
-      %th(scope="col") Nominees
-      %th(scope="col") Voters
-  %tbody
-    %tr
-      %td.nomination_total= @nomination_count
-      %td.nominee_total= @nominee_count
-      %td.voter_total= @voter_count
-
-
-
-
-%table
-  %caption Most nominated sites.
-  %thead
-    %tr
-      %th(scope="col") # of Nominations
-      %th(scope="col") Nominee
-      %th(scope="col") 
-  %tfoot
-    %tr
-      %td(colspan="3")= paginate(@nominees)
-  %tbody
-    - @nominees.each do |nominee|
+.content
+  %table
+    %caption Statistics
+    %thead
       %tr
-        %td.nomination_count= nominee.nomination_count
-        %td.github= link_to nominee.github_username, nominee.url
-        %td.actions= link_to "View nominations", [:admin, nominee]
+        %th(scope="col") Nominations
+        %th(scope="col") Nominees
+        %th(scope="col") Voters
+    %tbody
+      %tr
+        %td.nomination_total= @nomination_count
+        %td.nominee_total= @nominee_count
+        %td.voter_total= @voter_count
+
+
+
+
+  %table
+    %caption Most nominated sites.
+    %thead
+      %tr
+        %th(scope="col") # of Nominations
+        %th(scope="col") Nominee
+        %th(scope="col") 
+    %tfoot
+      %tr
+        %td(colspan="3")= paginate(@nominees)
+    %tbody
+      - @nominees.each do |nominee|
+        %tr
+          %td.nomination_count= nominee.nomination_count
+          %td.github= link_to nominee.github_username, nominee.url
+          %td.actions= link_to "View nominations", [:admin, nominee]
 
 
