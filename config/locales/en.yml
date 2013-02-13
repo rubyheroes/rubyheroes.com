@@ -10,3 +10,7 @@ en:
       name: "Your Name"
       email: "Your Email (We'll Never Sell)"
       testimonial: "This Person is Heroic Because (Min. 25 Characters)"
+      
+  errors:
+      messages:
+        blank: "This field is required."
