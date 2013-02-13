@@ -772,3 +772,8 @@ footer {
     display: block;
     font-size: 1.6em;
     font-weight: bold; }
+  .nomination .inline-errors {
+    background: #802b0d;
+    color: white;
+    font-size: 1.6em;
+    padding: 0.25em 0.5em; }
