@@ -29,6 +29,20 @@
         %li Nominees get tallied
         %li <a href="#" class="heroes-toggle">Previous Ruby Heroes</a> choose finalists
         %li Winners announced at <a href="http://railsconf.com">RailsConf</a>
+    -#.main-share
+      = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", :'data-url' => "http://rubyheroes.com", :'data-text' => "The Ruby Heroes among us deserve recognition from the community.", :'data-size' => "small"
+      :javascript
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      #fb-root
+        :javascript
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+      .fb-like{ :"data-href" => "http://rubyheroes.com", :"data-send" => "false", :"data-layout" => "button_count", :"data-width" => "50", :"data-show-faces" => "true", :"data-action" => "like", :"data-font" => "lucida grande" }
 
   %footer
     = image_tag 'img-mask.svg', class: 'footer-mask', alt: 'Mask', :"aria-hidden" => 'true'
@@ -62,25 +76,3 @@
     %ul.heroes-collection.grid.is-selected= render partial: "hero", collection: @heroes
     - %w( 2011 2010 2009 2008 ).each do |year|
       %ul.heroes-collection.grid= render partial: "hero", collection: @past_heroes.find_all {|i| i.year == year}
-
-
-
-
-
-
--#%section#pastheroes
-  = link_to "Tweet", "https://twitter.com/share", :class => "twitter-share-button", 'data-url' => "http://rubyheroes.com", 'data-text' => "The Ruby Heroes among us deserve recognition from the community.", 'data-size' => "large"
-  :javascript
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-  #fb-root
-    :javascript
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
-  .fb-like{ "data-href" => "http://rubyheroes.com", "data-send" => "false", "data-layout" => "button_count", "data-width" => "50", "data-show-faces" => "true", "data-action" => "recommend", "data-font" => "lucida grande" }

@@ -536,6 +536,19 @@ header {
 .main--thanks {
   margin-top: 4em; }
 
+.main-share {
+  background: #d6cec9;
+  clear: both;
+  margin: 2em 0;
+  padding: 15px 3em 10px; }
+  .main-share .twitter-share-button,
+  .main-share .fb-like,
+  .main-share #fb-root {
+    display: inline-block; }
+  .main-share .fb-like {
+    position: relative;
+    top: -3px; }
+
 .sponsor {
   padding: 4em 2em 0em;
   position: relative;
