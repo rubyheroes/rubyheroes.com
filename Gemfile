@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 ruby "1.9.3"
 
-gem 'rails', '3.0.20'
+gem 'rails', '~> 3.1'
 
 gem "haml-rails", "~> 0.3.4"
 gem "rdiscount", "~> 2.0.7"
