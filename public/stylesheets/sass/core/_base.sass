@@ -80,3 +80,7 @@ button
   &:hover,
   &:focus
     background: lighten($color-highlight, 5%)
+
+  &:disabled
+    background: desaturate($color-highlight, 80%)
+    color: darken(#fff, 10%)

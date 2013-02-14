@@ -155,11 +155,9 @@ button {
   z-index: 10; }
   button:hover, button:focus {
     background: #e85724; }
-
-button:disabled {
-  background: #333;
-  color: #aaa;
-}
+  button:disabled {
+    background: #7b7978;
+    color: #e6e6e6; }
 
 .grid {
   margin-left: -40px; }
