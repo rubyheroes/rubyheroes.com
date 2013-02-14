@@ -5,7 +5,7 @@ class Nominee < ActiveRecord::Base
                             sutto jnicklas lsegal mhartl radar steveklabnik
                             josevalim tenderlove sandal qrush wayneeseguin fxn 
                             tmm1 dkubb luislavena brynary freelancing-god jnunemaker
-                            wycats ryanb igrigorik evan tcopeland jeg2
+                            wycats ryanb rbates igrigorik evan tcopeland jeg2
                           )
 
   # Associations
