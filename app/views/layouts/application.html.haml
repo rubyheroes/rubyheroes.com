@@ -11,10 +11,11 @@
     %title Ruby Hero Awards
     %link{rel: 'shortcut icon', type: 'image/png', href: '/images/favicon.png'}
     = stylesheet_link_tag 'application'
-    = javascript_include_tag 'jquery-1.9.1.min', 'jquery.fittext.js', 'modernizr-2.6.2.min.js', 'application'
-    = javascript_include_tag 'http://platform.twitter.com/widgets.js'
       
   %body
     .site
       .site-backdrop
-      = yield
+      = yield    
+    = javascript_include_tag 'jquery-1.9.1.min', 'jquery.fittext.js', 'modernizr-2.6.2.min.js', 'application'
+    = javascript_include_tag 'http://platform.twitter.com/widgets.js'
+    = analytics_init if Rails.env.production?

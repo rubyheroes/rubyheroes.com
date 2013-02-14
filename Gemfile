@@ -11,6 +11,7 @@ gem "kaminari", "~> 0.14.1"
 gem 'sass', '~> 3.2.5'
 gem "jquery-rails", "~> 2.2.1"
 gem 'newrelic_rpm'
+gem "google-analytics-rails", "~> 0.0.3"
 
 group :production do
   gem 'pg'
