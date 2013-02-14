@@ -1,5 +1,7 @@
 //= require jquery
 //= require jquery_ujs
+//= require modernizr
+//= require jquery.fittext
 //= require_self
 //= require_tree .
 
