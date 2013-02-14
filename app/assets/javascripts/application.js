@@ -17,13 +17,14 @@ jQuery(function($){
 
   $('body').on('click', '.is-reminiscing .content, .heroes-close', function(e) {
     site.removeClass('is-reminiscing');
+    e.preventDefault();
   }).on('keydown.modal', function(e) {
     if (e.which == 27) {
       site.removeClass('is-reminiscing');
     }
   });
   $('.heroes-toggle').on('click', function(e) {
-    site.toggleClass('is-reminiscing');
+    site.addClass('is-reminiscing');
     $('html, body').delay(750).animate({ scrollTop: 0 }, "slow");
     e.preventDefault();
     e.stopPropagation();
