@@ -36,19 +36,33 @@ jQuery(function($){
 
   // ----- Nomination Form ----- //
 
-  var regex1 = /github.com/;
+  var regex1 = /github\./;
   var regex2 = /http:/;
   
   $('#nominee')
     .focus()
     .keyup(function(event) {
+      var form = $(this).closest('form');
       var input_text = $(event.target).val();
       
       // TODO disable http & github from submitting the form
       if ( regex1.test(input_text) ||  regex2.test(input_text) ) {
         $('#error').html("Only include the GitHub username");
+        // disable next button
+        $('.nominate-submit').prop('disabled', true);
+        
+        // disable form submission
+        form.on('submit', function(event){
+          event.preventDefault();
+        })
         $('#results').empty().hide();
       } else {
+        // enable next button
+        $('.nominate-submit').prop('disabled', false);
+
+        // enable form submission
+        form.off('submit');
+
         if (input_text.length > 2 ) {
           $('#yes_match')
             .load('/nominees/?q=' + input_text, function(event) {

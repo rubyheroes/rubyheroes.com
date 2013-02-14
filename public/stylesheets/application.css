@@ -156,6 +156,11 @@ button {
   button:hover, button:focus {
     background: #e85724; }
 
+button:disabled {
+  background: #333;
+  color: #aaa;
+}
+
 .grid {
   margin-left: -40px; }
 
