@@ -44,10 +44,15 @@ jQuery(function($){
     .keyup(function(event) {
       var form = $(this).closest('form');
       var input_text = $(event.target).val();
+      var matches = $("#yes_match");
       
       // TODO disable http & github from submitting the form
       if ( regex1.test(input_text) ||  regex2.test(input_text) ) {
-        $('#error').html("Only include the GitHub username");
+        if(! $("#error").length ) {
+          // only attempt to add the error if it wasn't already present
+          $("<div />").prop("id", "error").appendTo(matches).html("Only include the GitHub username").show();
+        }
+
         // disable next button
         $('.nominate-submit').prop('disabled', true);
         
@@ -64,9 +69,9 @@ jQuery(function($){
         form.off('submit');
 
         if (input_text.length > 2 ) {
-          $('#yes_match')
+          $(matches)
             .load('/nominees/?q=' + input_text, function(event) {
-              $('#yes_match').append($('<span>'));
+              $(matches).append($('<span>'));
             })
             .show()
           $('.nominate').addClass('is-nominating');
