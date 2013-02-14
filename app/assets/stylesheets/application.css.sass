@@ -220,9 +220,12 @@ header
     padding-right: 5em
 
 .nominate-input
+  font-size: 1.6em
   padding-right: 103px
   position: relative
   z-index: 1
+  +respond-to(400px)
+    font-size: 2em
   +respond-to($desk)
     padding-left: 1.5em
 
