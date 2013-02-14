@@ -31,7 +31,7 @@ namespace :db do
       "bdewitt", "joshk", "drawohara", "matthieusegret", "dchelimsky", "rkh", "mbleigh", "apneadiving", "carlhuda", 
       "floehopper", "ripienaar", "@gregbell", "steveklabnik", "rubiety", "cloudhead", "c7", "jmonteiro", "mhartl", 
       "nusco (paolo perrotta)", "fuzzmonkey", "schneems", "peterc", "brad rushby", "spastorino", "mitchellh", "pilu", 
-      "https://github.com/ryanb", "@rafaelfranca", "leongersing", "topfunky", "amatsuda", "sj26", "clnclarinet", 
+      "@rafaelfranca", "leongersing", "topfunky", "amatsuda", "sj26", "clnclarinet", 
       "drogus", "evanphx", "eduzera", "michaelklishin", "bascule", "karel minarik", "banister", "solnic", "drbrain", 
       "justinfrench", "woiiiiiii", "davidchelimsky", "xaviershay", "durran", "akitaonrails", "coreyhaines", 
       "progrium", "ernie", "tablatom", "camilleroux", "joshsusser", "netzpirat", "rbates", "hfdsfgsdg", 
