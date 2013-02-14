@@ -6,4 +6,8 @@ class Nominator < ActiveRecord::Base
     :message => "A valid email address is required."
   validates_presence_of :name,
     :message => "This field is required."
+
+  def to_s
+    self.name || self.email
+  end
 end

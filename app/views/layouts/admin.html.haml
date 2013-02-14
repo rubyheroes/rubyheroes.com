@@ -1,27 +1,21 @@
 !!! 5
-%html{ html_attrs }
+%html{lang: 'en'}
   %head
-    %meta{ "http-equiv" => "content-type", :content => "text/html;charset=UTF-8" }
+    %meta{charset: 'UTF-8'}
+    %meta{content: 'IE-edge, chrome=1', :'http-equiv' => 'X-UA-Compatible'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %meta{name: 'description', content: 'The Ruby Hero Award gives recognition to influential devs in the Ruby/Rails community and announces the winners at RailsConf'}
+    %meta{property: 'og:url', content: root_url }
+    %meta{property: 'og:image', content: "#{root_url}images/rubyheroes.jpg" }
+
     %title Ruby Hero Awards
-    = stylesheet_link_tag 'default', 'admin'
-    = render :partial => 'layouts/mobile_head'
-    %link{ :rel => 'shortcut icon', :type => 'image/png', :href => '/images/favicon.png' }
-    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js', 'application'
-    /[if IE]
-      = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
-    /[if lt IE 8]
-      = javascript_include_tag 'http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js'
+    %link{rel: 'shortcut icon', type: 'image/png', href: '/images/favicon.png'}
+    = stylesheet_link_tag 'application', 'admin'
       
-  %body{ :class => "#{controller.controller_name} #{controller.controller_name}-#{controller.action_name}" }
-    %header
-      %h1
-        = link_to "Ruby Hero", "/"
-    %section#wrapper
-      = yield
-    %footer
-      Ruby Heroes is produced by 
-      = link_to image_tag("/images/envylabs.png"), "http://www.envylabs.com"
-      designed by
-      = link_to image_tag("/images/clevercode.png"), "http://www.clevercode.net"
-      and graciously hosted at 
-      = link_to image_tag("/images/heroku.png"), "http://www.heroku.com"
+  %body
+    .site
+      .site-backdrop
+      = yield    
+    = javascript_include_tag 'jquery-1.9.1.min', 'jquery.fittext.js', 'modernizr-2.6.2.min.js', 'application'
+    = javascript_include_tag 'http://platform.twitter.com/widgets.js'
+    = analytics_init if Rails.env.production?
