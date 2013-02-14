@@ -64,6 +64,9 @@ module RubyHeroAwards
       g.view_specs          false
       g.helper_specs        false
     end
+
+    # Heroku requires this to be false
+    config.assets.initialize_on_precompile = false
   end
 end
 
