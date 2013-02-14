@@ -99,3 +99,6 @@ set :apache_proxy_servers, 1
 task :after_update_code, :roles => :app do
   put(File.read('#{release_path}/config/database.yml.example'), "#{release_path}/config/database.yml", :mode => 0444)
 end
+
+require './config/boot'
+require 'airbrake/capistrano'

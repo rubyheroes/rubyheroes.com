@@ -28,6 +28,10 @@ GEM
     activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    airbrake (3.1.8)
+      activesupport
+      builder
+      json
     arel (3.0.2)
     bourne (1.1.2)
       mocha (= 0.10.5)
@@ -185,6 +189,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake
   capybara (~> 2.0.2)
   coffee-rails (~> 3.2.2)
   factory_girl_rails (~> 4.2.1)

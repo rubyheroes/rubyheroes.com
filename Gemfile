@@ -12,6 +12,7 @@ gem 'sass', '~> 3.2.5'
 gem "jquery-rails", "~> 2.2.1"
 gem "modernizr-rails", "~> 2.6.2"
 gem 'newrelic_rpm'
+gem "airbrake"
 gem "google-analytics-rails", "~> 0.0.3"
 gem 'hirefireapp'
 
