@@ -5,6 +5,7 @@ Nomination Site & Application
 
 + v1 Created by [Envy Labs](http://envylabs.com)
 + v2 Rebuilt and redesigned by [cleverCode](http://clevercode.net)
++ v3 Redesigned by Nick Walsh [Envy Labs](http://envylabs.com) in February 2013
 
 
 ###Dependencies###
