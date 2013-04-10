@@ -1,11 +1,20 @@
 //= require jquery
 //= require jquery_ujs
-//= require modernizr-2.6.2.min.js
+//= require modernizr-2.6.2.min
 //= require jquery.fittext
+//= require jquery.ba-bbq
 //= require_self
 //= require_tree .
 
 jQuery(function($){
+
+  // ----- Parse Heroes Hash ----- //
+  if ($.deparam.fragment().heroes === ""){
+    window.setTimeout(function(){
+      $('.heroes-toggle').first().trigger('click')
+    }, 1)
+  };
+
 
   // ----- FitText ----- //
 
