@@ -27,13 +27,22 @@ past_heroes = [
   {:name=>"Michael Hartl",:year=>"2011",:avatar=>"michael_hartl.jpg",:url=>"https://github.com/mhartl"},
   {:name=>"Ryan Bigg",:year=>"2011",:avatar=>"ryan_bigg.jpg",:url=>"https://github.com/radar"},
   {:name=>"Steve Klabnik",:year=>"2011",:avatar=>"steve_klabnik.jpg",:url=>"https://github.com/steveklabnik"},
-  # 2011 Heroes
+  # 2012 Heroes
   {:name=>"Konstantin Haase",:year=>"2012",:avatar=>"konstantin_haase.jpg",:url=>"https://github.com/rkh"},
   {:name=>"Tony Arcieri",:year=>"2012",:avatar=>"tony_arcieri.jpg",:url=>"https://github.com/tarcieri"},
   {:name=>"Yoko Harada",:year=>"2012",:avatar=>"yoko_harada.jpg",:url=>"https://github.com/yokolet"},
   {:name=>"Sven Fuchs",:year=>"2012",:avatar=>"sven_fuchs.jpg",:url=>"https://github.com/svenfuchs"},
   {:name=>"Frederick Cheung",:year=>"2012",:avatar=>"frederick_cheung.jpg",:url=>"https://github.com/fcheung"},
   {:name=>"Eric Hodel",:year=>"2012",:avatar=>"eric_hodel.jpg",:url=>"https://github.com/drbrain"},
+  # 2013 Heroes
+  {:name=>"Terence Lee",:year=>"2013",:avatar=>"terence_lee.jpg",:url=>"https://github.com/hone"},
+  {:name=>"Sandi Metz",:year=>"2013",:avatar=>"sandi_metz.jpg",:url=>"https://github.com/skmetz"},
+  {:name=>"Mike Perham",:year=>"2013",:avatar=>"mike_perham.jpg",:url=>"https://github.com/mperham"},
+  {:name=>"James Tucker",:year=>"2013",:avatar=>"james_tucker.jpg",:url=>"https://github.com/raggi"},
+  {:name=>"Brian Shirai",:year=>"2013",:avatar=>"brian_shirai.jpg",:url=>"https://github.com/brixen"},
+  {:name=>"Linda Liukas",:year=>"2013",:avatar=>"linda_liukas.jpg",:url=>"https://github.com/lindaliukas"},
+  {:name=>"Pia Henrietta Kekäläinen",:year=>"2013",:avatar=>"pia_henrietta_kekalainen.jpg",:url=>"https://github.com/phenriettak"},
+  {:name=>"Karri Saarinen",:year=>"2013",:avatar=>"karri_saarinen.jpg",:url=>"https://github.com/ksaa"}
 ]
 
 past_heroes.each do |hero|
