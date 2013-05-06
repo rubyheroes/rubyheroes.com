@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 past_heroes = [
   # 2008 Heroes
   {:name=>"Ryan Bates",:year=>"2008",:avatar=>"ryan_bates.jpg",:url=>"http://railscasts.com/"},
