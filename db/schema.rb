@@ -14,12 +14,12 @@
 ActiveRecord::Schema.define(:version => 20110407174929) do
 
   create_table "heroes", :force => true do |t|
-    t.string    "name"
-    t.string    "avatar"
-    t.string    "year"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "url"
+    t.string   "name"
+    t.string   "avatar"
+    t.string   "year"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "url"
   end
 
   create_table "nominations", :force => true do |t|
@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(:version => 20110407174929) do
   end
 
   create_table "nominators", :force => true do |t|
-    t.string    "email"
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "email"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "nominees", :force => true do |t|
@@ -42,11 +42,11 @@ ActiveRecord::Schema.define(:version => 20110407174929) do
   end
 
   create_table "sites", :force => true do |t|
-    t.string    "url"
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "nominations_count"
+    t.string   "url"
+    t.string   "name"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "nominations_count"
   end
 
   add_index "sites", ["url"], :name => "index_sites_on_url"

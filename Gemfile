@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 ruby "1.9.3"
 
 gem 'rails', '~> 3.1'
+gem 'pg', "~> 0.14.1"
+
 
 gem "haml-rails"
 gem "rdiscount", "~> 2.0.7"
@@ -22,7 +24,6 @@ group :assets do
 end
 
 group :production do
-  gem 'pg', "~> 0.14.1"
   gem "thin"
 end
 
@@ -31,7 +32,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-remote'
   gem 'factory_girl_rails', "~> 4.2.1"
-  gem 'sqlite3', "~> 1.3.7"
 end
 
 group :test do
