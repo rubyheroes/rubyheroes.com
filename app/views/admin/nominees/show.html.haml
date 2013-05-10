@@ -6,12 +6,10 @@
         = link_to @nominee.github_username, @nominee.url
       %thead
         %tr
-          %th(scope="col") Nominator
           %th(scope="col") Testimony
       %tbody
         - @nominee.nominations.each do |nomination|
           %tr
-            %td.nominator= link_to "#{nomination.nominator.name} (#{nomination.nominator.email})", [:admin, nomination.nominator]
             %td.testimony= nomination.testimonial
 
     %p= link_to "Back to nominees", admin_nominees_path
