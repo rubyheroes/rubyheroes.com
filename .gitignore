@@ -12,3 +12,4 @@ public/system
 *.swp
 *.tmproj
 .sass-cache/
+/config/database.yml
