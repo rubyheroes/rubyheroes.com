@@ -67,6 +67,10 @@ module RubyHeroAwards
 
     # Heroku requires this to be false
     config.assets.initialize_on_precompile = false
+
+    # Asset logging is disabled thanks to the quiet_assets gem
+    # if you wish to re-enable it, uncomment the follwing:
+    # config.quiet_assets = false
   end
 end
 

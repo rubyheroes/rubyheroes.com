@@ -32,6 +32,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-remote'
   gem 'factory_girl_rails', "~> 4.2.1"
+  gem 'quiet_assets'
 end
 
 group :test do
