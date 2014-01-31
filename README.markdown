@@ -34,3 +34,10 @@ _(unless on heroku, done automatically with .gems file)_
     rake db:populate
     
 4 Start the server.
+
+## Stats
+
+### 2013
+| Nominations | Nominees | Nominators | 
+| --- | --- | --- | 
+| 898 | 272 | 773 |
