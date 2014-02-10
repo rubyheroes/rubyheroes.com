@@ -6,6 +6,7 @@ class Nominee < ActiveRecord::Base
                             josevalim tenderlove sandal qrush wayneeseguin fxn 
                             tmm1 dkubb luislavena brynary freelancing-god jnunemaker
                             wycats ryanb rbates igrigorik evan tcopeland jeg2
+                            hone skmetz mperham raggi brixen lindaliukas phenriettak ksaa
                           )
 
   # Associations
