@@ -1,9 +1,9 @@
 class Nominee < ActiveRecord::Base
 
-  INELIGIBLE_NOMINEES = %w( 
+  INELIGIBLE_NOMINEES = %w(
                             rkh tarcieri yokolet svenfuchs fcheung drbrain
                             sutto jnicklas lsegal mhartl radar steveklabnik
-                            josevalim tenderlove sandal qrush wayneeseguin fxn 
+                            josevalim tenderlove sandal qrush wayneeseguin fxn
                             tmm1 dkubb luislavena brynary freelancing-god jnunemaker
                             wycats ryanb rbates igrigorik evan tcopeland jeg2
                             hone skmetz mperham raggi brixen lindaliukas phenriettak ksaa
@@ -28,6 +28,20 @@ class Nominee < ActiveRecord::Base
 
   def github_username=(username)
     self[:github_username] = username.try(:downcase)
+  end
+
+  def merge_into(nominee)
+    return false if nominee == self
+    
+    transaction do
+      self.nominations.each do |nomination|
+        nomination.nominee = nominee
+        raise ActiveRecord::Rollback unless nomination.save!
+      end
+      raise ActiveRecord::Rollback unless destroy
+    end
+
+    nominee
   end
 
   def url
