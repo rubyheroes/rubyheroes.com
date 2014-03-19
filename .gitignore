@@ -13,3 +13,5 @@ public/system
 *.tmproj
 .sass-cache/
 /config/database.yml
+
+/.powenv
