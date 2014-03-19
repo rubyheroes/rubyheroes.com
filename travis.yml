@@ -1,0 +1,22 @@
+language: ruby
+rvm:
+  - 1.9.3
+env:
+  global:
+    - DB=postgres
+    - RAILS_ENV=test
+bundler_args: --binstubs --without=development
+before_script:
+  # copy required configuration files
+  - cp config/database.ci.yml config/database.yml
+  # create test database
+  - psql -c 'create database codeschool_test;' -U postgres
+  - bundle exec rake db:schema:load
+  - bundle exec rake db:test:prepare
+script:
+  - bin/rspec . --color --profile
+branches:
+  only:
+    - master
+notifications:
+  email: false
