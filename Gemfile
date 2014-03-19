@@ -28,7 +28,7 @@ group :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails', "~> 2.12.2"
+  gem 'rspec-rails', "~> 2.14.1"
   gem 'pry-rails'
   gem 'pry-remote'
   gem 'factory_girl_rails', "~> 4.2.1"
