@@ -1,5 +1,5 @@
 module ApplicationHelper
   def voting_enabled?
-    true
+    false
   end
 end
