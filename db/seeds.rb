@@ -45,7 +45,7 @@ past_heroes = [
   { name: "Pia Henrietta Kekäläinen", year: "2013", avatar: "pia_henrietta_kekalainen.jpg", url: "https://github.com/phenriettak" },
   { name: "Karri Saarinen", year: "2013", avatar: "karri_saarinen.jpg", url: "https://github.com/ksaa" },
   # 2014 Heroes
-  { name: "Katrina Owen", year: "2014", avatar: "katrina_owen.jpg", url: "https://github.com/hone" },
+  { name: "Katrina Owen", year: "2014", avatar: "katrina_owen.jpg", url: "https://github.com/kytrinyx" },
   { name: "Ron Evans", year: "2014", avatar: "ron_evans.jpg", url: "https://github.com/deadprogram" },
   { name: "Rafael Mendonça França", year: "2014", avatar: "rafael_mendonca_franca.jpg", url: "https://github.com/rafaelfranca" },
   { name: "Erik Michaels-Ober", year: "2014", avatar: "erik_michaels-ober.jpg", url: "https://github.com/sferik" },
