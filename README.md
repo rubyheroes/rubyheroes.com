@@ -25,7 +25,6 @@ Nomination Site & Application
 4. `rails server`
 
 ## Stats
-### 2013
 | Year | Nominations | Nominees | Nominators | 
 | --- | --- | --- | --- | 
 | 2013 | 898 | 272 | 773 |
