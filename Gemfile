@@ -15,14 +15,15 @@ gem "jquery-rails", "~> 2.2.1"
 gem "google-analytics-rails", "~> 0.0.3"
 gem "bugsnag"
 gem "skylight"
+gem "puma"
 
 gem "sass-rails"
 gem "coffee-rails"
 gem "uglifier"
 
 group :production do
-  gem "thin"
   gem "rails_12factor"
+  gem "rack-timeout"
 end
 
 group :development, :test do
