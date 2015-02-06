@@ -76,7 +76,6 @@ GEM
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     hike (1.2.3)
-    hirefireapp (0.0.8)
     i18n (0.6.9)
     journey (1.0.4)
     jquery-rails (2.2.1)
@@ -202,7 +201,6 @@ DEPENDENCIES
   formtastic (~> 2.2.1)
   google-analytics-rails (~> 0.0.3)
   haml-rails
-  hirefireapp
   jquery-rails (~> 2.2.1)
   kaminari (~> 0.14.1)
   newrelic_rpm

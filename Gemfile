@@ -15,7 +15,6 @@ gem "jquery-rails", "~> 2.2.1"
 gem 'newrelic_rpm'
 gem "airbrake"
 gem "google-analytics-rails", "~> 0.0.3"
-gem 'hirefireapp'
 
 group :assets do
   gem 'sass-rails', "~> 3.2.6"
