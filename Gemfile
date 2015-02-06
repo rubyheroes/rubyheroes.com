@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 ruby "2.0.0"
 
-gem "rails", "~> 3.1"
+gem "rails", "~> 4.0.0"
 gem "pg", "~> 0.14.1"
 
 
@@ -16,11 +16,9 @@ gem "newrelic_rpm"
 gem "google-analytics-rails", "~> 0.0.3"
 gem "bugsnag"
 
-group :assets do
-  gem "sass-rails", "~> 3.2.6"
-  gem "coffee-rails", "~> 3.2.2"
-  gem "uglifier", "~> 1.3.0"
-end
+gem "sass-rails"
+gem "coffee-rails"
+gem "uglifier"
 
 group :production do
   gem "thin"

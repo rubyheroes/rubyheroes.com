@@ -13,8 +13,6 @@ class Nominee < ActiveRecord::Base
   # Associations
   has_many :nominations
 
-  attr_accessible :github_username
-
   # Validations
   validates :github_username,
               :presence => true,

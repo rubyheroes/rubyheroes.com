@@ -6,8 +6,6 @@ class Nomination < ActiveRecord::Base
 
   accepts_nested_attributes_for :nominator
 
-  attr_accessible :nominee_attributes, :nominator_attributes, :testimonial
-
   # Validations
   validates :testimonial, :length => { :minimum => 25, :message => "Testimony must be at least 25 characters." }
 
