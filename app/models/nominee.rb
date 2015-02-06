@@ -7,6 +7,7 @@ class Nominee < ActiveRecord::Base
                             tmm1 dkubb luislavena brynary freelancing-god jnunemaker
                             wycats ryanb rbates igrigorik evan tcopeland jeg2
                             hone skmetz mperham raggi brixen lindaliukas phenriettak ksaa
+                            kytrinyx deadprogram rafaelfranca sferik enebo ahoward
                           )
 
   # Associations
@@ -32,7 +33,7 @@ class Nominee < ActiveRecord::Base
 
   def merge_into(nominee)
     return false if nominee == self
-    
+
     transaction do
       self.nominations.each do |nomination|
         nomination.nominee = nominee
