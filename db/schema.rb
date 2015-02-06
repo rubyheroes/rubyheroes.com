@@ -9,48 +9,55 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140128153316) do
+ActiveRecord::Schema.define(version: 20150206235442) do
 
-  create_table "heroes", :force => true do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "heroes", force: true do |t|
     t.string   "name"
     t.string   "avatar"
     t.string   "year"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "url"
   end
 
-  create_table "nominations", :force => true do |t|
-    t.text     "testimonial",  :null => false
+  add_index "heroes", ["year"], name: "index_heroes_on_year", using: :btree
+
+  create_table "nominations", force: true do |t|
+    t.text     "testimonial",  null: false
     t.integer  "nominator_id"
     t.integer  "nominee_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "nominators", :force => true do |t|
+  create_table "nominators", force: true do |t|
     t.string   "email"
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "nominees", :force => true do |t|
+  create_table "nominees", force: true do |t|
     t.string  "github_username"
     t.string  "name"
-    t.integer "nomination_count", :default => 0
+    t.integer "nomination_count", default: 0
   end
 
-  create_table "sites", :force => true do |t|
+  add_index "nominees", ["github_username"], name: "index_nominees_on_github_username", using: :btree
+
+  create_table "sites", force: true do |t|
     t.string   "url"
     t.string   "name"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.integer  "nominations_count"
   end
 
-  add_index "sites", ["url"], :name => "index_sites_on_url"
+  add_index "sites", ["url"], name: "index_sites_on_url", using: :btree
 
 end
