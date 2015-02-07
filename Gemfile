@@ -34,7 +34,6 @@ group :development, :test do
 end
 
 group :test do
-  gem "shoulda-matchers", "~> 1.4.2"
   gem "capybara", "~> 2.0.2"
   gem "launchy"
 end
