@@ -2,7 +2,7 @@ module Admin
   class AdminController < ::ApplicationController
     layout "admin"
 
-    before_filter :authenticate
+    before_action :authenticate
 
     protected
       def authenticate
