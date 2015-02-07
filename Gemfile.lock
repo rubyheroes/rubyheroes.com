@@ -94,7 +94,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.2.2)
     nokogiri (1.5.6)
-    pg (0.14.1)
+    pg (0.18.1)
     pry (0.9.12)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -197,7 +197,7 @@ DEPENDENCIES
   jquery-rails (~> 2.2.1)
   kaminari (~> 0.14.1)
   launchy
-  pg (~> 0.14.1)
+  pg
   pry-rails
   pry-remote
   puma
