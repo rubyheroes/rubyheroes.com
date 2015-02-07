@@ -161,7 +161,7 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     sexp_processor (4.4.5)
-    skylight (0.5.2)
+    skylight (0.6.0)
       activesupport (>= 3.0.0)
     slop (3.4.3)
     spring (1.2.0)
