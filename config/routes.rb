@@ -1,5 +1,5 @@
 RubyHeroAwards::Application.routes.draw do
-  root to: 'home#show'
+  root "home#show"
 
   resources :nominations
   resources :heroes
@@ -8,6 +8,6 @@ RubyHeroAwards::Application.routes.draw do
   namespace :admin do
     resources :nominees, only: %w( index show )
     resources :nominators, only: %w( index show )
-    root to: 'nominees#index'
+    root "nominees#index"
   end
 end

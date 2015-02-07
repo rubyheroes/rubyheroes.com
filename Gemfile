@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 ruby "2.2.0"
 
-gem "rails", "~> 4.1.0"
+gem "rails", "~> 4.2.0"
 gem "sass-rails"
 gem "coffee-rails"
 gem "uglifier"
@@ -30,6 +30,7 @@ group :development, :test do
   gem "factory_girl_rails", "~> 4.2.1"
   gem "quiet_assets"
   gem "spring"
+  gem "web-console"
 end
 
 group :test do
