@@ -11,11 +11,11 @@ class Nomination < ActiveRecord::Base
 
 
   def nominee_attributes=(params)
-    self.nominee = Nominee.find_or_create_by_github_username(params[:github_username])
+    self.nominee = Nominee.find_or_create_by(github_username: params[:github_username])
   end
 
   def nominator_attributes=(params)
-    self.nominator = Nominator.find_or_create_by_email(params[:email], :name => params[:name] )
+    self.nominator = Nominator.find_or_create_by(email: params[:email], name: params[:name])
   end
 
 end
