@@ -8,15 +8,6 @@ Nomination Site & Application
 - v2 Rebuilt and redesigned by [cleverCode](http://clevercode.net)
 - v3 Redesigned by Nick Walsh [Envy Labs](http://envylabs.com) in February 2013
 
-
-## Dependencies
-- Rails
-- Haml
-- Formtastic
-- RDiscount
-- will_Paginate 
-
-
 ## Installation
 
 1. `bundle install`
@@ -25,8 +16,8 @@ Nomination Site & Application
 4. `rails server`
 
 ## Stats
-| Year | Nominations | Nominees | Nominators | 
-| --- | --- | --- | --- | 
+| Year | Nominations | Nominees | Nominators |
+| --- | --- | --- | --- |
 | 2013 | 898 | 272 | 773 |
 | 2014 | 631 | 246 | 553 |
 
