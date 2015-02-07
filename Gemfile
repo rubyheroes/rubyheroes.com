@@ -2,11 +2,12 @@ source "http://rubygems.org"
 
 ruby "2.2.0"
 
-gem "rails", "~> 4.0.0"
-gem "pg"
-
-
+gem "rails", "~> 4.1.0"
+gem "sass-rails"
+gem "coffee-rails"
+gem "uglifier"
 gem "haml-rails"
+gem "pg"
 gem "rdiscount", "~> 2.0.7"
 gem "formtastic", "~> 2.2.1"
 gem "kaminari", "~> 0.14.1"
@@ -17,9 +18,6 @@ gem "bugsnag"
 gem "skylight"
 gem "puma"
 
-gem "sass-rails"
-gem "coffee-rails"
-gem "uglifier"
 
 group :production do
   gem "rails_12factor"
@@ -32,6 +30,7 @@ group :development, :test do
   gem "pry-remote"
   gem "factory_girl_rails", "~> 4.2.1"
   gem "quiet_assets"
+  gem "spring"
 end
 
 group :test do
