@@ -26,13 +26,6 @@ class NominationsController < ApplicationController
     params.require(:nomination).permit(:testimonial, nominee_attributes: [:github_username], nominator_attributes: [:name, :email])
   end
 
-  # Just a simple precaution to keep users from
-  #  passing around urls like /sites/22/nominations/new
-  #  Possibly unneeded, but it sounds good.
-  def session_check
-    #redirect_to search_sites_path unless session[:real_visit] && !session[:ns]
-  end
-
   def current_nominator
     @current_nominator ||= cookies[:nominator_id] ?  Nominator.find(session[:nominator_id]) : Nominator.new
   rescue
