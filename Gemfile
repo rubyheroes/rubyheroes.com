@@ -9,7 +9,7 @@ gem "uglifier"
 gem "haml-rails"
 gem "pg"
 gem "formtastic", "~> 2.2.1"
-gem "kaminari", "~> 0.14.1"
+gem "kaminari" # pagination
 gem "jquery-rails", "~> 2.2.1"
 gem "google-analytics-rails"
 gem "bugsnag"
