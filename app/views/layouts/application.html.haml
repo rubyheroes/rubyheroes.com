@@ -4,24 +4,24 @@
     %meta{charset: 'UTF-8'}
     %meta{content: 'IE-edge, chrome=1', :'http-equiv' => 'X-UA-Compatible'}
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
-    %meta{name: 'description', content: 'The Ruby Hero Award gives recognition to influential devs in the Ruby/Rails community and announces the winners at RailsConf'}
+    %meta{name: 'description', content: 'The Ruby Hero Award recognizes unsung Ruby & Rails community members at RailsConf.'}
 
     %meta{property: 'og:title', content: 'Ruby Heroes'}
     %meta{property: 'og:type', content: 'website'}
     %meta{property: 'og:locale', content: 'en_us'}
     %meta{property: 'og:url', content: root_url}
     %meta{property: 'og:image', content: "#{request.protocol}#{request.host_with_port}#{asset_path("rubyheroes.jpg")}" }
-    %meta{property: 'og:description', content: 'The Ruby Hero Award gives recognition to influential devs in the Ruby/Rails community and announces the winners at RailsConf'}
+    %meta{property: 'og:description', content: 'The Ruby Hero Award recognizes unsung Ruby & Rails community members at RailsConf.'}
     %meta{property: 'fb:admins', content: "716316740, 5121488"}
 
     %title Ruby Hero Awards
     %link{rel: 'shortcut icon', type: 'image/png', href: image_path('favicon.png') }
     = stylesheet_link_tag 'application'
-      
+
   %body
     .site
       .site-backdrop
-      = yield    
+      = yield
     = javascript_include_tag 'application'
     = javascript_include_tag 'http://platform.twitter.com/widgets.js'
     = analytics_init if Rails.env.production?
