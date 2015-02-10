@@ -3,7 +3,7 @@
     %h2 Thanks for Voting!
     %p You can #{link_to 'vote again', root_url} for a different hero, or rally some support for your hero-of-choice by telling friends to vote. Six Ruby Hero Award winners will be announced at #{link_to 'RailsConf', 'http://railsconf.com'} in Atlanta, Georgia in April.
     .main-share
-      = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", :'data-url' => "http://rubyheroes.com", :'data-text' => "The Ruby Heroes among us deserve recognition from the community. I cast my vote at", :'data-size' => "small"
+      = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", data: { text: "The unsung heroes of the Ruby community deserve recognition. I shared some love on", url: "http://rubyheroes.com", size: "small" }
       :javascript
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
@@ -17,7 +17,7 @@
             fjs.parentNode.insertBefore(js, fjs);
           }(document, 'script', 'facebook-jssdk'));
 
-      .fb-like{ :"data-href" => "http://rubyheroes.com", :"data-send" => "false", :"data-layout" => "button_count", :"data-width" => "50", :"data-show-faces" => "false", :"data-action" => "like", :"data-font" => "lucida grande" }
+      .fb-like{ data: { href: "http://rubyheroes.com", send: "false", layout: "button_count", width: "50", "show-faces" => "false", action: "like", font: "lucida grande" } }
 
   %footer
     = image_tag 'img-mask.svg', class: 'footer-mask', alt: 'Mask', :"aria-hidden" => 'true'
