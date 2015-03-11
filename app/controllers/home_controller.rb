@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def show
-    last_year = "2014"
+    last_year = "2015"
     @heroes = Hero.where(:year => last_year)
     @past_heroes = Hero.where(Hero.arel_table[:year].
       not_eq(last_year)).
