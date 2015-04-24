@@ -6,6 +6,6 @@ module ApplicationHelper
 
   # Making this boolean true will link to the previous year's heroes.
   def heroes_chosen?
-    false
+    true
   end
 end

@@ -51,6 +51,13 @@ past_heroes = [
   { name: "Erik Michaels-Ober", year: "2014", avatar: "erik_michaels-ober.jpg", url: "https://github.com/sferik" },
   { name: "Thomas Enebo", year: "2014", avatar: "thomas_enebo.jpg", url: "https://github.com/enebo" },
   { name: "Ara T. Howard", year: "2014", avatar: "ara_t_howard.jpg", url: "https://github.com/ahoward" },
+  # 2015 Heroes
+  { name: "Nobuyoshi Nakada", year: "2015", avatar: "nobuyoshi_nakada.jpg", url: "https://github.com/nobu" },
+  { name: "Eileen Uchitelle", year: "2015", avatar: "eileen_uchitelle.jpg", url: "https://github.com/eileencodes" },
+  { name: "Sarah Mei", year: "2015", avatar: "sarah_mei.jpg", url: "https://github.com/sarahmei" },
+  { name: "Zachary Scott", year: "2015", avatar: "zachary_scott.jpg", url: "https://github.com/zzak" },
+  { name: "Jeremy Evans", year: "2015", avatar: "jeremy_evans.jpg", url: "https://github.com/jeremyevans" },
+  { name: "Sam Saffron", year: "2015", avatar: "sam_saffron.jpg", url: "https://github.com/SamSaffron" }
 ]
 
 past_heroes.each do |hero|
