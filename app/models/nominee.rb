@@ -8,6 +8,7 @@ class Nominee < ActiveRecord::Base
                             wycats ryanb rbates igrigorik evan tcopeland jeg2
                             hone skmetz mperham raggi brixen lindaliukas phenriettak ksaa
                             kytrinyx deadprogram rafaelfranca sferik enebo ahoward
+                            nobu eileencodes sarahmei zzak jeremyevans samsaffron
                           )
 
   # Associations
