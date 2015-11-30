@@ -27,10 +27,16 @@ class NominationsController < ApplicationController
   end
 
   def current_nominator
-    @current_nominator ||= cookies[:nominator_id] ?  Nominator.find(session[:nominator_id]) : Nominator.new
-  rescue
-    # just in case the database was reset, their nominator record would have been deleted.
-    session[:nominator_id] = nil
-    @current_nominator = Nominator.new
+    @current_nominator ||= begin
+      if cookies[:nominator_id]
+        Nominator.find(session[:nominator_id])
+      else
+        Nominator.new
+      end
+    rescue
+      # if the database is reset the nominator record would have been deleted.
+      session[:nominator_id] = nil
+      Nominator.new
+    end
   end
 end
