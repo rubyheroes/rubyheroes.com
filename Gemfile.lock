@@ -183,7 +183,7 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     sexp_processor (4.6.0)
-    simple_form (3.1.0)
+    simple_form (3.2.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     skylight (0.9.4)
