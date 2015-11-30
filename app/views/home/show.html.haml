@@ -76,16 +76,14 @@
     = link_to '#', class: 'heroes-close', title: 'Close' do
       &lsaquo;
 
-    %ol.heroes-nav
-      %li.is-selected= link_to '2015', '#'
-      %li= link_to '2014', '#'
-      %li= link_to '2013', '#'
-      %li= link_to '2012', '#'
-      %li= link_to '2011', '#'
-      %li= link_to '2010', '#'
-      %li= link_to '2009', '#'
-      %li= link_to '2008', '#'
 
-    %ul.heroes-collection.grid.is-selected= render partial: "hero", collection: @heroes
-    - @past_heroes.each do |year|
-      %ul.heroes-collection.grid= render partial: "hero", collection: year.last
+
+    %ol.heroes-nav
+      - @years.each_with_index do |heroes, index|
+        - selected = (heroes.first == selected_year) ? 'is-selected' : ''
+        %li{ class: selected }= link_to heroes.first, '#'
+
+    - @years.each_with_index do |heroes, index|
+      - selected = (heroes.first == selected_year) ? 'is-selected' : ''
+      %ul.heroes-collection.grid{ class: selected }
+        = render partial: "hero", collection: heroes.last

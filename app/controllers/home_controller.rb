@@ -1,12 +1,16 @@
 class HomeController < ApplicationController
-
   def show
-    @this_year = "2015"
-    last_year = "2015"
-    @heroes = Hero.where(:year => last_year)
-    @past_heroes = Hero.where("year != ?", last_year).
-      group_by(&:year).
-      sort.reverse!
+    @years = Hero.order(year: :desc).order(:name).group_by(&:year) # where(year: last_year)
+    @this_year = @years.first.first
   end
 
+  def selected_year
+    if params[:year].present?
+      params[:year]
+    else
+      # defaults to the most recent year for which heroes have been named
+      @years.first.first
+    end
+  end
+  helper_method :selected_year
 end
