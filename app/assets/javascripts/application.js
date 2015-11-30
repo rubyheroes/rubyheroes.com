@@ -48,6 +48,13 @@ jQuery(function($){
     var index = heroes_nav.index(new_collection);
     new_collection.addClass('is-selected').siblings().removeClass('is-selected');
     $('.heroes-collection').removeClass('is-selected').eq(index).addClass('is-selected');
+
+    var year = $(e.currentTarget).find('a').text()
+    var state = { 'year': year };
+    var url = "/heroes/" + year;
+
+    history.pushState(state, null, url);
+
     e.preventDefault();
   });
 
@@ -55,14 +62,14 @@ jQuery(function($){
 
   var regex1 = /github\./;
   var regex2 = /http:/;
-  
+
   $('#nominee')
     .focus()
     .keyup(function(event) {
       var form = $(this).closest('form');
       var input_text = $(event.target).val();
       var matches = $("#yes_match");
-      
+
       // TODO disable http & github from submitting the form
       if ( regex1.test(input_text) ||  regex2.test(input_text) ) {
         if(! $("#error").length ) {
@@ -72,7 +79,7 @@ jQuery(function($){
 
         // disable next button
         $('.nominate-submit').prop('disabled', true);
-        
+
         // disable form submission
         form.on('submit', function(event){
           event.preventDefault();
