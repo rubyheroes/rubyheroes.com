@@ -3,7 +3,7 @@ class NominationsController < ApplicationController
     @nomination = Nomination.new
     @nomination.nominator = current_nominator
     @nomination.nominee_id = params[:nominee_id]
-    @nomination.build_nominee(:github_username => params[:nominee]) unless @nomination.nominee
+    @nomination.build_nominee(github_username: params[:nominee]) if @nomination.nominee.blank?
     @nomination.nominee.valid?
   end
 
