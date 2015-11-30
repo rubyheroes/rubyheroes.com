@@ -4,7 +4,7 @@ class Nomination < ActiveRecord::Base
   belongs_to :nominee, :counter_cache => :nomination_count
   belongs_to :nominator
 
-  accepts_nested_attributes_for :nominator
+  accepts_nested_attributes_for :nominator, :nominee
 
   # Validations
   validates :testimonial, :length => { :minimum => 25, :message => "Testimony must be at least 25 characters." }

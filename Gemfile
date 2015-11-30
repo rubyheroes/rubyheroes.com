@@ -8,7 +8,7 @@ gem "coffee-rails"
 gem "uglifier"
 gem "haml-rails"
 gem "pg"
-gem "formtastic", "~> 2.2.1"
+gem "simple_form"
 gem "kaminari" # pagination
 gem "jquery-rails", "~> 2.2.1"
 gem "google-analytics-rails"
