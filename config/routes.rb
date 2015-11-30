@@ -1,13 +1,17 @@
 RubyHeroAwards::Application.routes.draw do
-  root "home#show"
-
   resources :nominations
-  resources :heroes
-  resources :nominees, only: %w( index )
+  resources :heroes, only: [:index] do
+    collection do
+      get ":year", to: "heroes#year"
+    end
+  end
+  resources :nominees, only: [:index]
 
   namespace :admin do
-    resources :nominees, only: %w( index show )
-    resources :nominators, only: %w( index show )
-    root "nominees#index"
+    resources :nominees, only: [:index, :show]
+    resources :nominators, only: [:index, :show]
+    root to: "nominees#index"
   end
+
+  root "home#show"
 end
