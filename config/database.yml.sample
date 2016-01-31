@@ -2,11 +2,7 @@ development:
    adapter: postgresql
    encoding: unicode
    database: rubyheroes_development
-   user: <username>
-   password: <password>
 
 test:
   adapter: postgresql
   database: rubyheroes_testing
-  user: <username>
-  password: <password>
