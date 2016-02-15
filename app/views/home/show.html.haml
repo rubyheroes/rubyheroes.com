@@ -57,20 +57,7 @@
         %li <a href="#heroes" class="heroes-toggle">Previous Ruby Heroes</a> choose finalists
         %li Winners announced at <a href="http://railsconf.com">RailsConf</a>
 
-  %footer
-    .sponsor.grid
-      .grid-box.one-whole.desk-one-half
-        %p Ruby Heroes is sponsored by <a href="http://codeschool.com">Code School</a>, an online learning destination for existing and aspiring developers that teaches through entertaining content. Try out our <a href="http://codeschool.com/paths/ruby">Ruby Path</a>.
-      .grid-box.one-whole.desk-one-half
-        = link_to image_tag('logo-codeschool.svg', alt: 'Code School'), 'http://codeschool.com', class: 'sponsor-logo'
-
-    %ul.footer-credits
-      %li
-        %h4 Development
-        = link_to 'Code School', 'https://www.codeschool.com'
-      %li
-        %h4 Hosting
-        = link_to 'Heroku', 'https://www.heroku.com/'
+  = render "shared/footer"
 
 %section.heroes
   .heroes-inner

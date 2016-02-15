@@ -19,19 +19,4 @@
 
       .fb-like{ data: { href: "http://rubyheroes.com", send: "false", layout: "button_count", width: "50", "show-faces" => "false", action: "like", font: "lucida grande" } }
 
-  %footer
-    = image_tag 'img-mask.svg', class: 'footer-mask', alt: 'Mask', :"aria-hidden" => 'true'
-
-    .sponsor.grid
-      .grid-box.one-whole.desk-one-half
-        %p Ruby Heroes is sponsored by <a href="http://codeschool.com">Code School</a>, which teaches web technologies in the comfort of your browser with video lessons, coding challenges, and screencasts. Try it out now with a free level of <a href="http://codeschool.com/courses/ruby-bits">Ruby&nbsp;Bits</a>.
-      .grid-box.one-whole.desk-one-half
-        = link_to image_tag('logo-codeschool.svg', alt: 'Code School'), 'http://codeschool.com', class: 'sponsor-logo'
-
-    %ul.footer-credits
-      %li
-        %h4 Development
-        = link_to 'Code School', 'https://www.codeschool.com'
-      %li
-        %h4 Hosting
-        = link_to 'Heroku', 'https://www.heroku.com/'
+  = render "shared/footer"
