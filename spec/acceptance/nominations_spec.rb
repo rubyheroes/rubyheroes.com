@@ -3,7 +3,7 @@ require 'acceptance/acceptance_helper'
 feature "Nominations", %q{
   In order to nominate a Ruby Hero
   As a member of the Ruby community
-  I want to submit a github profile
+  I want to submit a GitHub username
 } do
 
   scenario "Nomination" do

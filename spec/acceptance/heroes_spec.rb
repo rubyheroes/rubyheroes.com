@@ -6,6 +6,8 @@ feature "Heroes", %q{
   I should be redirected
 } do
 
+  before { 3.times { create(:hero) } }
+
   scenario "Viewing past heroes" do
     visit heroes_path
     current_path.should eq root_path
