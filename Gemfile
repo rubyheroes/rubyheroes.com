@@ -30,6 +30,8 @@ group :development, :test do
   gem "quiet_assets"
   gem "spring"
   gem "web-console"
+  gem "fuubar"
+  gem "faker"
 end
 
 group :test do
