@@ -7,7 +7,7 @@ module Admin
     protected
       def authenticate
         authenticate_or_request_with_http_basic('Administration') do |username, password|
-          username == 'voter' && password == 'h3r03s'
+          username == ENV["ADMIN_USERNAME"] && password == ENV["ADMIN_PASSWORD"]
         end
       end
   end
