@@ -9,6 +9,7 @@ class Nomination < ActiveRecord::Base
   # Validations
   validates :testimonial, :length => { :minimum => 25, :message => "Testimony must be at least 25 characters." }
 
+  scope :from_year, -> (year) { where("EXTRACT(year FROM created_at) = ?", year)}
 
   def nominee_attributes=(params)
     self.nominee = Nominee.find_or_create_by(github_username: params[:github_username])
