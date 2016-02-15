@@ -1,6 +1,6 @@
 %section.content
   %header
-    .header-ruby{:'aria-hidden' => 'true'}
+    .header-ruby{ :"aria-hidden" => "true" }
     %h1= image_tag 'logo-rubyheroes.svg', alt: 'Ruby Heroes'
 
     - if voting_enabled?
@@ -12,7 +12,7 @@
             = text_field_tag 'nominee', nil, autocomplete: 'off', class: 'nominate-input', placeholder: 'GitHub Username'
             #yes_match.nominate-autocomplete
             %button#nomination_submit.nominate-submit Next
-            .nominate-hero{:'aria-hidden' => 'true'}
+            .nominate-hero{ :"aria-hidden" => "true" }
     - else
       - if heroes_chosen?
         .heroes-chosen
@@ -21,14 +21,20 @@
         .voting-disabled
           %h2 The #{@this_year} Ruby Heroes will be revealed at the upcoming <a href="http://railsconf.com/">RailsConf</a>.
 
-
-  .header-glow--a{:'aria-hidden' => 'true'}
-  .header-glow--b{:'aria-hidden' => 'true'}
+  .header-glow--a{ :"aria-hidden" => "true" }
+  .header-glow--b{ :"aria-hidden" => "true" }
 
   .main.grid
     .grid-box.one-whole.desk-one-half
-      %h3 The <a href="#" class="heroes-toggle">Ruby Hero Award</a> gives recognition to influential devs in the Ruby/Rails community and announces the winners at&nbsp;<a href="http://railsconf.com">RailsConf</a>.
-      %p We believe great work deserves recognition. The Ruby/Rails dev community is full of amazing contributors and unsung heroes who are busy producing educational content, developing plugins and gems, contributing to open-source projects, or putting on events to help developers learn and grow. Wherever they are, their work is too great to go unnoticed and we need your help to find&nbsp;them.
+      %h3
+        The #{link_to("Ruby Hero Awards", "#", class: "heroes-toggle")} celebrates
+        unsung and exemplary Rubyists.
+
+      %p
+        We believe great work deserves recognition. The Ruby community
+        is full of amazing contributors and unsung heroes who are helping in
+        diverse ways make the community a better place for the rest of us.
+
       .main-share
         = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", data: { url: "http://rubyheroes.com", text: "The unsung heroes of the Ruby community deserve recognition.", size: "small" }
         :javascript
@@ -45,7 +51,10 @@
         .fb-like{ data: { href: "http://rubyheroes.com", send: false, layout: "button_count", width: "50", "show-faces" => "false", action: "like", font: "lucida grande" } }
 
     .grid-box.one-whole.desk-one-half
-      %p Submit your vote for the Ruby Hero Award above. Six will be chosen and pulled out from behind their code to receive an award at&nbsp;RailsConf.
+      %p
+        Submit your vote. Six heroes will picked among the popular vote by their
+        peers from past years, and they will be given a lovely little award at RailsConf.
+
       = image_tag 'img-instructions.svg', alt: 'Instructions'
       %ol
         %li Nominate a worthy candidate
