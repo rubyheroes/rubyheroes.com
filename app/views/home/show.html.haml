@@ -1,6 +1,5 @@
 %section.content
   %header
-    .header-ruby{:'aria-hidden' => 'true'}
     %h1= image_tag 'logo-rubyheroes.svg', alt: 'Ruby Heroes'
 
     - if voting_enabled?
@@ -21,14 +20,18 @@
         .voting-disabled
           %h2 The #{@this_year} Ruby Heroes will be revealed at the upcoming <a href="http://railsconf.com/">RailsConf</a>.
 
-
-  .header-glow--a{:'aria-hidden' => 'true'}
-  .header-glow--b{:'aria-hidden' => 'true'}
-
   .main.grid
     .grid-box.one-whole.desk-one-half
-      %h3 The <a href="#" class="heroes-toggle">Ruby Hero Award</a> gives recognition to influential devs in the Ruby/Rails community and announces the winners at&nbsp;<a href="http://railsconf.com">RailsConf</a>.
-      %p We believe great work deserves recognition. The Ruby/Rails dev community is full of amazing contributors and unsung heroes who are busy producing educational content, developing plugins and gems, contributing to open-source projects, or putting on events to help developers learn and grow. Wherever they are, their work is too great to go unnoticed and we need your help to find&nbsp;them.
+      %h3
+        The <a href="#" class="heroes-toggle">Ruby Hero Award</a> gives
+        recognition to in the Ruby/Rails community and announces the winners
+        at&nbsp;<a href="http://railsconf.com">RailsConf</a>.
+
+      %p
+        We believe great work deserves recognition. The Ruby community
+        is full of amazing contributors and unsung heroes who are helping in
+        diverse ways make the community a better place for the rest of us.
+
       .main-share
         = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", data: { url: "http://rubyheroes.com", text: "The unsung heroes of the Ruby community deserve recognition.", size: "small" }
         :javascript
@@ -55,11 +58,9 @@
         %li Winners announced at <a href="http://railsconf.com">RailsConf</a>
 
   %footer
-    = image_tag 'img-mask.svg', class: 'footer-mask', alt: 'Mask', :"aria-hidden" => 'true'
-
     .sponsor.grid
       .grid-box.one-whole.desk-one-half
-        %p Ruby Heroes is sponsored by <a href="http://codeschool.com">Code School</a>, which teaches web technologies in the comfort of your browser with video lessons, coding challenges, and screencasts. Try it out now with a free level of <a href="http://codeschool.com/courses/surviving-apis-with-rails">Surviving APIs with Rails</a>.
+        %p Ruby Heroes is sponsored by <a href="http://codeschool.com">Code School</a>, an online learning destination for existing and aspiring developers that teaches through entertaining content. Try out our <a href="http://codeschool.com/paths/ruby">Ruby Path</a>.
       .grid-box.one-whole.desk-one-half
         = link_to image_tag('logo-codeschool.svg', alt: 'Code School'), 'http://codeschool.com', class: 'sponsor-logo'
 
