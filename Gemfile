@@ -23,10 +23,10 @@ group :production do
 end
 
 group :development, :test do
-  gem "rspec-rails", "~> 2.14.1"
+  gem "rspec-rails", "~> 3.4.2"
   gem "pry-rails"
   gem "pry-remote"
-  gem "factory_girl_rails", "~> 4.2.1"
+  gem "factory_girl_rails", "~> 4.5.0"
   gem "quiet_assets"
   gem "spring"
   gem "web-console"
@@ -35,6 +35,6 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara", "~> 2.0.2"
+  gem "capybara", "~> 2.6.2"
   gem "launchy"
 end
