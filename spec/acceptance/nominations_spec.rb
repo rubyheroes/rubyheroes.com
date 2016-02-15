@@ -10,7 +10,7 @@ feature "Nominations", %q{
     visit root_path
     fill_in 'nominee', with: 'envylabs'
     click_button 'Next'
-    find_field("Nominee's GitHub Username").value.should have_content "envylabs"
+    expect(find_field("Nominee's GitHub Username").value).to have_content "envylabs"
   end
 
 end

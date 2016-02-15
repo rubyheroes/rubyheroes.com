@@ -10,7 +10,7 @@ feature "Heroes", %q{
 
   scenario "Viewing past heroes" do
     visit heroes_path
-    current_path.should eq root_path
+    expect(current_path).to eq root_path
   end
 
 end
