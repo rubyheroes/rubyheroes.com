@@ -21,6 +21,9 @@
       .fb-like{ data: { href: "http://rubyheroes.com", send: "false", layout: "button_count", width: "50", "show-faces" => "false", action: "like", font: "lucida grande" } }
 
 
-    %p Six Ruby Hero Award winners will be announced at #{link_to 'RailsConf', 'http://railsconf.com'} in Atlanta, Georgia in April.
+    %p
+      Six Ruby Hero Award winners will be announced at
+      = link_to 'RailsConf', 'http://railsconf.com'
+      in #{Railsconf.city} in #{Railsconf.month} #{Railsconf.year}.
 
   = render "shared/footer"
