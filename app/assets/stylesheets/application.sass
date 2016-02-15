@@ -15,8 +15,6 @@
 //-------------------------------------
 
 .site
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
   box-sizing: border-box
   min-height: 100%
   overflow-x: hidden
@@ -28,24 +26,14 @@
 
 .site-backdrop
   background: image-url('bg-body.jpg') center
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
   background-size: cover
   bottom: 0
   left: 0
   position: absolute
   right: -150px
-  -webkit-transition: -webkit-transform 0.75s ease-in-out
-  -moz-transition: -moz-transform 0.75s ease-in-out
-  -o-transition: -o-transform 0.75s ease-in-out
   transition: transform 0.75s ease-in-out
   top: 0
   .is-reminiscing &
-    -webkit-transform: translateX(-150px)
-    -moz-transform: translateX(-150px)
-    -ms-transform: translateX(-150px)
-    -o-transform: translateX(-150px)
     transform: translateX(-150px)
   .no-backgroundsize &
     background: #c0bcba
@@ -60,16 +48,9 @@
   margin: 0 auto
   max-width: 1000px
   position: relative
-  -webkit-transition: -webkit-transform 0.75s ease-in-out
-  -moz-transition: -moz-transform 0.75s ease-in-out
-  -o-transition: -o-transform 0.75s ease-in-out
   transition: transform 0.75s ease-in-out
   z-index: 10
   .is-reminiscing &
-    -webkit-transform: translateX(-99%)
-    -moz-transform: translateX(-99%)
-    -ms-transform: translateX(-99%)
-    -o-transform: translateX(-99%)
     transform: translateX(-99%)
     .no-csstransforms &
       left: -99%
@@ -85,9 +66,6 @@
     width: 4px
   &:after
     background: image-url('bg-pages.svg') center bottom no-repeat
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
     background-size: cover
     content: ''
     height: 6px
@@ -120,9 +98,6 @@ header
 
 .header-ruby
   background: image-url('bg-header@2x.jpg') no-repeat
-  -webkit-background-size: 316px 150px
-  -moz-background-size: 316px 150px
-  -o-background-size: 316px 150px
   background-size: 316px 150px
   height: 150px
   left: 50%
@@ -134,9 +109,6 @@ header
   +respond-to(550px)
     margin-left: -118px
   +respond-to($portable)
-    -webkit-background-size: 633px 300px
-    -moz-background-size: 633px 300px
-    -o-background-size: 633px 300px
     background-size: 633px 300px
     height: 300px
     margin-left: -250px
@@ -148,16 +120,9 @@ header
   left: 50%
   opacity: 0
   position: absolute
-  -webkit-transform: scale(0.6)
-  -moz-transform: scale(0.6)
-  -ms-transform: scale(0.6)
-  -o-transform: scale(0.6)
   transform: scale(0.6)
 
 .header-glow--a
-  -webkit-animation: in 1s 0.75s forwards ease-in-out
-  -moz-animation: in 1s 0.75s forwards ease-in-out
-  -o-animation: in 1s 0.75s forwards ease-in-out
   animation: in 1s 0.75s forwards ease-in-out
   background: rgba(#ca3f29, 0.05)
   height: 350px
@@ -173,9 +138,6 @@ header
     width: 475px
 
 .header-glow--b
-  -webkit-animation: in 0.75s 0.5s forwards ease-in-out
-  -moz-animation: in 0.75s 0.5s forwards ease-in-out
-  -o-animation: in 0.75s 0.5s forwards ease-in-out
   animation: in 0.75s 0.5s forwards ease-in-out
   background: rgba(#ad3626, 0.05)
   height: 250px
@@ -305,9 +267,6 @@ header
   height: 72px
   position: absolute
   right: 0
-  -webkit-transition: background-position 0.2s ease-in-out
-  -moz-transition: background-position 0.2s ease-in-out
-  -o-transition: background-position 0.2s ease-in-out
   transition: background-position 0.2s ease-in-out
   width: 131px
   .is-nominating &
@@ -316,9 +275,6 @@ header
     display: block
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
     background: image-url('bg-hero@2x.png') no-repeat
-    -webkit-background-size: 272px 71px
-    -moz-background-size: 272px 71px
-    -o-background-size: 272px 71px
     background-size: 272px 71px
 
 // ----- Main ----- //
@@ -471,25 +427,11 @@ footer
   position: absolute
   right: 5em
   top: 0
-  -webkit-transform: scale(0.98)
-  -moz-transform: scale(0.98)
-  -ms-transform: scale(0.98)
-  -o-transform: scale(0.98)
   transform: scale(0.98)
-  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out
-  -moz-transition: opacity 0.3s ease-in-out, -moz-transform 0.3s ease-in-out
-  -o-transition: opacity 0.3s ease-in-out, -o-transform 0.3s ease-in-out
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out
   .is-reminiscing &
     opacity: 1
-    -webkit-transform: none
-    -moz-transform: none
-    -ms-transform: none
-    -o-transform: none
     transform: none
-    -webkit-transition: opacity 0.5s 0.6s ease-in-out, -webkit-transform 0.5s 0.6s ease-in-out
-    -moz-transition: opacity 0.5s 0.6s ease-in-out, -moz-transform 0.5s 0.6s ease-in-out
-    -o-transition: opacity 0.5s 0.6s ease-in-out, -o-transform 0.5s 0.6s ease-in-out
     transition: opacity 0.5s 0.6s ease-in-out, transform 0.5s 0.6s ease-in-out
 
 .heroes-inner
@@ -557,9 +499,6 @@ footer
     filter: grayscale(90%)
     margin-bottom: 20px
     padding: 0.75em 0.75em 0
-    -webkit-transition: none
-    -moz-transition: none
-    -o-transition: none
     transition: none
     &:hover,
     &:focus
