@@ -9,7 +9,7 @@ describe Nominee do
     subject(:merge){ nominee.merge_into(new_nominee) }
 
     it "destroys the instance & switches its nominations to the passed nominee" do
-      expect(merge).to be_true
+      expect(merge).to be_truthy
       expect(nominee).to_not be_persisted
       expect(nominee.nominations).to include(nomination)
     end
@@ -18,7 +18,7 @@ describe Nominee do
       let!(:new_nominee) { nominee }
 
       it "not possible to merge into oneself" do
-        expect(merge).to be_false
+        expect(merge).to be_falsey
         expect(nominee).to be_persisted
       end
     end
