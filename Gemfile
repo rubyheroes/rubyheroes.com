@@ -15,10 +15,13 @@ gem "bugsnag"
 gem "skylight"
 gem "puma"
 
-
 group :production do
   gem "rails_12factor"
   gem "rack-timeout"
+end
+
+group :development do
+  gem 'web-console'
 end
 
 group :development, :test do
@@ -28,7 +31,6 @@ group :development, :test do
   gem "factory_girl_rails", "~> 4.6.0"
   gem "quiet_assets"
   gem "spring"
-  gem "web-console"
   gem "fuubar"
   gem "faker"
 end
