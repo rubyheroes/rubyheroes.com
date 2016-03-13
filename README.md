@@ -25,10 +25,10 @@ recipients from previous years.
 | 2014 | 631 | 246 | 553 |
 | 2015 | 403 | 176 | 359 |
 
-[ci]: https://magnum.travis-ci.com/rubyheroes/rubyheroes.com
-[ci-image]: https://magnum.travis-ci.com/rubyheroes/rubyheroes.com.svg
+[ci]: https://travis-ci.org/rubyheroes/rubyheroes.com
+[ci-image]: https://travis-ci.org/rubyheroes/rubyheroes.com.svg?branch=master
 [gemnasium]: https://gemnasium.com/rubyheroes/rubyheroes.com
-[gemnasium-image]: https://gemnasium.com/09ec05045d5a29d690fe97b267c8b4d8.svg
+[gemnasium-image]: https://gemnasium.com/rubyheroes/rubyheroes.com.svg
 
 [olivier]: http://olivierlacan.com
 [zach]: http://zacharynicoll.com
