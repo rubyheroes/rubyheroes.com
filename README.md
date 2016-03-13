@@ -7,7 +7,7 @@ recipients from previous years.
 
 ## Versions
 
-- v1 Created by [Envy Labs](http://envylabs.com).
+- v1 Created by [Envy Labs][envy].
 - v2 Rebuilt and redesigned by [Olivier Lacan][olivier], [Zachary Nicoll][zach], and [Andrew Smith][andrew].
 - v3 Redesigned by Nick Walsh [Envy Labs][envy] in February 2013.
 - v4 Rebuild in progress by Olivier Lacan (Development) & Cher Cloude (Design).
@@ -25,9 +25,9 @@ recipients from previous years.
 | 2014 | 631 | 246 | 553 |
 | 2015 | 403 | 176 | 359 |
 
-[ci]: https://magnum.travis-ci.com/envylabs/RubyHeroAwards
-[ci-image]: https://magnum.travis-ci.com/envylabs/RubyHeroAwards.svg?token=bYo3ib4PCJrDSsNRgsEK
-[gemnasium]: https://gemnasium.com/envylabs/RubyHeroAwards
+[ci]: https://magnum.travis-ci.com/rubyheroes/rubyheroes.com
+[ci-image]: https://magnum.travis-ci.com/rubyheroes/rubyheroes.com.svg
+[gemnasium]: https://gemnasium.com/rubyheroes/rubyheroes.com
 [gemnasium-image]: https://gemnasium.com/09ec05045d5a29d690fe97b267c8b4d8.svg
 
 [olivier]: http://olivierlacan.com
