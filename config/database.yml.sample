@@ -5,4 +5,4 @@ development:
 
 test:
   adapter: postgresql
-  database: rubyheroes_testing
+  database: rubyheroes_test

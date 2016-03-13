@@ -1,4 +1,4 @@
 test:
   adapter: postgresql
-  database: rubyheroes_testing
+  database: rubyheroes_test
   username: postgres
