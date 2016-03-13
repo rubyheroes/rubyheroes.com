@@ -6,6 +6,10 @@ feature "Nominations", %q{
   I want to submit a GitHub username
 } do
 
+  before do
+    $voting_enabled = true
+  end
+
   scenario "Nomination" do
     visit root_path
     fill_in 'nominee', with: 'envylabs'

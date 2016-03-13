@@ -3,7 +3,7 @@
     .header-ruby{ :"aria-hidden" => "true" }
     %h1= image_tag 'logo-rubyheroes.svg', alt: 'Ruby Heroes'
 
-    - if voting_enabled?
+    - if $voting_enabled
       = form_tag new_nomination_path, method: :get, autocomplete: 'off', class: 'nominate grid' do
         .grid-box.one-whole.desk-one-half
           = label_tag 'nominee', "I'd like to nominate", class: 'nominate-label'
@@ -14,7 +14,7 @@
             %button#nomination_submit.nominate-submit Next
             .nominate-hero{ :"aria-hidden" => "true" }
     - else
-      - if heroes_chosen?
+      - if $heroes_chosen
         .heroes-chosen
           %h2 The #{@this_year} Ruby Heroes have been <a href="#heroes" class="heroes-toggle">named</a>.
       - else
