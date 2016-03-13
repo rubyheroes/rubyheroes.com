@@ -10,7 +10,7 @@ gem "haml-rails"
 gem "pg"
 gem "simple_form"
 gem "kaminari" # pagination
-gem "jquery-rails", "~> 2.2.1"
+gem "jquery-rails"
 gem "bugsnag"
 gem "skylight"
 gem "puma"
