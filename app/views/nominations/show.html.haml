@@ -3,21 +3,6 @@
     %h2 Thank you for caring!
     %p You can #{link_to 'vote again', root_url} for another Ruby Hero or spread the word about your Ruby Hero nominee(s) by telling friends to vote on your favorite place where you share things
 
-    .main-share
-      = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", data: { text: "The unsung heroes of the Ruby community deserve recognition. I shared some love on", url: "http://rubyheroes.com", size: "small" }
-      :javascript
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-      #fb-root
-        :javascript
-          (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-
-      .fb-like{ data: { href: "http://rubyheroes.com", send: "false", layout: "button_count", width: "50", "show-faces" => "false", action: "like", font: "lucida grande" } }
+    = render partial: "shared/share_buttons"
 
   = render "shared/footer"
