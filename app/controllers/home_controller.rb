@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def show
     @years = Hero.order(year: :desc).order(:name).group_by(&:year) # where(year: last_year)
-    @this_year = @years.first.first
+    @this_year = Date.today.year
   end
 
   def selected_year

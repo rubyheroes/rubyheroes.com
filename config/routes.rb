@@ -1,4 +1,6 @@
 RubyHeroAwards::Application.routes.draw do
+  get '/.well-known/acme-challenge/:id' => 'pages#lets_encrypt'
+
   resources :nominations
   resources :heroes, only: [:index] do
     collection do

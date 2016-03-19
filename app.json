@@ -1,0 +1,30 @@
+{
+  "name": "rubyheroes.com",
+  "scripts": {
+    "postdeploy": "bin/setup"
+  },
+  "env": {
+    "ADMIN_PASSWORD": {
+      "required": true
+    },
+    "ADMIN_USERNAME": {
+      "required": true
+    },
+    "BUNDLE_WITHOUT": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-postgresql",
+    "zerigo_dns",
+    "ssl"
+  ],
+  "buildpacks": [
+    {
+      "url": "urn:buildpack:heroku/ruby"
+    }
+  ]
+}

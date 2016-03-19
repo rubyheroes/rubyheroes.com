@@ -1,0 +1,14 @@
+%section.heroes
+  .heroes-inner
+    = link_to '#', class: 'heroes-close', title: 'Close' do
+      &lsaquo;
+
+    %ol.heroes-nav
+      - @years.each_with_index do |heroes, index|
+        - selected = (heroes.first == selected_year) ? 'is-selected' : ''
+        %li{ class: selected }= link_to heroes.first, '#'
+
+    - @years.each_with_index do |heroes, index|
+      - selected = (heroes.first == selected_year) ? 'is-selected' : ''
+      %ul.heroes-collection.grid{ class: selected }
+        = render partial: "hero", collection: heroes.last

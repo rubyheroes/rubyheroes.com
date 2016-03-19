@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-ruby "2.2.0"
+ruby "2.3.0"
 
 gem "rails", "~> 4.2.0"
 gem "sass-rails"
@@ -10,29 +10,32 @@ gem "haml-rails"
 gem "pg"
 gem "simple_form"
 gem "kaminari" # pagination
-gem "jquery-rails", "~> 2.2.1"
-gem "google-analytics-rails"
+gem "jquery-rails"
 gem "bugsnag"
 gem "skylight"
 gem "puma"
-
 
 group :production do
   gem "rails_12factor"
   gem "rack-timeout"
 end
 
+group :development do
+  gem 'web-console'
+end
+
 group :development, :test do
-  gem "rspec-rails", "~> 2.14.1"
+  gem "rspec-rails", "~> 3.4.2"
   gem "pry-rails"
   gem "pry-remote"
-  gem "factory_girl_rails", "~> 4.2.1"
+  gem "factory_girl_rails", "~> 4.6.0"
   gem "quiet_assets"
   gem "spring"
-  gem "web-console"
+  gem "fuubar"
+  gem "faker"
 end
 
 group :test do
-  gem "capybara", "~> 2.0.2"
+  gem "capybara", "~> 2.6.2"
   gem "launchy"
 end
