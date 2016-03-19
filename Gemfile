@@ -11,13 +11,13 @@ gem "pg"
 gem "simple_form"
 gem "kaminari" # pagination
 gem "jquery-rails"
-gem "bugsnag"
-gem "skylight"
 gem "puma"
 
 group :production do
   gem "rails_12factor"
   gem "rack-timeout"
+  gem "bugsnag"
+  gem "skylight"
 end
 
 group :development do
