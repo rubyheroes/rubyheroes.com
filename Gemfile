@@ -21,7 +21,10 @@ group :production do
 end
 
 group :development do
-  gem 'web-console'
+  gem "web-console"
+  gem "guard"
+  gem "guard-livereload", "~> 2.5", require: false
+  gem "rack-livereload"
 end
 
 group :development, :test do
