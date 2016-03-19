@@ -15,7 +15,7 @@ before_script:
   - bundle exec rake db:schema:load
   - bundle exec rake db:test:prepare
 script:
-  - bin/rspec . --color --profile
+  - bin/rspec spec/ --color --profile
 branches:
   only:
     - master
