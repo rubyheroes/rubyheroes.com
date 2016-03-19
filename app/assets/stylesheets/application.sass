@@ -84,9 +84,8 @@ header
   overflow: hidden
   position: relative
   h1
-    padding: 0 4em 1em
-    +respond-to(550px)
-      display: block
+    margin-left: 2em
+    +respond-to($portable)
   img
     display: block
     height: auto
@@ -275,7 +274,7 @@ header
     margin-bottom: .5em
 
   .share-buttons
-    margin: 0 2em
+    margin: 0 0 0
 
   .twitter-share-button,
   .fb-like,
@@ -295,7 +294,7 @@ header
     background: rgba($color-border, 0.075)
     padding: 0 0.2em
   +respond-to($lap)
-    padding: 5em 4em
+    padding: 5em 4em 1em
   +respond-to($desk)
     p
       padding-right: 1em
@@ -303,9 +302,11 @@ header
 .sponsor-logo
   background: transparent
   display: block
-  margin: 3em auto
+  margin: 2em auto
   padding: 0
   width: 280px
+  +respond-to($desk)
+    margin: 4em auto
   img
     display: block
     height: auto
@@ -315,9 +316,9 @@ header
 // ----- Footer ----- //
 
 footer
+  overflow: auto
   background: $color-bg-alt
   color: #fff
-  padding-bottom: 6em
   position: relative
   &:before,
   &:after
@@ -341,21 +342,16 @@ footer
     display: block
 
 .footer-credits
-  bottom: 1em
-  left: 2em
-  position: absolute
+  margin: 1em 0 2em
+  float: right
   li
     display: inline-block
     margin-right: 2em
   a
     font-size: 1.2em
   +respond-to($lap)
-    float: right
-    left: auto
-    right: 4em
     li
-      margin-left: 4em
-      margin-right: 0
+      margin-left: 2em
 
 // ----- Heroes ----- //
 
