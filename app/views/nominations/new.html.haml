@@ -1,15 +1,17 @@
 %section.nomination
-  = simple_form_for @nomination do |f|
+  .main.grid
+    .grid-box.one-whole
+      = simple_form_for @nomination do |f|
 
-    %h2 Nomination
+        %h1 Nomination
 
-    = f.fields_for :nominee do |n|
-      = n.input :github_username, label: "Nominee's GitHub Username"
+        = f.fields_for :nominee do |n|
+          = n.input :github_username, label: "Nominee's GitHub Username"
 
-    = f.fields_for :nominator do |n|
-      = n.input :name, label: "Your Name"
-      = n.input :email, label: "Your Email"
+        = f.fields_for :nominator do |n|
+          = n.input :name, label: "Your Name"
+          = n.input :email, label: "Your Email"
 
-    = f.input :testimonial, label: "How did this person make your life as a Rubyist better?"
+        = f.input :testimonial, label: "How did this person make your life as a Rubyist better?"
 
-    = f.button :submit, "Nominate"
+        = f.button :submit, "Nominate"
