@@ -32,19 +32,21 @@
         is full of amazing contributors and unsung heroes who are helping in
         diverse ways make the community a better place for the rest of us.
 
-      = render partial: "shared/share_buttons"
-
-    .grid-box.one-whole.desk-one-half
       %p
         Submit your vote. Six heroes will be picked among the popular vote by their peers from past years, and they will be given a lovely little award at RailsConf.
 
+    .grid-box.one-whole.desk-one-half
+
       = image_tag 'img-instructions.svg', alt: 'Instructions'
+
       %ol
         %li Nominate a worthy candidate
-        %li Share link to get others voting
-        %li Nominees get tallied
-        %li <a href="#heroes" class="heroes-toggle">Previous Ruby Heroes</a> choose finalists
-        %li Winners announced at <a href="http://railsconf.com">RailsConf</a>
+        %li Pass the word around
+        %li Nominee are tallied
+        %li #{link_to("Past Ruby Heroes", "#heroes", class: "heroes-toggle")} pick finalists
+        %li Heroes are named at #{link_to("RailsConf", "http://railsconf.com")}
+
+      = render partial: "shared/share_buttons"
 
   = render "shared/footer"
 
