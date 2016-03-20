@@ -5,13 +5,13 @@
   .main.main--thanks.grid
     .grid-box.one-whole.desk-one-half
       %h1 Thank you for caring!
-      %p You can #{link_to 'vote again', root_url} for another Ruby Hero or spread the word about your nominee(s) by telling friends to vote on your favorite place where you share things.
+      %p You can #{link_to 'vote for another hero', root_url} or spread the word by telling friends to come cast their vote wherever you share your social things.
 
     .grid-box.one-whole.desk-one-half
       = render partial: "shared/share_buttons"
 
       %p
         Encourage others to nominate your hero by sharing this nomination URL:
-        = text_field_tag :think, nominate_url(nominee: @nomination.nominee), class: "share-url"
+        = text_field_tag :share_url, nominate_url(nominee: @nomination.nominee), class: "share-url"
 
   = render "shared/footer"
