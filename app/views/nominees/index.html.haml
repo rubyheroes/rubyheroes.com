@@ -2,5 +2,7 @@
   %ul
     - @nominees.each do |nominee|
       %li
-        = link_to "Nominate <strong>#{h nominee.github_username}</strong>".html_safe,
-          new_nomination_path(nominee: nominee)
+        = link_to nominate_path(nominee: nominee) do
+          Nominate
+          %strong= nominee.github_username.html_safe
+
