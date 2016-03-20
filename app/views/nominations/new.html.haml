@@ -1,7 +1,7 @@
 %section.nomination
   .main.grid
     .grid-box.one-whole
-      = simple_form_for @nomination do |f|
+      = simple_form_for @nomination, html: { novalidate: true } do |f|
 
         %h1 Nomination
 
