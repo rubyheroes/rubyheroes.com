@@ -10,6 +10,6 @@ class NomineesController < ApplicationController
 
   def show
     @site = Site.find(params[:id])
-    render :show, layout: "admin"
+    render :show, layout: :admin
   end
 end
