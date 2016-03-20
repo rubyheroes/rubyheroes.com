@@ -17,6 +17,11 @@ class NominationsController < ApplicationController
     else
       @nomination.nominee.valid?
       render :action => 'new'
+  def show
+    if @nomination = Nomination.find_by(id: params[:id])
+      render :show
+    else
+      redirect_to new_nomination_path
     end
   end
 
