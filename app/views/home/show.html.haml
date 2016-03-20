@@ -2,7 +2,10 @@
   %header
     = render "shared/logo"
 
-    - if $voting_enabled
+    - if VotingEnabled?
+      .clock
+        There are only #{distance_of_time_in_words_to_now($end_of_voting)} left to name your heroes!
+
       = form_tag new_nomination_path, method: :get, autocomplete: 'off', class: 'nominate grid' do
         = label_tag 'nominee', "Who's your Ruby Hero?", class: 'nominate-label'
         .nominate-form
