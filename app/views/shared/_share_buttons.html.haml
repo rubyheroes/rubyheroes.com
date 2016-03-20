@@ -12,10 +12,12 @@
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=355963684474185";
+          js.async=true;
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-    .fb-like{ data: { href: "http://rubyheroes.com", send: false, layout: "button_count", width: "50", "show-faces" => "false", action: "like", font: "lucida grande" } }
+    .fb-share-button{ data: { href: "http://rubyheroes.com", send: false, layout: "button", width: "50", show_faces: "false", action: "like", font: "lucida grande" } }
+
     .reddit
       <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="//www.redditstatic.com/spreddit8.gif" alt="submit to reddit" border="0" /> </a>
 
