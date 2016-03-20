@@ -51,4 +51,7 @@ class Nominee < ActiveRecord::Base
     'http://github.com/%s' % github_username
   end
 
+  def to_param
+    github_username
+  end
 end
