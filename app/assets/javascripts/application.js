@@ -15,11 +15,11 @@ var focusSuggestions = function(event) {
   if (suggestions.length > 0) {
 
     if (event.keyCode == upArrow) {
-      suggestions.children(":first").trigger("focus");
+      suggestions.children(":last").trigger("focus");
 
       event.preventDefault();
     } else if (event.keyCode == downArrow) {
-      suggestions.children(":last").trigger("focus");
+      suggestions.children(":first").trigger("focus");
 
       event.preventDefault();
     }
