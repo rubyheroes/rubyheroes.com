@@ -11,7 +11,7 @@
       = render partial: "shared/share_buttons"
 
       %p
-        Encourage others to nominate your hero by sharing this URL:
-        = link_to nominate_url(nominee: @nomination.nominee)
+        Encourage others to nominate your hero by sharing this nomination URL:
+        = text_field_tag :think, nominate_url(nominee: @nomination.nominee), class: "share-url"
 
   = render "shared/footer"
