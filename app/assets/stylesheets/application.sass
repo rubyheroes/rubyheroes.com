@@ -37,7 +37,7 @@
 
 // ----- Content ----- //
 
-.content, .nomination
+.content
   background: $color-bg
   border-top: 13px solid $color-border
   box-shadow: 0 0 0 1px rgba(#000, 0.08), 0 0 35px rgba(#000, 0.14)
@@ -454,19 +454,26 @@ footer
 
 .nomination
   margin: 4em auto
-  max-width: 500px
-  position: relative
-  z-index: 10
+  +respond-to($palm)
+    max-width: 90%
+  +respond-to($lap)
+    max-width: 80%
+  +respond-to($portable)
+    max-width: 70%
+  +respond-to($desk)
+    max-width: 60%
 
   form
     margin: 2em 0
 
   .input
     margin: 2em 0
+
   label
     display: block
     font-size: 1.6em
     font-weight: bold
+
   .error
     display: block
     background: darken($color-highlight, 20%)
