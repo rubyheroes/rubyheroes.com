@@ -31,7 +31,11 @@ class NominationsController < ApplicationController
   private
 
   def nomination_params
-    params.require(:nomination).permit(:testimonial, nominee_attributes: [:github_username], nominator_attributes: [:name, :email])
+    params.require(:nomination).permit(
+      :testimonial,
+      nominee_attributes: [:github_username],
+      nominator_attributes: [:id, :name, :email]
+    )
   end
 
   def current_nominator
