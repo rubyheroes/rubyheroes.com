@@ -42,4 +42,5 @@ group :test do
   gem "capybara", "~> 2.6.2"
   gem "launchy"
   gem "capybara-webkit"
+  gem "database_cleaner"
 end
