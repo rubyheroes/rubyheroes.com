@@ -2,10 +2,16 @@
   %header
     %h1= link_to image_tag("logo-rubyheroes.svg", alt: "Ruby Heroes"), root_path
 
-  .main.main--thanks
-    %h1 Thank you for caring!
-    %p You can #{link_to 'vote again', root_url} for another Ruby Hero or spread the word about your Ruby Hero nominee(s) by telling friends to vote on your favorite place where you share things
+  .main.main--thanks.grid
+    .grid-box.one-whole.desk-one-half
+      %h1 Thank you for caring!
+      %p You can #{link_to 'vote again', root_url} for another Ruby Hero or spread the word about your nominee(s) by telling friends to vote on your favorite place where you share things.
 
-    = render partial: "shared/share_buttons"
+    .grid-box.one-whole.desk-one-half
+      = render partial: "shared/share_buttons"
+
+      %p
+        Encourage others to nominate your hero by sharing this URL:
+        = link_to nominate_url(nominee: @nomination.nominee)
 
   = render "shared/footer"
