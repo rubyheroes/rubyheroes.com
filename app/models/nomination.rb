@@ -14,6 +14,10 @@ class Nomination < ActiveRecord::Base
       why this person is a Ruby Hero."
     }
 
+  validates :nominator_id, uniqueness: {
+    message: "You can only nominate someone once."
+  }
+
   scope :from_year, -> (year) { where("EXTRACT(year FROM created_at) = ?", year)}
 
   def nominee_attributes=(params)

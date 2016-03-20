@@ -2,11 +2,12 @@
   .main.grid
     .grid-box.one-whole
       = simple_form_for @nomination, html: { novalidate: true } do |f|
-
         %h1 Nomination
 
         = f.fields_for :nominee do |n|
           = n.input :github_username, label: "Nominee's GitHub Username"
+
+        = f.error :nominator_id
 
         = f.fields_for :nominator do |n|
           = n.input :name, label: "Your Name"
