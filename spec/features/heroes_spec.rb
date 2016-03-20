@@ -8,9 +8,11 @@ RSpec.feature "Heroes" do
     3.times { create(:hero) }
   end
 
-  it "displays past heroes" do
+  let(:latest_hero_year) { Hero.order(:year).last.year }
+
+  it "redirects to the latest year of heroes" do
     visit heroes_path
-    expect(current_path).to eq root_path
+    expect(current_path).to eq year_heroes_path(latest_hero_year)
   end
 
 end
