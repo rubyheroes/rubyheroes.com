@@ -30,27 +30,20 @@
         The Ruby Hero Awards recognize #{link_to("everyday heroes", heroes_path)} of the Ruby community.
 
       %p
-        We believe good work deserves recognition. The Ruby community
-        is full of unsung heroes who are helping in diverse ways make the community a better place.
+        The Ruby community is full of good people who help each other in diverse
+        ways to make the community a better place.
 
       %p
-        Each year, Ruby Hero nominees are picked among the popular vote by Heroes from
-        previous years. These new heroes are given an award at RailsConf.
-
-      %p
-        Beyond that, they're recognized for the work they've done. Hopefully, they
-        will inspire others to contribute back to our community.
+        Once a year at RailsConf, we take a moment to appreciate their contributions and hopefully encourage others to make a difference.
 
     .grid-box.one-whole.desk-one-half
 
       %h3 Make your own heroes
 
       %ol
-        %li Nominate a worthy candidate
-        %li Pass the word around
-        %li Nominee are tallied
-        %li #{link_to("Past Ruby Heroes", heroes_path)} pick finalists
-        %li Heroes are named at #{link_to("RailsConf", "http://railsconf.com")}
+        %li You #{link_to("nominate", new_nomination_path)} your heroes
+        %li Past #{link_to("Ruby Heroes", heroes_path)} pick finalists
+        %li New heroes are named at #{link_to("RailsConf", "http://railsconf.com")}
 
       = render partial: "shared/share_buttons"
 
