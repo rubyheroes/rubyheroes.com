@@ -86,10 +86,6 @@ var submitSuggestion = function(event) {
 }
 
 jQuery(function($){
-   // ----- FitText ----- //
-
-  $('.nominate-label').fitText(1.3, {maxFontSize: '34px'});
-
   // ----- Nomination Form ----- //
 
   var regex1 = /github\./;
