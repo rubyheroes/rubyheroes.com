@@ -4,14 +4,12 @@
 
     - if $voting_enabled
       = form_tag new_nomination_path, method: :get, autocomplete: 'off', class: 'nominate grid' do
-        .grid-box.one-whole.desk-one-half
-          = label_tag 'nominee', "I'd like to nominate", class: 'nominate-label'
-        .grid-box.one-whole.desk-one-half
-          .nominate-form
-            = text_field_tag 'nominee', nil, autocomplete: 'off', class: 'nominate-input', placeholder: 'GitHub Username'
-            #yes_match.nominate-autocomplete
-            %button#nomination_submit.nominate-submit Next
-            .nominate-hero{ :"aria-hidden" => "true" }
+        = label_tag 'nominee', "Who's your Ruby Hero?", class: 'nominate-label'
+        .nominate-form
+          = text_field_tag 'nominee', nil, autocomplete: 'off', class: 'nominate-input', placeholder: 'GitHub Username'
+          #yes_match.nominate-autocomplete
+          %button#nomination_submit.nominate-submit Next
+          .nominate-hero{ :"aria-hidden" => "true" }
     - else
       - if $heroes_chosen
         .heroes-chosen
