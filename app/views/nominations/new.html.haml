@@ -12,6 +12,6 @@
           = n.input :name, label: "Your Name"
           = n.input :email, label: "Your Email"
 
-        = f.input :testimonial, label: "How did this person make your life as a Rubyist better?"
+        = f.input :testimonial, label: "Why is this person your Ruby Hero?"
 
-        = f.button :submit, "Nominate"
+        = f.button :submit, "Nominate", data: { disable_with: "Nominating..." }
