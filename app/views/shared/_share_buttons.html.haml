@@ -2,7 +2,7 @@
   %h3 Spread the word
 
   .share-buttons
-    = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", data: { url: "http://rubyheroes.com", text: "The Ruby Hero Awards recognize everyday heroes of the Ruby community. Nominate your heroes today:", size: "small" }
+    = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", data: { url: "http://rubyheroes.com", text: "There are only #{distance_of_time_in_words_to_now($end_of_voting)} left to nominate your Ruby Heroes for 2016. Don't be a lonely operator!", size: "small" }
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
