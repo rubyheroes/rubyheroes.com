@@ -7,7 +7,12 @@ class Nomination < ActiveRecord::Base
   accepts_nested_attributes_for :nominator, :nominee
 
   # Validations
-  validates :testimonial, :length => { :minimum => 25, :message => "Testimony must be at least 25 characters." }
+  validates :testimonial,
+    presence: true,
+    length: {
+      minimum: 25, message: "Please try to write a meaningful testimony to explain
+      why this person is a Ruby Hero."
+    }
 
   scope :from_year, -> (year) { where("EXTRACT(year FROM created_at) = ?", year)}
 
