@@ -15,7 +15,8 @@ class Nomination < ActiveRecord::Base
     }
 
   validates :nominator_id, uniqueness: {
-    message: "You can only nominate someone once."
+    message: "You can only nominate someone once.",
+    unless: :no_matching_nomination_exists_in_same_year?
   }
 
   scope :from_year, -> (year) { where("EXTRACT(year FROM created_at) = ?", year)}
@@ -26,6 +27,13 @@ class Nomination < ActiveRecord::Base
 
   def nominator_attributes=(params)
     self.nominator = Nominator.find_or_create_by(email: params[:email], name: params[:name])
+  end
+
+  private
+
+  def no_matching_nomination_exists_in_same_year?
+    self.class.where(nominator_id: nominator_id, nominee_id: nominee_id).
+      where("extract(year from created_at) = ?", Date.today.year).none?
   end
 
 end
