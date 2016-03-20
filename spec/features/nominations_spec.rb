@@ -1,10 +1,9 @@
-require 'acceptance/acceptance_helper'
+require "rails_helper"
 
-feature "Nominations", %q{
-  In order to nominate a Ruby Hero
-  As a member of the Ruby community
-  I want to submit a GitHub username
-} do
+RSpec.feature "Nominations" do
+  # In order to nominate a Ruby Hero
+  # As a member of the Ruby community
+  # I want to submit a GitHub username
 
   before do
     $voting_enabled = true

@@ -41,4 +41,5 @@ end
 group :test do
   gem "capybara", "~> 2.6.2"
   gem "launchy"
+  gem "capybara-webkit"
 end
