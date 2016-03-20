@@ -1,2 +1,14 @@
-%ul
-  = render :partial => @heroes
+%section.content
+  %header
+    = render "shared/logo"
+
+  %ol.heroes-nav
+    - @years.each_with_index do |heroes, index|
+      - selected = (heroes.first == params[:year]) ? 'is-selected' : ''
+      %li{ class: selected }= link_to heroes.first, year_heroes_path(year: heroes.first)
+
+  .heroes-inner.heroes-years
+    %ul.heroes-collection.grid
+      = render partial: @heroes
+
+  = render "shared/footer"

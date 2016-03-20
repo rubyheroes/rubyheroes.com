@@ -405,7 +405,7 @@ footer
 
 .heroes-inner
   margin: 8em auto 0
-  max-width: 600px
+  max-width: 800px
   padding: 0 0 2em 10em
   position: relative
 
@@ -429,13 +429,15 @@ footer
     color: #fff
 
 .heroes-nav
-  left: 0
-  position: absolute
-  top: 6em
+  margin: 0 auto
+  width: 57%
+
   li
+    float: left
     margin-bottom: 0.5em
     padding-bottom: 0.5em
-    width: 10em
+    width: 7em
+
     &.is-selected
       a
         background: $color-highlight
@@ -451,14 +453,11 @@ footer
       background: rgba(#fff, 0.7)
 
 .heroes-collection
-  display: none
-  margin-left: -20px
-  &.is-selected
-    display: block
+  display: block
 
 .heroes-collection-hero
-  padding-left: 20px
-  max-width: 220px
+  padding-left: 10px
+  max-width: 240px
   a
     background: #fff
     background: rgba(#fff, 0.7)

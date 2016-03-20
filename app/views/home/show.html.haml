@@ -15,15 +15,16 @@
     - else
       - if $heroes_chosen
         .heroes-chosen
-          %h2 The #{@this_year} Ruby Heroes have been <a href="#heroes" class="heroes-toggle">named</a>.
+          %h2
+            The #{@this_year} Ruby Heroes have been #{link_to("named", heroes_path)}.
       - else
         .voting-disabled
-          %h2 The #{@this_year} Ruby Heroes will be revealed at the upcoming <a href="http://railsconf.com/">RailsConf</a>.
+          %h2 The #{@this_year} Ruby Heroes will be revealed at the upcoming #{link_to("RailsConf", "http://railsconf.com")}.
 
   .main.grid
     .grid-box.one-whole.desk-one-half
       %h3
-        The Ruby Hero Awards recognize #{link_to("everyday heroes", "#", class: "heroes-toggle")} of the Ruby community.
+        The Ruby Hero Awards recognize #{link_to("everyday heroes", heroes_path)} of the Ruby community.
 
       %p
         We believe good work deserves recognition. The Ruby community
@@ -46,7 +47,7 @@
         %li Nominate a worthy candidate
         %li Pass the word around
         %li Nominee are tallied
-        %li #{link_to("Past Ruby Heroes", "#heroes", class: "heroes-toggle")} pick finalists
+        %li #{link_to("Past Ruby Heroes", heroes_path)} pick finalists
         %li Heroes are named at #{link_to("RailsConf", "http://railsconf.com")}
 
       = render partial: "shared/share_buttons"

@@ -5,7 +5,7 @@ RubyHeroAwards::Application.routes.draw do
 
   resources :heroes, only: [:index] do
     collection do
-      get ":year", to: "heroes#year"
+      get ":year", to: "heroes#year", as: :year
     end
   end
 

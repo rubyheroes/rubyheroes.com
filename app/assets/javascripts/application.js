@@ -86,56 +86,9 @@ var submitSuggestion = function(event) {
 }
 
 jQuery(function($){
-
-  // ----- Parse Heroes Hash ----- //
-  if ($.deparam.fragment().heroes === ""){
-    window.setTimeout(function(){
-      $('.heroes-toggle').first().trigger('click')
-    }, 1)
-  };
-
-
-  // ----- FitText ----- //
+   // ----- FitText ----- //
 
   $('.nominate-label').fitText(1.3, {maxFontSize: '34px'});
-
-  // ----- Past Hero Toggle ----- //
-
-  var site = $('.site');
-
-  $('body').on('click', '.is-reminiscing .content, .heroes-close', function(e) {
-    site.removeClass('is-reminiscing');
-    e.preventDefault();
-  }).on('keydown.modal', function(e) {
-    if (e.which == 27) {
-      site.removeClass('is-reminiscing');
-    }
-  });
-  $('.heroes-toggle').on('click', function(e) {
-    site.addClass('is-reminiscing');
-    $('html, body').delay(750).animate({ scrollTop: 0 }, "slow");
-    e.preventDefault();
-    e.stopPropagation();
-  });
-
-  // ----- Past Hero Nav ----- //
-
-  var heroes_nav = $('.heroes-nav li');
-
-  heroes_nav.on('click', function(e) {
-    var new_collection = $(this);
-    var index = heroes_nav.index(new_collection);
-    new_collection.addClass('is-selected').siblings().removeClass('is-selected');
-    $('.heroes-collection').removeClass('is-selected').eq(index).addClass('is-selected');
-
-    var year = $(e.currentTarget).find('a').text()
-    var state = { 'year': year };
-    var url = "/heroes/" + year;
-
-    history.pushState(state, null, url);
-
-    e.preventDefault();
-  });
 
   // ----- Nomination Form ----- //
 

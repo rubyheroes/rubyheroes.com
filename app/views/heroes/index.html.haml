@@ -3,10 +3,15 @@
     Here are the previous year's award winners.
     Many had quite humble beginnings, and now are quite notable.
 
-%section#pastheroes
-  - @years.each do |heroes|
-    .year
-      %h3
-        #{year} Ruby Hero Award Winners
-      %ul
-        = render @heroes
+-# %section#pastheroes
+-#   - @years.each do |heroes|
+-#     .year
+-#       %h3
+-#         #{year} Ruby Hero Award Winners
+-#       %ul
+-#         = render @heroes
+
+%ol.heroes-nav
+  - @years.each_with_index do |heroes, index|
+    - selected = (heroes.first == Date.today.year) ? 'is-selected' : ''
+    %li{ class: selected }= link_to heroes.first, year_heroes_path(year: heroes.first)
