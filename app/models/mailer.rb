@@ -1,4 +1,4 @@
-class MyMailer < ActionMailer::Base
+class Mailer < ActionMailer::Base
 
   def hero_notice(email, name, nominations, sent_at = Time.now)
     @subject    = 'Your Ruby Hero Nominations'
