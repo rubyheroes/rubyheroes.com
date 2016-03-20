@@ -13,7 +13,7 @@ class HeroesController < ApplicationController
 
   def index
     respond_to do |format|
-      format.html { redirect_to year_heroes_path(year: @years.last.first) }
+      format.html { redirect_to(year_heroes_path(year: @years.last.first)) }
       format.json do
         render json: Hero.select(:name, :url, :year).to_json(only: [:name, :url, :year])
       end
