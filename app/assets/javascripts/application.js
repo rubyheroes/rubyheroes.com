@@ -1,8 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require modernizr-2.6.2.min
-//= require jquery.fittext
-//= require jquery.ba-bbq
 //= require_self
 //= require_tree .
 
