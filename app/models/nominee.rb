@@ -54,4 +54,8 @@ class Nominee < ActiveRecord::Base
   def to_param
     github_username
   end
+
+  def to_s
+    github_username
+  end
 end

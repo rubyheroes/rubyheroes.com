@@ -10,6 +10,6 @@
 %p
   = link_to "Edit", edit_nominator_path(@nominator)
   |
-  = link_to "Destroy", @nominator, :confirm => 'Are you sure?', :method => :delete
+  = link_to "Destroy", @nominator, data: { confirm: 'Are you sure?' }, method: :delete
   |
   = link_to "View All", nominators_path
