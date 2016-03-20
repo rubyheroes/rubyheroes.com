@@ -6,9 +6,9 @@ class Admin::NomineesController < Admin::AdminController
     @nominee_count = Nominee.count
     @nominees = Nominee.order('nomination_count DESC').page(params[:page])
   end
-  
+
   def show
-    @nominee = Nominee.find(params[:id])
+    @nominee = Nominee.find_by(github_username: params[:id])
   end
 
 end
