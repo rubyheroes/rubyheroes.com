@@ -1,6 +1,6 @@
 %section.content
   %header
-    %h1= image_tag 'logo-rubyheroes.svg', alt: 'Ruby Heroes'
+    = render "shared/logo"
 
     - if $voting_enabled
       = form_tag new_nomination_path, method: :get, autocomplete: 'off', class: 'nominate grid' do
