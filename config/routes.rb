@@ -16,4 +16,6 @@ RubyHeroAwards::Application.routes.draw do
   end
 
   root "home#show"
+
+  get "/nominate/:nominee", to: "nominations#new", as: :nominate
 end
