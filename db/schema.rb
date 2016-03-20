@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206235442) do
+ActiveRecord::Schema.define(version: 20160320061822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "heroes", force: true do |t|
+  create_table "heroes", force: :cascade do |t|
     t.string   "name"
     t.string   "avatar"
     t.string   "year"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150206235442) do
 
   add_index "heroes", ["year"], name: "index_heroes_on_year", using: :btree
 
-  create_table "nominations", force: true do |t|
+  create_table "nominations", force: :cascade do |t|
     t.text     "testimonial",  null: false
     t.integer  "nominator_id"
     t.integer  "nominee_id"
@@ -35,29 +35,19 @@ ActiveRecord::Schema.define(version: 20150206235442) do
     t.datetime "updated_at"
   end
 
-  create_table "nominators", force: true do |t|
+  create_table "nominators", force: :cascade do |t|
     t.string   "email"
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "nominees", force: true do |t|
+  create_table "nominees", force: :cascade do |t|
     t.string  "github_username"
     t.string  "name"
     t.integer "nomination_count", default: 0
   end
 
   add_index "nominees", ["github_username"], name: "index_nominees_on_github_username", using: :btree
-
-  create_table "sites", force: true do |t|
-    t.string   "url"
-    t.string   "name"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.integer  "nominations_count"
-  end
-
-  add_index "sites", ["url"], name: "index_sites_on_url", using: :btree
 
 end
