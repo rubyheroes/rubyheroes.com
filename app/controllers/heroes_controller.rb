@@ -2,7 +2,7 @@ class HeroesController < ApplicationController
   before_action :find_years
 
   def year
-    @year = params[:year]
+    @year = params[:year].to_i
     @heroes = Hero.where(year: @year)
 
     respond_to do |format|
