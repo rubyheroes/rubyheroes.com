@@ -1,6 +1,9 @@
 %section.content
+  %header
+    %h1= image_tag 'logo-rubyheroes.svg', alt: 'Ruby Heroes'
+
   .main.main--thanks
-    %h2 Thank you for caring!
+    %h1 Thank you for caring!
     %p You can #{link_to 'vote again', root_url} for another Ruby Hero or spread the word about your Ruby Hero nominee(s) by telling friends to vote on your favorite place where you share things
 
     = render partial: "shared/share_buttons"
