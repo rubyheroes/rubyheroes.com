@@ -3,4 +3,4 @@
     - @nominees.each do |nominee|
       %li
         = link_to "Nominate <strong>#{h nominee.github_username}</strong>".html_safe,
-          new_nomination_path(:nominee_id => nominee.id)
+          new_nomination_path(nominee: nominee)
