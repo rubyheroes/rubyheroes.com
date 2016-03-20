@@ -7,9 +7,11 @@ require File.expand_path("../../config/environment", __FILE__)
 ActiveRecord::Migration.check_pending!
 ActiveRecord::Migration.maintain_test_schema!
 
-require 'rspec/rails'
-require 'capybara/rails'
-require 'capybara/rspec'
+require "rspec/rails"
+require "capybara/rails"
+require "capybara/rspec"
+require 'database_cleaner'
+require "timecop"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -68,7 +70,6 @@ Capybara::Webkit.configure do |config|
   # )
 end
 
-require 'database_cleaner'
 
 RSpec.configure do |config|
 
