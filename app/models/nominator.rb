@@ -1,5 +1,7 @@
 class Nominator < ActiveRecord::Base
-  has_many :nominations, :dependent => :destroy
+  has_many :nominations, dependent: :destroy
+
+  scope :from_year, -> (year) { joins(:nominations).merge(Nomination.from_year(year)) }
 
   validates_presence_of :name,
     message: "This field is required."

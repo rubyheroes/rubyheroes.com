@@ -23,7 +23,7 @@ class Nominee < ActiveRecord::Base
                 message: "They're already a Ruby Hero. Please nominate someone else."
               }
 
-  #validates :name, :presence => true
+  scope :from_year, -> (year) { joins(:nominations).merge(Nomination.from_year(year))}
 
   def self.begins_with(query)
     where(arel_table[:github_username].matches("#{query}%"))
