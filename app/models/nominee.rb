@@ -30,7 +30,7 @@ class Nominee < ActiveRecord::Base
   end
 
   def github_username=(username)
-    self[:github_username] = username.try(:downcase).strip
+    self[:github_username] = username&.downcase&.strip
   end
 
   def merge_into(nominee)
