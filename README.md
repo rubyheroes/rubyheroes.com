@@ -10,7 +10,7 @@ recipients from previous years.
 - v1 Created by [Envy Labs][envy].
 - v2 Rebuilt and redesigned by [Olivier Lacan][olivier], [Zachary Nicoll][zach], and [Andrew Smith][andrew].
 - v3 Redesigned by Nick Walsh [Envy Labs][envy] in February 2013.
-- v4 Rebuild in progress by Olivier Lacan (Development) & Cher Cloude (Design).
+- v4 Upgraded & Redesigned by Olivier Lacan (Development) & Cher Cloude (Design).
 
 ## Installation
 
