@@ -19,6 +19,8 @@ class Nomination < ActiveRecord::Base
     unless: :no_matching_nomination_exists_in_same_year?
   }
 
+  default_scope { from_year(Date.today.year) }
+
   scope :from_year, -> (year) { where("EXTRACT(year FROM created_at) = ?", year)}
 
   def nominee_attributes=(params)
