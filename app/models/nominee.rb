@@ -27,6 +27,12 @@ class Nominee < ActiveRecord::Base
               }
 
   scope :from_year, -> (year) { joins(:nominations).merge(Nomination.from_year(year)).uniq }
+  scope :ordered_by_recent_nominations, -> {
+    joins(:recent_nominations).
+      select("nominees.*, count(nominations.id) AS recent_nominations_count").
+      group("nominees.id").
+      order("recent_nominations_count DESC")
+  }
 
   def self.begins_with(query)
     where(arel_table[:github_username].matches("#{query}%"))
