@@ -12,6 +12,8 @@ class Admin::NomineesController < Admin::AdminController
 
   def show
     @nominee = Nominee.find_by(github_username: params[:id])
+    @recent_nominations = @nominee.recent_nominations.order(created_at: :desc)
+    @nominations = @nominee.nominations.order(created_at: :desc)
   end
 
 end

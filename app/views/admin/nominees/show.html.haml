@@ -10,7 +10,7 @@
           %th(scope="col") Nominator
           %th(scope="col") Date
       %tbody
-        - @nominee.recent_nominations.each do |nomination|
+        - @recent_nominations.each do |nomination|
           %tr
             %td.testimony= nomination.testimonial
             %td.nominator= link_to "#{nomination.nominator} (#{nomination.nominator.email})", admin_nominator_path(nomination.nominator.id)
@@ -26,7 +26,7 @@
           %th(scope="col") Nominator
           %th(scope="col") Date
       %tbody
-        - @nominee.nominations.each do |nomination|
+        - @nominations.each do |nomination|
           %tr
             %td.testimony= nomination.testimonial
             %td.nominator= link_to "#{nomination.nominator} (#{nomination.nominator.email})", admin_nominator_path(nomination.nominator.id)
