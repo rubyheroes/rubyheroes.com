@@ -14,7 +14,7 @@ class Nominee < ActiveRecord::Base
   # Associations
   has_many :nominations
   has_many :recent_nominations, -> {
-    merge(Nomination.from_year(Date.today.year))
+    merge(Nomination.from_year(Date.today.year)).uniq
   }, class_name: :Nomination
 
   # Validations
@@ -26,7 +26,7 @@ class Nominee < ActiveRecord::Base
                 message: "They're already a Ruby Hero. Please nominate someone else."
               }
 
-  scope :from_year, -> (year) { joins(:nominations).merge(Nomination.from_year(year))}
+  scope :from_year, -> (year) { joins(:nominations).merge(Nomination.from_year(year)).uniq }
 
   def self.begins_with(query)
     where(arel_table[:github_username].matches("#{query}%"))
