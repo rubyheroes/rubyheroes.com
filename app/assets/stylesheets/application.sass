@@ -48,8 +48,6 @@
 
 
 header
-  min-height: 150px
-  position: relative
   h1
     font-size: 1em
     margin-bottom: 0
@@ -226,13 +224,29 @@ header
     +respond-to($lap)
       font-size: 2em
 
-
 .main--thanks
-  margin-top: 4em
+  margin-top: 2em
+
+  h1
+    color: $color-highlight
+    font-weight: bold
+    margin-top: .5em
+    margin-bottom: .5em
+    +respond-to($portable)
+      margin-top: 0
+
+  .main-share
+    margin-top: 0
+    margin-bottom: 1em
+
+  #share_url
+    margin-top: .5em
+    margin-left: .5em
+    font-size: .8em
 
 .main-share
   clear: both
-  margin: 2em 0
+  margin: 2em 0 0
 
   h3
     margin-bottom: .5em
@@ -260,17 +274,8 @@ header
       img
         margin: 0
 
-.main--thanks
-  .main-share
-    margin-top: 0
-
   .share-buttons
     margin-left: 1em
-
-  .share-url
-    margin-top: .5em
-    margin-left: .5em
-    font-size: .9em
 
 // ----- Sponsor ----- //
 
@@ -450,21 +455,17 @@ footer
   .input
     margin: 2em 0
 
-    &[type=submit]
-      height: 51px
-      opacity: 0
-      padding: 13px 0 9px
-      position: absolute
-      right: 3px
-      top: 3px
-      visibility: hidden
-      width: 90px
-      .is-nominating &
-        opacity: 1
-        visibility: visible
-      +respond-to(400px)
-        right: 53px
+    input, textarea
+      border: .01em solid $color-base
 
+  .btn
+    border-radius: 5px
+    border: 1px solid gold
+    background-color: $color-highlight
+    color: $color-bg
+    &:hover, &:focus
+      background-color: darken($color-highlight, 10%)
+      cursor: pointer
 
   label
     display: block
@@ -473,7 +474,22 @@ footer
 
   .error
     display: block
-    background: darken($color-highlight, 20%)
+    background: darken($color-highlight, 10%)
     color: #fff
     font-size: 1.6em
     padding: 0.25em 0.5em
+    border-bottom-left-radius: 0.2em
+    border-bottom-right-radius: 0.2em
+
+.clock
+  padding: 0.7em 1em
+  font:
+    size: 1.4em
+    weight: bold
+  text-align: center
+  background: $color-bg-alt
+  color: $color-key
+  +respond-to($lap)
+    font-size: 1.6em
+  +respond-to($portable)
+    font-size: 1.8em
