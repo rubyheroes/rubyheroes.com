@@ -1,6 +1,6 @@
 class Admin::NominatorsController < Admin::AdminController
   def index
-    @nominators = Nominator.order('created_at DESC').page(params[:page])
+    @nominators = Nominator.order(created_at: :desc).page(params[:page])
   end
 
   def show
