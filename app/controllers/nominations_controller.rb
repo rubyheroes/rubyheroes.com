@@ -1,10 +1,10 @@
 class NominationsController < ApplicationController
   def new
-    @nomination = Nomination.new
-    @nomination.nominator = current_nominator
-    @nomination.nominee_id = params[:nominee_id]
-    @nomination.build_nominee(github_username: params[:nominee]) if @nomination.nominee.blank?
-    @nomination.nominee.valid?
+    @nomination = Nomination.new.tap do |n|
+      n.nominator = current_nominator
+      n.nominee_id = params[:nominee_id]
+      n.build_nominee(github_username: params[:nominee]) if n.nominee.blank?
+    end
   end
 
   def create
@@ -15,7 +15,6 @@ class NominationsController < ApplicationController
       flash[:notice] = "Thank you for your nomination."
       redirect_to @nomination
     else
-      @nomination.nominee.valid?
       render :new
     end
   end

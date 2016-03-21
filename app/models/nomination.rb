@@ -6,6 +6,8 @@ class Nomination < ActiveRecord::Base
 
   accepts_nested_attributes_for :nominator, :nominee
 
+  validates_associated :nominee, :nominator
+
   # Validations
   validates :testimonial,
     presence: true,
