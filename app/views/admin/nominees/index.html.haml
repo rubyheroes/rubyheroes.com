@@ -25,7 +25,7 @@
     %tbody
       - @nominees.each do |nominee|
         %tr
-          %td.nomination_count= nominee.nomination_count
+          %td.nomination_count= nominee.recent_nominations.count
           %td.github= link_to nominee.github_username, nominee.url
           %td.actions= link_to "View nominations", [:admin, nominee]
 
