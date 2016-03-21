@@ -13,6 +13,9 @@ class Nominee < ActiveRecord::Base
 
   # Associations
   has_many :nominations
+  has_many :recent_nominations, -> {
+    merge(Nomination.from_year(Date.today.year))
+  }, class_name: :Nomination
 
   # Validations
   validates :github_username,
