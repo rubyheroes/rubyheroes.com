@@ -2,7 +2,7 @@ module Admin
   class AdminController < ::ApplicationController
     layout "admin"
 
-    before_action :authenticate
+    before_action :authenticate, unless: -> { Rails.env.development? }
 
     protected
       def authenticate
