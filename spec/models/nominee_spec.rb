@@ -1,6 +1,6 @@
-require "spec_helper"
+require "rails_helper"
 
-describe Nominee do
+RSpec.describe Nominee do
   context "#merge_into(nominee)" do
     let(:nominee) { create :nominee }
     let!(:nomination) { create :nomination, nominee: nominee }

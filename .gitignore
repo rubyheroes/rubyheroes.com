@@ -37,3 +37,4 @@ coverage/
 
 # Node modules
 /node_modules
+spec/examples.txt

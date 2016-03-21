@@ -21,7 +21,10 @@ group :production do
 end
 
 group :development do
-  gem 'web-console'
+  gem "web-console"
+  gem "guard"
+  gem "guard-livereload", "~> 2.5", require: false
+  gem "rack-livereload"
 end
 
 group :development, :test do
@@ -38,4 +41,7 @@ end
 group :test do
   gem "capybara", "~> 2.6.2"
   gem "launchy"
+  gem "capybara-webkit"
+  gem "database_cleaner"
+  gem "timecop"
 end

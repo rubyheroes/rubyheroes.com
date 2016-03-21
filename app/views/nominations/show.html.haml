@@ -1,29 +1,17 @@
 %section.content
-  .main.main--thanks
-    %h2 Thank you for caring!
-    %p You can #{link_to 'vote again', root_url} for another Ruby Hero or spread the word about your Ruby Hero nominee(s) by telling friends to vote on your favorite place where you share things
+  %header
+    = render "shared/logo"
 
-    .main-share
-      = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", data: { text: "The unsung heroes of the Ruby community deserve recognition. I shared some love on", url: "http://rubyheroes.com", size: "small" }
-      :javascript
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  .main.main--thanks.grid
+    .grid-box.one-whole.desk-one-half
+      %h1 Thank you for caring!
+      %p You can #{link_to 'vote for another hero', root_url} or spread the word by telling friends to come cast their vote wherever you share your social things.
 
-      #fb-root
-        :javascript
-          (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
+    .grid-box.one-whole.desk-one-half
+      = render partial: "shared/share_buttons"
 
-      .fb-like{ data: { href: "http://rubyheroes.com", send: "false", layout: "button_count", width: "50", "show-faces" => "false", action: "like", font: "lucida grande" } }
-
-
-    %p
-      Six Ruby Hero Award winners will be announced at
-      = link_to 'RailsConf', 'http://railsconf.com'
-      in #{Railsconf.city} in #{Railsconf.month} #{Railsconf.year}.
+      %p
+        Encourage others to nominate your hero by sharing this nomination URL:
+        = text_field_tag :share_url, nominate_url(nominee: @nomination.nominee), class: "share-url"
 
   = render "shared/footer"

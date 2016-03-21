@@ -13,13 +13,23 @@ body
 
 // ----- Block Content ----- //
 
-h2
+h1
   font-size: 3em
-  font-family: $font-header
+  margin-bottom: 1em
+
+h2
+  font-size: 2.5em
+  margin-bottom: 1em
+  +respond-to($portable)
+    font-size: 2em
 
 h3
-  font-size: 2.6em
+  font-size: 3em
   font-weight: bold
+  margin-bottom: 1em
+  +respond-to($palm)
+    font-size: 2.5em
+    margin-bottom: .4em
 
 h4
   font-size: 1.2em
@@ -27,18 +37,17 @@ h4
 
 p
   font-size: 2em
+  margin-bottom: 1em
 
 // ----- Inline Content ----- //
 
 a
-  -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out
-  -moz-transition: background 0.1s ease-in-out, color 0.1s ease-in-out
-  -o-transition: background 0.1s ease-in-out, color 0.1s ease-in-out
   transition: background 0.1s ease-in-out, color 0.1s ease-in-out
-  color: lighten($color-base, 25%)
+  color: darken($color-key, 10%)
   font-style: italic
   font-weight: bold
   text-decoration: none
+  font-size: 1em
 
 // ----- Forms ----- //
 
@@ -47,9 +56,7 @@ textarea
   background: #fff
   background: rgba(#fff, 0.8)
   border: 0
-  border-bottom: 3px solid $color-border
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
+  border-bottom: .1em solid $color-border
   box-sizing: border-box
   color: lighten($color-base, 25%)
   cursor: text

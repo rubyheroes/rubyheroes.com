@@ -9,21 +9,33 @@ class NominationsController < ApplicationController
 
   def create
     @nomination = Nomination.new(nomination_params)
-    if @nomination.save && @nomination.nominee.valid?
+    if @nomination.save
       session[:nominator_id] = @nomination.nominator_id
       session[:ns] = true
       flash[:notice] = "Thank you for your nomination."
       redirect_to @nomination
     else
       @nomination.nominee.valid?
-      render :action => 'new'
+      render :new
+    end
+  end
+
+  def show
+    if @nomination = Nomination.find_by(id: params[:id])
+      render :show
+    else
+      redirect_to new_nomination_path
     end
   end
 
   private
 
   def nomination_params
-    params.require(:nomination).permit(:testimonial, nominee_attributes: [:github_username], nominator_attributes: [:name, :email])
+    params.require(:nomination).permit(
+      :testimonial,
+      nominee_attributes: [:github_username],
+      nominator_attributes: [:id, :name, :email]
+    )
   end
 
   def current_nominator

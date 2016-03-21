@@ -11,14 +11,14 @@
         %td.nomination_total= @nomination_count
         %td.nominee_total= @nominee_count
         %td.voter_total= @voter_count
-        
+
   %table
-    %caption Most nominated sites.
+    %caption Most nominated people
     %thead
       %tr
         %th(scope="col") # of Nominations
         %th(scope="col") Nominee
-        %th(scope="col") 
+        %th(scope="col")
     %tfoot
       %tr
         %td(colspan="3")= paginate(@nominees)

@@ -1,15 +1,22 @@
-%section.nomination
-  = simple_form_for @nomination do |f|
+%section.content
+  %header
+    = render "shared/logo"
 
-    %h2 Nomination
+  .main.grid
+    .grid-box.one-whole
+      .nomination
+        = simple_form_for @nomination, html: { novalidate: true } do |f|
+          %h1 Nomination
 
-    = f.fields_for :nominee do |n|
-      = n.input :github_username, label: "Nominee's GitHub Username"
+          = f.fields_for :nominee do |n|
+            = n.input :github_username, label: "Nominee's GitHub Username"
 
-    = f.fields_for :nominator do |n|
-      = n.input :name, label: "Your Name"
-      = n.input :email, label: "Your Email"
+          = f.error :nominator_id
 
-    = f.input :testimonial, label: "How did this person make your life as a Rubyist better?"
+          = f.fields_for :nominator do |n|
+            = n.input :name, label: "Your Name"
+            = n.input :email, label: "Your Email"
 
-    = f.button :submit, "Nominate"
+          = f.input :testimonial, label: "Why is this person your Ruby Hero?"
+
+          = f.button :submit, "Nominate", data: { disable_with: "Nominating..." }

@@ -5,7 +5,8 @@
       %tr
         %th(scope="col") Creation
         %th(scope="col") Nominee
-        %th(scope="col") 
+        %th(scope="col") Count
+        %th(scope="col")
     %tfoot
       %tr
         %td(colspan="3")= paginate(@nominators)
@@ -14,6 +15,7 @@
         %tr
           %td.nomination_count= nominator.created_at.to_s(:short)
           %td.name #{nominator} (#{nominator.email})
+          %td.name #{nominator.nominations.count}
           %td.actions= link_to "View nominator", [:admin, nominator]
 
 

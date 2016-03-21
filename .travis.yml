@@ -1,7 +1,5 @@
 language: ruby
 cache: bundler
-rvm:
-  - 2.3.0
 env:
   global:
     - DB=postgres
@@ -12,8 +10,7 @@ before_script:
   - cp config/database.ci.yml config/database.yml
   # create test database
   - psql -c 'create database rubyheroes_test;' -U postgres
-  - bundle exec rake db:schema:load
-  - bundle exec rake db:test:prepare
+  - bundle exec rake db:setup
 script:
   - bin/rspec spec/ --color --profile
 branches:

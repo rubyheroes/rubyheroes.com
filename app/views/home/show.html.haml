@@ -1,68 +1,50 @@
 %section.content
   %header
-    .header-ruby{ :"aria-hidden" => "true" }
-    %h1= image_tag 'logo-rubyheroes.svg', alt: 'Ruby Heroes'
+    = render "shared/logo"
 
-    - if $voting_enabled
+    - if VotingEnabled?
+      .clock
+        There are only
+        = time_tag $end_of_voting, distance_of_time_in_words_to_now($end_of_voting)
+        left to name your heroes!
+
       = form_tag new_nomination_path, method: :get, autocomplete: 'off', class: 'nominate grid' do
-        .grid-box.one-whole.desk-one-half
-          = label_tag 'nominee', "I'd like to nominate", class: 'nominate-label'
-        .grid-box.one-whole.desk-one-half
-          .nominate-form
-            = text_field_tag 'nominee', nil, autocomplete: 'off', class: 'nominate-input', placeholder: 'GitHub Username'
-            #yes_match.nominate-autocomplete
-            %button#nomination_submit.nominate-submit Next
-            .nominate-hero{ :"aria-hidden" => "true" }
+        = label_tag 'nominee', "Who's your Ruby Hero?", class: 'nominate-label'
+        .nominate-form
+          = text_field_tag 'nominee', nil, autocomplete: 'off', class: 'nominate-input', placeholder: 'GitHub Username'
+          #yes_match.nominate-autocomplete
+          %button#nomination_submit.nominate-submit Next
+          .nominate-hero{ :"aria-hidden" => "true" }
     - else
       - if $heroes_chosen
         .heroes-chosen
-          %h2 The #{@this_year} Ruby Heroes have been <a href="#heroes" class="heroes-toggle">named</a>.
+          %h2
+            The #{@this_year} Ruby Heroes have been #{link_to("named", heroes_path)}.
       - else
         .voting-disabled
-          %h2 The #{@this_year} Ruby Heroes will be revealed at the upcoming <a href="http://railsconf.com/">RailsConf</a>.
-
-  .header-glow--a{ :"aria-hidden" => "true" }
-  .header-glow--b{ :"aria-hidden" => "true" }
+          %h2 The #{@this_year} Ruby Heroes will be revealed at the upcoming #{link_to("RailsConf", "http://railsconf.com")}.
 
   .main.grid
     .grid-box.one-whole.desk-one-half
       %h3
-        The #{link_to("Ruby Hero Awards", "#", class: "heroes-toggle")} celebrates
-        unsung and exemplary Rubyists.
+        The Ruby Hero Awards recognize #{link_to("everyday heroes", heroes_path)} of the Ruby community.
 
       %p
-        We believe great work deserves recognition. The Ruby community
-        is full of amazing contributors and unsung heroes who are helping in
-        diverse ways make the community a better place for the rest of us.
+        The Ruby community is full of good people who help each other in diverse
+        ways to make the community a better place.
 
-      .main-share
-        = link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", data: { url: "http://rubyheroes.com", text: "The unsung heroes of the Ruby community deserve recognition.", size: "small" }
-        :javascript
-          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-        #fb-root
-          :javascript
-            (function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143753272357200";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        .fb-like{ data: { href: "http://rubyheroes.com", send: false, layout: "button_count", width: "50", "show-faces" => "false", action: "like", font: "lucida grande" } }
+      %p
+        Once a year at RailsConf, we take a moment to appreciate their contributions and hopefully encourage others to make a difference.
 
     .grid-box.one-whole.desk-one-half
-      %p
-        Submit your vote. Six heroes will picked among the popular vote by their
-        peers from past years, and they will be given a lovely little award at RailsConf.
 
-      = image_tag 'img-instructions.svg', alt: 'Instructions'
+      %h3 Make your own heroes
+
       %ol
-        %li Nominate a worthy candidate
-        %li Share link to get others voting
-        %li Nominees get tallied
-        %li <a href="#heroes" class="heroes-toggle">Previous Ruby Heroes</a> choose finalists
-        %li Winners announced at <a href="http://railsconf.com">RailsConf</a>
+        %li You #{link_to("nominate", new_nomination_path)} your heroes
+        %li Past #{link_to("Ruby Heroes", heroes_path)} pick finalists
+        %li New heroes are named at #{link_to("RailsConf", "http://railsconf.com")}
+
+      = render partial: "shared/share_buttons"
 
   = render "shared/footer"
-
-= render "shared/heroes_archive"

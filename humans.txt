@@ -1,0 +1,26 @@
+/* TEAM */
+Creator: Gregg Pollack
+Contact: gregg@codeschool.com
+Twitter: @greggpollack.
+From: Orlando, Florida
+
+Operator, Developer: Olivier Lacan.
+Contact: hi@olivierlacan.com
+Twitter: @olivierlacan.
+From: Paris, France
+
+Illustrator: Cher Cloude
+Twitter: @chercloude.
+From: Orlando, Florida, USA
+
+/* THANKS */
+
+Why The Lucky Stiff
+Gregg Pollack
+All the Ruby Heroes
+Ruby Central
+
+/* SITE */
+
+Last update: March 2016
+Software: Ruby on Rails
