@@ -7,9 +7,4 @@ class NomineesController < ApplicationController
       render nothing: true
     end
   end
-
-  def show
-    @site = Site.find(params[:id])
-    render :show, layout: :admin
-  end
 end
