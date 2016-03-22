@@ -11,13 +11,11 @@ class Nominee < ActiveRecord::Base
                             nobu eileencodes sarahmei zzak jeremyevans samsaffron
                           )
 
-  # Associations
   has_many :nominations
   has_many :recent_nominations, -> {
     merge(Nomination.from_year(Date.today.year)).uniq
   }, class_name: :Nomination
 
-  # Validations
   validates :github_username,
               presence: true,
               length: { maximum: 40 },
@@ -39,7 +37,11 @@ class Nominee < ActiveRecord::Base
   end
 
   def github_username=(username)
-    self[:github_username] = username&.downcase&.strip
+    if username.nil?
+      super
+    else
+      self[:github_username] = username.downcase.strip.sub("@", "")
+    end
   end
 
   def merge_into(nominee)

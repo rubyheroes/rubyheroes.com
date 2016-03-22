@@ -69,6 +69,16 @@ RSpec.feature "Nominate a Hero" do
     end
   end
 
+  context "from the nominate/:github_username URL" do
+    before do
+      visit nominate_path("@octocat")
+    end
+
+    it "pre-fills the nomination form with the parameter username" do
+      expect(page).to have_field("Nominee's GitHub Username", with: "octocat")
+    end
+  end
+
   def vote_for_jim
     fill_in "Nominee's GitHub Username", with: "jimweirich"
     fill_in "Your Name", with: "Lyra Silvertongue"
