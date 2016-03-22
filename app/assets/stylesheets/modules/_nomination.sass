@@ -1,0 +1,61 @@
+.nomination
+  margin: 4em auto
+  +respond-to($palm)
+    max-width: 90%
+  +respond-to($lap)
+    max-width: 80%
+  +respond-to($portable)
+    max-width: 70%
+  +respond-to($desk)
+    max-width: 60%
+
+  form
+    margin: 2em 0
+
+  .input
+    margin: 2em 0
+
+    input, textarea
+      border: .01em solid $color-base
+
+  .btn
+    border-radius: 5px
+    border: 1px solid gold
+    background-color: $color-highlight
+    color: $color-bg
+    &:hover, &:focus
+      background-color: darken($color-highlight, 10%)
+      cursor: pointer
+
+  label
+    display: block
+    font-size: 1.6em
+    font-weight: bold
+
+  .error
+    display: block
+    background: darken($color-highlight, 10%)
+    color: #fff
+    font-size: 1.6em
+    padding: 0.25em 0.5em
+    border-bottom-left-radius: 0.2em
+    border-bottom-right-radius: 0.2em
+
+  input,
+  textarea
+    background: #fff
+    background: rgba(#fff, 0.8)
+    border: 0
+    border-bottom: .1em solid $color-border
+    box-sizing: border-box
+    color: lighten($color-base, 25%)
+    cursor: text
+    display: block
+    height: 60px
+    font: normal 2em/30px $font-base
+    padding: 16px 10px 14px
+    position: relative
+    width: 100%
+
+  textarea
+    height: 150px

@@ -1,0 +1,27 @@
+input,
+textarea
+
+textarea
+  height: 150px
+
+button
+  background: $color-highlight
+  border: 0
+  border-radius: 3px
+  color: #fff
+  cursor: pointer
+  display: block
+  font: bold 2em/30px $font-base
+  height: 60px
+  padding: 18px 0 12px
+  right: 53px
+  top: 3px
+  width: 100%
+  z-index: 10
+  &:hover,
+  &:focus
+    background: lighten($color-highlight, 5%)
+  &:disabled
+    background: darken($color-border, 15%)
+    color: rgba(#fff, 0.25)
+    cursor: default

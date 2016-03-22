@@ -1,0 +1,32 @@
+footer
+  overflow: auto
+  background: $color-bg-alt
+  color: #fff
+  position: relative
+  a:hover,
+  a:focus
+    background: transparent
+    color: $color-highlight
+
+  p
+    font-size: 1.7em
+
+.sponsor
+  padding: 4em 2em 0em
+  +respond-to($lap)
+    padding: 4em 4em 1em
+  +respond-to($desk)
+
+.sponsor-logo
+  background: transparent
+  display: block
+  margin: 0em auto 2em
+  padding: 0
+  width: 320px
+  +respond-to($desk)
+    margin: 2em auto 4em
+  img
+    display: block
+    height: auto
+    max-width: 100%
+    width: 100%

@@ -1,0 +1,85 @@
+.heroes-inner
+  margin: 2em auto 0
+  max-width: 800px
+  padding: 0 2em
+  position: relative
+
+.heroes-nav
+  margin: 0 auto
+  width: 57%
+  clear: both
+  overflow: auto
+
+  +respond-to($palm)
+    margin-top: 1em
+    width: 75%
+
+  +respond-to($lap)
+    margin-top: 2em
+    width: 70%
+
+  +respond-to($portable)
+    width: 70%
+    margin-top: 3em
+
+  +respond-to($desk)
+    width: 65%
+    margin-top: 3em
+
+  li
+    float: left
+    width: 7em
+
+    &.is-selected
+      a
+        background: $color-key
+        color: #fff
+  a
+    color: #222
+    border-radius: 3px
+    display: inline-block
+    font-size: 2em
+    padding: 3px 0.5em 0
+    &:hover,
+    &:focus
+      background: #fff
+      background: rgba(#fff, 0.7)
+
+.heroes-collection
+  display: block
+  clear: both
+  margin: 1em auto
+  padding-top: 1em
+
+.heroes-collection-hero
+  padding-left: 10px
+  a
+    background: #fff
+    background: rgba(#fff, 0.7)
+    box-shadow: 0 0 0 1px rgba(#000, 0.05), 0 0 35px rgba(#000, 0.08)
+    display: block
+    -webkit-filter: grayscale(90%)
+    filter: grayscale(90%)
+    margin-bottom: 20px
+    padding: 0.75em 0.75em 0
+    -webkit-transition: none
+    -moz-transition: none
+    -o-transition: none
+    transition: none
+    &:hover,
+    &:focus
+      background: #fff
+      color: $color-highlight
+      -webkit-filter: none
+      filter: none
+  img
+    display: block
+    height: auto
+    max-width: 100%
+    width: 100%
+  strong
+    @extend %ellipsis
+    display: block
+    font: bold 1.2em/3 $font-base
+    padding: 0 0.5em
+    text-align: center
