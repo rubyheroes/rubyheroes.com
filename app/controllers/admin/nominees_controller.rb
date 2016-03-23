@@ -15,4 +15,17 @@ class Admin::NomineesController < Admin::AdminController
     @nominations = @nominee.nominations.order(created_at: :desc)
   end
 
+  def merge
+    @nominee = Nominee.find_by(github_username: params[:nominee_id])
+    @target_nominee = Nominee.find_by(github_username: params[:target_nominee])
+
+    if @target_nominee && @nominee.merge_into(@target_nominee)
+      flash[:notice] = "Successfully merged #{@nominee} into #{@target_nominee}."
+      redirect_to [:admin, @target_nominee]
+    else
+      flash[:notice] = "Failed to merge #{@nominee} into #{@target_nominee}."
+      redirect_to [:admin, @nominee]
+    end
+  end
+
 end

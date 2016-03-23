@@ -12,7 +12,9 @@ RubyHeroAwards::Application.routes.draw do
   resources :nominees, only: [:index]
 
   namespace :admin do
-    resources :nominees, only: [:index, :show]
+    resources :nominees, only: [:index, :show] do
+      put :merge
+    end
     resources :nominators, only: [:index, :show]
     root to: "nominees#index"
   end
