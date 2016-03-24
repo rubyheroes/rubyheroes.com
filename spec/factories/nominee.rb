@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :nominee do
-    name "Julie Ann Lovelace"
-    github_username "julie_ann_lovelace"
+    name { Faker::Name.name }
+    github_username { Faker::Internet.user_name }
 
     trait :with_nomination do
       after(:create) do |nominee|

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :nominator do
-    name "Johnny McGrateful"
-    email "email@example.com"
+    name { Faker::Name.name }
+    email { Faker::Internet.safe_email }
   end
 end
