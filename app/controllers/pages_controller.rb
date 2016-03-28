@@ -4,6 +4,8 @@ class PagesController < ApplicationController
 
     if challenge == "fSK3rze7XEjZ61BbT_kVRqCbrHUvQljxdsUEUklCW0A"
       render text: "fSK3rze7XEjZ61BbT_kVRqCbrHUvQljxdsUEUklCW0A.CRFFg2ylHX-dAS-TAtyvUkUwQ1tYenjudYtSmwAXA2U"
+    elsif challenge == "m8t_Qv3hlIdussgiQdV3C6GyvkrfMwgXNMbhdVnkj9w"
+      render text: "m8t_Qv3hlIdussgiQdV3C6GyvkrfMwgXNMbhdVnkj9w.CRFFg2ylHX-dAS-TAtyvUkUwQ1tYenjudYtSmwAXA2U"
     end
   end
 end
