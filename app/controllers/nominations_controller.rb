@@ -1,5 +1,7 @@
 class NominationsController < ApplicationController
   def new
+    redirect_to root_path unless VotingEnabled?
+
     @nomination = Nomination.new.tap do |n|
       n.nominator = current_nominator
       n.nominee_id = params[:nominee_id]
