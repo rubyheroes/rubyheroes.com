@@ -31,6 +31,7 @@ class Nominee < ActiveRecord::Base
       group("nominees.id").
       order("recent_nominations_count DESC")
   }
+  scope :duplicates, -> { select(:github_username).group(:github_username).having("count(*) > 1") }
 
   def self.begins_with(query)
     where(arel_table[:github_username].matches("#{query}%"))
