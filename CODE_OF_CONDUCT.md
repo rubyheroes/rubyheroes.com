@@ -65,6 +65,18 @@ Project maintainers who do not follow or enforce the Code of Conduct in good
 faith may face temporary or permanent repercussions as determined by other
 members of the project's leadership.
 
+## Amendments
+
+### Sole Maintainer Issue
+Since Ruby Heroes is organized and maintained in large part by a single person,
+and this person is the Code of Conduct enforcement contact, it would be quite 
+difficult to raise conduct violation issues with them directly. In that event,
+please open a [public GitHub issue](https://github.com/rubyheroes/rubyheroes.com/issues).
+
+In the event of misbehavior on the part of the maintainer, and although issues 
+can be closed and locked, they can't be deleted, which will at least provide 
+some public evidence of misbehavior.
+
 ## Attribution
 
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
