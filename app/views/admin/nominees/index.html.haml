@@ -17,6 +17,7 @@
     %thead
       %tr
         %th(scope="col") # of Nominations
+        %th(scope="col") ID
         %th(scope="col") Nominee
         %th(scope="col")
     %tfoot
@@ -26,7 +27,8 @@
       - @nominees.each do |nominee|
         %tr
           %td.nomination_count= nominee.recent_nominations.count
+          %td.nomination_count= nominee.id
           %td.github= link_to nominee.github_username, nominee.url
-          %td.actions= link_to "View nominations", [:admin, nominee]
+          %td.actions= link_to "View nominations", admin_nominee_path(nominee.id)
 
 

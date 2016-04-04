@@ -1,14 +1,15 @@
 %section.content
   .main
     %p Merge into another nominee
-    = simple_form_for(@nominee, url: admin_nominee_merge_path(@nominee), id: @nominee.id, method: :put) do |f|
-      = text_field_tag :target_nominee, nil, { placeholder: "Target nominee's GitHub username" }
+    = simple_form_for(@nominee, url: admin_nominee_merge_path(@nominee.id), id: @nominee.id, method: :put) do |f|
+      = text_field_tag :target_nominee_id, nil, { placeholder: "Target nominee's ID" }
       = f.submit "Merge"
 
     %table
       %caption
         Recent Nominations for
         = link_to @nominee.github_username, @nominee.url
+        (ID #{@nominee.id})
       %thead
         %tr
           %th{ scope: "col" } Testimony
