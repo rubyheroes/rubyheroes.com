@@ -18,6 +18,7 @@ class Nominee < ActiveRecord::Base
 
   validates :github_username,
               presence: true,
+              uniqueness: true,
               length: { maximum: 40 },
               exclusion: {
                 in: INELIGIBLE_NOMINEES,

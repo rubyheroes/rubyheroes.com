@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160320072348) do
+ActiveRecord::Schema.define(version: 20160324103716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,6 @@ ActiveRecord::Schema.define(version: 20160320072348) do
     t.integer "nomination_count", default: 0
   end
 
-  add_index "nominees", ["github_username"], name: "index_nominees_on_github_username", using: :btree
+  add_index "nominees", ["github_username"], name: "index_nominees_on_github_username", unique: true, using: :btree
 
 end
