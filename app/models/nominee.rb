@@ -47,6 +47,10 @@ class Nominee < ActiveRecord::Base
   def merge_into(nominee)
     return false if nominee == self
 
+    # Admins don't care if voting is enabled, we may need to merge duplicate
+    # nominees after the public nomination period has ended.
+    $voting_enabled = true
+
     transaction do
       self.nominations.each do |nomination|
         nomination.nominee = nominee
