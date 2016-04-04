@@ -7,6 +7,7 @@
       .nomination
         = simple_form_for @nomination, html: { novalidate: true } do |f|
           %h1 Nomination
+          = f.error :voting
 
           = f.fields_for :nominee do |n|
             = n.input :github_username, label: "Nominee's GitHub Username"

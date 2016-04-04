@@ -4,6 +4,10 @@ RSpec.describe Nominee do
   let(:nominee) { create(:nominee) }
 
   context "#merge_into(nominee)" do
+    before do
+      $voting_enabled = true
+    end
+
     let!(:nomination) { create(:nomination, nominee: nominee) }
     let!(:new_nominee) { create(:nominee, :with_nomination, name: "Peter", github_username: "peter") }
 

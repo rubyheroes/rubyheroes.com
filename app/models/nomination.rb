@@ -21,6 +21,8 @@ class Nomination < ActiveRecord::Base
     unless: :no_matching_nomination_exists_in_same_year?
   }
 
+  validate :voting_enabled?
+
   scope :from_year, -> (year) { where("EXTRACT(year FROM nominations.created_at) = ?", year)}
 
   def nominee_attributes=(params)
@@ -36,6 +38,10 @@ class Nomination < ActiveRecord::Base
   def no_matching_nomination_exists_in_same_year?
     self.class.where(nominator_id: nominator_id, nominee_id: nominee_id).
       where("extract(year from created_at) = ?", Date.today.year).none?
+  end
+
+  def voting_enabled?
+    errors.add(:voting, "Voting for this year is now closed.") unless VotingEnabled?
   end
 
 end
