@@ -24,6 +24,7 @@ recipients from previous years.
 | 2013 | 898 | 272 | 773 |
 | 2014 | 631 | 246 | 553 |
 | 2015 | 403 | 176 | 359 |
+| 2016 | 454 | 133 | 454 |
 
 [ci]: https://travis-ci.org/rubyheroes/rubyheroes.com
 [ci-image]: https://travis-ci.org/rubyheroes/rubyheroes.com.svg?branch=master
