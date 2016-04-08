@@ -1,4 +1,5 @@
-%li.heroes-collection-hero.grid-box.one-whole.lap-one-half.portable-one-third
-  = link_to hero.url do
-    = image_tag( "heroes/#{hero.avatar}", alt: hero.name, size: "100x100")
-    %strong= hero.name
+- if hero.name != "Gregory Brown"
+  %li.heroes-collection-hero.grid-box.one-whole.lap-one-half.portable-one-third
+    = link_to hero.url do
+      = image_tag( "heroes/#{hero.avatar}", alt: hero.name, size: "100x100")
+      %strong= hero.name
