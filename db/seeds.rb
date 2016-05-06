@@ -57,7 +57,18 @@ past_heroes = [
   { name: "Sarah Mei", year: "2015", avatar: "sarah_mei.jpg", url: "https://github.com/sarahmei" },
   { name: "Zachary Scott", year: "2015", avatar: "zachary_scott.jpg", url: "https://github.com/zzak" },
   { name: "Jeremy Evans", year: "2015", avatar: "jeremy_evans.jpg", url: "https://github.com/jeremyevans" },
-  { name: "Sam Saffron", year: "2015", avatar: "sam_saffron.jpg", url: "https://github.com/SamSaffron" }
+  { name: "Sam Saffron", year: "2015", avatar: "sam_saffron.jpg", url: "https://github.com/SamSaffron" },
+  # 2016 Heroes
+  { name: "Coraline Ada Ehmke", year: "2016", avatar: "coraline_ada_ehmke.jpg", url: "https://github.com/coralineada"},
+  { name: "Akira Matsuda", year: "2016", avatar: "akira_matsuda.jpg", url: "https://github.com/amatsuda"},
+  { name: "Anika Lindtner", year: "2016", avatar: "anika_lindtner.jpg", url: "https://github.com/anikalindtner" },
+  { name: "Laura Gaetano", year: "2016", avatar: "laura_gaetano.jpg", url: "https://github.com/alicetragedy" },
+  { name: "Sara Regan", year: "2016", avatar: "sara_regan.jpeg", url: "https://github.com/sareg0" },
+  { name: "Kōichi Sasada", year: "2016", avatar: "koichi_sasada.jpg", url: "https://github.com/ko1"},
+  { name: "Richard Schneeman", year: "2016", avatar: "richard_schneeman.jpg", url: "https://github.com/schneems" },
+  { name: "Avdi Grimm", year: "2016", avatar: "avdi_grimm.jp", url: "https://github.com/avdi" },
+  { name: "Charles Nutter", year: "2016", avatar: "charles_nutter", url: "https://github.com/headius" }
+
 ]
 
 past_heroes.each do |hero|
