@@ -9,4 +9,4 @@ end
 $end_of_voting = Date.parse("April 4th, 2016")
 
 # Making this boolean true will link to the previous year's heroes.
-$heroes_chosen = false
+$heroes_chosen = true
