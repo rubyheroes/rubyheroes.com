@@ -63,12 +63,11 @@ past_heroes = [
   { name: "Akira Matsuda", year: "2016", avatar: "akira_matsuda.jpg", url: "https://github.com/amatsuda"},
   { name: "Anika Lindtner", year: "2016", avatar: "anika_lindtner.jpg", url: "https://github.com/anikalindtner" },
   { name: "Laura Gaetano", year: "2016", avatar: "laura_gaetano.jpg", url: "https://github.com/alicetragedy" },
-  { name: "Sara Regan", year: "2016", avatar: "sara_regan.jpeg", url: "https://github.com/sareg0" },
+  { name: "Sara Regan", year: "2016", avatar: "sara_regan.jpg", url: "https://github.com/sareg0" },
   { name: "Kōichi Sasada", year: "2016", avatar: "koichi_sasada.jpg", url: "https://github.com/ko1"},
   { name: "Richard Schneeman", year: "2016", avatar: "richard_schneeman.jpg", url: "https://github.com/schneems" },
-  { name: "Avdi Grimm", year: "2016", avatar: "avdi_grimm.jp", url: "https://github.com/avdi" },
-  { name: "Charles Nutter", year: "2016", avatar: "charles_nutter", url: "https://github.com/headius" }
-
+  { name: "Avdi Grimm", year: "2016", avatar: "avdi_grimm.jpg", url: "https://github.com/avdi" },
+  { name: "Charles Nutter", year: "2016", avatar: "charles_nutter.jpg", url: "https://github.com/headius" }
 ]
 
 past_heroes.each do |hero|
