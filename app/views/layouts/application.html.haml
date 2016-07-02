@@ -6,7 +6,7 @@
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %meta{name: 'description', content: "The Ruby Hero Awards recognize everyday heroes of the Ruby community."}
 
-    %meta{property: 'og:title', content: 'Ruby Heroes'}
+    %meta{property: 'og:title', content: content_for(:title) || "Ruby Heroes" }
     %meta{property: 'og:type', content: 'website'}
     %meta{property: 'og:locale', content: 'en_us'}
     %meta{property: 'og:url', content: root_url}
@@ -15,7 +15,7 @@
     %meta{property: 'fb:admins', content: "716316740"}
     %meta{property: 'fb:app_id', content: "106874206377516"}
 
-    %title Ruby Hero Awards
+    %title content_for(:title) || "Ruby Heroes"
     %link{rel: 'shortcut icon', type: 'image/png', href: image_path('favicon.png') }
     = stylesheet_link_tag 'application'
 
