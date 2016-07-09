@@ -15,7 +15,7 @@
     %meta{property: 'fb:admins', content: "716316740"}
     %meta{property: 'fb:app_id', content: "106874206377516"}
 
-    %title content_for(:title) || "Ruby Heroes"
+    %title= content_for(:title) || "Ruby Heroes"
     %link{rel: 'shortcut icon', type: 'image/png', href: image_path('favicon.png') }
     = stylesheet_link_tag 'application'
 
