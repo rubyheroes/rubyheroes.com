@@ -18,8 +18,6 @@ group :production do
   gem "rack-timeout"
   gem "bugsnag"
   gem "skylight"
-  gem 'platform-api', github: 'jalada/platform-api', branch: 'master'
-  gem 'letsencrypt-rails-heroku', group: 'production'
 end
 
 group :development do
