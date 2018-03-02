@@ -76,7 +76,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  # https://github.com/pixielabs/letsencrypt-rails-heroku#installation
-  config.middleware.insert_before ActionDispatch::SSL, Letsencrypt::Middleware
 end
