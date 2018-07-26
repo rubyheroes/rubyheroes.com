@@ -19,32 +19,24 @@
       - if $heroes_chosen
         .heroes-chosen
           %h2
-            The #{@this_year} Ruby Heroes have been #{link_to("named", heroes_path)}.
+            The last Ruby Heroes have been #{link_to("named", heroes_path)}.
       - else
         .voting-disabled
           %h2 The #{@this_year} Ruby Heroes will be revealed at the upcoming #{link_to("RailsConf", "http://railsconf.com")}.
 
   .main.grid
-    .grid-box.one-whole.desk-one-half
+    .grid-box.one-whole
       %h3
-        Ruby Heroes recognize #{link_to("everyday heroes", heroes_path)} of the Ruby community.
+        Ruby Heroes recognized #{link_to("everyday heroes", heroes_path)}
+        of the Ruby community.
 
       %p
         The Ruby community is full of good people who help each other in diverse
         ways to make the community a better place.
 
       %p
-        Once a year at RailsConf, we take a moment to appreciate their contributions and hopefully encourage others to make a difference.
-
-    .grid-box.one-whole.desk-one-half
-
-      %h3 Make your own heroes
-
-      %ol
-        %li You #{link_to("nominate", new_nomination_path)} your heroes
-        %li Past #{link_to("Ruby Heroes", heroes_path)} pick finalists
-        %li New heroes are named at #{link_to("RailsConf", "http://railsconf.com")}
-
-      = render partial: "shared/share_buttons"
+        Once a year at RailsConf, between 2008 and 2017, we took a moment to appreciate
+        their contributions and hopefully encourage others to make a
+        difference.
 
   = render "shared/footer"
