@@ -1,6 +1,5 @@
 # Ruby Heroes
 [![Build Status][ci-image]][ci]
-[![Dependency Status][gemnasium-image]][gemnasium]
 
 An application to vote for Ruby Hero Award nominees, and remember the award
 recipients from previous years.
@@ -28,8 +27,6 @@ recipients from previous years.
 
 [ci]: https://travis-ci.org/rubyheroes/rubyheroes.com
 [ci-image]: https://travis-ci.org/rubyheroes/rubyheroes.com.svg?branch=master
-[gemnasium]: https://gemnasium.com/rubyheroes/rubyheroes.com
-[gemnasium-image]: https://gemnasium.com/rubyheroes/rubyheroes.com.svg
 
 [olivier]: http://olivierlacan.com
 [zach]: http://zacharynicoll.com
