@@ -74,10 +74,10 @@ GEM
     erubis (2.7.0)
     eventmachine (1.2.0.1)
     execjs (2.6.0)
-    factory_girl (4.5.0)
+    factory_girl (4.9.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.6.0)
-      factory_girl (~> 4.5.0)
+    factory_girl_rails (4.9.0)
+      factory_girl (~> 4.9.0)
       railties (>= 3.0.0)
     faker (1.6.3)
       i18n (~> 0.5)
@@ -275,7 +275,7 @@ DEPENDENCIES
   capybara-webkit
   coffee-rails
   database_cleaner
-  factory_girl_rails (~> 4.6.0)
+  factory_girl_rails (~> 4.9.0)
   faker
   fuubar
   guard
